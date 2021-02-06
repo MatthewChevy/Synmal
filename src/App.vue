@@ -34,5 +34,23 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (min-width: $w-lg) {
+    header {
+        display: flex;
+    }
+}
 
+@media screen and (min-width: $w-xl) {
+    header {
+        position: relative;
+        background: white;
+        border-radius: 0.5rem;
+        width: 95%;
+        top: 1.8rem;
+        justify-content: space-between;
+        align-items: stretch;
+        z-index: 10;
+        margin: 0 auto;
+    }
+}
 </style>
