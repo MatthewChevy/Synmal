@@ -17,11 +17,13 @@
 
 <script>
 import Navigation from './components/TheNavigation.vue'
+import BackgroundImage from './components/TheBackgroundMain.vue'
 
 export default {
 
       components: {
         Navigation,
+        BackgroundImage
     }
   
 }
