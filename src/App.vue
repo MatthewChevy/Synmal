@@ -16,15 +16,19 @@
 </template>
 
 <script>
+import tableMixin from './mixins/tableMixins'
+
 import Navigation from './components/TheNavigation.vue'
 import BackgroundImage from './components/TheBackgroundMain.vue'
 
 export default {
 
-      components: {
-        Navigation,
-        BackgroundImage
-    }
+    mixins: [tableMixin],
+
+    components: {
+      Navigation,
+      BackgroundImage
+  }
   
 }
 </script>
