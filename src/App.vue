@@ -16,7 +16,13 @@
 </template>
 
 <script>
+import Navigation from './components/TheNavigation.vue'
+
 export default {
+
+      components: {
+        Navigation,
+    }
   
 }
 </script>
