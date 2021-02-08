@@ -1,10 +1,12 @@
 <template>
-    <img />
+    <div>
+
+    </div>
 </template>
 
 <style lang="scss" scoped>
 @media screen and (min-width: $w-xl) {
-    img {
+    div {
         background: rgb(255, 200, 80);
         background: linear-gradient(
             0deg,

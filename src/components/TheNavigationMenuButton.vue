@@ -1,6 +1,6 @@
 <template>
     <button class="hamburger-menu" @click="activeMenu">
-        <img src="../assets/img/menu.png" alt="menu button" />
+        <img src="../assets/img/menu.png" alt="Menu button" />
     </button>
 </template>
 
@@ -26,8 +26,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hamburger-menu {
-    width: 3.3rem;
+
+.hamburger-menu,
+.hamburger-menu:hover,:focus {
+    border: none;
+    background: none;
+    width: 3.6rem;
+}
+
+img{
+    max-width: 2.6rem;
+}
+
+img:hover,:focus{
+    border: none;
+}
+
+
+button{
+    margin-right: 0.75rem;
 }
 
 @media screen and (min-width: $w-lg) {
