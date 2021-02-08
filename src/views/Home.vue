@@ -81,7 +81,7 @@ export default {}
         transform: translateY(-3%);
         min-height: 100%;
         min-width: 100%;
-        animation: move-image-lg 100s 3s infinite ease-in;
+        animation: main-img-lg 100s 2s infinite ease-in;
     }
 
     .persons-image{
@@ -94,7 +94,7 @@ export default {}
         top: 37.7%;
     }
 
-    @keyframes move-image-lg {
+    @keyframes main-img-lg {
         0% {
             transform: translateY(-3%);
         }
@@ -117,7 +117,7 @@ export default {}
         margin-top: 6.5%;
         border-radius: 0.5rem;
         transform: translateY(-12%);
-        animation: ready 1.3s 0.3s ease-in-out;
+        animation: painting-large-image-xl 1.3s 0.3s ease-in-out;
         animation-fill-mode: forwards;  
     }
 
@@ -126,14 +126,14 @@ export default {}
         transform: translateY(-2%);
         min-height: 100%;
         min-width: 100%;
-        animation: move-image-xl 100s 3s infinite ease-in-out;
+        animation: main-img-xl 100s 2s infinite ease-in-out;
     }
 
     .persons-image{
         left: 35.6%;
     }
 
-    @keyframes move-image-xl {
+    @keyframes main-img-xl {
         0% {
             transform: translateY(-2%);
         }
@@ -145,7 +145,7 @@ export default {}
         }
     }
 
-    @keyframes ready{
+    @keyframes painting-large-image-xl {
     0% { transform: translateY(-12%); }
     65% { transform: translateY(8%); }
     100% { transform: translateY(6%); }
@@ -156,17 +156,25 @@ export default {}
     //1536px+
 
     main {
+        position: relative;
         height: 35rem;
         margin-top: 6%;
+        transform: translateY(-12%);
     }
 
     .painting-large-image {
         transform: translateY(-2%);
-        animation: move-image-2xl 75s 3s infinite ease-in-out;
+        animation: main-img-2xl 75s 2s infinite ease-in-out;
     }
 
+    .persons-image{
+        top: 46.7%;
+    }
 
-    @keyframes move-image-2xl {
+    
+
+
+    @keyframes main-img-2xl {
         0% {
             transform: translateY(-2%);
         }
@@ -182,7 +190,17 @@ export default {}
 @media screen and (min-width: $w-3xl) {
 
     main {
-        margin-top: 6%;
+        height:44rem;
+        margin-top: 4.2%;
+        transform: translateY(-10%);
+        animation: painting-large-image-3xl 1.3s 0.3s ease-in-out;
+        animation-fill-mode: forwards;  
+    }
+
+    @keyframes painting-large-image-3xl{
+        0% { transform: translateY(-10%); }
+        65%  { transform: translateY(8%); }
+        100% { transform: translateY(6%); }
     }
 
     .persons-image{
@@ -191,5 +209,35 @@ export default {}
     }
 }
 
+@media screen and ( min-width:$w-4xl){
+    main {
+        margin-top: 3%;
+        height: 50rem;
+        transform: translateY(-10%);
+        animation: painting-large-image-3xl 1.3s 0.3s ease-in-out;
+        animation-fill-mode: forwards;  
+    }
 
+       .persons-image{
+            left: 38%;
+            top: 16rem;
+            width: 50rem;
+    }
+}
+
+@media screen and ( min-width:$w-4k){
+    main {
+        margin-top: 4.5%;
+        height: 70rem;
+        transform: translateY(-10%);
+        animation: painting-large-image-3xl 1.3s 0.3s ease-in-out;
+        animation-fill-mode: forwards;  
+    }
+
+    .persons-image{
+        left: 40%;
+        top: 29rem;
+        width: 60rem;
+    }
+}
 </style>

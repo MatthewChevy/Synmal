@@ -143,4 +143,41 @@ nav{
     }
 }
 
+@media screen and ( min-width:$w-3xl ){
+
+    nav{
+        font-size: 1rem;
+        ul{
+            li{
+                padding: 1.6rem 3rem;            
+            }
+        }
+    }
+}
+
+@media screen and ( min-width:$w-4xl ){
+
+    nav{
+        font-size: 1.2rem;
+        ul{
+            li{
+                padding: 1.4rem 4rem;
+            }
+        }
+    }
+}
+
+@media screen and ( min-width:$w-4k ){
+
+    nav{
+        top: 3.7rem;
+        font-size: 2.5rem;
+        ul{
+            li{
+                padding: 2.8rem 5.5rem;
+            }
+        }
+    }
+}
+
 </style>

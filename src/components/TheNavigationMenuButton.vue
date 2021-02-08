@@ -32,7 +32,14 @@ export default {
     border: none;
     background: none;
     width: 3.6rem;
+    animation: logo-smooth  1s ease-in-out;
+    animation-fill-mode:forwards
 }
+
+    @keyframes logo-smooth {
+         0% { transform: translateX(100%); }
+        100% { transform: translateX(0%); }
+    }
 
 img{
     max-width: 2.6rem;

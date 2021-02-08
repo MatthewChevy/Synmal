@@ -13,7 +13,11 @@
         <router-link to="/equipment">equipment</router-link>
         <router-link to="/gallery">gallery</router-link>
     </div>    
-        <router-view />    
+        <router-view />  
+
+    <footer>
+        
+    </footer>  
 </template>
 
 <script>
