@@ -1,20 +1,20 @@
 <template>
-    <navigation-social-bar />
-
-    <navigation-logo />
-
-    <navigation-menu-button @toggle-menu="toggleMenu($event)" />
+    <div class="banner">
+        <navigation-logo />
+        <navigation-menu-button @toggle-menu="toggleMenu($event)" />
+    </div>
+    <!-- <navigation-social-bar /> -->
 
     <nav>
         <ul v-if="activeMenu || breakPointLarge < actualyWidnowSize">
-            <li tabindex="1" @click="$router.push({ path: '/' })">DOMOV</li>
-            <li tabindex="1" @click="$router.push({ path: 'about' })">O NAS</li>
+            <li tabindex="1" @click="$router.push({ path: '/' })"> <span>DOMOV</span></li> 
+            <li tabindex="1" @click="$router.push({ path: 'about' })">O NAS</li> 
             <li tabindex="1" @click="$router.push({ path: '/contact' })">
                 KONTAKT
-            </li>
+            </li> 
             <li tabindex="1" @click="$router.push({ path: '/equipment' })">
                 VYBAVENIE
-            </li>
+            </li> 
             <li tabindex="1" @click="$router.push({ path: '/gallery' })">
                 GALÉRIA
             </li>
@@ -25,7 +25,7 @@
 <script>
 import tableMixin from '../mixins/tableMixins'
 
-import NavigationSocialBar from './TheNavigationSocialBar.vue'
+// import NavigationSocialBar from './TheNavigationSocialBar.vue'
 import NavigationLogo from './TheNavigationLogo'
 import NavigationMenuButton from './TheNavigationMenuButton.vue'
 
@@ -33,7 +33,7 @@ export default {
     mixins: [tableMixin],
 
     components: {
-        NavigationSocialBar,
+        // NavigationSocialBar,
         NavigationLogo,
         NavigationMenuButton
     },
@@ -58,68 +58,89 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-nav {
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.2rem;
+}
+
+nav{
+    min-width: 100vw;
     position: absolute;
-    text-align: center;
-    color: $navigation-text-color;
-    font-weight: 600;
-}
-
-nav {
-    width: 100%;
     z-index: 10;
-}
-ul {
-    li {
-        background-color: $navigation-background-color;
-        border-top: 1px solid gray;
-        padding: 0.8rem 0rem;
-    }
-    li:last-child {
-        border-bottom: 1px solid gray;
-    }
-    li:focus,
-    li:hover {
-        transition: 0.25s;
-        background-color: grey;
-        border-radius: 0.2rem;
-        color: white;
-    }
-}
+    font-family: $font-family-sans-serif;
+    font-weight: $font-weight-navigation;
+    letter-spacing: 1px;
+    text-align: center;
 
-@media screen and (min-width: $w-lg) {
-    nav {
-        position: relative;
-        top: 0.7rem;
-    }
 
-    ul {
-        li {
-            display: inline-block;
-            border: none;
-            padding: 0.8rem 2.5rem;
+    ul{
+        background: $navigation-background-color;
+
+
+        li:first-child{
+            border-top: 1px solid $navigation-border-color;
         }
-        li:last-child {
-            border-bottom: none;
+
+        li{
+            background: $navigation-background-color;
+            color: $navigation-text-color;
+            border-bottom: 1px solid $navigation-text-color;
+            padding: {
+                top: .9em;
+                bottom: .9rem;
+            }
+        }
+
+        li:hover, :focus{
+            transition: .30s;
+            background: rgb(141, 141, 141);
+            color: $navigation-background-color;
         }
     }
 }
 
-@media screen and (min-width: $w-xl) {
-    nav {
-        position: relative;
-        top: 0.7rem;
-    }
 
-    ul {
-        li {
-            display: inline-block;
-            border: none;
-            padding: 0.8rem 2.5rem;
-        }
-        li:last-child {
-            border-bottom: none;
+
+@media screen and ( min-width:$w-lg ){
+
+    nav{
+        z-index: 1;
+        top: 1.9rem;
+
+        ul{
+            li:first-child{        
+                border-top: none;
+            }
+
+            li{
+                padding: 0rem 1.5rem;
+                border-bottom: none;
+                display: inline-block;
+            }
         }
     }
 }
+
+@media screen and ( min-width:$w-xl ){
+
+    nav{
+        ul{
+            border-radius: 0.5rem;
+            max-width: 95%;
+            margin: 0 auto;
+
+            li{
+                padding: 1.3rem 2rem;
+            }
+
+            li:hover, :focus{
+                border-radius: 0.5rem;
+                transition: .5s;
+            }
+        }
+    }
+}
+
 </style>
