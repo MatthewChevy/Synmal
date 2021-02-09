@@ -26,31 +26,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .hamburger-menu,
-.hamburger-menu:hover,:focus {
+.hamburger-menu:hover,
+:focus {
     border: none;
     background: none;
     width: 3.6rem;
-    animation: logo-smooth  1s ease-in-out;
-    animation-fill-mode:forwards
+    animation: logo-smooth 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
-    @keyframes logo-smooth {
-         0% { transform: translateX(100%); }
-        100% { transform: translateX(0%); }
+@keyframes logo-smooth {
+    0% {
+        transform: translateX(100%);
     }
+    100% {
+        transform: translateX(0%);
+    }
+}
 
-img{
+img {
     max-width: 2.6rem;
 }
 
-img:hover,:focus{
+img:hover,
+:focus {
     border: none;
 }
 
-
-button{
+button {
     margin-right: 0.75rem;
 }
 

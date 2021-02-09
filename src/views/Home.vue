@@ -1,17 +1,17 @@
 <template>
     <main>
         <!-- <div class="container"> -->
-            <img
-                class="painting-large-image"
-                src="../assets/img/painting.png"
-                alt="old and new wall paint"
-            />
-        
-            <img
-                class="persons-image"
-                src="../assets/img/persons.png"
-                alt="people"
-            />
+        <img
+            class="painting-large-image"
+            src="../assets/img/painting.png"
+            alt="old and new wall paint"
+        />
+
+        <img
+            class="persons-image"
+            src="../assets/img/persons.png"
+            alt="people"
+        />
         <!-- </div> -->
     </main>
 </template>
@@ -21,15 +21,13 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-
-
-.painting-large-image{
+.painting-large-image {
     position: relative;
     width: 100vw;
     height: auto;
 }
 
-.persons-image{
+.persons-image {
     position: relative;
     display: block;
     margin: 0rem auto;
@@ -40,7 +38,7 @@ export default {}
 @media screen and (min-width: $w-2sm) {
     //550px+
 
-    .persons-image{
+    .persons-image {
         bottom: 11.3rem;
         width: 16rem;
     }
@@ -49,7 +47,7 @@ export default {}
 @media screen and (min-width: $w-sm) {
     //640px+
 
-    .persons-image{
+    .persons-image {
         bottom: 14.09rem;
         width: 20rem;
     }
@@ -58,7 +56,7 @@ export default {}
 @media screen and (min-width: $w-md) {
     //768px+
 
-    .persons-image{
+    .persons-image {
         bottom: 14.01rem;
         width: 20rem;
     }
@@ -75,7 +73,7 @@ export default {}
         margin: 0 auto;
         overflow: hidden;
     }
-    
+
     .painting-large-image {
         transform: translateX(-50%);
         transform: translateY(-3%);
@@ -84,7 +82,7 @@ export default {}
         animation: main-img-lg 100s 2s infinite ease-in;
     }
 
-    .persons-image{
+    .persons-image {
         position: absolute;
         bottom: 26.7rem;
         width: 27rem;
@@ -118,7 +116,7 @@ export default {}
         border-radius: 0.5rem;
         transform: translateY(-12%);
         animation: painting-large-image-xl 1.3s 0.3s ease-in-out;
-        animation-fill-mode: forwards;  
+        animation-fill-mode: forwards;
     }
 
     .painting-large-image {
@@ -129,7 +127,7 @@ export default {}
         animation: main-img-xl 100s 2s infinite ease-in-out;
     }
 
-    .persons-image{
+    .persons-image {
         left: 35.6%;
     }
 
@@ -146,9 +144,15 @@ export default {}
     }
 
     @keyframes painting-large-image-xl {
-    0% { transform: translateY(-12%); }
-    65% { transform: translateY(8%); }
-    100% { transform: translateY(6%); }
+        0% {
+            transform: translateY(-12%);
+        }
+        65% {
+            transform: translateY(8%);
+        }
+        100% {
+            transform: translateY(6%);
+        }
     }
 }
 
@@ -167,12 +171,9 @@ export default {}
         animation: main-img-2xl 75s 2s infinite ease-in-out;
     }
 
-    .persons-image{
+    .persons-image {
         top: 46.7%;
     }
-
-    
-
 
     @keyframes main-img-2xl {
         0% {
@@ -188,53 +189,58 @@ export default {}
 }
 
 @media screen and (min-width: $w-3xl) {
-
     main {
-        height:44rem;
+        height: 44rem;
         margin-top: 4.2%;
         transform: translateY(-10%);
         animation: painting-large-image-3xl 1.3s 0.3s ease-in-out;
-        animation-fill-mode: forwards;  
+        animation-fill-mode: forwards;
     }
 
-    @keyframes painting-large-image-3xl{
-        0% { transform: translateY(-10%); }
-        65%  { transform: translateY(8%); }
-        100% { transform: translateY(6%); }
+    @keyframes painting-large-image-3xl {
+        0% {
+            transform: translateY(-10%);
+        }
+        65% {
+            transform: translateY(8%);
+        }
+        100% {
+            transform: translateY(6%);
+        }
     }
 
-    .persons-image{
+    .persons-image {
         left: 38.5%;
         width: 34rem;
     }
 }
 
-@media screen and ( min-width:$w-4xl){
+@media screen and (min-width: $w-4xl) {
     main {
         margin-top: 3%;
         height: 50rem;
         transform: translateY(-10%);
         animation: painting-large-image-3xl 1.3s 0.3s ease-in-out;
-        animation-fill-mode: forwards;  
+        animation-fill-mode: forwards;
     }
 
-       .persons-image{
-            left: 38%;
-            top: 16rem;
-            width: 50rem;
+    .persons-image {
+        left: 38%;
+        top: 16rem;
+        width: 50rem;
     }
 }
 
-@media screen and ( min-width:$w-4k){
+@media screen and (min-width: $w-4k) {
     main {
         margin-top: 4.5%;
         height: 70rem;
         transform: translateY(-10%);
         animation: painting-large-image-3xl 1.3s 0.3s ease-in-out;
-        animation-fill-mode: forwards;  
+        animation-fill-mode: forwards;
     }
 
-    .persons-image{
+    .persons-image {
         left: 40%;
         top: 29rem;
         width: 60rem;
