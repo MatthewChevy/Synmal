@@ -58,19 +58,19 @@ export default {
 
 .banner{
     display: flex;
+    height: 55px;
     justify-content: space-between;
     background: #373737 
 }
 
 nav{
-    position: relative;
+    position: absolute;
     width: 100%;
     background: $light-grey;
     color: $black;
     text-align: center;
     
 }
-
 
 li {
     font:{
@@ -79,6 +79,12 @@ li {
     }
     padding: 15px 0px;
     border-bottom: 1px solid $dark;
+}
+
+li:focus {
+    background: $light-dark;
+    color: $white;
+    transition: .25s;
 }
 
 </style>
