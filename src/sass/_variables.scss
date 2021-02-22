@@ -3,31 +3,17 @@ $body-bg: #333333;
 $text-color: white;
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
-$font-family-sans-serif: 'Roboto Slab', serif;;
-$font-weight-navigation: 600;
-// $font-size-base: 0.9rem
-// $line-height-base: 1.6
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+$font-family: 'Poppins', sans-serif;
 
-//Navigation
-
-$navigation-text-color: #616161;
-$navigation-background-color: white;
-$navigation-border-color:#757575;
 // Colors
-$dark: #292929;
-$yellow: #ffed4a;
-
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$white: #ffffff;
+$light-grey: #ECECEC;
+$grey: #CFCFCF;
+$light-dark: #707070;
+$dark: #373737;
+$black: #000000;
+$fancy: #4FD4B4;
 
 
 //Responsive

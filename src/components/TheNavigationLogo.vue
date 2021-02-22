@@ -1,126 +1,37 @@
 <template>
-    <div class="container">
-        <!-- <div class="navigation-logo-wrapper"> -->
+    <div class="container">   
         <router-link to="/">
             <img
-                class="navigation-logo"
-                src="../assets/img/paint.png"
+               class="navigation-logo"
+                src="../assets/img/logo.png"
                 alt="Logo"
-            />
+            /> 
         </router-link>
-        <!-- </div> -->
     </div>
+        <h4>Maliarske práce</h4>
 </template>
 
 <style lang="scss" scoped>
-.container {
-    padding-top: 0.25rem;
-    max-width: 7rem;
-    animation: logo-smooth 1s ease-in-out;
-    animation-fill-mode: forwards;
+
+.container{
+ max-width: 12%;
+ display: flex;
 }
 
-@keyframes logo-smooth {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
+img{
+    width: 100%;
+    padding: 10px;
 }
 
-img {
-    max-width: 100%;
+h4{
+    font:{
+        size: 12px;
+        weight: 300;
+    }
+    position: absolute;
+    top: 1.2rem;
+    left: 4.2rem;
+    color: white
 }
 
-@media screen and (min-width: $w-md) {
-    .container {
-        max-width: 8rem;
-    }
-}
-
-@media screen and (min-width: $w-lg) {
-    .container {
-        position: relative;
-        z-index: 11;
-    }
-}
-
-@media screen and (min-width: $w-xl) {
-    .container {
-        position: absolute;
-        max-width: 14.6rem;
-        top: -0.4rem;
-        left: 1rem;
-        animation: logo-smooth-xl 1s ease-in-out;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes logo-smooth-xl {
-        0% {
-            transform: translateX(-15%);
-        }
-        100% {
-            transform: translateX(0%);
-        }
-    }
-}
-
-@media screen and (min-width: $w-2xl) {
-    .container {
-        position: absolute;
-        max-width: 16rem;
-        top: -0.8rem;
-        left: 1rem;
-        animation: logo-smooth-2xl 1s ease-in-out;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes logo-smooth-2xl {
-        0% {
-            transform: translateX(-15%);
-        }
-        100% {
-            transform: translateX(5%);
-        }
-    }
-}
-
-@media screen and (min-width: $w-3xl) {
-    .container {
-        max-width: 16.8rem;
-        top: -0.8rem;
-        left: 1rem;
-        animation: logo-smooth-3xl 1s ease-in-out;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes logo-smooth-3xl {
-        0% {
-            transform: translateX(-15%);
-        }
-        100% {
-            transform: translateX(25%);
-        }
-    }
-}
-
-@media screen and (min-width: $w-4k) {
-    .container {
-        max-width: 34rem;
-        top: -1.35rem;
-        left: 1rem;
-        animation: logo-smooth-4k 1s ease-in-out;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes logo-smooth-4k {
-        0% {
-            transform: translateX(-15%);
-        }
-        100% {
-            transform: translateX(50%);
-        }
-    }
-}
 </style>
