@@ -10,9 +10,6 @@
             <li tabindex="1" @click="$router.push({ path: '/contact' })">
                 KONTAKT
             </li>
-            <li tabindex="1" @click="$router.push({ path: '/equipment' })">
-                VYBAVENIE
-            </li>
             <li tabindex="1" @click="$router.push({ path: '/gallery' })">
                 GALÉRIA
             </li>
@@ -58,13 +55,17 @@ export default {
 
 .banner{
     display: flex;
+    z-index: 10;
+    position: fixed;
     height: 55px;
     justify-content: space-between;
     background: #373737 
 }
 
 nav{
-    position: absolute;
+    position: fixed;
+    margin-top: 3.438rem;
+    z-index: 10;
     width: 100%;
     background: $light-grey;
     color: $black;

@@ -1,7 +1,7 @@
 <template>
-    <button @click="activeMenu">
+    <a class="button" @click="activeMenu">
         <img src="../assets/img/menu.png" alt="Menu button" />
-    </button>
+    </a>
 </template>
 
 <script>
@@ -27,11 +27,18 @@ export default {
 
 <style lang="scss" scoped>
 
-button{
+.button{
     border: none;
     background: none;
-    width: 12.5%;
+    width: 8%;
+    margin: 10px;
 }
+
+.button::before, ::after{
+    border: none;
+    background: none;
+}
+
 
 img{
     width: 100%;

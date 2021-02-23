@@ -7,7 +7,6 @@
         <router-link to="/">home</router-link>
         <router-link to="/about">about</router-link>
         <router-link to="/contact">contact</router-link>
-        <router-link to="/equipment">equipment</router-link>
         <router-link to="/gallery">gallery</router-link>
     </div>
     <router-view />
