@@ -14,7 +14,7 @@
 <style lang="scss" scoped>
 
 .container{
- max-width: 12%;
+ max-width: 17%;
  display: flex;
 }
 
