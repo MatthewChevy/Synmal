@@ -1,11 +1,13 @@
 <template>
-    <main>
+    <header>
         <img class="welcome-image" src="../assets/img/welcome-image.png" alt="painting">
-        <header>
+        <div class="title-wrapper">
             <h1>Synmal - Jozef Zigo</h1>
             <h2>Maliari s 20 ročnými skúsenosťami</h2>
-        </header>
-
+        </div>
+    </header>
+    
+    <main>
         <section class="motto">
             <div class="motto-field">
                 <h3>Beautiful designs, powerful features and the freedom to build anything you want.</h3>
@@ -62,7 +64,68 @@
                 <aside class="second-section-fancy-line"></aside>
             </div>
         </section>
+        
+        <aside class="center-content">
+            <h4 class="center-content-h4">
+                Za roky vykonávania nášho remesla sme
+                vyskúšali a testovali desiatky výrobcov farieb. 
+            </h4>
+        </aside>
 
+        <section class="third-section">
+            <div class="third-section-cover-layer"></div>
+            <div class="third-section-field">
+                <div class="thrid-section-list-item">
+                    <h6>Zabezpečujeme</h6>
+                    <ul>
+                        <li>Malovanie interiérov</li>
+                        <li>Malovanie exteriérov</li>
+                        <li>Strojové maľovanie interiérov</li>
+                        <li>Strojové maľovanie exteriérov</li>
+                        <li>Nátery striech</li>
+                        <li class="reverse-color">Renovácia prasklín</li>
+                        <li class="reverse-color">Renovácia drevených obkladov</li>
+                        <li class="reverse-color">Nátery tatranských profilov</li>
+                        <li class="reverse-color">Nátery kovových zárubní</li>
+                    </ul>
+                    <div class="color-splitter"></div>
+                </div>
+
+                <div class="fancy-bucket">
+                    <img src="../assets/img/jupol.png" alt="Jupol bucket">
+                </div>
+
+            </div>
+
+            <div class="mirror-fancy-line"></div>
+
+            <div class="third-section-fancy-rectangle">
+                <div class="reverse-mirror-fancy-line"></div>
+            </div>
+
+            <aside class="third-field-aside"> 
+                <div class="third-field-aside-rectangle">
+                    <div class="fancy-paint-roller">
+                        <img src="../assets/img/paint-roller.png" alt="Paint roller">
+                    </div>
+                </div>
+
+                <div class="third-field-aside-wrapper">
+                    <p>
+                        Vo veľkej miere využívame produkty od firmy <strong>JUB</strong>. 
+                        Cenou, kvalitou a krycou schopnosťou je pre nás veľkým favoritom
+                    </p>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <footer>
+            <div tabindex="1" @click="$router.push({ path: '/contact' })">
+                <p class="contact-link-button">Kontaktujte nás</p>
+            </div>
+        </footer>
     </main>
 </template>
 
@@ -72,52 +135,48 @@ export default {}
 
 <style lang="scss" scoped>
 
-main{
-    padding-top: 3.438rem;
-    position: relative;
-    z-index: 2;
-}
-
 //welcome image-------------------------------------------
+
+header{
+    padding-top: 3.4rem;
+}
 
 .welcome-image{
     position: fixed;
     z-index: -2;
-    opacity: 60%;
+    opacity: 45%;
     max-width: 100%
 }
 
-header{
+.title-wrapper{
     max-width: 18.75rem;
     height: 13rem;
     margin: 0 auto;
-}
 
-header > h1{  
-    position: fixed;
-    z-index: -1;
-    color: $dark;
-    font:{
-        size: 23px;
-        weight: 700;
+     h1{  
+        position: fixed;
+        z-index: -1;
+        color: $dark;
+        padding-top: 3.6rem;
+        line-height: 24px;
+        font:{
+            size: 23px;
+            weight: 700;
+        }
     }
-    padding-top: 3.6rem;
-    line-height: 24px;
-}
 
-header > h2{
-    position: fixed;
-    z-index: -1;
-    margin-top: 5.1rem;
-    color: $dark;
-    font:{
-        size: 13.5px;
-        weight: 400;
+    h2{
+        position: fixed;
+        z-index: -1;
+        margin-top: 5.1rem;
+        color: $dark;
+        font:{
+            size: 13.5px;
+            weight: 400;
+        }
     }
 }
 
-
-//Section-wrapper---------------------------------
 
 //Motto-------------------------------------------
 
@@ -133,12 +192,12 @@ header > h2{
     width: 17.188rem;
     margin: 0 auto;
     text-align: center;
-}
 
-.motto-field > h3{
-    font:{
-        size: 14.5px;
-        weight: 300;
+    h3{
+        font:{
+            size: 14.5px;
+            weight: 300;
+        }
     }
 }
 
@@ -164,17 +223,19 @@ header > h2{
 
 }
 
- .first-section-h3-wrapper{
+.first-section-h3-wrapper{
      padding: 1.563rem 0;
- }
 
-.first-section-h3-wrapper > h3{
-    font:{
-        size: 14.5px;
-        weight: 500;
+     h3{
+        color: $white;
+
+        font:{
+            size: 14.5px;
+            weight: 500;
+        }
     }
-    color: $white;
 }
+
 
 .first-section-fancy-circle{
     position: relative;
@@ -197,21 +258,21 @@ header > h2{
     display: flex;
     justify-content: space-between;
     max-width: 18.75rem;
-}
 
-.first-section-half-size-images > img{
-    border: 5px solid $white;
-    max-width: 9.063rem;
-    height: 13rem;
-    border-radius: 5px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 5px 5px 2px rgba(#000000, 16%);
-}
+    img{
+        border: 5px solid $white;
+        max-width: 9.063rem;
+        height: 13rem;
+        border-radius: 5px;
+        position: relative;
+        z-index: 2;
+        box-shadow: 5px 5px 2px rgba(#000000, 16%);
+    }
 
-.first-section-half-size-images > img:first-child{
-    margin-right: 0.313rem;
-    margin-left: 0.125rem;
+    img:first-child{
+        margin-right: 0.313rem;
+        margin-left: 0.125rem;
+    }
 }
 
 .first-section-full-size-image > img{
@@ -251,11 +312,11 @@ header > h2{
 //second section-------------------------------------------
 
 .second-section{
-    position: absolute;
+    position: relative;
     background-color: $white;
     width: 100%;
-    height: 26.5rem;
-    border: 1px solid black
+    height:31.5rem;
+    border-bottom: 0.5px solid $grey;
 }
 
 .second-section-field{
@@ -283,34 +344,31 @@ header > h2{
     margin: 0 auto;
 }
 
-.paint-machine-logo > img{
-    max-width: 100%;
+.paint-machine-logo{
+    width: 5.375rem;
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+
+    img{
+        max-width: 100%;
+    }
 }
 
 .second-section-h3-wrapper > h3{
     margin-top: 1.2rem;
+    color: $white;
     font:{
         size: 14px;
         weight: 500; 
     }
-    color: $white;
-}
-
-.paint-machine-logo{
-    position: relative;
-    z-index: 1;
-    margin-top: 2rem;
-}
-
-.second-section-h3-wrapper > h3 > strong{
-    font:{
-        weight: 600; 
+    strong{
+        font:{
+            weight: 600; 
+        }
     }
 }
 
-.paint-machine-logo{
-    width: 5.375rem;
-}
 
 article > p {
     position: relative;
@@ -332,26 +390,24 @@ article > p {
     border: 5px solid $white;
     left: 10.2rem;
     box-shadow: 5px 5px 2px rgba(#000000, 16%);
-}
-
-.second-section-half-size-images > img{
-    width: 100%;
+    img{
+        width: 100%;
+    }   
 }
 
 .second-section-full-size-images{
     position: relative;
     z-index: 1;
     width: 15.625rem;
-    height: 9.1rem;
+    height: 9.05rem;
     border: 5px solid $white;
     border-radius: 3px;
     bottom: 7.063rem;
     left: 3rem;
     box-shadow: 5px 5px 2px rgba(#000000, 16%);
-}
-
-.second-section-full-size-images > img{
-    width: 100%;
+    img{
+        width: 100%;
+    }
 }
 
 .second-section-fancy-line{
@@ -365,11 +421,238 @@ article > p {
     box-shadow: 5px 0px 2px rgba(0, 0, 0, 0.16);
 }
 
+// Center text section-----------------------------------
+
+.center-content{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
+}
+
+.center-content-h4{
+    max-width: 17.875rem;
+    margin: 0 auto;
+    padding: 1.563rem 0px;
+    text-align: center;
+    font:{
+        size: 14px;
+        weight: 400;
+    }
+}
+
+//third section-------------------------------------------
+
+.third-section{
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    bottom: 1.6rem;
+}
+
+.third-section-cover-layer{
+    width: 100%;
+    height: 10.938rem;
+    background-color: $white;
+    position: absolute;
+    z-index: 0;
+    margin-top: -1.55rem;
+}
+
+.third-section-field{
+    width: 18.75rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
 
 
+.thrid-section-list-item{
 
+    width: 13.438rem;
+    max-height: 15.4rem;
+    margin-top: 3rem;
+    background-color: #CFCFCF;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px rgba(#000000, 16%);
+        
+        h6 {
+            color: $black;
+            padding: 0.938rem 1.25rem 0px;
 
+            font:{
+                size: 16px;
+                weight: 600;
+            }
+        }
+}
 
+ul{
+    position: relative;
+    z-index: 2;
+    padding:{
+        top: 0.625rem;
+        right: 1.25rem;
+        bottom: 0.625rem;
+        left: 1.25rem
+    }
 
+    li{
+        font:{
+        size: 10px;
+        weight: 500;
+        }
+        color: $black;
+        line-height: 1.2rem;
+    }
+
+    li:before {
+        content: "-"; 
+        padding-right: 0.188rem;
+    }
+}
+
+.reverse-color{
+     color: $white;
+ }
+
+.color-splitter{
+    width: 100%;
+    height: 6.25rem;
+    background: #707070;
+    position: relative;
+    z-index: 1;
+    bottom: 5.375rem;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.third-section-fancy-rectangle{
+    width: 100%;
+    height: 22.5rem;
+    background-color: #CFCFCF;
+    position: absolute;
+    z-index: 1;
+    margin-top: -13.55rem;
+}
+
+.mirror-fancy-line{
+    position: absolute;
+    z-index: 0;
+    top: 5.75rem;
+    width: 1.25rem;
+    height: 3.438rem;
+    background-color: #707070;
+    right: 2.375rem;
+    border-radius: 2px 2px 0px 0px;
+    box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
+}
+
+.reverse-mirror-fancy-line{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    width: 1.25rem;
+    height: 3.438rem;
+    background-color: #ffffff;
+    right: 2.375rem;
+    border-radius: 2px 2px 0px 0px;
+    box-shadow: 5px 5px 2px rgb(0 0 0 / 16%);
+}
+
+.third-field-aside{
+    position: relative;
+    width: 100%;
+    padding-top: 0.938rem;
+    z-index: 2;
+}
+
+.third-field-aside-rectangle{
+    width: 69%;
+    height: 4.563rem;
+    background-color: $white;
+    position: absolute;
+    right: 0;
+    top: 0.2rem;
+    box-shadow: 5px 5px 2px rgba(#000000, 16%);
+}
+
+.fancy-bucket{
+    width: 8.125rem;
+    height: auto;
+    position: relative;
+    top: 1.45rem;
+    left: 10.5rem;
+    z-index: 1;
+
+    img{
+        max-width: 100%;
+    }
+}
+
+.fancy-paint-roller{
+    position: relative;
+    width: 8.25rem;
+    height: 8.25rem;
+    transform: rotate(90deg);
+    top: -1.7rem;
+    left: -6.4rem; 
+
+    img{
+        max-width: 100%;
+    }
+}
+
+.third-field-aside-wrapper{
+    max-width: 18.75rem;
+    text-align: right;
+    margin: 0 auto;
+
+    p{
+        position: relative;
+        width: 13.188rem;
+        left: 5.5rem;
+        text-align: right;
+
+        font:{
+            size: 10px;
+            weight: 400;
+        }
+            strong{
+                font-weight: 700;
+            }
+    }
+}
+
+//footer-------------------------------------------------
+
+footer{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 6rem;
+    background-color: $white;
+    margin-top: 1rem;
+    padding: 1.875rem 0 0 0;
+}
+
+.contact-link-button{
+
+    max-width: 10rem;
+    margin: 0 auto;
+    background-color: $fancy;
+    text-align: center;
+    box-shadow: 5px 5px 3px rgba(#000000, 16%);
+    padding: 0.15rem 0;
+    cursor: pointer;
+
+    a{
+        font:{
+            size: 15px;
+            weight: regular;
+        }
+        color: $black;
+    }
+}
 
 </style>
