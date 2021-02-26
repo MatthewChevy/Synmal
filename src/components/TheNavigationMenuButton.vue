@@ -28,10 +28,10 @@ export default {
 <style lang="scss" scoped>
 
 .button{
-    border: none;
-    background: none;
     width: 8%;
     margin: 10px;
+    border: none;
+    background: none;
 }
 
 .button::before, ::after{
@@ -39,9 +39,15 @@ export default {
     background: none;
 }
 
-
 img{
     width: 100%;
+}
+
+@media screen and (max-width: 374px){
+
+    .button{
+        margin: 13px 10px;
+    }
 }
 
 </style>

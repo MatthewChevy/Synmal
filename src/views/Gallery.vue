@@ -5,11 +5,7 @@
 </template>
 
 <style lang="scss" scoped>
-
-main{
+main {
     padding-top: 3.438rem;
 }
-
-
 </style>
-

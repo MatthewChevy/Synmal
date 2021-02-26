@@ -1,38 +1,35 @@
 <template>
-    <div class="container">   
+    <div class="container">
         <router-link to="/">
             <img
-               class="navigation-logo"
+                class="navigation-logo"
                 src="../assets/img/logo.png"
                 alt="Logo"
-            /> 
+            />
         </router-link>
     </div>
-        <h4>Maliarske práce</h4>
+    <h4>Maliarske práce</h4>
 </template>
 
 <style lang="scss" scoped>
-
-.container{
- max-width: 17%;
- display: flex;
+.container {
+    max-width: 44px;
+    display: flex;
 }
 
-img{
+img {
     width: 100%;
-    padding: 10px;
-
+    margin: 9px 10px;
 }
 
-h4{
-    font:{
+h4 {
+    font: {
         size: 12px;
         weight: 300;
     }
     position: absolute;
-    top: 1.2rem;
+    top: 1.05rem;
     left: 4.2rem;
-    color: white
+    color: white;
 }
-
 </style>

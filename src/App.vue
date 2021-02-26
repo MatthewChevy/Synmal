@@ -20,15 +20,13 @@ import Navigation from './components/TheNavigation.vue'
 export default {
     mixins: [tableMixin],
     components: {
-        Navigation,
+        Navigation
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
-.navigation-links{
+.navigation-links {
     display: none;
 }
-
 </style>

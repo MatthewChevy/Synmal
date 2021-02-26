@@ -4,20 +4,18 @@
         <navigation-menu-button @toggle-menu="toggleMenu($event)" />
     </div>
     <nav>
-        <ul v-if="activeMenu || breakPointLarge < actualyWidnowSize">
-            <li tabindex="1" @click="$router.push({ path: '/' })">DOMOV</li>
-            <li tabindex="1" @click="$router.push({ path: 'about' })">O NAS</li>
-            <li tabindex="1" @click="$router.push({ path: '/contact' })">
-                KONTAKT
-            </li>
-            <li tabindex="1" @click="$router.push({ path: '/gallery' })">
-                GALÉRIA
-            </li>
+        <ul @click="toggleMenu(false)" v-if="activeMenu || breakPointLarge < actualyWidnowSize">
+            <li class="list-item" tabindex="1" @click="$router.push({ path: '/' })">DOMOV</li>
+            <li class="list-item" tabindex="1" @click="$router.push({ path: 'about' })">O NAS</li>
+            <li class="list-item" tabindex="1" @click="$router.push({ path: '/contact' })">KONTAKT</li>
+            <li class="list-item" tabindex="1" @click="$router.push({ path: '/gallery' })">GALÉRIA</li>
         </ul>
     </nav>
 </template>
 
 <script>
+// import func from '../../vue-temp/vue-editor-bridge'
+// import { watch } from 'vue'
 import tableMixin from '../mixins/tableMixins'
 
 import NavigationLogo from './TheNavigationLogo'
@@ -27,7 +25,6 @@ export default {
     mixins: [tableMixin],
 
     components: {
-        // NavigationSocialBar,
         NavigationLogo,
         NavigationMenuButton
     },
@@ -42,34 +39,35 @@ export default {
     methods: {
         toggleMenu(boolen) {
             if (boolen) {
-                this.activeMenu = true
+                this.activeMenu = true 
             } else {
                 this.activeMenu = false
             }
-        }
-    }
+        },
+    },
 }
 </script>
 
 <style lang="scss" scoped>
 
 .banner{
-    display: flex;
-    z-index: 10;
     position: fixed;
+    display: flex;
+    width: 100%;
     height: 55px;
+    z-index: 10;
+    background: #373737;
     justify-content: space-between;
-    background: #373737 
 }
 
 nav{
     position: fixed;
+    width: 100%;
     margin-top: 3.438rem;
     z-index: 10;
-    width: 100%;
-    background: $light-grey;
     color: $black;
     text-align: center;
+    background: $light-grey;
     
 }
 
@@ -80,6 +78,7 @@ li {
     }
     padding: 15px 0px;
     border-bottom: 1px solid $dark;
+    cursor: pointer;
 }
 
 li:focus {
