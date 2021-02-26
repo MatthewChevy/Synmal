@@ -56,7 +56,7 @@ export default {
     width: 100%;
     height: 55px;
     z-index: 10;
-    background: #373737;
+    background: $primary-dark;
     justify-content: space-between;
 }
 
@@ -65,9 +65,9 @@ nav{
     width: 100%;
     margin-top: 3.438rem;
     z-index: 10;
-    color: $black;
+    color: $darkest;
     text-align: center;
-    background: $light-grey;
+    background: $primary-semi-light;
     
 }
 
@@ -77,13 +77,13 @@ li {
         weight: 500;
     }
     padding: 15px 0px;
-    border-bottom: 1px solid $dark;
+    border-bottom: 1px solid $primary-dark;
     cursor: pointer;
 }
 
 li:focus {
-    background: $light-dark;
-    color: $white;
+    background: $primary-semi-dark;
+    color: $primary-light;
     transition: .25s;
 }
 
