@@ -87,34 +87,35 @@
             </section>
 
             <section class="thrid-section">
-                <div class="thrid-section-center">
-
-                    <article class="article-top-center">
-                        <h3>Priebeh našej práce</h3>
-                        <p> kontakte s Vami urobíme osobnú 
-                            prehliadku Vašich priestorov, na základe
-                            ktorej vypracujeme cenovú ponuku a 
-                            dohodneme termín
-                        </p>
-                    </article>
-
-                    <article class="article-left-side">
-                       <p>
-                            Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magnaqua. 
-                            Ut enim ad minim veniam, quis nostrud 
-                            exercitation ullamco laboris nisi ut aliquip 
-                            ex ea commodo consequat.  Duis autrure 
-                            dolor in reprehenderit
-                       </p>
-                       <div class="image-before-paint">
+                <div class="thrid-section-layer-top">
+                    <div class="thrid-section-center">
+                        <article class="article-top-center">
+                            <h3>Priebeh našej práce</h3>
+                            <p> kontakte s Vami urobíme osobnú 
+                                prehliadku Vašich priestorov, na základe
+                                ktorej vypracujeme cenovú ponuku a 
+                                dohodneme termín
+                            </p>
+                        </article>
+                        <article class="article-left-side">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magnaqua. 
+                                Ut enim ad minim veniam, quis nostrud 
+                                exercitation ullamco laboris nisi ut aliquip 
+                                ex ea commodo consequat.  Duis autrure 
+                                dolor in reprehenderit
+                            </p>
+                        <div class="image-before-paint">
                             <p>Fotka pred maľovaním</p>
-                       </div>
-                   </article>
-
-                   <article class="article-right-side">
-                       <div class="article-right-side-paragraph-handler">
+                        </div>
+                        </article>
+                    </div>
+                </div>
+                <article class="article-right-side">
+                    <div class="thrid-section-center">
+                        <div class="article-right-side-paragraph-handler">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur 
                                 adipiscing elit, sed do eiusmod tempor 
@@ -123,32 +124,34 @@
                                 itation ullamco laboris nisi ut aliquip ex 
                                 commodo consequat.  Duis aute irure 
                             </p>
-                       </div>
-                       <div class="image-painting-handler">
-                        <div class="image-painting">
-                                <p>Fotka počas maľovania</p>
                         </div>
-                       </div>
-                   </article>
+                        <div class="image-painting-handler">
+                            <div class="image-painting">
+                                <p>Fotka počas maľovania</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-                    <!-- <article class="article-bottom-center">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                            eiusmod tempor dunt ut labore et dolore magna aliqua. Ut eni
-                            ad minim veniam, quis nostru
-                        </p>
-                       <div class="image-after-paint">
-                            <p>Fotka po maľovaní</p>
-                       </div>
-                   </article> -->
-                </div>
+                <article class="article-bottom-center">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                        eiusmod tempor dunt ut labore et dolore magna aliqua. Ut eni
+                        ad minim veniam, quis nostru
+                    </p>
+                    <div class="image-after-paint">
+                        <p>Fotka po maľovaní</p>
+                    </div>
+                </article>
+
             </section>
 
-        <!-- <footer>
-            <div tabindex="1" @click="$router.push({ path: '/contact' })">
-                <p class="contact-link-button">Kontaktujte nás</p>
-            </div>
-        </footer> --> -->
+
+            <!-- <footer>
+                <div tabindex="1" @click="$router.push({ path: '/contact' })">
+                    <p class="contact-link-button">Kontaktujte nás</p>
+                </div>
+            </footer> -->
     </main>
 </template>
 
@@ -257,7 +260,8 @@ header {
     position: absolute;
     width: 9.375rem;
     height: 9.375rem;
-    left: 85%;
+    // left: 85%;
+    left: 38%;
     bottom: -2.2em;
     transform: rotate3d(1, 1, 0, 180deg);
     img {
@@ -494,7 +498,7 @@ header {
 
         p{
             padding-left: 5px;
-            max-width: 62%;
+            max-width: 79%;
             font:{
                size: 10px;
                weight: 500;
@@ -526,33 +530,54 @@ header {
 //------------------------------------------
 
 .article-right-side{
-
+    margin-top: 5.5rem;
+    background-color: $primary-light;
 }
 
-.article-right-side-paragraph-handlder{
+.article-right-side-paragraph-handler{
+    width: 100%;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    text-align: right;
+    
     p{
-
+        margin-right: 5px;
+        font:{
+            size: 10px;
+            weight: 500;
+        }
     }
 }
 
 .image-painting-handler{
+    padding-left: 6.1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .image-painting{
+    width: 200px;
+    height: 265px;
+    border: 5px solid $primary-light;
+    background-color: $primary-semi-dark;
+    box-shadow: 5px 5px 5px rgba($darkest, 16%);
+
     p{
+        min-width: 100%;
+        padding-top: 7rem;
+        text-align: center;
         font:{
-            size: 10px;
-            weight:{
-                
-            }
+            size: 11px;
+            weight: 300;
         }
+        color: $primary-light;
     }
 }
 
 //-------------------------------------------------
     
 .article-bottom-center{
-
+    position: relative;
     p{
 
     }
