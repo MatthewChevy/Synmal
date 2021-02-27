@@ -694,7 +694,7 @@ footer {
 }
 
 .contact-link-button {
-    max-width: 10rem;
+    max-width: 11rem;
     margin: 0 auto;
     padding: 0.15rem 0;
     text-align: center;

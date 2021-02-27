@@ -111,6 +111,16 @@
                             <p>Fotka pred maľovaním</p>
                         </div>
                         </article>
+                        <div class="thrid-section-cartoon-person">
+                            <div class="thrid-section-cartoon-person-align">
+                                <img src="../assets/img/person.png" alt="Cartoon person">
+                            </div>
+                        </div>
+                        <div class="decoration-line-handler">
+                            <div class="article-left-side-decoration-line-hr"></div>
+                            <div class="article-left-side-decoration-line-vr"></div>
+                            <div class="article-bottom-decoration-line-vr"></div>
+                        </div>
                     </div>
                 </div>
                 <article class="article-right-side">
@@ -132,27 +142,27 @@
                         </div>
                     </div>
                 </article>
-
-                <article class="article-bottom-center">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                        eiusmod tempor dunt ut labore et dolore magna aliqua. Ut eni
-                        ad minim veniam, quis nostru
-                    </p>
-                    <div class="image-after-paint">
-                        <p>Fotka po maľovaní</p>
+                <article class="article-bottom">
+                    <div class="article-bottom-center">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                            eiusmod tempor dunt ut labore et dolore magna aliqua. Ut eni
+                            ad minim veniam, quis nostru
+                        </p>
+                        <div class="image-after-paint">
+                            <p>Fotka po maľovaní</p>
+                        </div>
                     </div>
                 </article>
-
             </section>
-
-
-            <!-- <footer>
-                <div tabindex="1" @click="$router.push({ path: '/contact' })">
-                    <p class="contact-link-button">Kontaktujte nás</p>
-                </div>
-            </footer> -->
     </main>
+    <footer class="footer">
+        <div class="footer-center">
+            <div class="contact-link-button-wrapper" tabindex="1" @click="$router.push({ path: '/contact' })">
+                <p class="contact-link-button">Kontaktujte nás</p>
+            </div>
+        </div>
+    </footer>
 </template>
 
 <style lang="scss" scoped>
@@ -260,8 +270,7 @@ header {
     position: absolute;
     width: 9.375rem;
     height: 9.375rem;
-    // left: 85%;
-    left: 38%;
+    left: 85%;
     bottom: -2.2em;
     transform: rotate3d(1, 1, 0, 180deg);
     img {
@@ -365,15 +374,14 @@ header {
     height: 27.813rem;
     bottom: 6.9rem;
     background-color: $primary-dark;
-    border-radius: 15px;
     box-shadow: 8px 8px 5px rgba( $darkest, 16%);
 }
 
 .decoration-rectangle-three-quarters{
     position: absolute;
     width: 76%;
-    height: 6.25rem;
-    top: 7rem;
+    height: 7rem;
+    top: 6.6rem;
     z-index: 2;
     background-color: $primary;
     border-radius: 0 5px 5px 0 ;
@@ -398,7 +406,7 @@ header {
 .first-paragraf-holder{
     position: relative;
     max-width: 13.063rem;
-    top: 2.3rem;
+    top: 2.05rem;
     z-index: 2;
     
     p{
@@ -424,11 +432,11 @@ header {
 }
 
 .decorative-line{
-        position: absolute;
+        position: relative;
         width: 0.313rem;
-        height: 27.813rem;
-        top: 0;
-        left: 1.5rem;
+        height: 23rem;
+        top: -11.45rem;
+        left: 0;
         z-index: 0;
         background-color: $fancy;
         box-shadow: 5px 0px 2px rgba($darkest, 16%);
@@ -436,7 +444,7 @@ header {
 
 .decoration-rectangle-full-size{
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 7.188rem;
         bottom: 5rem;
         z-index: 2;
@@ -466,9 +474,8 @@ header {
 }
 
 .thrid-section-center{
-    width: 300px;
+    width: 18.75rem;
     margin: 0 auto;
-    border: 1px solid blue;
 }
 
 .article-top-center{
@@ -479,9 +486,7 @@ header {
             weight: 600;
         }
     }
-
     p{
-
         padding-top: 2rem;
         font:{
             size: 14.5px;
@@ -491,11 +496,9 @@ header {
 }
 
 .article-left-side{
-
         position: relative;
-        width: 265px;
+        width: 16.563rem;
         top: 2.5rem;
-
         p{
             padding-left: 5px;
             max-width: 79%;
@@ -504,16 +507,15 @@ header {
                weight: 500;
             }
         }
-    
         .image-before-paint{      
                 position: relative;
-                width: 200px;
-                height: 265px;
+                width: 12.5rem;
+                height: 16.563rem;
                 top: 1rem;
+                z-index: 3;
                 border: 5px solid $primary-light;
                 background-color: $primary-semi-dark;
                 box-shadow: 5px 5px 5px rgba($darkest, 16%);
-
             p{
                 min-width: 100%;
                 padding-top: 7rem;
@@ -527,11 +529,67 @@ header {
         }
 }
 
-//------------------------------------------
+.thrid-section-cartoon-person{
+    position: relative;
+}
+
+.thrid-section-cartoon-person-align{
+    position: absolute;
+    width: 13.438rem;
+    height: 13.438rem;
+    top: -11.7rem;
+    left: 9.5rem;
+
+    img{
+        width: 100%;
+    }
+}
+
+.decoration-line-handler{
+    position: relative;
+}
+
+.article-left-side-decoration-line-hr{
+    position: absolute;
+    width: 18.013rem;
+    height: 0.313rem;
+    top: 0rem;
+    left: 1.2rem;
+    z-index: 2;
+    background-color: $fancy;
+    box-shadow: 5px 0px 1px rgba($darkest, 16%);
+}
+
+.article-left-side-decoration-line-vr{
+    position: absolute;
+    width: 0.313rem;
+    height: 23.813rem;
+    top: 0rem;
+    left: 1.2rem;
+    z-index: 2;
+    background-color: $fancy;
+    box-shadow: 5px 0px 2px rgba($darkest, 16%);
+}
+
+.article-bottom-decoration-line-vr{
+    position: absolute;
+    width: 0.313rem;
+    height: 15rem;
+    top: 18.6rem;
+    left: 3.2rem;
+    z-index: 2;
+    background-color: $fancy;
+    box-shadow: 5px 0px 2px rgba($darkest, 16%);
+}
 
 .article-right-side{
+    position: relative;
+    height: 28.1rem;
     margin-top: 5.5rem;
+    z-index: 1;
     background-color: $primary-light;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 8px 8px 5px rgba($darkest, 16%);
 }
 
 .article-right-side-paragraph-handler{
@@ -550,14 +608,14 @@ header {
 }
 
 .image-painting-handler{
-    padding-left: 6.1rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
+    padding-left: 6.1rem;
 }
 
 .image-painting{
-    width: 200px;
-    height: 265px;
+    width: 12.5rem;
+    height: 16.563rem;
     border: 5px solid $primary-light;
     background-color: $primary-semi-dark;
     box-shadow: 5px 5px 5px rgba($darkest, 16%);
@@ -573,30 +631,73 @@ header {
         color: $primary-light;
     }
 }
-
-//-------------------------------------------------
     
-.article-bottom-center{
+.article-bottom{
     position: relative;
+    width: 100%;
+    top: -1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    background-color: $primary-semi-dark;
     p{
-
+        text-align: center;
+        padding-top: 1.5rem;
+        font:{
+            size: 10px;
+            weight: 400;
+        };
+        color: $primary-light;
     }
 
-    .image-after-paint{
+.article-bottom-center{
+    max-width: 300px;
+    margin: 0 auto;
+}
 
+    .image-after-paint{
+            width: 300px;
+            height: 180px;
+            background-color: #ECECEC;
+            border: 5px solid white;
+            margin-top: 1.5rem;
         p{
-            
+            color: $darkest;
+            padding-top: 5rem;
         }
     }
 }
 
-footer{
-    div{
-        p{
+.footer{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    bottom: -49rem;
+    z-index: 10;
+    background-color: $primary-semi-dark;
+}
 
-        }
-    }
+.footer-center{
+    max-width: 18.75rem;
+    margin: 0 auto;
+}
 
+.contact-link-button-wrapper{
+    width: 11rem;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.contact-link-button{
+    background-color: $fancy;
+    padding: 1px 0px;
+    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+    cursor: pointer;
+}
+
+.contact-link-button:focus{
+    background-color: $primary-light;
+    transition: .25s;
+    
 }
 
 </style>
