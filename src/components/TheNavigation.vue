@@ -4,11 +4,38 @@
         <navigation-menu-button @toggle-menu="toggleMenu($event)" />
     </div>
     <nav>
-        <ul @click="toggleMenu(false)" v-if="activeMenu || breakPointLarge < actualyWidnowSize">
-            <li class="list-item" tabindex="1" @click="$router.push({ path: '/' })">DOMOV</li>
-            <li class="list-item" tabindex="1" @click="$router.push({ path: 'about' })">O NAS</li>
-            <li class="list-item" tabindex="1" @click="$router.push({ path: '/contact' })">KONTAKT</li>
-            <li class="list-item" tabindex="1" @click="$router.push({ path: '/gallery' })">GALÉRIA</li>
+        <ul
+            @click="toggleMenu(false)"
+            v-if="activeMenu || breakPointLarge < actualyWidnowSize"
+        >
+            <li
+                class="list-item"
+                tabindex="1"
+                @click="$router.push({ path: '/' })"
+            >
+                DOMOV
+            </li>
+            <li
+                class="list-item"
+                tabindex="1"
+                @click="$router.push({ path: 'about' })"
+            >
+                O NAS
+            </li>
+            <li
+                class="list-item"
+                tabindex="1"
+                @click="$router.push({ path: '/contact' })"
+            >
+                KONTAKT
+            </li>
+            <li
+                class="list-item"
+                tabindex="1"
+                @click="$router.push({ path: '/gallery' })"
+            >
+                GALÉRIA
+            </li>
         </ul>
     </nav>
 </template>
@@ -39,18 +66,17 @@ export default {
     methods: {
         toggleMenu(boolen) {
             if (boolen) {
-                this.activeMenu = true 
+                this.activeMenu = true
             } else {
                 this.activeMenu = false
             }
-        },
-    },
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
-.banner{
+.banner {
     position: fixed;
     display: flex;
     width: 100%;
@@ -60,7 +86,7 @@ export default {
     justify-content: space-between;
 }
 
-nav{
+nav {
     position: fixed;
     width: 100%;
     margin-top: 3.438rem;
@@ -68,11 +94,10 @@ nav{
     color: $darkest;
     text-align: center;
     background: $primary-semi-light;
-    
 }
 
 li {
-    font:{
+    font: {
         size: 14px;
         weight: 500;
     }
@@ -84,7 +109,6 @@ li {
 li:focus {
     background: $primary-semi-dark;
     color: $primary-light;
-    transition: .25s;
+    transition: 0.25s;
 }
-
 </style>

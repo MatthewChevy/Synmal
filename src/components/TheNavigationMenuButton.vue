@@ -26,28 +26,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.button{
+.button {
     width: 8%;
     margin: 10px;
     border: none;
     background: none;
 }
 
-.button::before, ::after{
+.button::before,
+::after {
     border: none;
     background: none;
 }
 
-img{
+img {
     width: 100%;
 }
 
-@media screen and (max-width: 374px){
-
-    .button{
+@media screen and (max-width: 374px) {
+    .button {
         margin: 13px 10px;
     }
 }
-
 </style>
