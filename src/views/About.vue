@@ -268,10 +268,10 @@ header {
 
 .decorative-paint-roller {
     position: absolute;
-    width: 9.375rem;
-    height: 9.375rem;
-    left: 85%;
-    bottom: -2.2em;
+    width: 5.3rem;
+    height: auto;
+    left: 100%;
+    bottom: -0.9rem;
     transform: rotate3d(1, 1, 0, 180deg);
     img {
         width: 100%;
@@ -333,10 +333,10 @@ header {
 
 .second-section-cartoon-top-person-holder{
     position: relative;
-    width: 16.875rem;
-    height: 16.875rem;
-    top: -5rem;
-    right: 7rem;
+    width: 5.688rem;
+    height: 18.4rem;
+    top: -5.3rem;
+    right: 8rem;
     margin: 0 auto;
 
     img{
@@ -435,7 +435,7 @@ header {
         position: relative;
         width: 0.313rem;
         height: 23rem;
-        top: -11.45rem;
+        top: -10.9rem;
         left: 0;
         z-index: 0;
         background-color: $fancy;
@@ -534,11 +534,11 @@ header {
 }
 
 .thrid-section-cartoon-person-align{
-    position: absolute;
-    width: 13.438rem;
-    height: 13.438rem;
-    top: -11.7rem;
-    left: 9.5rem;
+position: absolute;
+    width: 4.438rem;
+    height: auto;
+    top: -12.3rem;
+    left: 14.5rem;
 
     img{
         width: 100%;
@@ -671,7 +671,7 @@ header {
     position: relative;
     width: 100%;
     height: 5rem;
-    bottom: -49rem;
+    bottom: -48.6rem;
     z-index: 10;
     background-color: $primary-semi-dark;
 }

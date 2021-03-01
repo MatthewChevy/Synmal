@@ -643,10 +643,10 @@ ul {
 
 .fancy-paint-roller {
     position: relative;
-    width: 8.25rem;
-    height: 8.25rem;
-    top: -1.75rem;
-    left: -6.4rem;
+    width: 4.65rem;
+    height: 4.65rem;
+    top: -0.05rem;
+    left: -4.3rem;
     transform: rotate(90deg);
 
     img {
