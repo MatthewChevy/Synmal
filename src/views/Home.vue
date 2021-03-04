@@ -341,6 +341,16 @@ header {
     box-shadow: 5px 0px 2px rgba($darkest, 16%);
 }
 
+@media screen and (max-width: 374px) {
+
+    .first-section-half-size-images {
+
+        img:first-child {
+            margin-left: 0rem;
+        }
+    }
+}
+
 //second section-------------------------------------------
 
 .second-section {
@@ -400,6 +410,7 @@ header {
 
     h3 {
         margin-top: 1.2rem;
+        padding-top: 0.25rem;
         color: $primary-light;
         font: {
             size: 14px;
@@ -465,13 +476,18 @@ article > p {
 }
 
 @media screen and (max-width: 374px) {
-    .second-section-test-graybg {
+
+    .second-section-cover-layer {
         width: 100%;
         border-radius: 0px 0px 0px 0px;
     }
 
     .second-section-fancy-rectangle {
         width: 100%;
+    }
+
+    .first-section-h3-wrapper{
+        padding: 1.563rem 0.5rem;
     }
 }
 
@@ -516,14 +532,15 @@ article > p {
 .third-section-field {
     position: relative;
     width: 18.75rem;
-    margin: 0 auto;
+    margin: 3.2rem auto 0 auto;
     z-index: 2;
 }
 
 .thrid-section-list-item {
+    position: relative;
     width: 13.438rem;
     max-height: 15.4rem;
-    margin-top: 3rem;
+    top: 0.1rem;
     background-color: $primary;
     border-radius: 5px;
     box-shadow: 5px 5px 2px rgba($darkest, 16%);
@@ -582,7 +599,7 @@ ul {
     width: 100%;
     height: 22.5rem;
     position: absolute;
-    margin-top: -13.45rem;
+    top: 9.2rem;
     z-index: 1;
     background-color: $primary;
 }

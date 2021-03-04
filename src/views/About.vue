@@ -17,11 +17,11 @@
             <div class="first-section-center">
                 <aside class="first-section-top-aside">
                     <div class="right-side-rectangle"></div>
-                    <h4>
-                        Za roky našej práce máme mnoho spokojných ľudí, ktorým
-                        sme pomohli zveľadiť ich <strong>bytové</strong> a
-                        <strong>nebytové</strong> priestory
-                    </h4>
+                        <h4>
+                            Za roky našej práce máme mnoho spokojných ľudí, ktorým
+                            sme pomohli zveľadiť ich <strong>bytové</strong> a
+                            <strong>nebytové</strong> priestory
+                        </h4>
                 </aside>
                 <aside class="first-section-bottom-aside">
                     <div class="left-side-rectangle">
@@ -87,7 +87,8 @@
             </section>
 
             <section class="thrid-section">
-                <div class="thrid-section-layer-top">
+                <div class="thrid-section-layer">
+                    <div class="thrid-section-layer-top"></div>
                     <div class="thrid-section-center">
                         <article class="article-top-center">
                             <h3>Priebeh našej práce</h3>
@@ -311,7 +312,13 @@ header {
     }
 }
 
+
 @media screen and (max-width: 374px) {
+
+    .title-wrapper {
+        padding-left: 1rem;
+    }
+
     .first-section {
         top: -1rem;
     }
@@ -373,6 +380,7 @@ header {
     width: 100%;
     height: 27.813rem;
     bottom: 6.9rem;
+    z-index: 1;
     background-color: $primary-dark;
     box-shadow: 8px 8px 5px rgba( $darkest, 16%);
 }
@@ -432,11 +440,11 @@ header {
 }
 
 .decorative-line{
-        position: relative;
+        position: absolute;
         width: 0.313rem;
         height: 23rem;
-        top: -10.9rem;
-        left: 0;
+        bottom: 0rem;
+        left: 3.544rem;
         z-index: 0;
         background-color: $fancy;
         box-shadow: 5px 0px 2px rgba($darkest, 16%);
@@ -453,14 +461,22 @@ header {
 }
 
 @media screen and (max-width: 374px) {
-  .second-section{
-    top: -1rem;
-  }
+    .second-section{
+        top: -1rem;
+    }
 
-  .decorative-line{
-        height: 24rem;
-        top: 3.8rem;
-  }
+    .second-section-cartoon-top-person-holder{
+        position: relative;
+        width: 4.688rem;
+        height: 18.4rem;
+        top: -2.3rem;
+        right: 7rem;
+        margin: 0 auto;
+
+        img{
+            width: 100%;
+        }
+    }
 }
 
 //third-section-----------------------------
@@ -473,7 +489,18 @@ header {
     background: $primary-semi-light;
 }
 
+.thrid-section-layer-top{
+    position: absolute;
+    width: 100%;
+    height: 12.5rem;
+    top: -1.7rem;
+    background: $primary-light;
+    z-index: 0;
+    border-bottom: 1px solid $primary;
+}
+
 .thrid-section-center{
+    position: relative;
     width: 18.75rem;
     margin: 0 auto;
 }
@@ -697,6 +724,26 @@ position: absolute;
 .contact-link-button:focus{
     background-color: $primary-light;
     transition: .25s;
+    
+}
+
+@media screen and (max-width: 374px) {
+
+    .thrid-section{
+        margin-top: 0rem;
+        top: -2rem;
+    }
+    .thrid-section-cartoon-person-align{
+        left: 13rem;
+    }
+    
+    .article-left-side-decoration-line-hr{
+        width: 17.013rem;
+    }
+
+    .footer{
+        bottom:-44.6rem
+    }
     
 }
 

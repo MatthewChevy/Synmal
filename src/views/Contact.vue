@@ -21,7 +21,7 @@
                             <input class="form-email-input" type="email" name="email" id="email" value="@" required>
                         </div>
                         <div class="form-textarea">
-                            <textarea name="message" id="textarea" cols="30" rows="6" placeholder="Vaša správa"></textarea>
+                            <textarea name="message" id="textarea" placeholder="Vaša správa"></textarea>
                         </div>
                         <div class="form-button">
                             <button type="submit">Odoslať správu</button>
@@ -42,14 +42,16 @@
                     <div class="contact-information-title">
                         <h3>Kontaktné informácie</h3>
                     </div>
-                    <div class="decorative-paint-roller">
-                        <img src="../assets/img/paint-roller.png" alt="Paint-roller">
+                    <div class="contact-information-list-handler">
+                        <div class="decorative-paint-roller">
+                            <img src="../assets/img/paint-roller.png" alt="Paint-roller">
+                        </div>
+                        <ul class="contact-information-list">
+                            <li>Jozef Zigo SYNMAL</li>
+                            <li>0904 669 843</li>
+                            <li>Ivachnová 183</li>
+                        </ul>
                     </div>
-                    <ul class="contact-information-list">
-                        <li>Jozef Zigo SYNMAL</li>
-                        <li>0904 669 843</li>
-                        <li>Ivachnová 183</li>
-                    </ul>
                 </article>
 
                 <article class="billing-information">
@@ -127,7 +129,7 @@ main {
 }
 
 .contact-form-title{
-    padding: 0.625rem 0 0.938rem 0;
+    padding: 0.025rem 0 0.938rem 0;
     color: $primary-light;
     h3{
         font: {
@@ -145,7 +147,7 @@ main {
         .form-name-label{
             padding-top: 0.375rem;
             font: {
-                size: 14px;
+                size: 13px;
                 weight: 400;
             };
             color: $primary-light;
@@ -172,7 +174,7 @@ main {
         .form-email-label{
             padding-top: 0.375rem;
             font:{ 
-                size: 14px;
+                size: 13px;
                 weight: 400;
             }
             color: $primary-light;
@@ -225,6 +227,7 @@ main {
     button{
         width: 9.063rem;
         height: 1.438rem;
+        padding-top: 2px;
         background-color: $fancy;
         border: none;
         box-shadow: 5px 5px 3px rgba( $darkest, 16%);
@@ -235,7 +238,7 @@ main {
     position: absolute;
     width: 0.313rem;
     height: 27.5rem;
-    top: 9.7rem;
+    top: 9rem;
     left: 1.4rem;
     z-index: 0;
     background-color: $fancy;
@@ -248,6 +251,42 @@ main {
     height: 29rem;
     top: 26rem;
     background-color: $primary-light;
+}
+
+@media screen and ( max-width: 374px){
+
+    .contact-form-center{
+        width: 100%;
+    }
+
+    .form-name{
+        justify-content: space-between;
+
+        .form-name-input{
+            width: 69%;
+        }
+    }
+
+     .form-email{
+         justify-content: space-between;
+
+         .form-email-input{
+            width: 73%;
+        }
+    }
+
+    .form-textarea {
+
+        textarea{
+            max-width: 100%;
+            min-width: 100%;
+            min-height: 8.7rem;
+            max-height: 18.375rem;
+            margin: 0;
+            border: none;
+            box-shadow: 5px 5px 3px rgba( $darkest, 16%);
+        }
+    }
 }
 
 //company-information------------------------------
@@ -285,8 +324,8 @@ main {
     position: absolute;
     width: 5.188rem;
     height: 5.188rem;
-    top: 4.9rem;
-    right: 14.3rem;
+    top: 0;
+    left: -4.6rem;
     z-index: 3;
     transform: rotate3d(0, 0, 1, 89deg);
 
@@ -295,14 +334,18 @@ main {
     }
 }
 
+.contact-information-list-handler{
+        position: absolute;
+        right: 0;
+
+}
+
 .contact-information-list{
-    position: relative;
     width: 14.625rem;
-    left: 5.85rem;
     padding: 0.375rem 0;
     background-color: $primary-light;
     box-shadow: 0px 5px 4px rgba($darkest, 16%);
-    
+
     li{
         padding: 0.063rem 0.938rem;   
         font:{
@@ -315,7 +358,7 @@ main {
 .billing-information{
     position: relative;
     width: 90%;
-    margin: 3rem auto 0 auto;
+    margin: 8rem auto 0 auto;
     z-index: 1;
 }
 
@@ -357,12 +400,18 @@ main {
 .company-decoration-line{
     position: absolute;
     width: 0.313rem;
-    height: 29.8rem;
-    top: 0;
+    height: 36.4rem;
+    bottom: 0;
     left: 1.4rem;
     z-index: 0;
     background-color: $fancy;
     box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
+}
+
+@media screen and ( max-width: 374px){
+    .company-information-center{
+        width: 100%;
+    }  
 }
 
 //footer--------------------------------------
