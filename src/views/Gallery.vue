@@ -151,6 +151,7 @@ main{
 .big-size-photo{
     max-width: 100%;
     border: 5px solid $primary-light;
+    border-radius: 5px;
     line-height: 0;
 
         img{
@@ -161,6 +162,7 @@ main{
 .medium-size-photo{
     max-width: 49.5%;
     border: 5px solid $primary-light;
+    border-radius: 5px;
     line-height: 0;
 
         img{
