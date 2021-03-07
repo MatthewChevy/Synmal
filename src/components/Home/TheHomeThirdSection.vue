@@ -402,7 +402,8 @@
     }
 
     .mirror-decorative-line {
-        top: 7.85rem;
+        top: 2.85rem;
+        height: 9.438rem;
     }
 
     .third-section-aside{

@@ -283,6 +283,17 @@
         };
     }
 
+    .second-section-top-image{
+        border: 5px solid $primary-light;
+    }
+
+    .second-section-bottom-image{
+        width: 60%;
+        top: -1.5rem;
+        border: 5px solid $primary-light;
+    }
+
+
 }
 
 </style>
