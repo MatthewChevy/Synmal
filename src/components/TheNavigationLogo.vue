@@ -32,4 +32,25 @@ h4 {
     left: 4.2rem;
     color: white;
 }
+
+@media screen and (min-width: 600px){
+
+    .container {
+        max-width: 65px;
+    }
+
+    img {
+        margin: 15px;
+    }
+
+
+    h4 {
+        top: 1.55rem;
+        left: 6rem;
+        font: {
+            size: 18px;
+        }   
+    }   
+    
+}
 </style>

@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 .button {
-    width: 8%;
+    width: 2rem;
     margin: 10px;
     border: none;
     background: none;
@@ -47,5 +47,14 @@ img {
     .button {
         margin: 13px 10px;
     }
+}
+
+@media screen and ( min-width: 600px) {
+    .button {
+        width: 3rem;
+        margin: 15px;
+        border: none;
+        background: none;
+    } 
 }
 </style>

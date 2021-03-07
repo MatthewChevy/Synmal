@@ -111,4 +111,10 @@ li:focus {
     color: $primary-light;
     transition: 0.25s;
 }
+
+@media screen and ( min-width: 600px) {
+    .banner {
+        height: 80px;
+    }  
+}
 </style>
