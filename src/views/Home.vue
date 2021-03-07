@@ -5,9 +5,11 @@
             src="../assets/img/welcome-image.png"
             alt="painting"
         />
-        <div class="title-wrapper">
-            <h1>Synmal - Jozef Zigo</h1>
-            <h2>Maliari s 20 ročnými skúsenosťami</h2>
+        <div class="title-center">
+            <div class="title-handler">
+                <h1>Synmal - Jozef Zigo</h1>
+                <h2>Maliari s 20 ročnými skúsenosťami</h2>
+            </div>
         </div>
     </header>
     <main>
@@ -20,6 +22,7 @@
                 <div class="horizontal-line"></div>
             </div>
         </section>
+
         <section class="first-section">
             <div class="first-section-container">
                 <div class="first-section-h3-wrapper">
@@ -28,19 +31,22 @@
                         našou samozrejmosťou.
                     </h3>
                 </div>
-                <aside class="first-section-fancy-circle"></aside>
-                <div class="first-section-images-wrapper">
-                    <div class="first-section-half-size-images">
+                <aside class="first-section-decorative-circle"></aside>
+
+                <div class="first-section-images-handler">
+                    <div class="first-section-image-first">
                         <img
                             src="../assets/img/gallery/IMG_20200908_115947.jpg"
                             alt="Roof painting"
                         />
+                    </div>
+                    <div class="first-section-image-second">
                         <img
                             src="../assets/img/gallery/IMG_20200716_101559.jpg"
                             alt="Interior painting"
                         />
                     </div>
-                    <div class="first-section-full-size-image">
+                    <div class="first-section-image-third">
                         <img
                             src="../assets/img/gallery/IMG_20200824_122141.jpg"
                             alt="Exterior painting"
@@ -48,111 +54,115 @@
                     </div>
                 </div>
             </div>
-            <aside class="first-section-fancy-rectangle"></aside>
-            <aside class="first-section-fancy-line"></aside>
+            <aside class="first-section-decorative-rectangle"></aside>
+            <aside class="first-section-decorative-line"></aside>
         </section>
+
         <section class="second-section">
-            <div class="second-section-cover-layer"></div>
-            <div class="second-section-field">
+            <div class="second-section-z-index-background"></div>
+            <div class="second-section-background">
                 <div class="second-section-container">
-                    <div class="second-section-h3-wrapper">
+                    <div class="second-section-h3-handler">
                         <h3>
-                            Keďže aj my ideme s dobou, ponúkame veľmi populárne
-                            a moderné
-                            <strong
-                                >strojové maľovanie interiérov a
-                                exteriérov</strong
-                            >
+                            Keďže aj my ideme s dobou, ponúkame veľmi populárne a moderné
+                            strojové maľovanie interiérov a exteriérov
                         </h3>
                     </div>
-                    <article>
-                        <div class="paint-machine-logo">
+                </div>
+                    <div class="second-section-wagner-color-splitter">
+                        <div class="second-section-wagner-container">
+                            <div class="second-section-wagner">
+                                <div class="paint-machine-about">
+                                    <div class="second-section-logo-holder">
+                                        <img
+                                            src="../assets/img/wagner.png"
+                                            alt="wagner logo"
+                                        />
+                                    </div>
+                                    <div class="second-section-paragraph-holder">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit, sed do eiusmod tempor incididunt ut labore et
+                                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="second-section-top-image">
+                                    <img
+                                        src="../assets/img/airless-painting.jpg"
+                                        alt="Airless painting"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-section-bottom-handler">
+                        <div class="second-section-bottom-image">
                             <img
-                                src="../assets/img/wagner.png"
-                                alt="wagner logo"
+                                src="../assets/img/wagner-machine.jpg"
+                                alt="Wagner Machine"
                             />
                         </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris.
-                        </p>
-                    </article>
-                    <aside class="second-section-fancy-rectangle"></aside>
-                    <div class="second-section-half-size-images">
-                        <img
-                            src="../assets/img/airless-painting.jpg"
-                            alt="Airless painting"
-                        />
-                    </div>
-                    <div class="second-section-full-size-images">
-                        <img
-                            src="../assets/img/wagner-machine.jpg"
-                            alt="Wagenr Machine"
-                        />
                     </div>
                 </div>
-                <aside class="second-section-fancy-line"></aside>
-            </div>
+                <aside class="second-section-decorative-line"></aside>
         </section>
+
         <aside class="center-content">
             <h4 class="center-content-h4">
                 Za roky vykonávania nášho remesla sme vyskúšali a testovali
                 desiatky výrobcov farieb.
             </h4>
         </aside>
+
         <section class="third-section">
             <div class="third-section-background-rectangle"></div>
             <div class="third-section-field">
+
                 <div class="thrid-section-list-item">
                     <h6>Zabezpečujeme</h6>
-                    <ul>
+                    <ul class="third-section-ul">
                         <li>Malovanie interiérov</li>
                         <li>Malovanie exteriérov</li>
                         <li>Strojové maľovanie interiérov</li>
                         <li>Strojové maľovanie exteriérov</li>
                         <li>Nátery striech</li>
                         <li class="reverse-color">Renovácia prasklín</li>
-                        <li class="reverse-color">
-                            Renovácia drevených obkladov
-                        </li>
-                        <li class="reverse-color">
-                            Nátery tatranských profilov
-                        </li>
+                        <li class="reverse-color">Renovácia drevených obkladov</li>
+                        <li class="reverse-color">Nátery tatranských profilov</li>
                         <li class="reverse-color">Nátery kovových zárubní</li>
                     </ul>
                     <div class="color-splitter"></div>
                 </div>
 
-                <div class="fancy-bucket">
+                <div class="decorative-bucket">
                     <img src="../assets/img/jupol.png" alt="Jupol bucket" />
                 </div>
+
             </div>
-            <div class="mirror-fancy-line"></div>
-            <div class="third-section-fancy-rectangle">
-                <div class="reverse-mirror-fancy-line"></div>
+            <div class="mirror-decorative-line"></div>
+            <div class="third-section-decorative-rectangle">
+                <div class="reverse-mirror-decorative-line"></div>
             </div>
-            <aside class="third-field-aside">
-                <div class="third-field-aside-rectangle">
-                    <div class="fancy-paint-roller">
-                        <img
-                            src="../assets/img/paint-roller.png"
-                            alt="Paint roller"
-                        />
-                    </div>
+            <aside class="third-section-aside">
+                <div class="decorative-paint-roller">
+                    <img src="../assets/img/paint-roller.png" alt="Paint roller"/>
                 </div>
-                <div class="third-field-aside-wrapper">
-                    <p>
-                        Vo veľkej miere využívame produkty od firmy
-                        <strong>JUB</strong>. Cenou, kvalitou a krycou
-                        schopnosťou je pre nás veľkým favoritom
-                    </p>
+                <div class="third-section-paint-roller-paragraph">
+                    <div class="third-section-paint-roller-paragraph-handler">
+                        <p>
+                            Vo veľkej miere využívame produkty od firmy
+                            <strong>JUB</strong>. Cenou, kvalitou a krycou
+                            schopnosťou je pre nás veľkým favoritom
+                        </p>
+                    </div>
                 </div>
             </aside>
         </section>
+
         <footer>
-            <div tabindex="1" @click="$router.push({ path: '/contact' })">
+            <div class="footer-handler" tabindex="1" @click="$router.push({ path: '/contact' })">
                 <p class="contact-link-button">Kontaktujte nás</p>
             </div>
         </footer>
@@ -166,6 +176,10 @@ export default {}
 <style lang="scss" scoped>
 //welcome image-------------------------------------------
 
+main{
+    background-color: $primary-light;
+}
+
 header {
     padding-top: 3.4rem;
 }
@@ -173,21 +187,26 @@ header {
 .welcome-image {
     position: fixed;
     max-width: 100%;
-    z-index: -2;
+    z-index: 0;
     opacity: 45%;
 }
 
-.title-wrapper {
-    max-width: 18.75rem;
-    height: 13rem;
+.title-center{
+    width: 100%;
+}
+
+.title-handler {
+    position: fixed;
+    width: 100%;
     margin: 0 auto;
+    text-align: center;
+    z-index: 0;
 
     h1 {
-        position: fixed;
         padding-top: 3.6rem;
-        z-index: -1;
         color: $primary-dark;
         line-height: 24px;
+
         font: {
             size: 23px;
             weight: 700;
@@ -195,9 +214,6 @@ header {
     }
 
     h2 {
-        position: fixed;
-        z-index: -1;
-        margin-top: 5.1rem;
         color: $primary-dark;
         font: {
             size: 13.5px;
@@ -206,26 +222,58 @@ header {
     }
 }
 
-@media screen and (max-width: 374px) {
-    .title-wrapper[data-v-fae5bece] {
-        max-width: 14.55rem;
-        height: 13rem;
-        margin: 0 auto;
+@media screen and ( min-width: 350px) {
+
+    .title-handler {
+        margin-left: 2rem;
+        text-align: left;
+
+        h1 {
+            font: {
+                size: 25px;
+            }
+        }
+        h2 {
+            font: {
+                size: 14.5px;
+            }
+        }
     }
 }
+
+@media screen and ( min-width: 500px) {
+
+    .title-handler {
+        margin-top: 1rem;
+        margin-left: 3rem;
+        h1 {
+            font: {
+                size: 27.5px;
+            }
+        }
+        h2 {
+            font: {
+                size: 16px;
+            }
+        }
+    }
+}
+
 
 //Motto-------------------------------------------
 
 .motto {
-    height: 8.25rem;
+    position: relative;
+    width: 100%;
+    margin-top: 55%;
+    padding: 1.8rem 0 2.2rem 0;
     background: $primary-light;
     border-radius: 10px 10px 0px 0px;
 }
 
 .motto-field {
-    width: 17.188rem;
+    max-width: 17rem;
     margin: 0 auto;
-    padding-top: 1.438rem;
     text-align: center;
 
     h3 {
@@ -238,257 +286,404 @@ header {
 
 .horizontal-line {
     position: relative;
-    height: 0.063rem;
-    margin-top: 0.6rem;
+    height: 0.5px;
     background-color: $primary-semi-dark;
     z-index: 2;
+}
+
+@media screen and ( min-width: 375px) {
+
+    .motto-field {
+        max-width: 80%;
+
+        h3 {
+            font: {
+                size: 16px;
+            }
+        }
+    }
+
+}
+
+@media screen and ( min-width: 500px) {
+
+    .motto-field {
+        max-width: 22rem;
+
+        h3 {
+            font: {
+                size: 16px;
+            }
+        }
+    }
+
+}
+
+@media screen and ( min-width: 600px) {
+
+    .motto-field {
+        padding: 1rem 0;
+        max-width: 80%;
+
+        h3 {
+            font: {
+                size: 20px;
+            }
+        }
+    }
+
 }
 
 //first section-------------------------------------------
 
 .first-section {
+    position: relative;
     width: 100%;
-    height: 33.5rem;
+    margin-bottom: 2rem;
     background-color: $primary-semi-dark;
 }
 
 .first-section-container {
-    max-width: 18.75rem;
+    max-width: 95%;
     margin: 0 auto;
+    padding: 1.5rem 0;
 }
 
 .first-section-h3-wrapper {
-    padding: 1.563rem 0;
+    max-width: 75%;
+    margin-bottom: 1.5rem;
 
-    h3 {
+    h3{
         color: $primary-light;
-
         font: {
             size: 14.5px;
-            weight: 500;
-        }
-    }
-}
-
-.first-section-fancy-circle {
-    position: relative;
-    width: 6.25rem;
-    height: 6.25rem;
-    right: -11rem;
-    bottom: 3rem;
-    z-index: 2;
-    background-color: $primary-light;
-    border-radius: 50%;
-    box-shadow: 5px 5px 2px rgba($darkest, 16%);
-}
-
-.first-section-images-wrapper {
-    position: relative;
-    bottom: 6.25rem;
-}
-
-.first-section-half-size-images {
-    max-width: 18.75rem;
-    display: flex;
-    justify-content: space-between;
-
-    img {
-        position: relative;
-        max-width: 9.063rem;
-        height: 13rem;
-        z-index: 2;
-        border: 5px solid $primary-light;
-        border-radius: 5px;
-        box-shadow: 5px 5px 2px rgba($darkest, 16%);
+            weight: 400;
+        };
     }
 
-    img:first-child {
-        margin-right: 0.313rem;
-        margin-left: 0.125rem;
-    }
 }
 
-.first-section-full-size-image > img {
-    position: relative;
-    width: 18.75rem;
-    height: 10.625rem;
-    margin-top: 0.5rem;
-    margin-left: 0.063rem;
-    z-index: 2;
-    border: 5px solid $primary-light;
-    border-radius: 5px;
-    box-shadow: 5px 5px 2px rgba($darkest, 16%);
-}
-
-.first-section-fancy-rectangle {
+.first-section-decorative-circle {
     position: absolute;
-    width: 100%;
-    height: 9.375rem;
-    top: 41rem;
-    z-index: 1;
+    width: 7rem;
+    height: 7rem;
+    right: 6%;
+    margin-top: -3rem;
+    z-index: 0;
+    border-radius: 50%;
     background-color: $primary-light;
-    box-shadow: 5px 5px 2px rgba($darkest, 16%);
+    box-shadow: 5px 5px 3px rgba($darkest, 16%);
 }
 
-.first-section-fancy-line {
+.first-section-images-handler {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+
+}
+
+.first-section-image-first{ 
+    width: 49%;
+    border: 3px solid $primary-light;
+    border-radius: 3px;
+    line-height: 0;
+    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+        img{
+            max-width: 100%;
+        }
+}
+
+.first-section-image-second{ 
+    width: 49%;
+    border: 3px solid $primary-light;
+    line-height: 0;
+    border-radius: 3px;
+    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+        img{
+            max-width: 100%;
+        }
+}
+
+.first-section-image-third{ 
+    width: 100%;
+    margin-top: 0.3rem;
+    line-height: 0;
+    border: 3px solid $primary-light;
+    border-radius: 3px;
+    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+        img{
+            max-width: 100%;
+        }
+}
+
+.first-section-decorative-rectangle {
+    position: absolute; 
+    width: 100%;
+    height: 30%;
+    background-color: $primary-light;
+    z-index: 1;
+    bottom: 30%;
+
+}
+
+.first-section-decorative-line {
     position: absolute;
     width: 0.313rem;
-    height: 33.5rem;
-    top: 24.7rem;
+    height: 100%;
+    top: 0;
     right: 0.813rem;
     z-index: 0;
     background-color: $fancy;
-    box-shadow: 5px 0px 2px rgba($darkest, 16%);
+    box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
 }
 
-@media screen and (max-width: 374px) {
+@media screen and ( min-width: 400px) {
+    .first-section-container{
+        max-width: 85%;
+    }
+}
 
-    .first-section-half-size-images {
+@media screen and ( min-width: 500px) {
 
-        img:first-child {
-            margin-left: 0rem;
+    .first-section-h3-wrapper {
+        max-width: 74%;
+        h3{
+            font: {
+                size: 16px
+            };
         }
+
+    }
+
+    .first-section-decorative-circle{
+        width: 8rem;
+        height: 8rem;
+        margin-top: -5rem;
+    }
+}
+
+@media screen and ( min-width: 600px) {
+
+    .first-section-h3-wrapper {
+        padding: 1rem 0;
+        max-width: 85%;
+        h3{
+            font: {
+                size: 20px;
+            };
+        }
+
     }
 }
 
 //second section-------------------------------------------
 
-.second-section {
+.second-section{
     position: relative;
     width: 100%;
-    height: 31.5rem;
+    z-index: 3;
     background-color: $primary-light;
-    border-bottom: 0.5px solid $primary;
 }
 
-.second-section-cover-layer {
+.second-section-z-index-background{
     position: absolute;
-    width: 95%;
-    height: 22.5rem;
-    right: 0;
-    margin-top: 2.5rem;
-    background: $primary-semi-dark;
-    border-radius: 10px 0 0 10px;
-}
-
-.second-section-field {
     width: 100%;
-    margin: 0 auto;
+    height: 122%;
+    top: -2rem;
+    z-index: 0;
+    background-color: $primary-light;
 }
 
-.second-section-fancy-rectangle {
-    position: absolute;
-    width: 95%;
-    height: 12.5rem;
-    top: 8.7rem;
-    right: 0;
-    z-index: 1;
-    background-color: $primary;
-    box-shadow: 5px 5px 2px rgba($darkest, 16%);
-}
-
-.second-section-container {
-    width: 18.75rem;
-    margin: 0 auto;
-}
-
-.paint-machine-logo {
+.second-section-background{
     position: relative;
-    width: 5.375rem;
-    margin-top: 5.2rem;
-    z-index: 2;
+    width: 100%;
+    background-color: $primary-semi-dark;
+}
 
-    img {
-        max-width: 100%;
+.second-section-container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.second-section-h3-handler{
+    max-width: 97%;
+    padding: 1rem 0;
+
+    h3{
+        color: $primary-light;
+        font:{
+            size: 13.5px;
+            weight: 400;
+        }
     }
 }
 
-.second-section-h3-wrapper {
+.second-section-wagner-color-splitter{
     position: relative;
-    top: 3.35rem;
-    margin-top: -1.2rem;
+    width: 100%;
+    z-index: 1;
+    background-color: $primary;
+}
 
-    h3 {
-        margin-top: 1.2rem;
-        padding-top: 0.25rem;
-        color: $primary-light;
-        font: {
-            size: 14px;
-            weight: 500;
+.second-section-wagner-container{
+    width: 95%;
+    margin: 0 auto;
+    padding: 3% 0 7% 0;
+}
+
+.second-section-wagner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.paint-machine-about{
+    width: 49%;
+}
+
+.second-section-logo-holder{
+    width: 87%;
+    img{
+        max-width:100%;
+    }
+}
+
+.second-section-paragraph-holder{
+    max-width: 100%;
+    padding-top: 5%;
+    p{
+        font:{
+            size: 10px;
+            weight: 400;
         }
-        strong {
-            font: {
-                weight: 600;
+    }
+}
+
+.second-section-top-image{
+    width: 49%;
+    height: fit-content;
+    margin-top: 6%;
+    border-radius: 3px;
+    line-height: 0;
+    border: 3px solid $primary-light;
+    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+    img{
+        max-width:100%;
+    }
+}
+
+.second-section-bottom-handler{
+    max-height: 6rem;
+}
+
+.second-section-bottom-image{
+    position: relative;
+    width: 76%;
+    top: -1rem;
+    margin: 0 auto;
+    border-radius: 3px;
+    line-height: 0;
+    z-index: 3;
+    border: 3px solid $primary-light;
+    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+    img{
+        max-width:100%;
+    }
+}
+
+.second-section-decorative-line{
+    position: absolute;
+    width: 0.313rem;
+    height: 100%;
+    top: 0;
+    right: 0.813rem;
+    z-index: 0;
+    background-color: $fancy;
+    box-shadow: 5px 0px 2px rgb(0 0 0 / 16%); 
+}
+
+@media screen and ( min-width: 375px){
+
+    .second-section{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        background-color: $primary-light;
+    }
+
+    .second-section-background{
+        width: 95%;
+        border-radius:10px 0 0 10px ;
+    }
+
+    .second-section-h3-handler{
+    max-width: 95%;
+    padding: 1rem 0;
+
+    h3{
+        color: $primary-light;
+        font:{
+            size: 14px;
+            weight: 400;
+        }
+    }
+}
+
+    .second-section-paragraph-holder{
+        p{
+            font:{
+                size: 11px;
             }
         }
     }
 }
 
-article > p {
-    position: relative;
-    z-index: 2;
-    max-width: 9.75rem;
-    font: {
-        size: 10px;
-        weight: 400;
+@media screen and ( min-width: 400px){
+    .second-section-container{
+        width: 85%;
+    }
+
+    .second-section-wagner-container {
+        width: 85%;
+    }
+
+    .second-section-bottom-image{
+        width: 70%;
     }
 }
 
-.second-section-half-size-images {
-    position: relative;
-    width: 8.438rem;
-    height: 8.438rem;
-    z-index: 1;
-    left: 10.2rem;
-    bottom: 8.25rem;
-    border: 5px solid $primary-light;
-    border-radius: 3px;
-    box-shadow: 5px 5px 2px rgba($darkest, 16%);
-    img {
-        width: 100%;
-    }
-}
+@media screen and ( min-width: 500px) {
 
-.second-section-full-size-images {
-    position: relative;
-    width: 15.625rem;
-    height: 9.05rem;
-    left: 3rem;
-    z-index: 1;
-    bottom: 7.063rem;
-    border: 5px solid $primary-light;
-    border-radius: 3px;
-    box-shadow: 5px 5px 2px rgba($darkest, 16%);
-    img {
-        width: 100%;
-    }
-}
-
-.second-section-fancy-line {
-    position: absolute;
-    width: 0.313rem;
-    height: 22.5rem;
-    top: 2.5rem;
-    right: 0.813rem;
-    z-index: 0;
-    background-color: $fancy;
-    box-shadow: 5px 0px 2px rgba($darkest, 16%);
-}
-
-@media screen and (max-width: 374px) {
-
-    .second-section-cover-layer {
-        width: 100%;
-        border-radius: 0px 0px 0px 0px;
+    .second-section-z-index-background{
+        height: 46rem;
     }
 
-    .second-section-fancy-rectangle {
-        width: 100%;
+    .second-section-h3-handler{
+        h3{
+            font:{
+                size: 16px;
+            }
+        }
     }
 
-    .first-section-h3-wrapper{
-        padding: 1.563rem 0.5rem;
+    .second-section-paragraph-holder{
+        p{
+            font:{
+                size: 12px;
+            }
+        }
     }
+
 }
 
 // Center text section-----------------------------------
@@ -496,7 +691,8 @@ article > p {
 .center-content {
     position: relative;
     width: 100%;
-    z-index: 2;
+    top: 2rem;
+    z-index: 3;
     background-color: $primary-light;
     box-shadow: 5px 5px 3px rgba($darkest, 16%);
 }
@@ -512,13 +708,39 @@ article > p {
     }
 }
 
+@media screen and ( min-width: 375px) {
+    .center-content{
+        top: 3rem;
+    }
+
+    .center-content-h4 {
+        max-width: 85%;
+        padding: 2rem 0px;
+        font: {
+            size: 16px;
+        }
+    }
+}
+
+@media screen and ( min-width: 500px) {
+
+    .center-content {
+        top: 7rem;
+    }
+
+    .center-content-h4 {
+        max-width: 80%;
+        padding: 2rem 0;
+   
+    }
+}
 //third section-------------------------------------------
 
 .third-section {
     position: relative;
-    bottom: 1.6rem;
+    top: 2rem;
     z-index: 1;
-    background-color: primary-light;
+    background-color: $primary-light;
 }
 
 .third-section-background-rectangle {
@@ -531,22 +753,26 @@ article > p {
 
 .third-section-field {
     position: relative;
-    width: 18.75rem;
+    width: 95%;
+    height: 23.5rem;
     margin: 3.2rem auto 0 auto;
     z-index: 2;
 }
 
 .thrid-section-list-item {
     position: relative;
-    width: 13.438rem;
+    width: 75%;
     max-height: 15.4rem;
     top: 0.1rem;
+    margin: 0 auto;
+    text-align: center;
     background-color: $primary;
     border-radius: 5px;
     box-shadow: 5px 5px 2px rgba($darkest, 16%);
 
     h6 {
         padding: 0.938rem 1.25rem 0px;
+        text-align: center;
         color: $darkest;
 
         font: {
@@ -556,7 +782,7 @@ article > p {
     }
 }
 
-ul {
+.third-section-ul {
     position: relative;
     z-index: 2;
     padding: {
@@ -571,7 +797,6 @@ ul {
             size: 10px;
             weight: 500;
         }
-        color: $darkest;
         line-height: 1.2rem;
     }
 
@@ -588,14 +813,14 @@ ul {
 .color-splitter {
     position: relative;
     width: 100%;
-    height: 6.3rem;
-    bottom: 5.375rem;
+    height: 6.35rem;
+    bottom: 5.335rem;
     z-index: 1;
     background: $primary-semi-dark;
     border-radius: 0px 0px 5px 5px;
 }
 
-.third-section-fancy-rectangle {
+.third-section-decorative-rectangle {
     width: 100%;
     height: 22.5rem;
     position: absolute;
@@ -604,53 +829,20 @@ ul {
     background-color: $primary;
 }
 
-.mirror-fancy-line {
-    position: absolute;
-    width: 1.25rem;
-    height: 3.438rem;
-    top: 5.75rem;
-    z-index: 0;
-    right: 2.375rem;
-    background-color: $primary-semi-dark;
-    border-radius: 2px 2px 0px 0px;
-    box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
+.mirror-decorative-line {
+    display: none;
 }
 
-.reverse-mirror-fancy-line {
-    position: absolute;
-    z-index: 0;
-    width: 1.25rem;
-    height: 3.438rem;
-    top: 0;
-    right: 2.375rem;
-    background-color: $primary-light;
-    border-radius: 2px 2px 0px 0px;
-    box-shadow: 5px 5px 2px rgb(0 0 0 / 16%);
+.reverse-mirror-decorative-line {
+    display: none;
 }
 
-.third-field-aside {
+.decorative-bucket {
     position: relative;
-    width: 100%;
-    padding-top: 0.938rem;
-    z-index: 2;
-}
-
-.third-field-aside-rectangle {
-    position: absolute;
-    width: 69%;
-    height: 4.563rem;
-    top: 0.2rem;
-    right: 0;
-    background-color: $primary-light;
-    box-shadow: 5px 5px 2px rgba($darkest, 16%);
-}
-
-.fancy-bucket {
-    position: relative;
-    width: 8.125rem;
+    width: 9rem;
     height: auto;
     top: 1.45rem;
-    left: 10.5rem;
+    left: 50%;
     z-index: 1;
 
     img {
@@ -658,45 +850,200 @@ ul {
     }
 }
 
-.fancy-paint-roller {
+.third-section-aside{
     position: relative;
-    width: 4.65rem;
-    height: 4.65rem;
-    top: -0.05rem;
-    left: -4.3rem;
-    transform: rotate(90deg);
-
-    img {
-        max-width: 100%;
-    }
+    width: 100%;
+    z-index: 2;
 }
 
-.third-field-aside-wrapper {
-    max-width: 18.75rem;
+.third-section-paint-roller-paragraph{
+    width: 100%;
+    height: 5rem;
+    background-color: $primary-light;
+}
+
+.third-section-paint-roller-paragraph-handler{
+    width: 85%;
     margin: 0 auto;
-    text-align: right;
-
-    p {
-        position: relative;
-        width: 13.188rem;
-        left: 5.5rem;
-        text-align: right;
-
-        font: {
-            size: 10px;
-            weight: 400;
-        }
-        strong {
-            font-weight: 700;
+    padding-top: 4%;
+    text-align: center;
+    p{
+        font:{
+            size: 11px;
         }
     }
 }
 
-@media screen and (max-width: 374px) {
-    .third-field-aside-rectangle {
+.decorative-paint-roller{
+     display: none;
+}
+
+
+@media screen and ( max-width:300px ){
+    .thrid-section-list-item {
+        width: 85%;
+    }
+}
+
+@media screen and ( min-width:350px ){
+
+    .thrid-section-list-item {
+        width: 15rem;
+        margin: 0 0 0 5%; 
+        text-align: left;
+            h6 {
+                padding: 0.938rem 1.25rem 0px;
+                text-align: left;
+                color: $darkest;
+
+                font: {
+                    size: 16px;
+                    weight: 600;
+                }
+            }
+    }
+
+    .mirror-decorative-line {
+        display: block;
+        position: absolute;
+        width: 1.25rem;
+        height: 3.438rem;
+        top: 5.85rem;
+        z-index: 0;
+        right: 19%;
+        background-color: $primary-semi-dark;
+        border-radius: 2px 2px 0px 0px;
+        box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
+    }
+
+    .reverse-mirror-decorative-line {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        width: 1.25rem;
+        height: 3.438rem;
+        top: 0;
+        right: 19%;
+        background-color: $primary-light;
+        border-radius: 2px 2px 0px 0px;
+        box-shadow: 5px 5px 2px rgb(0 0 0 / 16%);
+    }
+
+    .third-section-aside{
+        width: 100%;  
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .third-section-paint-roller-paragraph{
+        width: 76%;
+    }
+
+    .third-section-paint-roller-paragraph-handler{
+
+        p{
+            text-align: right;
+            font:{
+                size: 10px;
+            }
+        }
+    }
+
+    .decorative-paint-roller {
+        position: relative;
+        display: block;
+        width: 5.15rem;
+        top: -0.95rem;
+        transform: rotate(90deg);
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and ( min-width:375px ){
+
+    .third-section-ul {
+        li {
+            font: {
+                size: 11px;
+                weight: 400;
+            }
+        }
+    }
+
+    .third-section-paint-roller-paragraph{
         width: 72%;
     }
+
+    .third-section-paint-roller-paragraph-handler{
+        p{
+            font:{
+                size: 11px;
+            }
+        }
+    }
 }
+
+@media screen and ( min-width: 500px) {
+    
+    .third-section{
+        top: 7rem;
+    }
+    
+    .third-section-background-rectangle{
+        top: -8rem;
+    }
+
+    .thrid-section-list-item{
+        max-height: 16.8rem;
+    }
+
+   .third-section-ul{
+        li {
+            line-height: 22px;
+            font: {
+                size: 12px;
+                weight: 400;
+            }
+        }
+    }
+
+    .color-splitter{
+        position: relative;
+        width: 100%;
+        height: 6.75rem;
+        bottom: 6.035rem;
+        z-index: 1;
+        background: $primary-semi-dark;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    .mirror-decorative-line{
+        top: 6.85rem;
+    }
+
+    .third-section-decorative-rectangle{
+        top: 10.2rem;
+    }
+
+    .decorative-bucket {
+        top: -0.55rem;
+        left: 60%;
+    }
+
+    .third-section-paint-roller-paragraph-handler{
+        width: 75%;
+        padding-top: 3.1%;
+        p{
+            font:{
+                size: 12px;
+            }
+        }
+    }
+}
+
 
 //footer-------------------------------------------------
 
@@ -704,8 +1051,8 @@ footer {
     position: relative;
     width: 100%;
     height: 6rem;
-    margin-top: 1rem;
-    padding: 1.875rem 0 0 0;
+    top: 5rem;
+    padding-top: 1.875rem;
     z-index: 1;
     background-color: $primary-light;
 }
@@ -732,5 +1079,18 @@ footer {
     background-color: $primary-semi-dark;
     color: $primary-light;
     transition: 0.25s;
+}
+
+@media screen and ( min-width:375px ){
+    footer {
+        padding-top: 0rem;
+    }
+}
+
+@media screen and ( min-width:500px ){
+    footer {
+        top: 8rem;
+        padding-top: 1.5rem;
+    }
 }
 </style>
