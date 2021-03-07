@@ -12,23 +12,23 @@
             <div class="first-section-images-handler">
                 <div class="first-section-image-first">
                     <img
-                        src="../assets/img/gallery/IMG_20200908_115947.jpg"
+                        src="../../assets/img/gallery/IMG_20200908_115947.jpg"
                         alt="Roof painting"
                     />
                 </div>
                 <div class="first-section-image-second">
                     <img
-                        src="../assets/img/gallery/IMG_20200716_101559.jpg"
+                        src="../../assets/img/gallery/IMG_20200716_101559.jpg"
                         alt="Interior painting"
                     />
                 </div>
                 <div class="first-section-image-third">
                     <img
-                        src="../assets/img/gallery/IMG_20200824_122152.jpg"
+                        src="../../assets/img/gallery/IMG_20200824_122152.jpg"
                         alt="Exterior painting"
                     />
                     <!-- <img
-                        src="../assets/img/gallery/IMG_20200824_122141.jpg"
+                        src="../../assets/img/gallery/IMG_20200824_122141.jpg"
                         alt="Exterior painting"
                     /> -->
                 </div>

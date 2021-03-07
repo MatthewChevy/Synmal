@@ -20,7 +20,7 @@
             </div>
 
             <div class="decorative-bucket">
-                <img src="../assets/img/jupol.png" alt="Jupol bucket" />
+                <img src="../../assets/img/jupol.png" alt="Jupol bucket" />
             </div>
 
         </div>
@@ -30,7 +30,7 @@
         </div>
         <aside class="third-section-aside">
             <div class="decorative-paint-roller">
-                <img src="../assets/img/paint-roller.png" alt="Paint roller"/>
+                <img src="../../assets/img/paint-roller.png" alt="Paint roller"/>
             </div>
             <div class="third-section-paint-roller-paragraph">
                 <div class="third-section-paint-roller-paragraph-handler">

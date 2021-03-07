@@ -16,7 +16,7 @@
                             <div class="paint-machine-about">
                                 <div class="second-section-logo-holder">
                                     <img
-                                        src="../assets/img/wagner.png"
+                                        src="../../assets/img/wagner.png"
                                         alt="wagner logo"
                                     />
                                 </div>
@@ -31,7 +31,7 @@
                             </div>
                             <div class="second-section-top-image">
                                 <img
-                                    src="../assets/img/airless-painting.jpg"
+                                    src="../../assets/img/airless-painting.jpg"
                                     alt="Airless painting"
                                 />
                             </div>
@@ -41,7 +41,7 @@
                 <div class="second-section-bottom-handler">
                     <div class="second-section-bottom-image">
                         <img
-                            src="../assets/img/wagner-machine.jpg"
+                            src="../../assets/img/wagner-machine.jpg"
                             alt="Wagner Machine"
                         />
                     </div>
