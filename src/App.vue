@@ -1,7 +1,7 @@
 <template>
-    <header>
+    <nav>
         <navigation />
-    </header>
+    </nav>
     <div class="navigation-links">
         <!-- Is good this using ? -->
         <router-link to="/">home</router-link>
