@@ -62,5 +62,21 @@
     }
 }
 
+@media screen and ( min-width: 500px) {
+
+    .center-content {
+        top: 7rem;
+    }
+
+    .center-content-h4 {
+        max-width: 80%;
+        padding: 2rem 0;
+        font:{
+            size: 18px
+        }
+   
+    }
+}   
+
 
 </style>

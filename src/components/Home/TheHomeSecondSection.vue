@@ -263,4 +263,26 @@
 
 }
 
+@media screen and ( min-width: 600px) {
+
+    .second-section-h3-handler{
+        max-width: 29rem;
+
+        h3{
+            font:{
+                size: 18px;
+            }
+        }
+    }
+
+    .second-section-paragraph-holder{
+        p{
+            font:{
+                size: 14px
+            }
+        };
+    }
+
+}
+
 </style>

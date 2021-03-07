@@ -23,14 +23,14 @@
                     />
                 </div>
                 <div class="first-section-image-third">
-                    <img
+                    <img v-if="actualyWidnowSize > 599"
                         src="../../assets/img/gallery/IMG_20200824_122152.jpg"
                         alt="Exterior painting"
                     />
-                    <!-- <img
+                    <img v-if="actualyWidnowSize < 599"    
                         src="../../assets/img/gallery/IMG_20200824_122141.jpg"
                         alt="Exterior painting"
-                    /> -->
+                    />
                 </div>
             </div>
         </div>
@@ -40,8 +40,13 @@
 </template>
 
 <script>
+
+import tableMixin from "../../mixins/tableMixins.js"
+
     export default {
-        
+
+        mixins: [tableMixin],
+  
     }
 </script>
 
@@ -186,7 +191,7 @@
         max-width: 80%;
         h3{
             font: {
-                size: 20px;
+                size: 18px;
             };
         }
     } 

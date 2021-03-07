@@ -1,17 +1,15 @@
 <template>
-    <header>
-        <img
-            class="welcome-image"
-            src="../../assets/img/welcome-image.png"
-            alt="painting"
-        />
-        <div class="title-center">
-            <div class="title-handler">
-                <h1>Synmal - Jozef Zigo</h1>
-                <h2>Maliari s 20 ročnými skúsenosťami</h2>
-            </div>
+    <img
+        class="welcome-image"
+        src="../../assets/img/welcome-image.png"
+        alt="painting"
+    />
+    <div class="title-center">
+        <div class="title-handler">
+            <h1>Synmal - Jozef Zigo</h1>
+            <h2>Maliari s 20 ročnými skúsenosťami</h2>
         </div>
-    </header>
+    </div>
 </template>
 
 <script>
@@ -22,9 +20,6 @@
 
 <style lang="scss" scoped>
 
-header {
-    padding-top: 3.4rem;
-}
 
 .welcome-image {
     position: fixed;
@@ -83,7 +78,7 @@ header {
     }
 }
 
-@media screen and ( min-width: 500px) {
+@media screen and ( min-width: 450px) {
 
     .title-handler {
         margin-top: 1rem;
@@ -104,6 +99,7 @@ header {
 @media screen and ( min-width: 600px) {
 
     .title-handler {
+        margin-top: 3rem;
         margin-left: 3rem;
         h1 {
             font: {

@@ -79,11 +79,11 @@
 
     .motto-field {
         padding: 1rem 0;
-        max-width: 80%;
+        max-width: 75%;
 
         h3 {
             font: {
-                size: 20px;
+                size: 18px;
             }
         }
     }
