@@ -204,21 +204,21 @@ import tableMixin from "../../mixins/tableMixins.js"
     }
 
     .first-section-image-first{ 
-        width: 33%;
+        width: 32.5%;
         height: fit-content;
         border: 5px solid $primary-light;
         border-radius: 5px;
     }
 
     .first-section-image-second{ 
-        width: 33%;
+        width: 32.5%;
         height: fit-content;
         border: 5px solid $primary-light;
         border-radius: 5px;
     }
 
     .first-section-image-third{ 
-        width: 33%;
+        width: 32.5%;
         height: fit-content;
         margin-top: 0;
         border: 5px solid $primary-light;
