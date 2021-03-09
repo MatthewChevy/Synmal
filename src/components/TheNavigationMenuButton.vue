@@ -57,4 +57,10 @@ img {
         background: none;
     } 
 }
+
+@media screen and ( min-width: 1024px) {
+   .button {
+        display: none;
+    }
+}
 </style>

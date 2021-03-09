@@ -115,6 +115,41 @@ li:focus {
 @media screen and ( min-width: 600px) {
     .banner {
         height: 80px;
-    }  
+    }
+
+    nav {
+        margin-top: 5rem;
+    }
+
+    li{
+        font-size: 18px;
+        padding: 24px 0px;
+    }
+}
+
+@media screen and ( min-width: 1024px) {
+    .banner {
+        height: 90px;
+    }
+
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;;
+        margin-top: 1.9rem;
+        background: none;
+    }
+
+    li{
+        display: inline-block;
+        padding: 0rem 2.5rem;
+        font: {
+            size: 15px;
+            weight: 300;
+        };
+        color: $primary-light;
+    };
+
+
 }
 </style>

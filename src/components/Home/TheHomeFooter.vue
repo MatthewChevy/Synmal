@@ -36,6 +36,13 @@
     transition: 0.25s;
 }
 
+@media screen and ( max-width: 349px ){
+
+    .contact-link-button {
+        margin: 1.5rem auto;
+    }
+}
+
 @media screen and ( min-width: 500px ){
 
     .contact-link-button {
@@ -57,4 +64,14 @@
     }
 }
 
+@media screen and ( min-width: 900px ){
+
+    .contact-link-button {
+        max-width: 20rem;
+
+        font:{
+            size: 25px;
+        }
+    }
+}
 </style>

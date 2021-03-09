@@ -58,7 +58,7 @@
 .third-section {
     position: relative;
     top: 2rem;
-    z-index: 1;
+    z-index: 3;
     background-color: $primary-light;
 }
 
@@ -431,5 +431,112 @@
     }
 }
 
+@media screen and ( min-width: 700px) {
+
+    .third-section-field{
+        width: 81%;
+        height: 25.5rem;
+    }
+
+    .thrid-section-list-item{
+        h6{
+            font-size: 24px;
+        }
+    }   
+
+    .third-section-aside{
+        top: -1rem;
+    }
+
+    .third-section-decorative-rectangle{
+        top: 11.6rem;
+    }
+
+}
+
+@media screen and ( min-width: 768px) {
+
+    .third-section{
+        top: 11rem;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+
+    .third-section-field{
+        margin: 6rem auto 0 auto;
+    }
+
+    .thrid-section-list-item{
+        width: 25rem;
+        max-height: 27.4rem;
+
+        h6{
+            padding: 0.938rem 1.85rem 0px;
+            font:{
+                size: 30px;
+            };
+        }
+    }
+
+    .third-section-ul{
+        padding-left: 1.85rem;
+
+        li{
+            font-size: 20px;
+            line-height: 35px;
+        }
+    }
+
+    .mirror-decorative-line{
+        width: 2rem;
+        top: 6.85rem;
+    }
+
+    .reverse-mirror-decorative-line{
+        width: 2rem;
+        height: 6.5rem;
+    }
+
+    .color-splitter{
+        height: 12.05rem;
+        bottom: 9.335rem;
+    }
+
+    .decorative-bucket{
+        width: 14rem;
+        top: -3.55rem;
+        left: 62%;
+    }
+
+    .third-section-aside{
+        top: 9rem;
+    }
+
+    .third-section-paint-roller-paragraph{
+        width: 74%;
+        height: 8.5rem;
+    }
+
+    .third-section-paint-roller-paragraph-handler{
+        p{
+            font:{
+                size: 20px
+            }
+        }
+    }
+
+    .third-section-decorative-rectangle{ 
+        top: 15.55rem;
+        height: 31.5rem;
+    }
+
+    .decorative-paint-roller{
+        width: 8.65rem;
+        top: -1.45rem;
+    }
+
+}
 
 </style>

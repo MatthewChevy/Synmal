@@ -19,7 +19,7 @@
     position: relative;
     width: 100%;
     top: 2rem;
-    z-index: 3;
+    z-index: 4;
     background-color: $primary-light;
     box-shadow: 5px 5px 3px rgba($darkest, 16%);
 }
@@ -76,7 +76,35 @@
         }
    
     }
-}   
+}
 
+@media screen and (min-width: 700px){
+
+        .center-content-h4{
+            font-size: 20px;
+    }
+}
+
+@media screen and ( min-width: 768px) {
+
+    .center-content {
+        top: 10rem;
+    }
+
+    .center-content-h4{
+        font-size: 24px;
+    }
+}  
+
+@media screen and ( min-width: 900px) {
+
+    .center-content {
+        top: 12rem;
+    }
+
+    .center-content-h4{
+        font-size: 26px;
+    }
+}  
 
 </style>

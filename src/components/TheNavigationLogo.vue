@@ -53,4 +53,25 @@ h4 {
     }   
     
 }
+
+@media screen and (min-width: 1024px){
+
+    .container {
+        max-width: 70px;
+    }
+
+    img {
+        margin: 17px 25px;
+    }
+
+
+    h4 {
+        top: 1.75rem;
+        left: 7.5rem;
+        font: {
+            size: 19px;
+        }   
+    }   
+    
+}
 </style>

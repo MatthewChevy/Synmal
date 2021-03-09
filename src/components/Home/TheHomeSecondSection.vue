@@ -227,7 +227,7 @@
 
 @media screen and ( min-width: 400px){
     .second-section-container{
-        width: 85%;
+        width: 93%;
     }
 
     .second-section-wagner-container {
@@ -263,6 +263,15 @@
 
 }
 
+@media screen and (min-width: 550px){
+
+    .second-section-paragraph-holder {
+        p{
+            font-size: 13px;
+        }
+    }
+}
+
 @media screen and ( min-width: 600px) {
 
     .second-section-h3-handler{
@@ -292,8 +301,102 @@
         top: -1.5rem;
         border: 5px solid $primary-light;
     }
+}
 
+@media screen and ( min-width: 700px) {
+
+    .second-section-h3-handler{
+        max-width: 30rem;
+
+        h3{
+            font:{
+                size: 20px;
+            };
+        }
+    }
+
+    .second-section-wagner-container{
+        padding: 0 0 7% 0;
+    }
+
+    .paint-machine-about {
+        width: 63%;
+        margin-top: 3rem;
+    }
+
+    .second-section-logo-holder{
+        width: 65%;
+    }
+
+    .second-section-paragraph-holder{
+        p{
+            font-size: 15px;
+        }
+    }
+
+    .second-section-bottom-image{
+        top: -1.9rem;
+    }
+
+    .second-section-decorative-line{
+        width: 0.625rem;
+        right: 1rem;
+    }
+}
+
+@media screen and ( min-width: 768px) {
+
+    .second-section-z-index-background{
+        height: 55rem; 
+    }
 
 }
+
+@media screen and ( min-width: 800px) {
+
+    .paint-machine-about{
+        margin-top: 3rem;
+    }
+
+    .second-section-paragraph-holder{
+        max-width: 86%; 
+    }
+
+}
+
+@media screen and ( min-width: 900px) {
+
+    .second-section-h3-handler{
+        max-width: 45rem;
+
+        h3{
+            font-size: 26px;
+        }
+    }
+
+    .second-section-paragraph-holder{
+        p{
+            font:{
+                size: 20px
+            }
+        }
+    }
+
+    .second-section-z-index-background{
+        height: 65rem;
+    }
+
+    .third-section-decorative-rectangle{
+        top: 15.55rem; 
+    }
+}
+
+@media screen and ( min-width: 1000px) {
+    .second-section-h3-handler{
+        max-width: 41rem;
+    }
+}
+
+
 
 </style>

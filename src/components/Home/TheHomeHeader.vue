@@ -98,8 +98,13 @@
 
 @media screen and ( min-width: 600px) {
 
+    .welcome-image {
+        opacity: 50%;
+    }
+
+
     .title-handler {
-        margin-top: 3rem;
+        margin-top: 1rem;
         margin-left: 3rem;
         h1 {
             font: {
@@ -115,11 +120,8 @@
     }
 }
 
-@media screen and ( min-width: 768px) {
-    .welcome-image {
-        opacity: 85%;
-    }
-
+@media screen and ( min-width: 700px) {
+    
     .title-handler {
         margin-top: 1rem;
         margin-left: 4rem;
@@ -139,4 +141,26 @@
     }
 }
 
+@media screen and ( min-width: 900px) {
+
+    .welcome-image {
+        opacity: 50%;
+    }
+
+
+    .title-handler {
+        margin-top: 3rem;
+        h1 {
+            font: {
+                size: 51.5px;
+            }
+        }
+        h2{
+            font: {
+                size: 30px;
+            }
+        }
+    }
+
+}
 </style>

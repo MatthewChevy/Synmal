@@ -1,11 +1,13 @@
 <template>
     <section class="first-section">
         <div class="first-section-container">
-            <div class="first-section-h3-wrapper">
-                <h3>
-                    Široké možnosti maliarskych prác a vysoká kvalita je
-                    našou samozrejmosťou.
-                </h3>
+            <div class="first-section-h3-wrapper-flex">
+                <div class="first-section-h3-wrapper">
+                    <h3>
+                        Široké možnosti maliarskych prác a vysoká kvalita je
+                        našou samozrejmosťou.
+                    </h3>
+                </div>
             </div>
             <aside class="first-section-decorative-circle"></aside>
 
@@ -57,6 +59,7 @@ import tableMixin from "../../mixins/tableMixins.js"
     width: 100%;
     margin-bottom: 2rem;
     background-color: $primary-semi-dark;
+    z-index: 1;
 }
 
 .first-section-container {
@@ -224,6 +227,61 @@ import tableMixin from "../../mixins/tableMixins.js"
         border: 5px solid $primary-light;
         border-radius: 5px;
     }
+}
+
+@media screen and ( min-width: 700px) {
+
+    .first-section-container{
+        max-width: 85%;  
+    }
+
+    .first-section-h3-wrapper-flex{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .first-section-h3-wrapper{
+        max-width: 80%;
+        text-align: right;
+        margin-left: 9rem;
+
+        h3{
+            font-size: 20px;
+        }
+    }
+    
+    .first-section-decorative-circle{
+        width: 10rem;
+        height: 10rem;
+        left: 5%;
+        margin-top: -4rem;
+    }
+
+    .first-section-decorative-line{
+        width: 0.625rem;
+        right: 1rem;
+    }
+
+}
+
+@media screen and ( min-width: 900px) {
+
+    .first-section-h3-wrapper{
+        max-width: 80%;
+        margin-left: 15rem;
+
+        h3{
+            font-size: 25px;
+        }
+    }
+
+    .first-section-decorative-circle{
+        width: 12rem;
+        height: 12rem;
+        left: 2%;
+        margin-top: -7rem;
+    }
+
 }
 
 </style>

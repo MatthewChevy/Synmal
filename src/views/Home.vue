@@ -76,10 +76,29 @@ footer {
 }
 
 @media screen and ( min-width:600px ){
+
+    header {
+        padding-top: 4.9rem;
+    }
+
     footer {
         height: 8rem;
         padding-top: 5%;
     }
 }
+
+@media screen and (min-width: 768px){
+
+    footer{
+        top: 11rem;
+    }
+}
+
+@media screen and (min-width: 900px){
+    footer{
+        top: 21rem;
+    }
+}
+
 
 </style>
