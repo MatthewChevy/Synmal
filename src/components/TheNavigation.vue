@@ -112,44 +112,41 @@ li:focus {
     transition: 0.25s;
 }
 
-@media screen and ( min-width: 600px) {
+// @media screen and ( min-width: 600px) {
+//     .banner {
+//         height: 80px;
+//     }
+
+//     nav {
+//         margin-top: 5rem;
+//     }
+
+//     li{
+//         font-size: 18px;
+//         padding: 24px 0px;
+//     }
+// }
+
+@media screen and (min-width: 1024px) {
     .banner {
-        height: 80px;
+        height: 75px;
     }
 
-    nav {
-        margin-top: 5rem;
-    }
-
-    li{
-        font-size: 18px;
-        padding: 24px 0px;
-    }
-}
-
-@media screen and ( min-width: 1024px) {
-    .banner {
-        height: 90px;
-    }
-
-    
     nav {
         display: flex;
-        justify-content: flex-end;;
-        margin-top: 1.9rem;
+        justify-content: flex-end;
+        margin-top: 1.5rem;
         background: none;
     }
 
-    li{
+    li {
         display: inline-block;
         padding: 0rem 2.5rem;
         font: {
             size: 15px;
             weight: 300;
-        };
+        }
         color: $primary-light;
-    };
-
-
+    }
 }
 </style>
