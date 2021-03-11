@@ -8,19 +8,19 @@
         <div class="title-handler">
             <h1>Synmal - Jozef Zigo</h1>
             <h2>Maliari s 20 ročnými skúsenosťami</h2>
+            <h3>{{ actualyWidnowSize }}</h3>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+import tableMixins from '../../mixins/tableMixins.js'
+export default {
+    mixins: [tableMixins]
+}
 </script>
 
 <style lang="scss" scoped>
-
-
 .welcome-image {
     position: fixed;
     max-width: 100%;
@@ -28,7 +28,7 @@
     opacity: 45%;
 }
 
-.title-center{
+.title-center {
     width: 100%;
 }
 
@@ -59,8 +59,8 @@
     }
 }
 
-@media screen and ( min-width: 350px) {
-
+@media screen and (min-width: 350px) {
+    
     .title-handler {
         margin-left: 2rem;
         text-align: left;
@@ -78,7 +78,7 @@
     }
 }
 
-@media screen and ( min-width: 450px) {
+@media screen and (min-width: 450px) {
 
     .title-handler {
         margin-top: 1rem;
@@ -96,15 +96,10 @@
     }
 }
 
-@media screen and ( min-width: 600px) {
-
-    .welcome-image {
-        opacity: 50%;
-    }
-
+@media screen and (min-width: 640px) {
 
     .title-handler {
-        margin-top: 1rem;
+        margin-top: 1.2rem;
         margin-left: 3rem;
         h1 {
             font: {
@@ -120,8 +115,8 @@
     }
 }
 
-@media screen and ( min-width: 700px) {
-    
+@media screen and (min-width: 700px) {
+
     .title-handler {
         margin-top: 1rem;
         margin-left: 4rem;
@@ -141,12 +136,11 @@
     }
 }
 
-@media screen and ( min-width: 900px) {
+@media screen and (min-width: 900px) {
 
     .welcome-image {
         opacity: 50%;
     }
-
 
     .title-handler {
         margin-top: 3rem;
@@ -155,12 +149,11 @@
                 size: 51.5px;
             }
         }
-        h2{
+        h2 {
             font: {
                 size: 30px;
             }
         }
     }
-
 }
 </style>
