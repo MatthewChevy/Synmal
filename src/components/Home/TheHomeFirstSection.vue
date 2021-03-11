@@ -25,11 +25,13 @@
                     />
                 </div>
                 <div class="first-section-image-third">
-                    <img v-if="actualyWidnowSize > 599"
+                    <img
+                        v-if="actualyWidnowSize > 1023"
                         src="../../assets/img/gallery/IMG_20200824_122152.jpg"
                         alt="Exterior painting"
                     />
-                    <img v-if="actualyWidnowSize < 599"    
+                    <img
+                        v-if="actualyWidnowSize < 1024"
                         src="../../assets/img/gallery/IMG_20200824_122141.jpg"
                         alt="Exterior painting"
                     />
@@ -42,246 +44,182 @@
 </template>
 
 <script>
+import tableMixin from '../../mixins/tableMixins.js'
 
-import tableMixin from "../../mixins/tableMixins.js"
-
-    export default {
-
-        mixins: [tableMixin],
-  
-    }
+export default {
+    mixins: [tableMixin]
+}
 </script>
 
 <style lang="scss" scoped>
 
-.first-section {
-    position: relative;
-    width: 100%;
-    margin-bottom: 2rem;
-    background-color: $primary-semi-dark;
-    z-index: 1;
-}
-
-.first-section-container {
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 1.5rem 0;
-}
-
-.first-section-h3-wrapper {
-    max-width: 75%;
-    margin-bottom: 1.5rem;
-
-    h3{
-        color: $primary-light;
-        font: {
-            size: 14.5px;
-            weight: 400;
-        };
+@media screen and (min-width: 0px) {
+    .first-section {
+        position: relative;
+        width: 100%;
+        margin-bottom: 2rem;
+        background-color: $primary-semi-dark;
+        z-index: 1;
     }
 
-}
+    .first-section-container {
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 1.5rem 0;
+    }
 
-.first-section-decorative-circle {
-    position: absolute;
-    width: 7rem;
-    height: 7rem;
-    right: 6%;
-    margin-top: -3rem;
-    z-index: 0;
-    border-radius: 50%;
-    background-color: $primary-light;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-}
+    .first-section-h3-wrapper {
+        max-width: 88%;
+        margin-bottom: 1.5rem;
 
-.first-section-images-handler {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 2;
+        h3 {
+            color: $primary-light;
+            font: {
+                size: 14.5px;
+                weight: 400;
+            }
+        }
+    }
 
-}
+    .first-section-decorative-circle {
+        position: absolute;
+        width: 7rem;
+        height: 7rem;
+        right: 6%;
+        margin-top: -3rem;
+        z-index: 0;
+        border-radius: 50%;
+        background-color: $primary-light;
+        box-shadow: 5px 5px 3px rgba($darkest, 16%);
+    }
 
-.first-section-image-first{ 
-    width: 49%;
-    border: 3px solid $primary-light;
-    border-radius: 3px;
-    line-height: 0;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+    .first-section-images-handler {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 3;
+    }
 
-        img{
+    .first-section-image-first {
+        width: 49%;
+        border-radius: 3px;
+        height: fit-content;
+        line-height: 0;
+        border: 5px solid $primary-light;
+        box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+        img {
             max-width: 100%;
         }
-}
+    }
 
-.first-section-image-second{ 
-    width: 49%;
-    border: 3px solid $primary-light;
-    line-height: 0;
-    border-radius: 3px;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-        img{
+    .first-section-image-second {
+        width: 49%;
+        height: fit-content;
+        line-height: 0;
+        border-radius: 3px;
+        border: 5px solid $primary-light;
+        box-shadow: 5px 5px 3px rgba($darkest, 16%);
+        img {
             max-width: 100%;
         }
-}
+    }
 
-.first-section-image-third{ 
-    width: 100%;
-    margin-top: 0.3rem;
-    line-height: 0;
-    border: 3px solid $primary-light;
-    border-radius: 3px;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+    .first-section-image-third {
+        width: 100%;
+        margin-top: 0.3rem;
+        line-height: 0;
+        border-radius: 3px;
+        border: 5px solid $primary-light;
+        box-shadow: 5px 5px 3px rgba($darkest, 16%);
 
-        img{
+        img {
             max-width: 100%;
         }
+    }
+
+    .first-section-decorative-rectangle {
+        position: absolute;
+        width: 100%;
+        height: 30%;
+        background-color: $primary-light;
+        z-index: 1;
+        bottom: 30%;
+    }
+
+    .first-section-decorative-line {
+        position: absolute;
+        width: 0.313rem;
+        height: 100%;
+        top: 0;
+        right: 0.813rem;
+        z-index: 0;
+        background-color: $fancy;
+        box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
+    }
 }
 
-.first-section-decorative-rectangle {
-    position: absolute; 
-    width: 100%;
-    height: 30%;
-    background-color: $primary-light;
-    z-index: 1;
-    bottom: 30%;
-
-}
-
-.first-section-decorative-line {
-    position: absolute;
-    width: 0.313rem;
-    height: 100%;
-    top: 0;
-    right: 0.813rem;
-    z-index: 0;
-    background-color: $fancy;
-    box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
-}
-
-@media screen and ( min-width: 400px) {
-    .first-section-container{
+@media screen and (min-width: 375px) {
+    .first-section-container {
         max-width: 85%;
+        margin: 0 auto;
+        padding: 1.5rem 0;
     }
-}
-
-@media screen and ( min-width: 500px) {
 
     .first-section-h3-wrapper {
-        max-width: 74%;
-        h3{
-            font: {
-                size: 16px
-            };
-        }
-
-    }
-
-    .first-section-decorative-circle{
-        width: 8rem;
-        height: 8rem;
-        margin-top: -5rem;
-    }
-}
-
-@media screen and ( min-width: 600px) {
-
-    .first-section-h3-wrapper {
-        padding-top: 0.5rem;
         max-width: 80%;
-        h3{
-            font: {
-                size: 18px;
-            };
-        }
-    } 
+        margin-bottom: 1.5rem;
+    }
+}
 
-    .first-section-decorative-circle{
-        width: 9rem;
-        height: 9rem;
-        right: 1%;
+@media screen and (min-width: 500px) {
+    .first-section-h3-wrapper {
+        h3 {
+            font: {
+                size: 17px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    .first-section-h3-wrapper {
+        max-width: 71%;
+        margin-bottom: 1.5rem;
+
+        h3 {
+            color: $primary-light;
+            font: {
+                size: 20px;
+                weight: 400;
+            }
+        }
+    }
+
+    .first-section-decorative-circle {
+        width: 11rem;
+        height: 11rem;
         margin-top: -6rem;
     }
 
-    .first-section-image-first{ 
-        width: 32.5%;
-        height: fit-content;
-        border: 5px solid $primary-light;
-        border-radius: 5px;
+    .first-section-image-first,
+    .first-section-image-second,
+    .first-section-image-third {
     }
 
-    .first-section-image-second{ 
-        width: 32.5%;
-        height: fit-content;
-        border: 5px solid $primary-light;
-        border-radius: 5px;
-    }
-
-    .first-section-image-third{ 
-        width: 32.5%;
-        height: fit-content;
-        margin-top: 0;
-        border: 5px solid $primary-light;
-        border-radius: 5px;
+    .first-section-container {
+        width: 85%;
     }
 }
 
-@media screen and ( min-width: 700px) {
-
-    .first-section-container{
-        max-width: 85%;  
+@media screen and (min-width: 768px) {
+    .first-section-container {
+        width: 80%;
     }
-
-    .first-section-h3-wrapper-flex{
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .first-section-h3-wrapper{
-        max-width: 80%;
-        text-align: right;
-        margin-left: 9rem;
-
-        h3{
-            font-size: 20px;
-        }
-    }
-    
-    .first-section-decorative-circle{
-        width: 10rem;
-        height: 10rem;
-        left: 5%;
-        margin-top: -4rem;
-    }
-
-    .first-section-decorative-line{
-        width: 0.625rem;
-        right: 1rem;
-    }
-
-}
-
-@media screen and ( min-width: 900px) {
-
-    .first-section-h3-wrapper{
-        max-width: 80%;
-        margin-left: 15rem;
-
-        h3{
-            font-size: 25px;
-        }
-    }
-
-    .first-section-decorative-circle{
-        width: 12rem;
-        height: 12rem;
-        left: 2%;
-        margin-top: -7rem;
-    }
-
 }
 
 </style>

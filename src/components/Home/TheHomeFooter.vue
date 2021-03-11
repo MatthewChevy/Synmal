@@ -1,15 +1,15 @@
 <template>
-
-    <div class="footer-handler" tabindex="1" @click="$router.push({ path: '/contact' })">
+    <div
+        class="footer-handler"
+        tabindex="1"
+        @click="$router.push({ path: '/contact' })"
+    >
         <p class="contact-link-button">Kontaktujte nás</p>
     </div>
-
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {}
 </script>
 
 <style lang="scss" scoped>
@@ -26,51 +26,26 @@
         size: 15px;
         weight: regular;
     }
-    color: $darkest
- 
+    color: $darkest;
 }
 
-.contact-link-button:focus {
+.contact-link-button:focus,:hover {
     background-color: $primary-semi-dark;
     color: $primary-light;
     transition: 0.25s;
 }
 
-@media screen and ( max-width: 349px ){
+@media screen and (min-width: 640px) {
 
-    .contact-link-button {
-        margin: 1.5rem auto;
+    .footer-handler{
+        margin: -1.5rem 0 2rem 0 ;
     }
-}
-
-@media screen and ( min-width: 500px ){
-
-    .contact-link-button {
-        max-width: 13rem;
+    .contact-link-button{
+        max-width: 15rem;
+        padding: 0.3rem 0;
         font: {
-            size: 18px;
-            weight: regular;
-        }
-    }
-}
-
-@media screen and ( min-width: 600px ){
-
-    .contact-link-button {
-        max-width: 16rem;
-        font:{
-            size: 22px;
-        }
-    }
-}
-
-@media screen and ( min-width: 900px ){
-
-    .contact-link-button {
-        max-width: 20rem;
-
-        font:{
-            size: 25px;
+            size: 16px;
+            weight: 500;
         }
     }
 }
