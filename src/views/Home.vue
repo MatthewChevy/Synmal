@@ -4,7 +4,6 @@
     </header>
 
     <main>
-        
         <the-home-motto-section />
 
         <the-home-first-section />
@@ -14,13 +13,11 @@
         <the-home-aside-content />
 
         <the-home-third-section />
-
     </main>
 
     <footer>
         <the-home-footer />
     </footer>
-
 </template>
 
 <script>
@@ -35,70 +32,36 @@ import TheHomeThirdSection from '../components/Home/TheHomeThirdSection.vue'
 import TheHomeFooter from '../components/Home/TheHomeFooter.vue'
 
 export default {
-    components: { 
-        TheHomeHeader, 
-        TheHomeFirstSection, 
-        TheHomeSecondSection, 
-        TheHomeAsideContent, 
-        TheHomeThirdSection, 
+    components: {
+        TheHomeHeader,
+        TheHomeFirstSection,
+        TheHomeSecondSection,
+        TheHomeAsideContent,
+        TheHomeThirdSection,
         TheHomeFooter,
-        TheHomeMottoSection, 
-    },
+        TheHomeMottoSection
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 header {
     padding-top: 1.7rem;
 }
 
-main{
+main {
     background-color: $primary-light;
 }
 
 footer {
-    position: relative;
     width: 100%;
-    height: 7rem;
-    top: 3rem;
-    padding-top: 9%;
-    z-index: 1;
     background-color: $primary-light;
+    margin: 2rem 0;
 }
 
-@media screen and ( min-width:500px ){
-    footer {
-        top: 7rem;
-        height: 6rem;
-        padding-top: 3%;
-    }
-}
-
-@media screen and ( min-width:600px ){
-
-    header {
-        padding-top: 4.9rem;
-    }
-
-    footer {
-        height: 8rem;
-        padding-top: 5%;
-    }
-}
-
-@media screen and (min-width: 768px){
-
+@media screen and ( min-width:640px ){
     footer{
-        top: 11rem;
+        margin: 2rem auto 3rem auto
     }
 }
-
-@media screen and (min-width: 900px){
-    footer{
-        top: 21rem;
-    }
-}
-
-
 </style>
