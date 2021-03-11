@@ -33,45 +33,41 @@ h4 {
     color: white;
 }
 
-@media screen and (min-width: 600px){
+// @media screen and (min-width: 600px){
 
+//     .container {
+//         max-width: 65px;
+//     }
+
+//     img {
+//         margin: 15px;
+//     }
+
+//     h4 {
+//         top: 1.55rem;
+//         left: 6rem;
+//         font: {
+//             size: 18px;
+//         }
+//     }
+
+// }
+
+@media screen and (min-width: 1024px) {
     .container {
-        max-width: 65px;
+        max-width: 60px;
     }
 
     img {
-        margin: 15px;
+        margin: 13px 20px;
     }
-
 
     h4 {
-        top: 1.55rem;
-        left: 6rem;
-        font: {
-            size: 18px;
-        }   
-    }   
-    
-}
-
-@media screen and (min-width: 1024px){
-
-    .container {
-        max-width: 70px;
-    }
-
-    img {
-        margin: 17px 25px;
-    }
-
-
-    h4 {
-        top: 1.75rem;
-        left: 7.5rem;
+        top: 1.35rem;
+        left: 6.1rem;
         font: {
             size: 19px;
-        }   
-    }   
-    
+        }
+    }
 }
 </style>

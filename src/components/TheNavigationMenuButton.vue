@@ -49,17 +49,17 @@ img {
     }
 }
 
-@media screen and ( min-width: 600px) {
-    .button {
-        width: 3rem;
-        margin: 15px;
-        border: none;
-        background: none;
-    } 
-}
+// @media screen and ( min-width: 600px) {
+//     .button {
+//         width: 3rem;
+//         margin: 15px;
+//         border: none;
+//         background: none;
+//     }
+// }
 
-@media screen and ( min-width: 1024px) {
-   .button {
+@media screen and (min-width: 1024px) {
+    .button {
         display: none;
     }
 }
