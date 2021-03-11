@@ -9,7 +9,7 @@ export default {
 
     created() {
         this.actualyWidnowSize = window.innerWidth
-        window.addEventListener('resize', throttle(this.sizeWindow, 350))
+        window.addEventListener('resize', throttle(this.sizeWindow, 0))
     },
 
     methods: {
