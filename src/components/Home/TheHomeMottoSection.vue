@@ -1,14 +1,15 @@
 <template>
     <section class="motto">
         <div class="motto-field">
-            <h3 v-if="actualyWidnowSize < 600">
-                Beautiful designs, powerful features and the freedom to
-                build anything you want.
+            <h3 class="sm-screen">
+                Beautiful designs, powerful features and the freedom to build
+                anything you want.
             </h3>
 
-            <h3 v-if="actualyWidnowSize > 599">
-                   Beautiful designs, powerful features, and the freedom to buil 
-                   anything you want. WordPress is both free and priceless at the same time.
+            <h3 class="md-screen">
+                Beautiful designs, powerful features, and the freedom to buil
+                anything you want. WordPress is both free and priceless at the
+                same time.
             </h3>
 
             <div class="horizontal-line"></div>
@@ -17,16 +18,22 @@
 </template>
 
 <script>
+import tableMixin from '../../mixins/tableMixins.js'
 
-    import tableMixin from "../../mixins/tableMixins.js"
-
-    export default {
-        mixins:[tableMixin],
-    }
-
+export default {
+    mixins: [tableMixin]
+}
 </script>
 
 <style lang="scss" scoped>
+
+.sm-screen{
+    display: block;
+}
+
+.md-screen{
+    display: none;
+}
 
 .motto {
     position: relative;
@@ -58,8 +65,7 @@
     z-index: 2;
 }
 
-@media screen and ( min-width: 375px) {
-
+@media screen and (min-width: 375px) {
     .motto-field {
         max-width: 80%;
 
@@ -69,71 +75,23 @@
             }
         }
     }
-
 }
 
-@media screen and ( min-width: 500px) {
 
-    .motto-field {
-        max-width: 22rem;
+@media screen and ( min-width: 640px) {
 
-        h3 {
-            font: {
-                size: 16px;
-            }
-        }
-    }
-
-}
-
-@media screen and ( min-width: 600px) {
     .motto-field {
         padding: 1rem 0;
-        max-width: 85%;
+        max-width: 75%;
 
         h3 {
             font: {
-                size: 18px;
+                size: 20px;
             }
         }
     }
 }
 
-@media screen and ( min-width: 700px) {
-
-    .motto {
-        border-radius: 15px 15px 0px 0px;
-    }   
-
-    .motto-field {
-        max-width: 80%;
-        h3{
-            font:{
-                size: 18px;
-            };
-        }
-    }
-
-}
-
-@media screen and (min-width: 800px){
-
-    .motto-field {
-        max-width: 67%;
-    }
-}
-
-@media screen and (min-width: 900px){
-
-    .motto-field {
-        max-width: 70%;
-        h3{
-            font:{
-                size: 21px;
-            };
-        }
-    }
-}
 
 
 </style>

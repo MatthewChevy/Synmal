@@ -1,31 +1,27 @@
 <template>
     <aside class="center-content">
         <h4 class="center-content-h4">
-            Za roky vykonávania nášho remesla sme vyskúšali a testovali
-            desiatky výrobcov farieb.
+            Za roky vykonávania nášho remesla sme vyskúšali a testovali desiatky
+            výrobcov farieb.
         </h4>
     </aside>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {}
 </script>
 
 <style lang="scss" scoped>
-
 .center-content {
     position: relative;
     width: 100%;
-    top: 2rem;
-    z-index: 4;
+    z-index: 3;
     background-color: $primary-light;
     box-shadow: 5px 5px 3px rgba($darkest, 16%);
 }
 
 .center-content-h4 {
-    max-width: 17.875rem;
+    max-width: 80%;
     margin: 0 auto;
     padding: 1.563rem 0px;
     text-align: center;
@@ -35,76 +31,17 @@
     }
 }
 
-@media screen and ( min-width: 375px) {
-    .center-content{
-        top: 3rem;
+@media screen and (min-width: 640px) {
+    .center-content {
+        top: 0;
     }
 
     .center-content-h4 {
-        max-width: 85%;
-        padding: 2rem 0px;
+        max-width: 80%;
+        padding: 2rem 0;
         font: {
-            size: 16px;
+            size: 20px;
         }
     }
 }
-
-@media screen and ( min-width: 500px) {
-
-    .center-content {
-        top: 7rem;
-    }
-
-    .center-content-h4 {
-        max-width: 80%;
-        padding: 2rem 0;
-   
-    }
-}
-
-@media screen and ( min-width: 500px) {
-
-    .center-content {
-        top: 7rem;
-    }
-
-    .center-content-h4 {
-        max-width: 80%;
-        padding: 2rem 0;
-        font:{
-            size: 18px
-        }
-   
-    }
-}
-
-@media screen and (min-width: 700px){
-
-        .center-content-h4{
-            font-size: 20px;
-    }
-}
-
-@media screen and ( min-width: 768px) {
-
-    .center-content {
-        top: 10rem;
-    }
-
-    .center-content-h4{
-        font-size: 24px;
-    }
-}  
-
-@media screen and ( min-width: 900px) {
-
-    .center-content {
-        top: 12rem;
-    }
-
-    .center-content-h4{
-        font-size: 26px;
-    }
-}  
-
 </style>
