@@ -14,9 +14,10 @@ export default {}
 
 <style lang="scss" scoped>
 
+
 .contact-link-button {
     max-width: 11rem;
-    margin: 0 auto;
+    margin: 3.5rem auto 3rem auto;
     padding: 0.15rem 0;
     text-align: center;
     background-color: $fancy;
@@ -33,6 +34,12 @@ export default {}
     background-color: $primary-semi-dark;
     color: $primary-light;
     transition: 0.25s;
+}
+
+@media screen and ( min-width: 375px) {
+   .contact-link-button {
+        margin: 1rem auto 3rem auto;
+    } 
 }
 
 @media screen and (min-width: 640px) {

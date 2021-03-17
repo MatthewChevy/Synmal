@@ -38,8 +38,7 @@ export default {
 .motto {
     position: relative;
     width: 100%;
-    margin-top: 55%;
-    padding: 1.8rem 0 2.2rem 0;
+    padding: 2.5rem 0;
     background: $primary-light;
     border-radius: 10px 10px 0px 0px;
     z-index: 1;

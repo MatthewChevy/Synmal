@@ -2,7 +2,6 @@
     <header>
         <the-home-header />
     </header>
-
     <main>
         <the-home-motto-section />
 
@@ -13,11 +12,9 @@
         <the-home-aside-content />
 
         <the-home-third-section />
-    </main>
 
-    <footer>
-        <the-home-footer />
-    </footer>
+        <the-contact-button />
+    </main>
 </template>
 
 <script>
@@ -29,7 +26,7 @@ import TheHomeSecondSection from '../components/Home/TheHomeSecondSection.vue'
 import TheHomeAsideContent from '../components/Home/TheHomeAsideContent.vue'
 import TheHomeThirdSection from '../components/Home/TheHomeThirdSection.vue'
 
-import TheHomeFooter from '../components/Home/TheHomeFooter.vue'
+import TheContactButton from '../components/TheContactButton.vue'
 
 export default {
     components: {
@@ -38,7 +35,7 @@ export default {
         TheHomeSecondSection,
         TheHomeAsideContent,
         TheHomeThirdSection,
-        TheHomeFooter,
+        TheContactButton,
         TheHomeMottoSection
     }
 }
@@ -51,17 +48,17 @@ header {
 
 main {
     background-color: $primary-light;
+    // transform: translateY(0%);
+    transform: translateY(-210px);
+    overflow: auto;
+    animation: mainTranslateY 1.5s 3.5s ease-in-out forwards;  
 }
 
-footer {
-    width: 100%;
-    background-color: $primary-light;
-    margin: 2rem 0;
-}
+// @keyframes mainTranslateY {
+//     0%{ transform: translateY(0);}
+//     80%{ transform: translateY( -210px);}
+//     90%{ transform: translateY( -213px);}
+//     100%{ transform: translateY( -210px);}
+// }
 
-@media screen and ( min-width:640px ){
-    footer{
-        margin: 2rem auto 3rem auto
-    }
-}
 </style>

@@ -9,7 +9,7 @@
                     </h3>
                 </div>
             </div>
-            <aside class="first-section-decorative-circle"></aside>
+            <!-- <aside class="first-section-decorative-circle"></aside> -->
 
             <div class="first-section-images-handler">
                 <div class="first-section-image-first">
@@ -26,16 +26,16 @@
                 </div>
                 <div class="first-section-image-third">
                     <img
-                        v-if="actualyWidnowSize > 1023"
                         src="../../assets/img/gallery/IMG_20200824_122152.jpg"
                         alt="Exterior painting"
                     />
-                    <img
-                        v-if="actualyWidnowSize < 1024"
-                        src="../../assets/img/gallery/IMG_20200824_122141.jpg"
-                        alt="Exterior painting"
-                    />
                 </div>
+            </div>
+
+            <div class="dots-wrapper">
+                <div class="dot-active"></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
         <aside class="first-section-decorative-rectangle"></aside>
@@ -52,6 +52,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.dots-wrapper{
+    width: 100%;
+    text-align: center;
+    .dot-active{
+        background-color: $fancy;
+    }
+}
+
+.dots-wrapper > *{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $primary;
+    margin:5px;
+}
 
 @media screen and (min-width: 0px) {
     .first-section {
@@ -93,61 +110,93 @@ export default {
         box-shadow: 5px 5px 3px rgba($darkest, 16%);
     }
 
+    // .first-section-images-handler {
+    //     position: relative;
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content: space-between;
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     z-index: 3;
+    // }
+
+    // .first-section-image-first {
+    //     width: 49%;
+    //     border-radius: 3px;
+    //     height: fit-content;
+    //     line-height: 0;
+    //     border: 5px solid $primary-light;
+    //     box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+    //     img {
+    //         max-width: 100%;
+    //     }
+    // }
+
+    // .first-section-image-second {
+    //     width: 49%;
+    //     height: fit-content;
+    //     line-height: 0;
+    //     border-radius: 3px;
+    //     border: 5px solid $primary-light;
+    //     box-shadow: 5px 5px 3px rgba($darkest, 16%);
+    //     img {
+    //         max-width: 100%;
+    //     }
+    // }
+
+    // .first-section-image-third {
+    //     width: 100%;
+    //     margin-top: 0.3rem;
+    //     line-height: 0;
+    //     border-radius: 3px;
+    //     border: 5px solid $primary-light;
+    //     box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+    //     img {
+    //         max-width: 100%;
+    //     }
+    // }
+
+    // .first-section-decorative-rectangle {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 30%;
+    //     background-color: $primary-light;
+    //     z-index: 1;
+    //     bottom: 30%;
+    // }
+
     .first-section-images-handler {
         position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         width: 100%;
         margin: 0 auto;
+        overflow: scroll;
+        white-space:nowrap;
         z-index: 3;
     }
 
-    .first-section-image-first {
-        width: 49%;
-        border-radius: 3px;
+    .first-section-image-first,
+    .first-section-image-second,
+    .first-section-image-third
+    {
+        display: inline-block;
+        width: 75%;
         height: fit-content;
+        margin-right: 15px;
         line-height: 0;
-        border: 5px solid $primary-light;
-        box-shadow: 5px 5px 3px rgba($darkest, 16%);
+        border-radius: 10px;
+        border: 3px solid $primary-light;
+        overflow: hidden;
 
         img {
             max-width: 100%;
+
         }
     }
 
-    .first-section-image-second {
-        width: 49%;
-        height: fit-content;
-        line-height: 0;
-        border-radius: 3px;
-        border: 5px solid $primary-light;
-        box-shadow: 5px 5px 3px rgba($darkest, 16%);
-        img {
-            max-width: 100%;
-        }
-    }
-
-    .first-section-image-third {
-        width: 100%;
-        margin-top: 0.3rem;
-        line-height: 0;
-        border-radius: 3px;
-        border: 5px solid $primary-light;
-        box-shadow: 5px 5px 3px rgba($darkest, 16%);
-
-        img {
-            max-width: 100%;
-        }
-    }
-
-    .first-section-decorative-rectangle {
-        position: absolute;
-        width: 100%;
-        height: 30%;
-        background-color: $primary-light;
-        z-index: 1;
-        bottom: 30%;
+    .first-section-image-third{
+        margin-right: unset;
     }
 
     .first-section-decorative-line {

@@ -18,7 +18,7 @@
             </div>
 
             <div class="decorative-bucket">
-                <img src="../../assets/img/jupol.png" alt="Jupol bucket" />
+                <img @click=" bucketAni()" src="../../assets/img/jupol.png" alt="Jupol bucket" />
             </div>
         </div>
         <div class="mirror-decorative-line"></div>
@@ -46,7 +46,32 @@
 </template>
 
 <script>
-export default {}
+export default {
+
+    data() {
+        return {
+            count: 0,
+            bucket: Object
+        }
+    },
+
+    mounted () {
+        this.bucket = document.getElementsByClassName('decorative-bucket')[0]
+    },
+    methods: {
+        bucketAni() {
+            if ( this.count < 3 ){
+               this.bucket.classList.add('decorative-bucket-animation')
+                 this.bucket.addEventListener('animationend', () => {
+                     this.bucket.classList.remove('decorative-bucket-animation')
+                    this.count++
+                }) 
+            } else {
+                this.bucket.classList.add('decorative-bucket-animation-vanish')
+            }
+        }     
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -120,7 +145,7 @@ export default {}
 
     .third-section-decorative-rectangle {
         width: 100%;
-        height: 20.55rem;
+        height: 22.55rem;
         position: absolute;
         top: 11.5rem;
         z-index: 1;
@@ -146,6 +171,26 @@ export default {}
         img {
             max-width: 100%;
         }
+    }
+
+    .decorative-bucket-animation{
+        animation: bucket 1.5s ease-in-out;
+    }
+
+    .decorative-bucket-animation-vanish{
+        animation: bucket-vanish 1.5s ease-in-out both;
+    }
+
+    @keyframes bucket {
+        0% { transform: translateY( 0px ); }
+        50% { transform: translateY( -10px ); }
+        100% { transform: translateY( 0px ); }
+    }
+
+    @keyframes bucket-vanish {
+        0% { transform: translateX( 0px ); }
+        20% { transform: skew(7deg);}
+        100% {  transform: translateX( -999px );}
     }
 
     .third-section-aside {

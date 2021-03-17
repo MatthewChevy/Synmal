@@ -31,8 +31,8 @@
                     </div>
                     <div class="second-section-top-secondImage">
                         <img
-                            src="../../assets/img/airless-painting.jpg"
-                            alt="Airless painting"
+                            src="../../assets/img/gallery/IMG_20200824_122152.jpg"
+                            alt="Exterior painting"
                         />
                     </div>
                 </div>

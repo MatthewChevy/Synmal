@@ -20,7 +20,7 @@
                 </div>
                 <div class="second-section-top-image">
                     <img
-                        src="../../assets/img/gallery/131930597_3221521607952808_6118545964526696010_n.jpg"
+                        src="../../assets/img/gallery/131895848_411182313570877_2920369544276251577_n.jpg"
                         alt="Airless painting"
                     />
                 </div>
@@ -29,8 +29,8 @@
         <div class="second-section-bottom-image-wrapper">
             <div class="second-section-bottom-image">
                 <img
-                    src="../../assets/img/wagner-machine.jpg"
-                    alt="Wagner Machine"
+                    src="../../assets/img/welcome-image.png"
+                    alt="Exterior painting"
                 />
             </div>
         </div>
@@ -94,7 +94,7 @@ export default {}
         height: fit-content;
         border-radius: 3px;
         line-height: 0;
-        border: 5px solid $primary-light;
+        border: 3px solid $primary-light;
         box-shadow: 5px 5px 3px rgba($darkest, 16%);
 
         img {
@@ -113,7 +113,7 @@ export default {}
     .second-section-bottom-image {
         border-radius: 3px;
         line-height: 0;
-        border: 5px solid $primary-light;
+        border: 3px solid $primary-light;
         box-shadow: 5px 5px 3px rgba($darkest, 16%);
 
         img {
