@@ -12,9 +12,11 @@
         <the-home-aside-content />
 
         <the-home-third-section />
-
-        <the-contact-button />
     </main>
+
+    <footer>
+        <the-contact-button />
+    </footer>
 </template>
 
 <script>
@@ -37,28 +39,20 @@ export default {
         TheHomeThirdSection,
         TheContactButton,
         TheHomeMottoSection
-    }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-header {
-    padding-top: 1.7rem;
+
+header{
+    position: relative;
+    height: calc( 100% - 3.35rem ); //3.35rem is height of URL bar on 
 }
 
-main {
-    background-color: $primary-light;
-    // transform: translateY(0%);
-    transform: translateY(-210px);
-    overflow: auto;
-    animation: mainTranslateY 1.5s 3.5s ease-in-out forwards;  
+footer{
+    position: relative;
+    margin-top: -5rem;
 }
-
-// @keyframes mainTranslateY {
-//     0%{ transform: translateY(0);}
-//     80%{ transform: translateY( -210px);}
-//     90%{ transform: translateY( -213px);}
-//     100%{ transform: translateY( -210px);}
-// }
 
 </style>
