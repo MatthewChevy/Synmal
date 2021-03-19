@@ -47,8 +47,9 @@
 import tableMixin from '../../mixins/tableMixins.js'
 
 export default {
-    mixins: [tableMixin]
+    mixins: [tableMixin],
 }
+
 </script>
 
 <style lang="scss" scoped>
