@@ -1,11 +1,12 @@
 <template>
-    <div
-        class="footer-handler"
-        tabindex="1"
-        @click="$router.push({ path: '/contact' })"
-    >
-        <p class="contact-link-button">Kontaktujte nás</p>
+<div class="contact-link-wrapper">
+    <div class="contact-link-button">
+        <a class='contact-link' tabindex="1" @click="$router.push({ path: '/contact' })">
+            Kontaktujte nás
+        </a>
     </div>
+</div>
+
 </template>
 
 <script>
@@ -14,46 +15,49 @@ export default {}
 
 <style lang="scss" scoped>
 
+@media screen and ( min-width: 0px){
 
-.contact-link-button {
-    max-width: 11rem;
-    margin: 3.5rem auto 3rem auto;
-    padding: 0.15rem 0;
-    text-align: center;
-    background-color: $fancy;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-    cursor: pointer;
-    font: {
-        size: 15px;
-        weight: regular;
+    .contact-link-wrapper{
+        height: 12rem;
+        background: $primary-light;
+        position: relative;
+        margin-top: -1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2.5rem;
     }
-    color: $darkest;
-}
 
-.contact-link-button:focus,:hover {
-    background-color: $primary-semi-dark;
-    color: $primary-light;
-    transition: 0.25s;
+    .contact-link-button{
+        background-color: $fancy;
+        padding: 3px 15px;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 3px 3px 3px rgba( $darkest, 16% );
+    }
+
+    .contact-link-button:hover,:focus{
+        transition: .25s;
+        // color: $primary-semi-light;
+        // background-color: $primary-semi-dark;
+        transform: scale(1.1);
+        box-shadow: 5px 5px 3px rgba( $darkest, 16% );
+    }
+
 }
 
 @media screen and ( min-width: 375px) {
-   .contact-link-button {
-        margin: 1rem auto 3rem auto;
-    } 
-}
 
-@media screen and (min-width: 640px) {
-
-    .footer-handler{
-        margin: -1.5rem 0 2rem 0 ;
-    }
     .contact-link-button{
-        max-width: 15rem;
-        padding: 0.3rem 0;
-        font: {
-            size: 16px;
-            weight: 500;
-        }
+        background-color: $fancy;
+        padding: 2px 30px;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 3px 3px 3px rgba( $darkest, 16% );
+        font:{
+            size: 17px
+        };
     }
 }
+
 </style>
