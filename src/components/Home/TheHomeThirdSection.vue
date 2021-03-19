@@ -18,7 +18,7 @@
             </div>
 
             <div class="decorative-bucket">
-                <img @click=" bucketAni()" src="../../assets/img/jupol.png" alt="Jupol bucket" />
+                <img @click="bucketAni()" src="../../assets/img/jupol.png" alt="Jupol bucket" />
             </div>
         </div>
         <div class="mirror-decorative-line"></div>
@@ -46,18 +46,38 @@
 </template>
 
 <script>
+
+
+
 export default {
 
     data() {
         return {
             count: 0,
-            bucket: Object
+            bucket: Object,
+            paintRoller: Object,
+            paintRollerPointFireAni: 1616,  //Scroll position when start paint roller animation
+            paintRollerParagraphwidth: Number
         }
     },
 
     mounted () {
         this.bucket = document.getElementsByClassName('decorative-bucket')[0]
+        this.paintRoller = document.getElementsByClassName('decorative-paint-roller')[0]
+        this.paintRollerParagraphwidth = document.getElementsByClassName('third-section-paint-roller-paragraph')[0].offsetWidth
+
+        
+
+        // console.log( paintRollerParagraph  );
+
+        window.addEventListener("scroll", () => {
+            if( document.documentElement.scrollTop > this.paintRollerPointFireAni ){
+                this.paintRoller.classList.add('paint-roller-move')
+            }
+             
+        })
     },
+
     methods: {
         bucketAni() {
             if ( this.count < 3 ){
@@ -69,7 +89,9 @@ export default {
             } else {
                 this.bucket.classList.add('decorative-bucket-animation-vanish')
             }
-        }     
+        }
+        
+            
     }
 }
 </script>
@@ -197,7 +219,6 @@ export default {
         position: relative;
         width: 100%;
         z-index: 2;
-        margin-bottom: 2rem;
     }
 
     .third-section-paint-roller-paragraph {
