@@ -1,12 +1,15 @@
 <template>
     <div class="banner">
         <navigation-logo />
-        <navigation-menu-button @toggle-menu="toggleMenu($event)" />
+        <navigation-menu-button 
+            @menu-button="toggleMenu" 
+            :activeMenu=activeMenu 
+        /> 
     </div>
     <nav>
         <ul
-            @click="toggleMenu(false)"
             v-if="activeMenu || breakPointLarge < actualyWidnowSize"
+            @click="activeMenu = false"
         >
             <li
                 class="list-item"
@@ -41,16 +44,12 @@
 </template>
 
 <script>
-// import func from '../../vue-temp/vue-editor-bridge'
-// import { watch } from 'vue'
-import tableMixin from '../mixins/tableMixins'
-
+import tableMixin from '../mixins/tableMixins.js'
 import NavigationLogo from './TheNavigationLogo'
 import NavigationMenuButton from './TheNavigationMenuButton.vue'
 
 export default {
     mixins: [tableMixin],
-
     components: {
         NavigationLogo,
         NavigationMenuButton
@@ -58,19 +57,15 @@ export default {
 
     data() {
         return {
-            activeMenu: false,
-            breakPointLarge: 1023 //px
+            breakPointLarge: 1023, //px
+            activeMenu: false
         }
     },
 
     methods: {
-        toggleMenu(boolen) {
-            if (boolen) {
-                this.activeMenu = true
-            } else {
-                this.activeMenu = false
-            }
-        }
+        toggleMenu() {
+            this.activeMenu ? this.activeMenu = false : this.activeMenu = true
+        },
     }
 }
 </script>

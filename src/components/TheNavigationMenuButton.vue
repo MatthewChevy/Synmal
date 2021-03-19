@@ -1,62 +1,135 @@
 <template>
-    <a class="button" @click="activeMenu">
-        <img src="../assets/img/menu.png" alt="Menu button" />
-    </a>
+    <div class="button-wrapper">
+        <button @click="$emit('menu-button'), buttonToggle()" class="menu-toggle">Menu</button>
+    </div>
 </template>
 
 <script>
+
+import tableMixins from '../mixins/tableMixins.js'
+
 export default {
+
+    mixins: [tableMixins],
+
+    emits: ['menu-button'],
+
+    props: {
+      activeMenu: {
+        type: Boolean,
+      },
+    },
+
     data() {
         return {
-            menuIsActive: false
+            button: Object,
         }
     },
+
     methods: {
-        activeMenu() {
-            if (this.menuIsActive) {
-                this.$emit('toggle-menu', false)
-                this.menuIsActive = false
-            } else {
-                this.$emit('toggle-menu', true)
-                this.menuIsActive = true
-            }
-        }
-    }
+      buttonToggle() {
+        this.button.classList.toggle('is-active')
+      }
+    },
+
+    watch: {
+      activeMenu() {
+        if( this.activeMenu === false)
+          this.button.classList.remove('is-active')
+      }
+    },
+
+    mounted() {
+        this.button = document.getElementsByTagName('button')[0]
+    },
+
 }
 </script>
 
 <style lang="scss" scoped>
-.button {
-    width: 2rem;
-    margin: 10px;
-    border: none;
-    background: none;
+
+
+$buttonWidth: 30px;
+$buttonHeight: 20px;
+$buttonColor: darken(#ffffff, 15%);
+$lineThickness: 2px;
+$transitionSpeed: .25s;
+$transitionEasing: ease-in-out;
+
+.button-wrapper{
+    margin: 15px;
 }
 
-.button::before,
-::after {
-    border: none;
-    background: none;
-}
+.menu-toggle {
+  position: relative;
+  display: block;
+  width: $buttonWidth;
+  height: $buttonHeight;
+  background: transparent;
+  border-top: $lineThickness solid;
+  border-bottom: $lineThickness solid;
+  color: $buttonColor;
+  font-size: 0;
+  
+  transition: all $transitionSpeed $transitionEasing;
 
-img {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
     width: 100%;
+    height: $lineThickness;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    background: currentColor;
+    
+    transform: translate(-50%, -50%);
+    transition: transform $transitionSpeed $transitionEasing;
+  } 
 }
 
-@media screen and (max-width: 374px) {
-    .button {
-        margin: 13px 10px;
-    }
+button:hover {
+  color: lighten($buttonColor, 15%);
 }
 
-// @media screen and ( min-width: 600px) {
-//     .button {
-//         width: 3rem;
-//         margin: 15px;
-//         border: none;
-//         background: none;
-//     }
+button.is-active {
+  border-color: transparent;
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+// .button {
+//     width: 2rem;
+//     margin: 10px;
+//     border: none;
+//     background: none;
 // }
+
+// .button::before,
+// ::after {
+//     border: none;
+//     background: none;
+// }
+
+// img {
+//     width: 100%;
+// }
+
 
 @media screen and (min-width: 1024px) {
     .button {
