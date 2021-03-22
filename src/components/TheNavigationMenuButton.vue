@@ -113,26 +113,10 @@ button {
   outline: none;
 }
 
-// .button {
-//     width: 2rem;
-//     margin: 10px;
-//     border: none;
-//     background: none;
-// }
-
-// .button::before,
-// ::after {
-//     border: none;
-//     background: none;
-// }
-
-// img {
-//     width: 100%;
-// }
 
 
 @media screen and (min-width: 1024px) {
-    .button {
+    .button-wrapper {
         display: none;
     }
 }

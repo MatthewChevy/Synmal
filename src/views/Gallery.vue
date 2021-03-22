@@ -7,12 +7,12 @@
         </section>
 
         <section class="gallery">
-            <div class="big-size-photo mb">
+            <!-- <div class="big-size-photo mb">
                 <img
                     src="../assets/img/gallery/IMG_20200824_122141.jpg"
                     alt=""
                 />
-            </div>
+            </div> -->
 
             <div class="medium-size-photo">
                 <img
@@ -149,6 +149,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 .mt {
     margin-top: 0.3rem;
 }
@@ -170,7 +171,7 @@ main {
 
 .title-section {
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     z-index: 1;
 }
@@ -197,7 +198,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     margin: 1rem auto 0 auto;
     z-index: 2;
 }
@@ -223,6 +224,7 @@ main {
         width: 100%;
     }
 }
+
 .background-splitter {
     position: absolute;
     width: 100%;
@@ -264,16 +266,45 @@ main {
     transition: 0.25s;
 }
 
-@media screen and (max-width: 374px) {
+@media screen and ( min-width: 640px ) {
+
     .title-section {
-        width: 95%;
+        width: 80%;
     }
 
     .gallery {
-        width: 95%;
+        width: 80%;
     }
-    .background-splitter {
-        display: none;
+
+ 
+}
+
+@media screen and ( min-width: 768px ) {
+
+    .gallery {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: .5rem;
     }
+
+    .big-size-photo {
+           all: initial;
+        * {
+            all: unset;
+        }
+    }
+
+    .medium-size-photo {
+           all: initial;
+        * {
+            all: unset;
+        }
+
+        width: 100%;
+    }
+
+ 
 }
 </style>

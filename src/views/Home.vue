@@ -1,9 +1,9 @@
 <template>
     <header>
-        <the-home-header />
+        <the-home-header @end-ani-titles="startMottoAni= $event"/>
     </header>
     <main>
-        <the-home-motto-section />
+        <the-home-motto-section :startMottoAni=startMottoAni />
 
         <the-home-first-section />
 
@@ -40,6 +40,12 @@ export default {
         TheContactButton,
         TheHomeMottoSection
     },
+
+    data() {
+        return {
+            startMottoAni: Boolean
+        }
+    }
 }
 </script>
 
