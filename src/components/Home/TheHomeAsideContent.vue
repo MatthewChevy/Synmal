@@ -12,22 +12,34 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.center-content {
-    position: relative;
-    width: 100%;
-    z-index: 3;
-    background-color: $primary-light;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
+
+@media screen and (min-width: 0px) {
+    
+    .center-content {
+        position: relative;
+        width: 100%;
+        z-index: 3;
+        background-color: $primary-light;
+        box-shadow: 5px 5px 3px rgba($darkest, 16%);
+    }
+
+    .center-content-h4 {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 1.563rem 0px;
+        text-align: center;
+        font: {
+            size: 14px;
+            weight: 400;
+        }
+    }
 }
 
-.center-content-h4 {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 1.563rem 0px;
-    text-align: center;
-    font: {
-        size: 14px;
-        weight: 400;
+@media screen and (min-width: 550px) {
+    .center-content-h4 {
+        font: {
+            size: 17px;
+        }
     }
 }
 

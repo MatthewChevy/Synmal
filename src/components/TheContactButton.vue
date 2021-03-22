@@ -60,4 +60,11 @@ export default {}
     }
 }
 
+@media screen and ( min-width: 640px) {
+
+    .contact-link-wrapper{
+        margin-top: 0rem;
+    }
+}
+
 </style>

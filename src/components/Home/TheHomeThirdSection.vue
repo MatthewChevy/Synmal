@@ -55,8 +55,9 @@ export default {
         return {
             count: 0,
             bucket: Object,
+            executed: false,
             paintRoller: Object,
-            paintRollerPointFireAni: 1616,  //Scroll position when start paint roller animation
+            paintRollerPointFireAni: 1555, //px from top  //Scroll position when start bucket animation
             paintRollerParagraphwidth: Number
         }
     },
@@ -71,8 +72,9 @@ export default {
         // console.log( paintRollerParagraph  );
 
         window.addEventListener("scroll", () => {
-            if( document.documentElement.scrollTop > this.paintRollerPointFireAni ){
-                this.paintRoller.classList.add('paint-roller-move')
+            if( !this.executed && document.documentElement.scrollTop > this.paintRollerPointFireAni ){
+                this.bucketAni();
+                this.executed = true
             }
              
         })
@@ -80,7 +82,7 @@ export default {
 
     methods: {
         bucketAni() {
-            if ( this.count < 3 ){
+            if ( this.count < 4 ){
                this.bucket.classList.add('decorative-bucket-animation')
                  this.bucket.addEventListener('animationend', () => {
                      this.bucket.classList.remove('decorative-bucket-animation')
@@ -316,10 +318,61 @@ export default {
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
     .third-section-field {
-        width: 85%;
-        margin: 0 auto;
+        width: 78%;
+    }
+
+    .thrid-section-list-item{
+        width: 18rem;
+        margin-left: 3rem;
+
+        h6 {
+            font: {
+                size: 17px;
+            }
+        }
+    }
+
+    .third-section-ul {
+        li {
+            font: {
+                size: 15px;
+            }
+            line-height: 1.6rem;
+        }
+    }
+
+    .color-splitter{
+        height: 7.5rem;
+    }
+
+    .decorative-bucket{
+        width: 11rem;
+        left: 75%;
+    }
+
+    .decorative-paint-roller{
+        width: 6.15rem;
+        top: -1.05rem;
+    }
+
+    .third-section-paint-roller-paragraph {
+        width: 70%;
+        height: 6rem;
+    }
+
+    .third-section-paint-roller-paragraph-handler{
+
+        p{
+            font:{
+                size: 13px 
+            }
+        }
+    }
+
+    .third-section-decorative-rectangle{
+        height: 27.5rem;
     }
 }
 
@@ -356,7 +409,7 @@ export default {
     .decorative-bucket {
         width: 11rem;
         top: -1.5rem;
-        left: 60%;
+        left: 80%;
     }
 
     .third-section-decorative-rectangle{
@@ -368,6 +421,8 @@ export default {
     }
 
     .third-section-paint-roller-paragraph-handler{
+
+        width: 75%;
         p{
             font:{
                 size: 14px;

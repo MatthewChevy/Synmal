@@ -22,10 +22,44 @@ import tableMixin from '../../mixins/tableMixins.js'
 
 export default {
     mixins: [tableMixin],
+
+    data() {
+        return {
+            motto: Object
+        }
+    },
+
+    props: ['startMottoAni'],
+        
+
+    mounted () {
+        this.motto = document.getElementsByClassName('motto')[0]
+         window.addEventListener('scroll', () => {
+            this.motto.classList.add('motto-ani')
+         })
+    },
+
+    methods: {
+        mottoAni() {
+        if( this.startMottoAni ){
+                this.motto.classList.add('motto-ani')
+            }
+        }
+    },
+
+    watch: {
+        startMottoAni() {
+            this.mottoAni()
+        }
+    },
 }
+
+
 </script>
 
 <style lang="scss" scoped>
+
+// Pri resize z mensieho na vacsie odskoci motto sekcia
 
 @media screen and ( min-width: 0px) {
  
@@ -44,8 +78,11 @@ export default {
         background: $primary-light;
         border-radius: 10px 10px 0px 0px;
         z-index: 1;
-        animation: mottoTranslateY 1.5s 3.5s ease-in-out both;  
+        height: 9rem;
+    }
 
+    .motto-ani{
+        animation: mottoTranslateY 1s ease-in-out both;
     }
 
     .motto-field {
@@ -70,7 +107,7 @@ export default {
 
     @keyframes mottoTranslateY {
         0%{ transform: translateY(0);}
-        100%{ transform: translateY( -9rem );}  //height of motto section
+        100%{ transform: translateY( -8.9rem );}  //height of motto section
     }
 }
 
@@ -87,24 +124,61 @@ export default {
 
     @keyframes mottoTranslateY {
         0%{ transform: translateY(0);}
-        100%{ transform: translateY( -8rem );} //height of motto section
+        100%{ transform: translateY( -7.9rem );} //height of motto section
     }
 }
 
-@media screen and ( min-width: 640px) {
+@media screen and ( min-width: 550px) {
 
     .motto-field {
-        padding: 1rem 0;
-        max-width: 75%;
-
         h3 {
             font: {
-                size: 20px;
+                size: 17px;
             }
         }
     }
+
 }
 
+@media screen and ( min-width: 600px) {
 
+    .motto{
+        padding: 2.75rem 0;
+        height: 10rem;
+    }
+
+    .motto-field {
+        max-width: 30rem;
+    }
+
+    .horizontal-line{
+        height: 1px;
+        margin-top: 5px;
+    }
+
+    @keyframes mottoTranslateY {
+        0%{ transform: translateY(0);}
+        100%{ transform: translateY( -9.9rem );} //height of motto section
+    }
+}
+
+@media screen and ( min-width: 768px) {
+ 
+    .sm-screen{
+        display: none;
+    }
+
+    .md-screen{
+        display: block;
+    }
+
+    .motto{
+        padding: 2rem 0;
+    }
+
+    .motto-field{
+        max-width: 32rem;
+    }
+}
 
 </style>

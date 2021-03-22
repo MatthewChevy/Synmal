@@ -144,6 +144,25 @@ export default {}
     }
 }
 
+@media screen and (min-width: 550px) {
+
+    .second-section-paragraph-holder {
+        p {
+            font: {
+                size: 13px;
+            }
+        }
+    }
+
+    .second-section-equipment{
+        width: 92%;
+    }
+
+    .second-section-bottom-image-wrapper{
+        width: 80%;
+    }
+}
+
 @media screen and (min-width: 640px) {
 
     .article{

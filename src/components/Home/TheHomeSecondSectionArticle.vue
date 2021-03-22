@@ -87,6 +87,7 @@
     .paint-machine-about{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 85%;
         margin: 0 auto;
         padding: 1rem 0;
@@ -118,9 +119,11 @@
     }
 
     .second-section-wagner {
+        position: relative;
         width: 85%;
         margin: 0 auto;
         padding-left: 0;
+        z-index: 2;
     }
 
     .second-section-top-images {
@@ -151,7 +154,7 @@
     .second-section-bottom-handler {
         position: relative;
         width: 100%;
-        background-color: $primary-semi-light;
+        background-color: $primary-soft;
         padding: 0;
         z-index: 1;
     }
@@ -162,9 +165,9 @@
         justify-content: space-between;
         align-items: flex-end;
         width: 85%;
-        margin: 0 auto;
-        padding: 0.75rem 0 1rem 0;
-        top: -5rem;
+        margin: -6rem auto 0 auto;
+        padding: 0.75rem 0 2rem 0;
+        
     }
 
     .second-section-bottom-paragraph-handler {

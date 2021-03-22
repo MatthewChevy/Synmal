@@ -2,8 +2,14 @@
   <article>
     <div class="image-wrapper">
         <img
-            class="welcome-image"
+            class="welcome-image sm"
             src="../../assets/img/city.jpg"
+            alt="painting"
+        />
+ <!-- Component -->       
+        <img
+            class="welcome-image lg"
+            src="../../assets/img/lagre-wallpaper.jpg" 
             alt="painting"
         />
     </div>
@@ -20,6 +26,19 @@
         </div>
     </div>
 
+    <div class="title-container">
+      <div class="box">
+          <div class="title">
+              <span class="block"></span>
+              <h1>JOZEF ZIGO - SYNMAL<span></span></h1>
+          </div>
+          <div class="sub-title">
+              <div class="sub-title-block"></div>
+              <p>Maliarkse práce</p>
+          </div>
+      </div>
+  </div>
+
       <h3 class="width">Width: {{ width }}</h3>
       <h3 class="height">Height: {{ height }}</h3>
   </article>
@@ -34,10 +53,21 @@ export default {
 
     data() {
       return {
-        width:  window.innerWidth,
+        width: window.innerWidth,
         height: window.innerHeight,
+        subTitleBlock: Object
       }
-    }
+    },
+
+    emits: ['end-ani-titles'],
+
+    mounted () {
+      this.subTitleBlock = document.getElementsByClassName('sub-title-block')[0]
+      
+      this.subTitleBlock.addEventListener('animationend', () => {
+        this.$emit('end-ani-titles', true)
+      })
+    },
 }
 
 </script>
@@ -62,7 +92,7 @@ export default {
   }
       
   .box {
-    width: 22rem;
+    width: 97%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -90,7 +120,7 @@ export default {
   h1 {
       font-family: $font-family;
       color: #fff;
-      font-size: 32px;
+      font-size: 26px;
       animation: mainFadeIn 2s 1.6s forwards;
       opacity: 0;
       display: flex;
@@ -178,7 +208,7 @@ export default {
     }
     65% {
         width: 7px;
-      height: 7px;
+        height: 7px;
         bottom: 0px;
         width: 15px
     }
@@ -206,7 +236,16 @@ export default {
       position: fixed;
       max-width: 100%;
       z-index: 0;
+      margin-top: 3rem;
       background-repeat: no-repeat;
+  }
+
+  .lg{
+    display: none;
+  }
+
+  .sm{
+    display: block;
   }
 
   h3{
@@ -220,39 +259,152 @@ export default {
   .width{
     top: 4rem;
   }
+
   .height{  
     top: 5.5rem;
   }
 
-  .roz{  
-    top: 7rem;
+}
+
+@media screen and (min-width: 375px) {
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+  .box{
+    margin-left: 6%;
+  }
+
+  h1 {
+    font-size: 40px;
+    // letter-spacing: 2px;
+
+    span {
+      right: -15px;
+    }
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  @keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #e9d856;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 13px;
+    height: 13px;
+    background: #e9d856;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+      width: 10px;
+      height: 7px;
+      bottom: 0px;
+      width: 18px
+  }
+  80% {
+      width: 10px;
+      height: 10px;
+      bottom: 20px
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    background: #e9d856;
+    border: 0px solid #222;
+    bottom: 14px;
+
+  }
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+    .box{
+      margin-left: 6%;
+    }
+
+    h1{
+      font-size: 50px;
+      // letter-spacing: 2px;
+
+      span {
+        right: -20px;
+      }
+    }
+
+    .sub-title{
+      margin-top: 4.5rem;
+    }
+
+    p{
+      font-size: 22px;
+    }
+
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: #e9d856;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 16px;
+      height: 16px;
+      background: #e9d856;
+      opacity: 1;
+      bottom: 48px;
+    }
+    65% {
+        width: 13px;
+        height: 10px;
+        bottom: 0px;
+        width: 21px
+    }
+    80% {
+        width: 13px;
+        height: 13px;
+        bottom: 23px
+    }
+    100% {
+      width: 13px;
+      height: 13px;
+      background: #e9d856;
+      border: 0px solid #222;
+      bottom: 20px;
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .lg{
+    display: block;
+  }
+
+  .sm{
+    display: none;
   }
 
 }
 
 
-
-@media screen and (min-width: 350px) {
-   
-}
-
-@media screen and (min-width: 375px) {
-
-}
-
-@media screen and (min-width: 450px) {
-
-}
-
-@media screen and (min-width: 640px) {
-
-}
-
-@media screen and (min-width: 700px) {
-
-}
-
-@media screen and (min-width: 900px) {
-
-}
 </style>

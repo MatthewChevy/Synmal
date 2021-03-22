@@ -112,8 +112,22 @@ export default {
 
 @media screen and (min-width: 550px) {
 
-    .second-section-background {
+    .second-section-container{
         width: 90%;
+        margin-left: 1.5rem;
+    }   
+
+    .second-section-background {
+        width: 92%;
+    }
+
+    .second-section-h3-handler {
+        width: 100%;
+        h3 {
+            font: {
+                size: 17px;
+            }
+        }
     }
 }
 
@@ -130,16 +144,23 @@ export default {
     }
 
     .second-section-container {
-        width: 85%;
+        width: 100%;
+        margin-left: unset;
     }
 
     .second-section-h3-handler {
-        width: 100%;
+        width: 30rem;
+        text-align: center;
+        margin: 0 auto;
         h3 {
             font: {
                 size: 20px;
             }
         }
+    }
+
+    .second-section-decorative-line{
+        width: 0.4rem;
     }
 
 }
