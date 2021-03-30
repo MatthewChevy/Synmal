@@ -113,6 +113,18 @@ export default {
         }
     },
 
+     mounted() {
+
+        this.boxContainer = document.getElementsByClassName('box-container')
+
+        window.addEventListener('scroll', debounce( () => { 
+            if (this.actualyWidnowSize <= this.breakpointmd ) {
+                this.scrollSelectBox()
+            }
+        }, this.timer))
+
+    },
+
     methods: {
         scrollSelectBox() {
             for (let i = 0; i < this.boxContainer.length; i++) {
