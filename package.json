@@ -10,12 +10,13 @@
   "dependencies": {
     "@splidejs/vue-splide": "^0.3.5",
     "core-js": "^3.6.5",
-    "lodash-es": "^4.17.20",
+    "lodash-es": "^4.17.21",
     "mitt": "^2.1.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.4",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
