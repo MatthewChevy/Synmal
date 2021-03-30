@@ -320,5 +320,95 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    section {
+        padding-top: 1rem;
+    }
+
+    .container {
+        width: $container;
+    }
+
+    .why-us {
+        h2 {
+            margin: 4rem 0 2rem 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        h2::before,
+        h2::after {
+            content: '';
+            display: inline-block;
+            position: relative;
+            width: 21%;
+            top: -0.4rem;
+            border: 0.25px solid $fancy;
+            background: $fancy;
+        }
+
+        h2::after {
+            left: 1rem;
+        }
+
+        h2::before {
+            right: 1rem;
+        }
+
+        p {
+            width: 45rem;
+            padding-top: 1rem;
+            font: {
+                weight: 300;
+            }
+        }
+    }
+
+    .notes-box {
+        padding: 4rem 0;
+        width: 52rem;
+    }
+
+    .list-box {
+        padding: 1rem;
+        ul {
+            li {
+                padding: 0.15rem 0;
+                font: {
+                    weight: 300;
+                }
+            }
+        }
+    }
+
+    .paragraph-box {
+        width: 25rem;
+        padding-left: 3rem;
+        font: {
+            weight: 300;
+        }
+
+        .contact-button {
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            padding: 3px 40px;
+            border-radius: 3px;
+            color: $darkest;
+            background-color: $fancy;
+            cursor: pointer;
+            font: {
+                size: 16px;
+            }
+        }
+
+        .contact-link:hover,
+        :focus {
+            background-color: darken($fancy, 10%);
+        }
+    }
+}
+
 </style>
 
