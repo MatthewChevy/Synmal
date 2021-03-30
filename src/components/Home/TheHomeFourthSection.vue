@@ -48,4 +48,120 @@
 
 <style lang="scss" scoped>
 
+@media screen and (min-width: 0px) {
+    .section {
+        width: 100%;
+        position: relative;
+        background-color: $primary-light;
+        padding-top: 1rem;
+    }
+
+    .container {
+        width: $container;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .why-us {
+        margin: 0 auto;
+
+        h2 {
+            margin: 2rem 0 1rem 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        h2::before,
+        h2::after {
+            content: '⬤';
+            position: relative;
+            top: -0.4rem;
+            color: $fancy;
+            background: $fancy;
+            font: {
+                size: 5px;
+            }
+        }
+
+        h2::after {
+            left: 0.15rem;
+        }
+
+        h2::before {
+            right: 0.15rem;
+        }
+
+        p {
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 1rem;
+            font: {
+                weight: 300;
+            }
+        }
+    }
+
+    .notes-box {
+        align-items: center;
+        padding: 2rem 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .list-box {
+        margin: 0 auto;
+        border-top: 1px solid $fancy;
+        border-bottom: 1px solid $fancy;
+        padding: 2rem 0;
+
+        ul {
+            margin: 0 auto;
+            width: 95%;
+            text-align: left;
+            li {
+                padding: 0.15rem 0;
+                font: {
+                    weight: 300;
+                }
+            }
+
+            li::before {
+                content: '>';
+                color: $fancy;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+
+    .paragraph-box {
+        width: 100%;
+        padding-top: 2rem;
+        text-align: center;
+        font: {
+            weight: 300;
+        }
+
+        .contact-button {
+            margin: 2rem 0;
+        }
+
+        .contact-link {
+            padding: 3px 40px;
+            border-radius: 3px;
+            color: $darkest;
+            background-color: $fancy;
+            cursor: pointer;
+            font: {
+                size: 16px;
+            }
+        }
+
+        .contact-link:hover,
+        :focus {
+            background-color: darken($fancy, 10%);
+        }
+    }
+}
+
+
 </style>
