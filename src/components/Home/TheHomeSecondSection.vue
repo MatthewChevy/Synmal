@@ -220,6 +220,66 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .section {
+        padding-top: 2rem;
+    }
 
+    .container {
+        width: $container;
+        margin: 0 auto;
+        text-align: right;
+    }
+
+    .h3-handler {
+        width: 34rem;
+        margin: 2rem auto;
+        padding: 0;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+
+    article {
+        max-width: 60rem;
+    }
+
+    .airless-box {
+        margin: 0 auto 5rem auto;
+    }
+
+    .logo-holder {
+        width: 22rem;
+        margin-bottom: 1rem;
+
+        img {
+            width: 16rem;
+        }
+
+        .p-1,
+        .p-2 {
+            margin-top: 2rem;
+
+            strong {
+                font: {
+                    weight: 500;
+                }
+            }
+
+            font: {
+                weight: 300;
+            }
+        }
+    }
+
+    .paint-machine-image {
+        width: 25rem;
+        img {
+            width: 100%;
+        }
+    }
+}
 
 </style>
