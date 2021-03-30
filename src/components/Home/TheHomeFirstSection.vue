@@ -232,6 +232,30 @@
     }
 }
 
+@media screen and (min-width: 350px) {
+    .to-do-box {
+        .box-container {
+            border-radius: 10px;
+            min-height: 400px;
+            h4 {
+                font: {
+                    size: 22px;
+                    weight: 300;
+                }
+            }
+            p {
+                width: 19rem;
+                margin: 0 auto;
+                font: {
+                    size: 16px;
+                    weight: 300;
+                }
+            }
+        }
+    }
+}
+
+
 </style>
 
 
