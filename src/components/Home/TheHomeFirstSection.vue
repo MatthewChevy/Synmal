@@ -283,8 +283,77 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: $container;
+        padding: 3rem 0 1.5rem 0;
+    }
 
+    .h3-wrapper {
+        margin: 1.5rem auto 4rem auto;
 
+        h3 {
+            font: {
+                size: 40px;
+                weight: 300;
+            }
+        }
+    }
+
+    .to-do-box {
+        .box-container {
+            h4 {
+                font: {
+                    size: 17px;
+                    weight: 400;
+                }
+            }
+
+            p {
+                width: 13rem;
+                font: {
+                    size: 14px;
+                    weight: 300;
+                }
+            }
+
+            .image-holder {
+                img {
+                    width: 22%;
+                }
+            }
+        }
+    }
+
+    aside {
+        line-height: 4rem;
+
+        h5 {
+            margin: 4rem 0 2rem 0;
+            font: {
+                size: 20px;
+                weight: 300;
+            }
+        }
+    }
+
+    .contact-link {
+        margin: 3rem 0;
+        padding: 2px 30px;
+        border-radius: 3px;
+        color: $darkest;
+        background-color: $fancy;
+        cursor: pointer;
+        font: {
+            size: 16px;
+        }
+    }
+
+    .contact-link:hover,
+    :focus {
+        background-color: darken($fancy, 10%);
+    }
+}
 
 </style>
 
