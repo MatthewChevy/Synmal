@@ -3,8 +3,6 @@
         <the-home-header @end-ani-titles="startMottoAni= $event"/>
     </header>
     <main>
-        <the-home-motto-section :startMottoAni=startMottoAni />
-
         <the-home-first-section />
 
         <the-home-second-section />
@@ -22,7 +20,6 @@
 <script>
 import TheHomeHeader from '../components/Home/TheHomeHeader.vue'
 
-import TheHomeMottoSection from '../components/Home/TheHomeMottoSection.vue'
 import TheHomeFirstSection from '../components/Home/TheHomeFirstSection.vue'
 import TheHomeSecondSection from '../components/Home/TheHomeSecondSection.vue'
 import TheHomeAsideContent from '../components/Home/TheHomeAsideContent.vue'
@@ -38,7 +35,6 @@ export default {
         TheHomeAsideContent,
         TheHomeThirdSection,
         TheContactButton,
-        TheHomeMottoSection
     },
 
     data() {
