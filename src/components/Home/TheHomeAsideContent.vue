@@ -21,7 +21,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     article {
         position: relative;
@@ -109,5 +108,4 @@
         background-color: darken($fancy, 10%);
     }
 }
-
 </style>

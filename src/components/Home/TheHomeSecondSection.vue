@@ -62,7 +62,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .sm-screen {
         display: block;
@@ -281,5 +280,4 @@
         }
     }
 }
-
 </style>

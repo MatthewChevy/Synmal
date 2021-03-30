@@ -149,7 +149,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .mt {
     margin-top: 0.3rem;
 }
@@ -266,8 +265,7 @@ main {
     transition: 0.25s;
 }
 
-@media screen and ( min-width: 640px ) {
-
+@media screen and (min-width: 640px) {
     .title-section {
         width: 80%;
     }
@@ -275,36 +273,31 @@ main {
     .gallery {
         width: 80%;
     }
-
- 
 }
 
-@media screen and ( min-width: 768px ) {
-
+@media screen and (min-width: 768px) {
     .gallery {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
-        grid-gap: .5rem;
+        grid-gap: 0.5rem;
     }
 
     .big-size-photo {
-           all: initial;
+        all: initial;
         * {
             all: unset;
         }
     }
 
     .medium-size-photo {
-           all: initial;
+        all: initial;
         * {
             all: unset;
         }
 
         width: 100%;
     }
-
- 
 }
 </style>

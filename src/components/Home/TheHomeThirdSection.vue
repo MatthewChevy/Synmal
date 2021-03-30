@@ -3,10 +3,7 @@
         <div class="container">
             <div class="decorative-bucket-box">
                 <div class="decorative-bucket lg-screen">
-                    <img
-                        src="../../assets/img/jupol.png"
-                        alt="Jupol bucket"
-                    />
+                    <img src="../../assets/img/jupol.png" alt="Jupol bucket" />
                 </div>
                 <div class="decorative-bucket-paragraph">
                     <p class="p-1">
@@ -175,5 +172,4 @@
         background-color: $fancy;
     }
 }
-
 </style>

@@ -1,6 +1,6 @@
 <template>
     <header>
-        <the-home-header @end-ani-titles="startMottoAni= $event"/>
+        <the-home-header @end-ani-titles="startMottoAni = $event" />
     </header>
     <main>
         <the-home-first-section />
@@ -13,7 +13,6 @@
 
         <the-home-fourth-section />
     </main>
-
 </template>
 
 <script>
@@ -25,7 +24,6 @@ import TheHomeAsideContent from '../components/Home/TheHomeAsideContent.vue'
 import TheHomeThirdSection from '../components/Home/TheHomeThirdSection.vue'
 import TheHomeFourthSection from '../components/Home/TheHomeFourthSection.vue'
 
-
 export default {
     components: {
         TheHomeHeader,
@@ -33,7 +31,7 @@ export default {
         TheHomeSecondSection,
         TheHomeAsideContent,
         TheHomeThirdSection,
-        TheHomeFourthSection,
+        TheHomeFourthSection
     },
 
     data() {
@@ -45,10 +43,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-header{
+header {
     position: relative;
-    height: calc( 100% - 3.35rem ); //3.35rem is height of URL bar on 
+    height: calc(100% - 3.35rem); //3.35rem is height of URL bar on
 }
-
 </style>

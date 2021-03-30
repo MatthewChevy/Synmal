@@ -1,10 +1,10 @@
 <template>
     <div class="banner">
         <navigation-logo />
-        <navigation-menu-button 
-            @menu-button="toggleMenu" 
-            :activeMenu=activeMenu 
-        /> 
+        <navigation-menu-button
+            @menu-button="toggleMenu"
+            :activeMenu="activeMenu"
+        />
     </div>
     <nav>
         <ul
@@ -64,8 +64,10 @@ export default {
 
     methods: {
         toggleMenu() {
-            this.activeMenu ? this.activeMenu = false : this.activeMenu = true
-        },
+            this.activeMenu
+                ? (this.activeMenu = false)
+                : (this.activeMenu = true)
+        }
     }
 }
 </script>

@@ -47,7 +47,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .section {
         width: 100%;
@@ -409,6 +408,4 @@
         }
     }
 }
-
 </style>
-

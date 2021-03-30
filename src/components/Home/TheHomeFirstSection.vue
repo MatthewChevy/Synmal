@@ -109,31 +109,37 @@ export default {
         return {
             toDoBox: Object,
             percentage: 70, // 60% percent from height of box-container
-            timer: 100,
+            timer: 100
         }
     },
 
     mounted() {
-
         this.boxContainer = document.getElementsByClassName('box-container')
 
-        window.addEventListener('scroll', debounce( () => { 
-            if (this.actualyWidnowSize <= this.breakpointmd ) {
-                this.scrollSelectBox()
-            }
-        }, this.timer))
-
-        window.addEventListener('resize', debounce( () => {  
-            if ( this.actualyWidnowSize > this.breakpointmd ) {
-                for (let i = 0; i < this.boxContainer.length; i++) {
-                    this.boxContainer[i].classList.remove('box-container-bg')
+        window.addEventListener(
+            'scroll',
+            debounce(() => {
+                if (this.actualyWidnowSize <= this.breakpointmd) {
+                    this.scrollSelectBox()
                 }
-            } 
-        }, this.timer) )
+            }, this.timer)
+        )
+
+        window.addEventListener(
+            'resize',
+            debounce(() => {
+                if (this.actualyWidnowSize > this.breakpointmd) {
+                    for (let i = 0; i < this.boxContainer.length; i++) {
+                        this.boxContainer[i].classList.remove(
+                            'box-container-bg'
+                        )
+                    }
+                }
+            }, this.timer)
+        )
     },
 
     methods: {
-
         scrollSelectBox() {
             for (let i = 0; i < this.boxContainer.length; i++) {
                 if (
@@ -165,7 +171,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     section {
         position: relative;
@@ -422,5 +427,4 @@ export default {
         background-color: darken($fancy, 10%);
     }
 }
-
 </style>
