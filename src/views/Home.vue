@@ -10,6 +10,8 @@
         <the-home-aside-content />
 
         <the-home-third-section />
+
+        <the-home-fourth-section />
     </main>
 
     <footer>
@@ -24,6 +26,7 @@ import TheHomeFirstSection from '../components/Home/TheHomeFirstSection.vue'
 import TheHomeSecondSection from '../components/Home/TheHomeSecondSection.vue'
 import TheHomeAsideContent from '../components/Home/TheHomeAsideContent.vue'
 import TheHomeThirdSection from '../components/Home/TheHomeThirdSection.vue'
+import TheHomeFourthSection from '../components/Home/TheHomeFourthSection.vue'
 
 import TheContactButton from '../components/TheContactButton.vue'
 
@@ -34,6 +37,7 @@ export default {
         TheHomeSecondSection,
         TheHomeAsideContent,
         TheHomeThirdSection,
+        TheHomeFourthSection,
         TheContactButton,
     },
 
