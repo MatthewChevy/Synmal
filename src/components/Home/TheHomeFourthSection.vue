@@ -224,5 +224,101 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    section {
+        padding-top: 1rem;
+    }
+
+    .container {
+        width: $container;
+    }
+
+    .why-us {
+        width: 100%;
+        h2 {
+            margin: 4rem 0 2rem 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        h2::before,
+        h2::after {
+            content: '';
+            display: inline-block;
+            position: relative;
+            width: 21%;
+            top: -0.4rem;
+            border: 0.25px solid $fancy;
+            background: $fancy;
+        }
+
+        h2::after {
+            left: 1rem;
+        }
+
+        h2::before {
+            right: 1rem;
+        }
+
+        p {
+            width: 100%;
+            padding-top: 1rem;
+            font: {
+                weight: 300;
+            }
+        }
+    }
+
+    .notes-box {
+        padding: 4rem 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .list-box {
+        width: 22rem;
+        padding: 0.5rem;
+        ul {
+            li {
+                padding: 0.15rem 0;
+                font: {
+                    weight: 300;
+                }
+            }
+        }
+    }
+    .paragraph-box {
+        width: 25rem;
+        border-left: 1px solid $fancy;
+        padding-left: 0.8rem;
+
+        font: {
+            weight: 300;
+        }
+
+        .contact-button {
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            padding: 3px 40px;
+            border-radius: 3px;
+            color: $darkest;
+            background-color: $fancy;
+            cursor: pointer;
+            font: {
+                size: 16px;
+            }
+        }
+
+        .contact-link:hover,
+        :focus {
+            background-color: darken($fancy, 10%);
+        }
+    }
+}
+
 </style>
 
