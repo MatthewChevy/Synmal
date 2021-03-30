@@ -182,4 +182,22 @@
         }
     }
 }
+
+@media screen and (min-width: 375px) {
+    .why-us {
+        h2::before,
+        h2::after {
+            width: 10%;
+        }
+
+        h2::after {
+            left: 0.5rem;
+        }
+
+        h2::before {
+            right: 0.5rem;
+        }
+    }
+}
+
 </style>
