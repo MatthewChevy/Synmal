@@ -123,6 +123,14 @@ export default {
             }
         }, this.timer))
 
+        window.addEventListener('resize', debounce( () => {  
+            if ( this.actualyWidnowSize > this.breakpointmd ) {
+                for (let i = 0; i < this.boxContainer.length; i++) {
+                    this.boxContainer[i].classList.remove('box-container-bg')
+                }
+            } 
+        }, this.timer) )
+
     },
 
     methods: {
