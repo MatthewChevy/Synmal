@@ -106,5 +106,13 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    .decorative-bucket-paragraph {
+        p {
+            text-align: left;
+        }
+    }
+}
+
 
 </style>
