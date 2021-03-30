@@ -114,5 +114,66 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    .sm-screen {
+        display: none;
+    }
+
+    .lg-screen {
+        display: block;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+    }
+
+    .container {
+        width: $container;
+    }
+
+    .decorative-bucket-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .decorative-bucket {
+        width: 90%;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .decorative-bucket-paragraph {
+        width: 90%;
+        padding-left: 2rem;
+        p {
+            font: {
+                weight: 300;
+            }
+
+            strong {
+                font: {
+                    weight: 500;
+                }
+            }
+        }
+
+        .p-1 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .decorative-line {
+        position: absolute;
+        width: 0.313rem;
+        height: 100%;
+        top: 0;
+        right: 0.813rem;
+        z-index: 0;
+        background-color: $fancy;
+    }
+}
 
 </style>
