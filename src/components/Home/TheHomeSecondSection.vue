@@ -62,4 +62,95 @@
 </template>
 
 <style lang="scss" scoped>
+
+@media screen and (min-width: 0px) {
+    .sm-screen {
+        display: block;
+    }
+
+    .lg-screen {
+        display: none;
+    }
+
+    .section {
+        position: relative;
+        padding-top: 2rem;
+        border: {
+            top: 1px solid $primary;
+            bottom: 1px solid $primary;
+        }
+        background-color: $primary-soft;
+    }
+
+    .container {
+        width: $container;
+        margin: 0 auto;
+        text-align: right;
+    }
+
+    .h3-handler {
+        width: 100%;
+        margin: 2rem auto;
+        text-align: left;
+        padding: 0;
+
+        h3 {
+            color: $darkest;
+            font-size: 19px;
+            font-weight: 400;
+        }
+    }
+
+    article {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .airless-box {
+        align-items: center;
+        margin: 0 auto 5rem auto;
+    }
+
+    .logo-holder {
+        width: 80%;
+        padding: 1rem 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .p-1,
+    .p-2 {
+        text-align: left;
+        strong {
+            font: {
+                weight: 500;
+            }
+        }
+
+        font: {
+            weight: 300;
+        }
+    }
+
+    .p-2 {
+        text-align: center;
+    }
+
+    .paint-machine-image {
+        width: 90%;
+        margin: 2rem auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .decorative-line {
+        display: none;
+    }
+}
+
+
 </style>
