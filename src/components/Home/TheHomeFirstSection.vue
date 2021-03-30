@@ -255,6 +255,19 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    .to-do-box {
+        .box-container {
+            width: 70%;
+        }
+    }
+
+    .aside {
+        h5 {
+            width: 100%;
+        }
+    }
+}
 
 </style>
 
