@@ -158,4 +158,17 @@
     }
 }
 
+@media screen and (min-width: 640px) {
+    .h3-handler {
+        width: 28rem;
+        margin: 2rem 0;
+    }
+
+    .logo-holder {
+        width: 24rem;
+    }
+}
+
+
+
 </style>
