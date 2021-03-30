@@ -77,6 +77,37 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .container {
+        width: $container;
+        padding: 5rem 0;
+    }
 
+    .title-box {
+        max-width: 80%;
+        line-height: 3rem;
+        font: {
+            size: 20px;
+            weight: 300;
+        }
+    }
+
+    .contact-link {
+        margin: 3rem 0;
+        padding: 3px 40px;
+        border-radius: 3px;
+        color: $darkest;
+        background-color: $fancy;
+        cursor: pointer;
+        font: {
+            size: 16px;
+        }
+    }
+
+    .contact-link:hover,
+    :focus {
+        background-color: darken($fancy, 10%);
+    }
+}
 
 </style>
