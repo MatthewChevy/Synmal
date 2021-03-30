@@ -269,6 +269,23 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    .to-do-box {
+        .box-container {
+            width: 20.5rem;
+        }
+    }
+
+    .aside {
+        h5 {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
 </style>
 
 
