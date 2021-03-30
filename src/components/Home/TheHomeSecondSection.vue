@@ -152,5 +152,10 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    .p-1 {
+        width: 26rem;
+    }
+}
 
 </style>
