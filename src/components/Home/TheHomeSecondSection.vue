@@ -169,6 +169,57 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    .sm-screen {
+        display: none;
+    }
+
+    .lg-screen {
+        display: block;
+    }
+
+    .h3-handler {
+        width: 34rem;
+        margin: 0rem auto;
+        padding: 0;
+        text-align: right;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+
+    .logo-holder {
+        display: block;
+        width: 22rem;
+    }
+
+    .paint-machine-image {
+        width: 60%;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .p-1,
+    .p-2 {
+        width: 23rem;
+    }
+
+    .p-1 {
+        margin-top: 1rem;
+    }
+
+    .p-2 {
+        margin-top: 3rem;
+        text-align: left;
+    }
+}
+
 
 
 </style>
