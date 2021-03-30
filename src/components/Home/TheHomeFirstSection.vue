@@ -113,7 +113,7 @@ export default {
         }
     },
 
-     mounted() {
+    mounted() {
 
         this.boxContainer = document.getElementsByClassName('box-container')
 
@@ -130,10 +130,10 @@ export default {
                 }
             } 
         }, this.timer) )
-
     },
 
     methods: {
+
         scrollSelectBox() {
             for (let i = 0; i < this.boxContainer.length; i++) {
                 if (
@@ -161,12 +161,11 @@ export default {
             }
         }
     }
-
 }
-
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     section {
         position: relative;
@@ -425,5 +424,3 @@ export default {
 }
 
 </style>
-
-
