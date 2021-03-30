@@ -14,9 +14,6 @@
         <the-home-fourth-section />
     </main>
 
-    <footer>
-        <the-contact-button />
-    </footer>
 </template>
 
 <script>
@@ -28,7 +25,6 @@ import TheHomeAsideContent from '../components/Home/TheHomeAsideContent.vue'
 import TheHomeThirdSection from '../components/Home/TheHomeThirdSection.vue'
 import TheHomeFourthSection from '../components/Home/TheHomeFourthSection.vue'
 
-import TheContactButton from '../components/TheContactButton.vue'
 
 export default {
     components: {
@@ -38,7 +34,6 @@ export default {
         TheHomeAsideContent,
         TheHomeThirdSection,
         TheHomeFourthSection,
-        TheContactButton,
     },
 
     data() {
@@ -54,11 +49,6 @@ export default {
 header{
     position: relative;
     height: calc( 100% - 3.35rem ); //3.35rem is height of URL bar on 
-}
-
-footer{
-    position: relative;
-    margin-top: -5rem;
 }
 
 </style>
