@@ -217,5 +217,12 @@
     }
 }
 
+@media screen and (min-width: 640px) {
+    .paragraph-box {
+        width: 35rem;
+        margin: 0 auto;
+    }
+}
+
 </style>
 
