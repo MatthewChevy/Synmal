@@ -163,5 +163,23 @@
     }
 }
 
+@media screen and (min-width: 350px) {
+    .why-us {
+        h2::before,
+        h2::after {
+            content: '';
+            display: inline-block;
+            width: 6%;
+            border: 0.25px solid $fancy;
+        }
 
+        h2::after {
+            left: 0.25rem;
+        }
+
+        h2::before {
+            right: 0.25rem;
+        }
+    }
+}
 </style>
