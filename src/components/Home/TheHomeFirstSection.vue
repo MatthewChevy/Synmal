@@ -97,6 +97,55 @@
     </section>
 </template>
 
+<script>
+import tableMixin from '../../mixins/tableMixins.js'
+
+import { debounce } from 'lodash-es'
+
+export default {
+    mixins: [tableMixin],
+
+    data() {
+        return {
+            toDoBox: Object,
+            percentage: 70, // 60% percent from height of box-container
+            timer: 100,
+        }
+    },
+
+    methods: {
+        scrollSelectBox() {
+            for (let i = 0; i < this.boxContainer.length; i++) {
+                if (
+                    window.scrollY >
+                    this.boxContainer[i].offsetTop +
+                        (this.percentage / 100) *
+                            this.boxContainer[i].offsetHeight
+                ) {
+                    this.boxContainer[i].classList.add('box-container-bg')
+
+                    if (
+                        window.scrollY >
+                        this.boxContainer[i].offsetTop +
+                            (this.boxContainer[i].offsetHeight +
+                                (this.percentage / 100) *
+                                    this.boxContainer[i].offsetHeight)
+                    ) {
+                        this.boxContainer[i].classList.remove(
+                            'box-container-bg'
+                        )
+                    }
+                } else {
+                    this.boxContainer[i].classList.remove('box-container-bg')
+                }
+            }
+        }
+    }
+
+}
+
+</script>
+
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
     section {
