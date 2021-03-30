@@ -3,7 +3,8 @@ import { throttle } from 'lodash-es'
 export default {
     data() {
         return {
-            actualyWidnowSize: Number
+            actualyWidnowSize: Number,
+            breakpointmd: 767
         }
     },
 
@@ -15,6 +16,6 @@ export default {
     methods: {
         sizeWindow(e) {
             return (this.actualyWidnowSize = e.srcElement.innerWidth)
-        },
+        }
     }
 }
