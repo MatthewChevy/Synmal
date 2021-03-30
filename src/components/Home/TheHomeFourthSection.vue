@@ -200,4 +200,22 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    .why-us {
+        h2::before,
+        h2::after {
+            width: 15%;
+        }
+
+        h2::after {
+            left: 0.75rem;
+        }
+
+        h2::before {
+            right: 0.75rem;
+        }
+    }
+}
+
 </style>
+
