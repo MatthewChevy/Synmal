@@ -4,7 +4,7 @@
             <div class="h3-handler">
                 <h3>
                     Interérové a exterierové nátery stien a fasád realizujeme aj
-                    strojovím maľovaním
+                    <strong>strojovím maľovaním</strong>
                 </h3>
             </div>
             <article>
@@ -234,13 +234,22 @@
     }
 
     .h3-handler {
-        width: 34rem;
+        display: flex;
+        justify-content: flex-end;
+        width: 93%;
         margin: 2rem auto;
         padding: 0;
 
         h3 {
+            width: 38rem;
             font-size: 20px;
             font-weight: 300;
+
+            strong{
+                font:{
+                    weight: 400
+                }
+            }
         }
     }
 
