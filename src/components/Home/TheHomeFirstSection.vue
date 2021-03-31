@@ -62,7 +62,7 @@
                     </p>
                 </div>
 
-                <div class="box-container last-box">
+                <div class="box-container last-box sm-screen">
                     <h4>Nátery drevených profilov</h4>
                     <div class="image-holder">
                         <img
@@ -82,14 +82,8 @@
 
             <aside class="aside">
                 <h5>Máte špecálne požiadavky alebo otázky ?</h5>
-                <div class="contact-button">
-                    <a
-                        class="contact-link"
-                        tabindex="1"
-                        @click="$router.push({ path: '/contact' })"
-                    >
-                        Kontaktuje nás
-                    </a>
+                <div class="button">
+                    <the-path-button :textButton="'Kontaktuje nás'" :path="'contact'"/>
                 </div>
             </aside>
         </div>
@@ -100,9 +94,16 @@
 <script>
 import tableMixin from '../../mixins/tableMixins.js'
 
+import ThePathButton from '../ThePathButton.vue';
+
 import { debounce } from 'lodash-es'
 
 export default {
+
+    components: {
+        ThePathButton,
+    },
+
     mixins: [tableMixin],
 
     data() {
@@ -171,6 +172,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     section {
         position: relative;
@@ -283,29 +285,13 @@ export default {
         }
     }
 
-    .contact-button {
+    .button {
         margin: 2rem 0;
-    }
-
-    .contact-link {
-        margin: 3rem 0;
-        padding: 2px 30px;
-        border-radius: 3px;
-        color: $darkest;
-        background-color: $fancy;
-        cursor: pointer;
-        font: {
-            size: 16px;
-        }
-    }
-
-    .contact-link:hover,
-    :focus {
-        background-color: darken($fancy, 10%);
     }
 }
 
 @media screen and (min-width: 350px) {
+
     .to-do-box {
         .box-container {
             border-radius: 10px;
@@ -329,6 +315,7 @@ export default {
 }
 
 @media screen and (min-width: 500px) {
+
     .to-do-box {
         .box-container {
             width: 70%;
@@ -343,6 +330,7 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
+
     .to-do-box {
         .box-container {
             width: 20.5rem;
@@ -357,8 +345,13 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .sm-screen{
+        display: none;
+    }
+
     .container {
-        max-width: $container;
+        max-width: 60rem;
         padding: 3rem 0 1.5rem 0;
     }
 
@@ -374,18 +367,20 @@ export default {
     }
 
     .to-do-box {
+        width: 100%;
         .box-container {
+            width: 33.3333%;
             h4 {
                 font: {
-                    size: 17px;
+                    size: 19px;
                     weight: 400;
                 }
             }
 
             p {
-                width: 13rem;
+                width: 16rem;
                 font: {
-                    size: 14px;
+                    size: 15px;
                     weight: 300;
                 }
             }
@@ -398,8 +393,7 @@ export default {
         }
     }
 
-    aside {
-        line-height: 4rem;
+    aside{
 
         h5 {
             margin: 4rem 0 2rem 0;
@@ -410,21 +404,5 @@ export default {
         }
     }
 
-    .contact-link {
-        margin: 3rem 0;
-        padding: 2px 30px;
-        border-radius: 3px;
-        color: $darkest;
-        background-color: $fancy;
-        cursor: pointer;
-        font: {
-            size: 16px;
-        }
-    }
-
-    .contact-link:hover,
-    :focus {
-        background-color: darken($fancy, 10%);
-    }
 }
 </style>
