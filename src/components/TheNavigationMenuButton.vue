@@ -49,68 +49,63 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$buttonWidth: 1.875rem;
-$buttonHeight: 1.25rem;
-$buttonColor: darken($primary-light, 15%);
-$lineThickness: 2px;
-$transitionSpeed: 0.25s;
-$transitionEasing: ease-in-out;
 
-.button-wrapper {
-    margin: 15px;
-}
+@media screen and (min-width: 0px){
 
-.menu-toggle {
-    position: relative;
-    display: block;
-    width: 1.875rem;
-    height: 1.25rem;
-    background: transparent;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    color: darken($primary-light, 15%);
-    font-size: 0;
+    .button-wrapper {
+        margin: 0.938rem
+    }
 
-    transition: all .25s ease-in-out;
-
-    &:before,
-    &:after {
-        content: '';
+    .menu-toggle {
+        position: relative;
         display: block;
-        width: 100%;
-        height: 2px;
+        width: 1.875rem;
+        height: 1.25rem;
+        font:{
+            size: 0
+        };
+        border-top: 2px solid;
+        border-bottom: 2px solid;
+        color: darken($primary-light, 15%);
+        background: transparent;
+        transition: all .25s ease-in-out;
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        background: currentColor;
-
-        transform: translate(-50%, -50%);
-        transition: transform .25s ease-in-out;
+        &:before,
+        &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0.125rem;
+            top: 50%;
+            left: 50%;
+            background: currentColor;
+            transform: translate(-50%, -50%);
+            transition: transform .25s ease-in-out;
+        }
     }
-}
 
-button:hover {
-    color: darken($primary-light, 15%);
-}
-
-button.is-active {
-    border-color: transparent;
-
-    &:before {
-        transform: translate(-50%, -50%) rotate(45deg);
+    button:hover {
+        color: darken($primary-light, 15%);
     }
 
-    &:after {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
-}
+    button.is-active {
+        border-color: transparent;
 
-button {
-    border: none;
-    cursor: pointer;
-    outline: none;
+        &:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
