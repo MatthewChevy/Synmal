@@ -139,7 +139,7 @@ export default {
             width: 0rem;
             height: 0rem;
             right: -3%;
-            bottom: 13px;
+            bottom: 0.813rem;
             margin-top: -0.625rem;
             margin-left: 0.313rem;
             border-radius: 50%;
