@@ -287,6 +287,7 @@ export default {
             }
         }
     }
+    
     .paragraph-box {
         width: 25rem;
         border-left: 1px solid $fancy;
@@ -324,7 +325,7 @@ export default {
             content: '';
             display: inline-block;
             position: relative;
-            width: 21%;
+            width: 29%;
             top: -0.4rem;
             border: 0.25px solid $fancy;
             background: $fancy;
@@ -339,7 +340,7 @@ export default {
         }
 
         p {
-            width: 45rem;
+            width: 55rem;
             padding-top: 1rem;
             font: {
                 weight: 300;
@@ -349,7 +350,7 @@ export default {
 
     .notes-box {
         padding: 4rem 0;
-        width: 52rem;
+        width: 100%;
     }
 
     .list-box {
@@ -365,7 +366,8 @@ export default {
     }
 
     .paragraph-box {
-        width: 25rem;
+
+        width: 47%;
         padding-left: 3rem;
         font: {
             weight: 300;

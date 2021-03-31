@@ -254,10 +254,10 @@
 
     .logo-holder {
         width: 22rem;
-        margin-bottom: 1rem;
+        padding: 0;
 
         img {
-            width: 16rem;
+            width: 100%;
         }
 
         .p-1,
@@ -276,8 +276,13 @@
         }
     }
 
+    .flex{
+        justify-content: space-evenly;
+    }
+
     .paint-machine-image {
-        width: 25rem;
+        width: 30rem;
+        margin: 0;
         img {
             width: 100%;
         }
