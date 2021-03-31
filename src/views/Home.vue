@@ -47,4 +47,12 @@ header {
     position: relative;
     height: calc(100% - 3.35rem); //3.35rem is height of URL bar on
 }
+
+@media screen and ( min-width: 1024px) {
+    header {
+        height: 45rem;
+    }
+}
+
+
 </style>
