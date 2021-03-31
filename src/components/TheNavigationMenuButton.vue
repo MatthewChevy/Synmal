@@ -49,9 +49,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$buttonWidth: 30px;
-$buttonHeight: 20px;
-$buttonColor: darken(#ffffff, 15%);
+$buttonWidth: 1.875rem;
+$buttonHeight: 1.25rem;
+$buttonColor: darken($primary-light, 15%);
 $lineThickness: 2px;
 $transitionSpeed: 0.25s;
 $transitionEasing: ease-in-out;
@@ -63,22 +63,22 @@ $transitionEasing: ease-in-out;
 .menu-toggle {
     position: relative;
     display: block;
-    width: $buttonWidth;
-    height: $buttonHeight;
+    width: 1.875rem;
+    height: 1.25rem;
     background: transparent;
-    border-top: $lineThickness solid;
-    border-bottom: $lineThickness solid;
-    color: $buttonColor;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    color: darken($primary-light, 15%);
     font-size: 0;
 
-    transition: all $transitionSpeed $transitionEasing;
+    transition: all .25s ease-in-out;
 
     &:before,
     &:after {
         content: '';
         display: block;
         width: 100%;
-        height: $lineThickness;
+        height: 2px;
 
         position: absolute;
         top: 50%;
@@ -87,12 +87,12 @@ $transitionEasing: ease-in-out;
         background: currentColor;
 
         transform: translate(-50%, -50%);
-        transition: transform $transitionSpeed $transitionEasing;
+        transition: transform .25s ease-in-out;
     }
 }
 
 button:hover {
-    color: lighten($buttonColor, 15%);
+    color: darken($primary-light, 15%);
 }
 
 button.is-active {

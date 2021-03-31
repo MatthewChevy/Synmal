@@ -72,103 +72,136 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
+
+    .lg {
+        display: none;
+    }
+
+    .sm {
+        display: block;
+    }
+
     article {
         position: relative;
     }
 
-    @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
-
     .title-container {
-        width: 100%;
-        height: 100vh;
-        background: #232323;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: 100vh;
+        background: $primary-dark;
     }
 
     .box {
-        width: 97%;
         position: relative;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        width: 97%;
         margin-top: -50%;
     }
 
     .title {
-        width: 100%;
         position: relative;
         display: flex;
+        width: 100%;
+        height: 3.125rem;
         align-items: center;
-        height: 50px;
     }
 
     .block {
+        position: fixed;
+        display: flex;
         width: 0%;
         height: inherit;
-        background: #ffb510;
-        position: fixed;
+        background: $title-decoration;
         animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-        display: flex;
     }
 
     h1 {
-        font-family: $font-family;
-        color: #fff;
-        font-size: 26px;
-        animation: mainFadeIn 2s 1.6s forwards;
-        opacity: 0;
+        position: fixed;
         display: flex;
         align-items: baseline;
-        position: fixed;
+        font:{
+            family: $font-family;
+            size: 8.2vw;
+        }
+        color: $primary-light;
+        opacity: 0;
+        animation: mainFadeIn 2s 1.6s forwards;
 
         span {
-            width: 0px;
-            height: 0px;
-            border-radius: 50%;
-            background: #ffb510;
-            animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-            animation-delay: 2s;
-            margin-left: 5px;
-            margin-top: -10px;
             position: absolute;
+            width: 0rem;
+            height: 0rem;
+            right: -3%;
             bottom: 13px;
-            right: -12px;
+            margin-top: -0.625rem;
+            margin-left: 0.313rem;
+            border-radius: 50%;
+            background: $title-decoration;
+            animation: popIn .8s 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
         }
     }
 
     .sub-title {
-        width: 100%;
         position: fixed;
         display: flex;
         align-items: center;
-        height: 30px;
-        margin-top: 4rem;
+        width: 100%;
+        height: 1.875rem;
+        margin-top: 13%;
     }
 
     .sub-title-block {
+        position: absolute;
+        display: flex;
         width: 0%;
         height: inherit;
         background: $fancy;
-        position: absolute;
-        animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-        animation-delay: 2s;
-        display: flex;
+        animation: secBlock 2s 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
     }
 
     p {
         position: fixed;
-        animation: secFadeIn 2s forwards;
-        animation-delay: 3.2s;
-        opacity: 0;
-        font-weight: 600;
-        font-family: $font-family;
-        color: #ffffff;
-        font-size: 14px;
+        font:{
+            size: 4vw;
+            weight: 600;
+            family: $second-font-family;
+        }
         text-transform: uppercase;
+        opacity: 0;
+        color: $primary-light;
         letter-spacing: 5px;
+        animation: secFadeIn 2s 3.2s forwards;
+    }
+
+    .welcome-image {
+        position: fixed;
+        max-width: 100%;
+        margin-top: 3rem;
+        z-index: 0;
+        background-repeat: no-repeat;
+    }
+
+    h3 {
+        position: absolute;
+        top: 4rem;
+        margin: 1rem;
+        color: $title-decoration-light;
+        z-index: 7;
+    }
+
+    .width {
+        top: 4rem;
+    }
+
+    .height {
+        top: 5.5rem;
     }
 
     @keyframes mainBlock {
@@ -212,36 +245,35 @@ export default {
 
     @keyframes popIn {
         0% {
-            width: 0px;
-            height: 0px;
-            background: #e9d856;
-            border: 0px solid #ddd;
+            width: 0rem;
+            height: 0rem;
+            border: 0px solid $primary-light;
+            background: $title-decoration-light;
             opacity: 0;
         }
         50% {
-            width: 10px;
-            height: 10px;
-            background: #e9d856;
+            width: 0.625rem;
+            height: 0.625rem;
+            bottom: 2.813rem;
+            background: $title-decoration-light;
             opacity: 1;
-            bottom: 45px;
         }
         65% {
-            width: 7px;
-            height: 7px;
-            bottom: 0px;
-            width: 15px;
+            width: 0.438rem;
+            height: 0.438rem;
+            bottom: 0rem;
         }
         80% {
-            width: 10px;
-            height: 10px;
-            bottom: 20px;
+            width: 0.625rem;
+            height: 0.625rem;
+            bottom: 1.25rem
         }
         100% {
-            width: 7px;
-            height: 7px;
-            background: #e9d856;
-            border: 0px solid #222;
-            bottom: 13px;
+            width: 0.438rem;
+            height: 0.438rem;
+            background: $title-decoration-light;
+            border: 0px solid $primary-dark;
+            bottom: 25%;
         }
     }
 
@@ -253,163 +285,78 @@ export default {
             opacity: 0.85;
         }
     }
-
-    .welcome-image {
-        position: fixed;
-        max-width: 100%;
-        z-index: 0;
-        margin-top: 3rem;
-        background-repeat: no-repeat;
-    }
-
-    .lg {
-        display: none;
-    }
-
-    .sm {
-        display: block;
-    }
-
-    h3 {
-        color: #d9ff00;
-        position: absolute;
-        z-index: 7;
-        top: 4rem;
-        margin: 1rem;
-    }
-
-    .width {
-        top: 4rem;
-    }
-
-    .height {
-        top: 5.5rem;
-    }
-}
-
-@media screen and (min-width: 375px) {
-    h1 {
-        font-size: 32px;
-    }
-
-    p {
-        font-size: 14px;
-    }
 }
 
 @media screen and (min-width: 600px) {
-    .box {
-        margin-left: 6%;
-    }
-
-    h1 {
-        font-size: 40px;
-        // letter-spacing: 2px;
-
-        span {
-            right: -15px;
-        }
-    }
-
-    p {
-        font-size: 17px;
-    }
 
     @keyframes popIn {
-        0% {
-            width: 0px;
-            height: 0px;
-            background: #e9d856;
-            border: 0px solid #ddd;
-            opacity: 0;
-        }
         50% {
-            width: 13px;
-            height: 13px;
-            background: #e9d856;
+            width: 0.938rem;
+            height: 0.938rem;
+            bottom: 2.813rem;
             opacity: 1;
-            bottom: 45px;
+            background: $title-decoration-light;
         }
         65% {
-            width: 10px;
-            height: 7px;
-            bottom: 0px;
-            width: 18px;
+            width: 0.625rem;
+            height: 0.375rem;
+            bottom: 0rem;
         }
         80% {
-            width: 10px;
-            height: 10px;
-            bottom: 20px;
+            width: 0.5rem;
+            height: 0.5rem;
+            bottom: 1.25rem;
         }
         100% {
-            width: 10px;
-            height: 10px;
-            background: #e9d856;
-            border: 0px solid #222;
-            bottom: 14px;
+            width: 0.625rem;
+            height: 0.625rem;
+            bottom: 25%;
+            border: 0px solid $primary-dark;
+            background: $title-decoration-light;
         }
     }
 }
 
 @media screen and (min-width: 768px) {
-    .box {
-        margin-left: 6%;
-    }
 
-    h1 {
-        font-size: 50px;
-        // letter-spacing: 2px;
-
-        span {
-            right: -20px;
-        }
-    }
-
-    .sub-title {
-        margin-top: 4.5rem;
-    }
-
-    p {
-        font-size: 22px;
-    }
 
     @keyframes popIn {
         0% {
-            width: 0px;
-            height: 0px;
-            background: #e9d856;
-            border: 0px solid #ddd;
+            width: 0rem;
+            height: 0rem;
+            border: 0px solid $primary-light;
             opacity: 0;
+            background: $title-decoration-light;
         }
         50% {
-            width: 16px;
-            height: 16px;
-            background: #e9d856;
+            width: 1rem;
+            height:  1rem;
+            bottom: 3rem;
             opacity: 1;
-            bottom: 48px;
+            background: $title-decoration-light;
         }
         65% {
-            width: 13px;
-            height: 10px;
-            bottom: 0px;
-            width: 21px;
+            width: 0.813rem;
+            height: 0.625rem;
+            bottom: 0rem;
         }
         80% {
-            width: 13px;
-            height: 13px;
-            bottom: 23px;
+            width: 0.813rem;
+            height: 0.813rem;
+            bottom: 1.438rem
         }
         100% {
-            width: 13px;
-            height: 13px;
-            background: #e9d856;
-            border: 0px solid #222;
-            bottom: 20px;
+            width: 0.813rem;
+            height: 0.813rem;
+            bottom: 25%;
+            border: 0px solid $primary-dark;
+            background: $title-decoration-light;
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
+
     .lg {
         display: block;
     }
@@ -418,4 +365,5 @@ export default {
         display: none;
     }
 }
+
 </style>
