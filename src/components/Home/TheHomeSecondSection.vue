@@ -62,6 +62,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .sm-screen {
         display: block;
@@ -82,7 +83,7 @@
     }
 
     .container {
-        width: $container;
+        width: $sm-width-container;
         margin: 0 auto;
         text-align: right;
     }
@@ -134,7 +135,9 @@
     }
 
     .p-2 {
-        text-align: center;
+        width: 95%;
+        margin: 0 auto;
+        text-align: right;
     }
 
     .paint-machine-image {
@@ -225,7 +228,7 @@
     }
 
     .container {
-        width: $container;
+        width: $lg-width-container;
         margin: 0 auto;
         text-align: right;
     }
@@ -280,4 +283,5 @@
         }
     }
 }
+
 </style>

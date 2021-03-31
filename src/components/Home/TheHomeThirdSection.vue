@@ -53,7 +53,7 @@
     }
 
     .container {
-        width: $container;
+        width: $sm-width-container;
         margin: 0 auto;
     }
 
@@ -125,7 +125,7 @@
     }
 
     .container {
-        width: $container;
+        width: $md-width-container;
     }
 
     .decorative-bucket-box {
