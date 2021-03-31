@@ -28,7 +28,7 @@
                     </p>
                 </div>
 
-                <div class="box-container center-border center-lg-screen">
+                <div class="box-container center-border active">
                     <h4>Malovanie exteriérov</h4>
                     <div class="image-holder">
                         <img
@@ -79,7 +79,6 @@
                         exteriéri.
                     </p>
                 </div>
-
             </article>
 
             <aside class="aside">
@@ -358,7 +357,6 @@ export default {
         padding: 3rem 0 1.5rem 0;
     }
 
-
     .h3-wrapper {
         margin: 1.5rem auto 4rem auto;
 
@@ -375,7 +373,8 @@ export default {
         margin-bottom: 4rem;
 
         .box-container {
-            width: 33.3333%;
+            padding-top: 2rem;
+            width: 33.33333%;
             h4 {
                 font: {
                     size: 19px;
@@ -384,7 +383,7 @@ export default {
             }
 
             p {
-                width: 16rem;
+                width: 18rem;
                 font: {
                     size: 15px;
                     weight: 300;
@@ -398,15 +397,12 @@ export default {
             }
         }
 
-        .center-border{
-            border: unset;
+        .active{
+            background-color: $primary-semi-light;
         }
 
-        .center-lg-screen{
-            border:{
-                left: 1px solid $primary-semi-light;
-                right: 1px solid $primary-semi-light;
-            }
+        .center-border{
+            border: unset;
         }
     }
 
@@ -420,6 +416,16 @@ export default {
             }
         }
     }
+}
 
+@media screen and (min-width: 1280px) {
+
+    .sm-screen{
+        display: none;
+    }
+
+    .container {
+        max-width: $xl-width-container;
+    }
 }
 </style>
