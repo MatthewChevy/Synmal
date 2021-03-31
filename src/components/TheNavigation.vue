@@ -73,60 +73,51 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.banner {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    height: 55px;
-    z-index: 10;
-    background: $primary-dark;
-    justify-content: space-between;
-}
 
-nav {
-    position: fixed;
-    width: 100%;
-    margin-top: 3.438rem;
-    z-index: 10;
-    color: $darkest;
-    text-align: center;
-    background: $primary-semi-light;
-}
-
-li {
-    font: {
-        size: 14px;
-        weight: 500;
+@media screen and (min-width: 0px) {
+    
+    .banner {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 3.438rem;
+        z-index: 10;
+        background: $primary-dark;
+        justify-content: space-between;
     }
-    padding: 15px 0px;
-    border-bottom: 1px solid $primary-dark;
-    cursor: pointer;
+
+    nav {
+        position: fixed;
+        width: 100%;
+        margin-top: 3.438rem;
+        z-index: 10;
+        color: $darkest;
+        text-align: center;
+        background: $primary-semi-light;
+    }
+
+    li {
+        font: {
+            size: 14px;
+            weight: 500;
+        }
+        padding: 0.938rem 0;
+        border-bottom: 1px solid $primary-dark;
+        cursor: pointer;
+    }
+
+    li:focus {
+        background: $primary-semi-dark;
+        color: $primary-light;
+        transition: 0.25s;
+    }
+
 }
-
-li:focus {
-    background: $primary-semi-dark;
-    color: $primary-light;
-    transition: 0.25s;
-}
-
-// @media screen and ( min-width: 600px) {
-//     .banner {
-//         height: 80px;
-//     }
-
-//     nav {
-//         margin-top: 5rem;
-//     }
-
-//     li{
-//         font-size: 18px;
-//         padding: 24px 0px;
-//     }
-// }
 
 @media screen and (min-width: 1024px) {
+
     .banner {
-        height: 75px;
+        height: 4.688rem;
     }
 
     nav {
@@ -140,10 +131,15 @@ li:focus {
         display: inline-block;
         padding: 0rem 2.5rem;
         font: {
-            size: 15px;
+            size: 14px;
             weight: 300;
         }
         color: $primary-light;
+    }
+
+    li:hover {
+        color: $fancy;
+        transition: .25s;
     }
 }
 </style>

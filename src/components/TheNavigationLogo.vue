@@ -12,61 +12,45 @@
 </template>
 
 <style lang="scss" scoped>
-.container {
-    max-width: 44px;
-    display: flex;
-}
 
-img {
-    width: 100%;
-    margin: 9px 10px;
-}
-
-h4 {
-    font: {
-        size: 12px;
-        weight: 300;
-    }
-    position: absolute;
-    top: 1.05rem;
-    left: 4.2rem;
-    color: white;
-}
-
-// @media screen and (min-width: 600px){
-
-//     .container {
-//         max-width: 65px;
-//     }
-
-//     img {
-//         margin: 15px;
-//     }
-
-//     h4 {
-//         top: 1.55rem;
-//         left: 6rem;
-//         font: {
-//             size: 18px;
-//         }
-//     }
-
-// }
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 0px) {
+    
     .container {
-        max-width: 60px;
+        max-width: 2.75rem;
+        display: flex;
     }
 
     img {
-        margin: 13px 20px;
+        width: 100%;
+        margin: 0.563rem 0.625rem;
     }
 
     h4 {
-        top: 1.35rem;
+        position: absolute;
+        top: 1.05rem;
+        left: 4.2rem;
+        color: $primary-light;
+        font: {
+            size: 12px;
+            weight: 300;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 3.75rem
+    }
+
+    img {
+        margin: 0.813rem 1.25rem;
+    }
+
+    h4 {
+        top: 1.4rem;
         left: 6.1rem;
         font: {
-            size: 19px;
+            size: 17px;
         }
     }
 }
