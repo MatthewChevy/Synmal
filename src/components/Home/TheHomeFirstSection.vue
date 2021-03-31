@@ -9,6 +9,7 @@
             </div>
 
             <article class="to-do-box">
+
                 <div class="box-container">
                     <h4>Malovanie interiérov</h4>
                     <div class="image-holder">
@@ -27,7 +28,7 @@
                     </p>
                 </div>
 
-                <div class="box-container center-border">
+                <div class="box-container center-border center-lg-screen">
                     <h4>Malovanie exteriérov</h4>
                     <div class="image-holder">
                         <img
@@ -78,6 +79,7 @@
                         exteriéri.
                     </p>
                 </div>
+
             </article>
 
             <aside class="aside">
@@ -356,6 +358,7 @@ export default {
         padding: 3rem 0 1.5rem 0;
     }
 
+
     .h3-wrapper {
         margin: 1.5rem auto 4rem auto;
 
@@ -369,6 +372,8 @@ export default {
 
     .to-do-box {
         width: 100%;
+        margin-bottom: 4rem;
+
         .box-container {
             width: 33.3333%;
             h4 {
@@ -388,16 +393,27 @@ export default {
 
             .image-holder {
                 img {
-                    width: 22%;
+                    width: 20%;
                 }
+            }
+        }
+
+        .center-border{
+            border: unset;
+        }
+
+        .center-lg-screen{
+            border:{
+                left: 1px solid $primary-semi-light;
+                right: 1px solid $primary-semi-light;
             }
         }
     }
 
-    aside{
-
+    .aside{
+        padding: 3rem 0;
+        
         h5 {
-            margin: 4rem 0 2rem 0;
             font: {
                 size: 20px;
                 weight: 300;
