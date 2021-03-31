@@ -29,6 +29,8 @@ export default{
 
 <style lang="scss" scoped>
 
+@media screen and (min-width: 0px) {
+
     .contact-link-button {
         max-width: 12rem;
         margin: 0 auto;
@@ -46,12 +48,11 @@ export default{
         }
     }
 
-    
-
     .contact-link-button:hover,
     :focus {
         transition: .35s;
         background-color: darken($fancy, 10%);
     }
+}
 
 </style>
