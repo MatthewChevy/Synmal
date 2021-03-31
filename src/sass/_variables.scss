@@ -6,6 +6,9 @@ $text-color: white;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 $font-family: 'Poppins', sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+$second-font-family: 'Lato', sans-serif;
+
 // Colors
 $primary-light: #ffffff;
 $primary-soft: #f0f0f0;
@@ -16,7 +19,14 @@ $primary-dark: #373737;
 $darkest: #000000;
 $fancy: #4FD4B4;
 
-$container: 90%;
+$title-decoration: #ffb510;
+$title-decoration-light: #e9d856;
+//containers width
+
+$sm-width-container: 90%;
+$md-width-container: 90%;
+$lg-width-container: 60rem;
+$xl-width-container: 70rem;
 
 
 //Responsive
