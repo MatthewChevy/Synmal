@@ -31,14 +31,8 @@
                         Treba Vám čokoľvek vymalovať ? Neváhajte nás
                         kontaktovať, tešíme sa na Vás.
                     </p>
-                    <div class="contact-button">
-                        <a
-                            class="contact-link"
-                            tabindex="1"
-                            @click="$router.push({ path: '/about' })"
-                        >
-                            Kontaktovať
-                        </a>
+                    <div class="button">
+                        <the-path-button :textButton="'Kontaktovať'" :path="'contact'"/>
                     </div>
                 </div>
             </div>
@@ -46,8 +40,24 @@
     </section>
 </template>
 
+<script>
+    
+import ThePathButton from '../ThePathButton.vue';
+
+export default {
+
+    components: {
+        ThePathButton,
+    },
+    
+}
+
+</script>
+
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
+
     .section {
         width: 100%;
         position: relative;
@@ -56,7 +66,7 @@
     }
 
     .container {
-        width: $container;
+        width: $sm-width-container;
         margin: 0 auto;
         text-align: center;
     }
@@ -140,29 +150,14 @@
             weight: 300;
         }
 
-        .contact-button {
+        .button {
             margin: 2rem 0;
-        }
-
-        .contact-link {
-            padding: 3px 40px;
-            border-radius: 3px;
-            color: $darkest;
-            background-color: $fancy;
-            cursor: pointer;
-            font: {
-                size: 16px;
-            }
-        }
-
-        .contact-link:hover,
-        :focus {
-            background-color: darken($fancy, 10%);
         }
     }
 }
 
 @media screen and (min-width: 350px) {
+
     .why-us {
         h2::before,
         h2::after {
@@ -183,6 +178,7 @@
 }
 
 @media screen and (min-width: 375px) {
+
     .why-us {
         h2::before,
         h2::after {
@@ -200,6 +196,7 @@
 }
 
 @media screen and (min-width: 500px) {
+
     .why-us {
         h2::before,
         h2::after {
@@ -217,6 +214,7 @@
 }
 
 @media screen and (min-width: 640px) {
+
     .paragraph-box {
         width: 35rem;
         margin: 0 auto;
@@ -224,12 +222,13 @@
 }
 
 @media screen and (min-width: 768px) {
+
     section {
         padding-top: 1rem;
     }
 
     .container {
-        width: $container;
+        width: $md-width-container;
     }
 
     .why-us {
@@ -297,35 +296,20 @@
             weight: 300;
         }
 
-        .contact-button {
+        .button {
             margin-top: 2rem;
-        }
-
-        .contact-link {
-            padding: 3px 40px;
-            border-radius: 3px;
-            color: $darkest;
-            background-color: $fancy;
-            cursor: pointer;
-            font: {
-                size: 16px;
-            }
-        }
-
-        .contact-link:hover,
-        :focus {
-            background-color: darken($fancy, 10%);
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
+
     section {
         padding-top: 1rem;
     }
 
     .container {
-        width: $container;
+        width: $lg-width-container;
     }
 
     .why-us {
@@ -387,25 +371,10 @@
             weight: 300;
         }
 
-        .contact-button {
+        .button {
             margin-top: 2rem;
-        }
-
-        .contact-link {
-            padding: 3px 40px;
-            border-radius: 3px;
-            color: $darkest;
-            background-color: $fancy;
-            cursor: pointer;
-            font: {
-                size: 16px;
-            }
-        }
-
-        .contact-link:hover,
-        :focus {
-            background-color: darken($fancy, 10%);
         }
     }
 }
+
 </style>

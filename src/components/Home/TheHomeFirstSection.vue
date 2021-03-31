@@ -174,13 +174,14 @@ export default {
 <style lang="scss" scoped>
 
 @media screen and (min-width: 0px) {
+
     section {
         position: relative;
         background-color: $primary-light;
     }
 
     .container {
-        max-width: $container;
+        max-width: $sm-width-container;
         padding: 3rem 0 1.5rem 0;
         margin: 0 auto;
     }
@@ -351,7 +352,7 @@ export default {
     }
 
     .container {
-        max-width: 60rem;
+        max-width: $lg-width-container;
         padding: 3rem 0 1.5rem 0;
     }
 
