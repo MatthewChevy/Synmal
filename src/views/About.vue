@@ -13,35 +13,37 @@
     </header>
 
     <main>
-        <section class="first-section">
-            <div class="first-section-center">
-                <aside class="first-section-top-aside">
-                    <div class="right-side-rectangle"></div>
+        <section class="section">
+
+            <div class="top-aside-box">
+                <div class="right-side-rectangle">
                     <h4>
                         Za roky našej práce máme mnoho spokojných ľudí, ktorým
                         sme pomohli zveľadiť ich <strong>bytové</strong> a
                         <strong>nebytové</strong> priestory
                     </h4>
-                </aside>
-                <aside class="first-section-bottom-aside">
-                    <div class="left-side-rectangle">
-                        <div class="decorative-paint-roller">
-                            <img
-                                src="../assets/img/paint-roller.png"
-                                alt="Paint roller"
-                            />
-                        </div>
-                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-aside-box">
+                <div class="left-side-rectangle">
                     <h4>
                         Sme rodinná firma s 20 ročnými skúsenosťami
                     </h4>
-                </aside>
+                    <div class="decorative-paint-roller">
+                        <img
+                            src="../assets/img/paint-roller.png"
+                            alt="Paint roller"
+                        />
+                    </div>
+                </div>
             </div>
-            <div class="first-section-bottom-title">
-                <h2>Naše pôsobenie</h2>
-            </div>
-            <div class="first-section-article-center">
-                <article class="first-section-article">
+
+            <div class="center-box">
+                <div class="center-box-h2">
+                    <h2>Naše pôsobenie</h2>
+                </div>
+                <article class="center-box-paragraph">
                     <p>
                         Sme spoločnosť, ktorej hodnoty sú postavené na
                         úprimnosti, poctivej práci a zodpovednému prístupu ku
@@ -54,51 +56,67 @@
                     </p>
                 </article>
             </div>
+
         </section>
+
         <section class="second-section">
-            <div class="second-section-cartoon-top-person-holder">
+
+            <div class="cartoon-person">
                 <img src="../assets/img/person2.png" alt="Cartoon person" />
             </div>
-            <aside class="decorative-circle-holder">
+
+            <span class="decorative-circle-box">
                 <div class="decorative-circle-bigger">
                     <div class="decorative-circle-smaller"></div>
                 </div>
-            </aside>
-            <article class="second-section-article">
-                <div class="decoration-rectangle-three-quarters"></div>
-                <div class="second-section-article-center">
+            </span>
+
+            <article class="article">
+
+                <div class="article-header-box">
                     <h3>Naše najväčšie úspechy</h3>
-                    <div class="first-paragraf-holder">
+                </div>
+
+                <div class="top-box">
+                    <div class="top-box-paragraph">
                         <p>
                             Náš najväčší úspech je že môžeme vykonávať remeslo
                             ktoré nás už dlhé roky baví napĺňa a pomáha ľudom
                         </p>
                     </div>
-                    <div class="second-paragraf-holder">
+                </div>
+
+                <div class="bottom-box">
+                    <div class="bottom-box-paragraph">
                         <p>
                             Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
                             S.C.P. sú spoločnosti s ktorým sme mali možnosť
                             pomôcť vymaľovať ich priestory.
                         </p>
                     </div>
-                    <div class="decorative-line"></div>
                 </div>
-                <div class="decoration-rectangle-full-size"></div>
+
+                <span class="decorative-line"></span>
+
             </article>
+
         </section>
 
         <section class="thrid-section">
-            <div class="thrid-section-layer">
-                <div class="thrid-section-layer-top"></div>
-                <div class="thrid-section-center">
-                    <article class="article-top-center">
+            <div class="container">
+
+                <div class="thrid-section-layer-top">
+                    <aside class="article-top-center">
                         <h3>Priebeh našej práce</h3>
                         <p>
-                            kontakte s Vami urobíme osobnú prehliadku Vašich
+                            Po kontakte s Vami urobíme osobnú prehliadku Vašich
                             priestorov, na základe ktorej vypracujeme cenovú
                             ponuku a dohodneme termín
                         </p>
-                    </article>
+                    </aside>
+                </div>
+
+                <div class="thrid-section-center">
                     <article class="article-left-side">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -159,6 +177,7 @@
             </article>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer-center">
             <div
@@ -170,6 +189,7 @@
             </div>
         </div>
     </footer>
+
 </template>
 
 <style lang="scss" scoped>
@@ -201,133 +221,123 @@ header {
             weight: 700;
         }
     }
-}
+} 
 
 //first-section-----------------------------
 
-.first-section {
+.section {
     position: relative;
     width: 100%;
-    height: 39rem;
-    top: 2rem;
     background: $primary-light;
     border-radius: 10px 10px 0 0;
 }
 
-.first-section-center {
-    width: 18.75rem;
+.container {
+    width: $sm-width-container;  
     margin: 0 auto;
 }
 
-.first-section-top-aside {
-    h4 {
+.top-aside-box {
+   padding-top: 2rem;
+   width: 100%;
+
+    .right-side-rectangle {
         position: relative;
-        padding-top: 3.5rem;
-        text-align: right;
-        font: {
-            size: 14.5px;
-            weight: 400;
-        }
-
-        strong {
-            font-weight: 600;
-        }
-    }
-}
-
-.right-side-rectangle {
-    position: absolute;
-    width: 93%;
-    height: 5.625rem;
-    right: 0;
-    margin-top: 2.938rem;
-    z-index: 0;
-    background-color: $primary;
-    border-radius: 5px 0 0 5px;
-    box-shadow: 5px 5px 5px rgba($darkest, 16%);
-}
-
-.first-section-bottom-aside {
-    height: 10rem;
-    h4 {
-        position: relative;
-        width: 10.563rem;
-        padding-top: 4.3rem;
-        text-align: center;
-
-        font: {
-            size: 14.5px;
-            weight: 400;
-        }
-    }
-}
-
-.left-side-rectangle {
-    position: absolute;
-    width: 62.5%;
-    height: 5.2rem;
-    left: 0;
-    margin-top: 2.938rem;
-    z-index: 0;
-    background-color: $fancy;
-    box-shadow: 5px 5px 6px rgba($darkest, 16%);
-}
-
-.decorative-paint-roller {
-    position: absolute;
-    width: 5.3rem;
-    height: auto;
-    left: 100%;
-    bottom: -0.9rem;
-    transform: rotate3d(1, 1, 0, 180deg);
-    img {
+        display: flex;
+        align-items: center;
         width: 100%;
+        padding: 0.75rem 0; 
+        background-color: $primary;
+        border-radius: 5px 0 0 5px;
+
+        h4 {
+            width: 19rem;
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            font: {
+                size: 14px;
+                weight: 300;
+            }
+
+            strong {
+                font-weight: 500;
+            }
+        }
+    
     }
 }
 
-.first-section-bottom-title {
+.bottom-aside-box {
+
+    .left-side-rectangle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 62.5%;
+        max-height: 4.7rem;
+        margin: 3rem 0;
+        padding: 1rem;
+        z-index: 0;
+        background-color: $fancy;
+        box-shadow: 5px 5px 6px rgba($darkest, 16%);
+
+        h4 {
+            position: relative;
+            width: 10.563rem;
+            text-align: center;
+
+            font: {
+                size: 14px;
+                weight: 300;
+            }
+        }
+    
+        .decorative-paint-roller {
+            position: absolute;
+            left: 65%;
+            width: 4.9rem;
+            transform: rotate3d(1, 1, 0, 180deg);
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.center-box {
     position: relative;
     width: 100%;
-    height: 3.75rem;
     padding-top: 0.563rem;
+    padding-bottom: 3rem;
     text-align: center;
     box-shadow: 5px 5px 6px rgba($darkest, 16%);
 
-    h2 {
-        font: {
-            size: 25px;
-            weight: 500;
+    .center-box-h2 {
+        h2 {
+            font: {
+                size: 25px;
+                weight: 400;
+            }
         }
     }
-}
 
-.first-section-article-center {
-    position: relative;
-    max-width: 18.75rem;
-    top: 2rem;
-    margin: 0 auto;
-}
+    .center-box-paragraph {
+        width: $sm-width-container;
+        margin: 2rem auto 0 auto;
 
-.first-section-article {
-    p {
-        text-align: center;
-        font: {
-            size: 13px;
+        p {
+            margin: 0 auto;
+            text-align: center;
+            font: {
+                size: 14px;
+                weight: 300;
+            }
+
+            strong {
+                font-weight: 500;
+            }
         }
-    }
-}
-
-@media screen and (max-width: 374px) {
-    .title-wrapper {
-        padding-left: 1rem;
-    }
-
-    .first-section {
-        top: -1rem;
-    }
-
-    .right-side-rectangle {
-        width: 100%;
     }
 }
 
@@ -336,25 +346,25 @@ header {
 .second-section {
     position: relative;
     width: 100%;
-    height: 42rem;
-    top: 2rem;
     background: $primary-semi-light;
 }
 
-.second-section-cartoon-top-person-holder {
+.cartoon-person {
     position: relative;
     width: 5.688rem;
     height: 18.4rem;
-    top: -5.3rem;
-    right: 8rem;
+    top: -1.3rem;
+    right: 33%;
     margin: 0 auto;
+    z-index: 1;
 
     img {
-        width: 100%;
+        max-width: 100%;
     }
 }
 
-.decorative-circle-holder {
+.decorative-circle-box {
+
     .decorative-circle-bigger {
         position: absolute;
         width: 15rem;
@@ -377,108 +387,95 @@ header {
     }
 }
 
-.second-section-article {
+.article {
     position: relative;
     width: 100%;
-    height: 27.813rem;
-    bottom: 6.9rem;
+    top: -3rem;
+    padding-bottom: 2rem;
     z-index: 1;
     background-color: $primary-dark;
     box-shadow: 8px 8px 5px rgba($darkest, 16%);
-}
 
-.decoration-rectangle-three-quarters {
-    position: absolute;
-    width: 76%;
-    height: 7rem;
-    top: 6.6rem;
-    z-index: 2;
-    background-color: $primary;
-    border-radius: 0 5px 5px 0;
-    box-shadow: 5px 5px 5px rgba($darkest, 16%);
-}
+    .article-header-box {
+        position: relative;
+        width: 18.75rem;
+        margin: 0 auto;
+        z-index: 1;
 
-.second-section-article-center {
-    width: 18.75rem;
-    margin: 0 auto;
-
-    h3 {
-        padding: 1.5rem 0;
-        text-align: center;
-        color: $primary-light;
-        font: {
-            size: 24px;
-            weight: 700;
+        h3 {
+            padding: 1.5rem 0;
+            text-align: center;
+            color: $primary-light;
+            font: {
+                size: 24px;
+                weight: 700;
+            }
         }
     }
-}
 
-.first-paragraf-holder {
-    position: relative;
-    max-width: 13.063rem;
-    top: 2.05rem;
-    z-index: 2;
+    .top-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 76%;
+        padding: 1rem 0;
+        z-index: 2;
+        background-color: $primary;
+        border-radius: 0 5px 5px 0;
 
-    p {
-        font: {
-            size: 14.5px;
-            weight: 400;
+        .top-box-paragraph{  
+            position: relative;
+            max-width: 85%;
+            z-index: 2;
+
+            p {
+               font: {
+                    size: 14px;
+                    weight: 300;
+                }
+            }
+        }
+
+    }
+
+    .bottom-box{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 4rem;
+        padding: 1rem;
+        z-index: 1;
+        background-color: $primary-light;
+
+
+        .bottom-box-paragraph {
+            width: 90%;
+            position: relative;
+            z-index: 3;
+
+            p {
+                text-align: center;
+                font: {
+                    size: 14px;
+                    weight: 300;
+                }
+            }
         }
     }
-}
 
-.second-paragraf-holder {
-    position: relative;
-    top: 6.05rem;
-    z-index: 3;
-
-    p {
-        text-align: right;
-        font: {
-            size: 14.5px;
-            weight: 400;
-        }
-    }
 }
 
 .decorative-line {
     position: absolute;
     width: 0.313rem;
-    height: 23rem;
-    bottom: 0rem;
-    left: 3.544rem;
+    height: 100%;
+    top: 0;
+    left: 1rem;
     z-index: 0;
     background-color: $fancy;
-    box-shadow: 5px 0px 2px rgba($darkest, 16%);
-}
-
-.decoration-rectangle-full-size {
-    position: absolute;
-    width: 100%;
-    height: 7.188rem;
-    bottom: 5rem;
-    z-index: 2;
-    background-color: $primary-light;
-    box-shadow: 5px 5px 5px rgba($darkest, 16%);
-}
-
-@media screen and (max-width: 374px) {
-    .second-section {
-        top: -1rem;
-    }
-
-    .second-section-cartoon-top-person-holder {
-        position: relative;
-        width: 4.688rem;
-        height: 18.4rem;
-        top: -2.3rem;
-        right: 7rem;
-        margin: 0 auto;
-
-        img {
-            width: 100%;
-        }
-    }
 }
 
 //third-section-----------------------------
@@ -486,9 +483,13 @@ header {
 .thrid-section {
     position: relative;
     width: 100%;
-    top: 2rem;
-    height: 40.1rem;
+    margin: 0 auto;
     background: $primary-semi-light;
+
+    .container{
+        width: $sm-width-container;
+        margin: 0 auto;
+    }
 }
 
 .thrid-section-layer-top {
@@ -728,21 +729,8 @@ header {
     transition: 0.25s;
 }
 
-@media screen and (max-width: 374px) {
-    .thrid-section {
-        margin-top: 0rem;
-        top: -2rem;
-    }
-    .thrid-section-cartoon-person-align {
-        left: 13rem;
-    }
 
-    .article-left-side-decoration-line-hr {
-        width: 17.013rem;
-    }
+@media screen and (min-width: 374px) {
 
-    .footer {
-        bottom: -44.6rem;
-    }
 }
 </style>
