@@ -118,6 +118,12 @@ export default {
     mounted() {
         this.boxContainer = document.getElementsByClassName('box-container')
 
+        // this.boxContainer[1].addEventListener('mouseover', () => {   //foreach
+        //      for (let i = 0; i < this.boxContainer.length; i++) {
+        //         this.boxContainer[i].classList.add('active');
+        //      }
+        // })
+
         window.addEventListener(
             'scroll',
             debounce(() => {
