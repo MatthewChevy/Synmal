@@ -91,6 +91,9 @@
     .h3-handler {
         width: 100%;
         margin: 2rem auto;
+
+        width: 21.3rem;
+        margin: 2rem 0; 
         text-align: left;
         padding: 0;
 
@@ -98,6 +101,12 @@
             color: $darkest;
             font-size: 19px;
             font-weight: 400;
+
+            strong{
+                font:{
+                    weight: 600
+                }
+            }
         }
     }
 
@@ -108,12 +117,12 @@
 
     .airless-box {
         align-items: center;
-        margin: 0 auto 5rem auto;
+        margin: 0 auto 4rem auto;
     }
 
     .logo-holder {
         width: 80%;
-        padding: 1rem 0;
+        padding-top: 1rem;
 
         img {
             width: 100%;
