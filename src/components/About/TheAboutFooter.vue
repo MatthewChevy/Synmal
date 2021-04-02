@@ -18,27 +18,30 @@
 
 <style lang="scss" scoped>
 
-.footer-center {
-    max-width: 18.75rem;
-    margin: 0 auto;
-}
+@media screen and ( min-width: 0px ) {
 
-.contact-link-button-wrapper {
-    width: 11rem;
-    margin: 0 auto;
-    text-align: center;
-}
+    .footer-center {
+        max-width: 18.75rem;
+        margin: 0 auto;
+    }
 
-.contact-link-button {
-    background-color: $fancy;
-    padding: 1px 0px;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-    cursor: pointer;
-}
+    .contact-link-button-wrapper {
+        width: 11rem;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-.contact-link-button:focus {
-    background-color: $primary-light;
-    transition: 0.25s;
+    .contact-link-button {
+        background-color: $fancy;
+        padding: 1px 0px;
+        box-shadow: 5px 5px 3px rgba($darkest, 16%);
+        cursor: pointer;
+    }
+
+    .contact-link-button:focus {
+        background-color: $primary-light;
+        transition: 0.25s;
+    }
 }
 
 </style>
