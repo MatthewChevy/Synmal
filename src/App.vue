@@ -15,7 +15,7 @@
 <script>
 import tableMixin from './mixins/tableMixins'
 
-import Navigation from './components/TheNavigation.vue'
+import Navigation from './components/Navigation/TheNavigation.vue'
 
 export default {
     mixins: [tableMixin],
