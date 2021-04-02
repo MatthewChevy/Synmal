@@ -102,7 +102,7 @@ export default {
         justify-content: center;
         flex-direction: column;
         width: 97%;
-        margin-top: -50%;
+        top: -8rem;
     }
 
     .title {
@@ -126,11 +126,13 @@ export default {
         position: fixed;
         display: flex;
         align-items: baseline;
+        margin-left: 2.5%;
         font:{
             family: $font-family;
             size: 8.2vw;
+            
         }
-        color: $primary-light;
+        color: $title-decoration;
         opacity: 0;
         animation: mainFadeIn 2s 1.6s forwards;
 
@@ -173,9 +175,10 @@ export default {
             weight: 600;
             family: $second-font-family;
         }
+        margin-left: 2.5%;
         text-transform: uppercase;
         opacity: 0;
-        color: $primary-light;
+        color: $title-decoration;
         letter-spacing: 5px;
         animation: secFadeIn 2s 3.2s forwards;
     }
