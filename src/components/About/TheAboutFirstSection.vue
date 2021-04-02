@@ -1,7 +1,8 @@
 <template>
     <section class="section">
-        <div class="top-aside-box">
-            <div class="right-side-rectangle">
+
+        <div class="top-box">
+            <div class="rectangle">
                 <p>
                     Za roky našej práce máme mnoho spokojných ľudí, ktorým
                     sme pomohli zveľadiť ich <strong>bytové</strong> a
@@ -10,8 +11,8 @@
             </div>
         </div>
 
-        <div class="bottom-aside-box">
-            <div class="left-side-rectangle">
+        <div class="bottom-box">
+            <div class="rectangle">
                 <p>
                     Sme rodinná firma s 20 ročnými skúsenosťami
                 </p>
@@ -24,11 +25,11 @@
             </div>
         </div>
 
-        <div class="center-box">
-            <div class="center-box-h2">
+        <article class="article-box">
+            <div class="article-h2">
                 <h2>Naše pôsobenie</h2>
             </div>
-            <article class="center-box-paragraph">
+            <div class="article-paragraph">
                 <p>
                     Sme spoločnosť, ktorej hodnoty sú postavené na
                     úprimnosti, poctivej práci a zodpovednému prístupu ku
@@ -39,16 +40,11 @@
                     <strong>Liptove</strong> ale po vzájomnej dohode robíme
                     kompromisy.
                 </p>
-            </article>
-        </div>
+            </div>
+        </article>
     </section>
 </template>
 
-<script>
-    export default {
-        
-    }
-</script>
 
 <style lang="scss" scoped>
 
@@ -66,11 +62,11 @@
     margin: 0 auto;
 }
 
-.top-aside-box {
+.top-box {
    padding-top: 2rem;
    width: 100%;
 
-    .right-side-rectangle {
+    .rectangle {
         position: relative;
         display: flex;
         align-items: center;
@@ -97,9 +93,9 @@
     }
 }
 
-.bottom-aside-box {
+.bottom-box {
 
-    .left-side-rectangle {
+    .rectangle {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -134,7 +130,7 @@
     }
 }
 
-.center-box {
+.article-box{
     position: relative;
     width: 100%;
     padding-top: 0.563rem;
@@ -142,7 +138,7 @@
     text-align: center;
     box-shadow: 5px 5px 6px rgba($darkest, 16%);
 
-    .center-box-h2 {
+    .article-h2 {
         h2 {
             font: {
                 size: 25px;
@@ -151,7 +147,7 @@
         }
     }
 
-    .center-box-paragraph {
+    .article-paragraph {
         width: $sm-width-container;
         margin: 2rem auto 0 auto;
 
@@ -173,12 +169,12 @@
 
 @media screen and ( min-width: 375px ) {
 
-    .top-aside-box {
+    .top-box  {
         display: flex;
         justify-content: flex-end;
         align-items: center;
 
-        .right-side-rectangle {
+        .rectangle {
             width: 85%;
             padding:{
                 top: 1rem;
@@ -202,9 +198,9 @@
         
     }
 
-    .bottom-aside-box {
+    .bottom-box {
 
-    .left-side-rectangle {
+    .rectangle {
         display: flex;
         justify-content: flex-start;
         align-items: center;
