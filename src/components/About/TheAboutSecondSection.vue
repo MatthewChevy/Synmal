@@ -50,7 +50,7 @@
     .section {
         position: relative;
         width: 100%;
-        background: $primary-semi-light;
+        background: $primary-light;
     }
 
     .cartoon-person {
@@ -102,7 +102,6 @@
 
         .article-title {
             position: relative;
-            width: 18.75rem;
             margin: 0 auto;
             z-index: 1;
 
@@ -111,8 +110,8 @@
                 text-align: center;
                 color: $primary-light;
                 font: {
-                    size: 24px;
-                    weight: 700;
+                    size: 30px;
+                    weight: 300;
                 }
             }
         }
@@ -131,6 +130,7 @@
             .top-box-paragraph{  
                 position: relative;
                 max-width: 85%;
+                text-align: justify;
                 z-index: 2;
 
                 p {
@@ -149,7 +149,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin-top: 4rem;
+            margin-top: 2rem;
             padding: 1rem;
             z-index: 1;
             background-color: $primary-light;
@@ -186,7 +186,6 @@
 @media screen and ( min-width: 350px ) {
 
     .article{
-
         .top-box{ 
             padding: 1.25rem 0;
             .top-box-paragraph{
@@ -214,20 +213,15 @@
 
 }
 
-@media screen and ( min-width: 375px ) {
+@media screen and ( min-width: 500px ) {
 
-    .article {
-        padding: 2rem 0 3rem 0;
-
-        .article-title {
-            h3 {
-                font: {
-                    size: 24px;
-                    weight: 600;
-                } 
-            }
+    .article{
+        .top-box{
+            width: 70%;
         }
     }
+
+
 }
 
 </style>
