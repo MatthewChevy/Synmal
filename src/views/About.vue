@@ -49,13 +49,16 @@ header {
     padding-top: 3.4rem;
 }
 
+main{
+    margin-top: 63%;
+}
+
 footer {
     position: relative;
     width: 100%;
-    height: 5rem;
-    z-index: 10;
+    padding: 1rem 0 3rem 0; 
     top: -2rem;
-    background-color: $primary-semi-dark;
+    background-color: $primary-soft;
 }
 
 </style>
