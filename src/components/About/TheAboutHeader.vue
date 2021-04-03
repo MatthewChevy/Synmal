@@ -1,43 +1,45 @@
 <template>
+       <h3 class="width">Width: {{ width }}</h3>
+        <h3 class="height">Height: {{ height }}</h3>
     <img
         class="welcome-image"
         src="../../assets/img/brothers.jpg"
         alt="brothers"
     />
-    <div class="title-wrapper">
-        <div class="title-wrapper-center">
-            <h1>Pár slov o nás a našej práci</h1>
-        </div>
-    </div>
 </template>
+
+<script>
+export default {
+       data() {
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight,
+        }
+    },
+}
+</script>
 
 <style lang="scss" scoped>
 
 @media screen and ( min-width: 0px ) {
+
+    .width {
+        position: absolute;
+        top: 4rem;
+        color: purple;
+    }
+
+    .height {
+        position: absolute;
+        top: 5.5rem;
+        color: purple;
+    }
 
     .welcome-image {
         position: fixed;
         max-width: 100%;
         z-index: -2;
         opacity: 100%;
-    }
-
-    .title-wrapper {
-        max-width: 18.75rem;
-        height: 13rem;
-        margin: 0 auto;
-
-        h1 {
-            position: fixed;
-            width: 13rem;
-            padding-top: 0.5rem;
-            z-index: -1;
-            color: $primary-dark;
-            font: {
-                size: 25px;
-                weight: 700;
-            }
-        }
     }
 } 
 
