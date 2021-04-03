@@ -1,18 +1,18 @@
 <template>
     <div class="footer-center">
-        <div
-            class="contact-link-button-wrapper"
-            tabindex="1"
-            @click="$router.push({ path: '/contact' })"
-        >
-            <p class="contact-link-button">Kontaktujte nás</p>
+        <div class="button">
+            <the-path-button :path="'contact'" :textButton="'Kontaktujte nás'" />
         </div>
     </div>
 </template>
 
 <script>
+import ThePathButton from '../ThePathButton.vue';
+
     export default {
-        
+        components: {
+            ThePathButton,
+        },
     }
 </script>
 
@@ -25,23 +25,11 @@
         margin: 0 auto;
     }
 
-    .contact-link-button-wrapper {
-        width: 11rem;
-        margin: 0 auto;
+    .button{
         text-align: center;
+        margin: 0 auto;
     }
 
-    .contact-link-button {
-        background-color: $fancy;
-        padding: 1px 0px;
-        box-shadow: 5px 5px 3px rgba($darkest, 16%);
-        cursor: pointer;
-    }
-
-    .contact-link-button:focus {
-        background-color: $primary-light;
-        transition: 0.25s;
-    }
 }
 
 </style>
