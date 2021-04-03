@@ -103,7 +103,7 @@ export default {
         p {
             width: 100%;
             margin: 0 auto;
-            padding-top: 1rem;
+            text-align: justify;
             font: {
                 weight: 300;
             }

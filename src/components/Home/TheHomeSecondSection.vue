@@ -85,7 +85,7 @@
     .container {
         width: $sm-width-container;
         margin: 0 auto;
-        text-align: right;
+        text-align: left;
     }
 
     .h3-handler {
@@ -131,7 +131,7 @@
 
     .p-1,
     .p-2 {
-        text-align: left;
+        text-align: justify;
         strong {
             font: {
                 weight: 500;
@@ -146,7 +146,7 @@
     .p-2 {
         width: 95%;
         margin: 0 auto;
-        text-align: right;
+        text-align: justify;
     }
 
     .paint-machine-image {
@@ -164,6 +164,12 @@
 }
 
 @media screen and (min-width: 500px) {
+
+    .h3-handler{
+        width: 100%;
+        text-align: left;
+    }
+
     .p-1 {
         width: 26rem;
     }

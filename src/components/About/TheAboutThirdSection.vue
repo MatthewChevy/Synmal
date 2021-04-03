@@ -5,10 +5,10 @@
 
             <div class="center">
                 <div class="article-title">
-                    <h3>Priebeh našej práce</h3>
+                    <h2>Priebeh práce</h2>
                 </div>
                 <p>
-                    Po kontakte s Vami urobíme osobnú prehliadku Vašich
+                    <strong>Kontakt:</strong> Po kontakte s Vami urobíme osobnú prehliadku Vašich
                     priestorov, na základe ktorej vypracujeme cenovú
                     ponuku a dohodneme termín
                 </p>
@@ -19,75 +19,51 @@
 
             <article class="article-first-box">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magnaqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis autrure dolor in
-                    reprehenderit
+                    <strong>Pred maľovaním:</strong> Všetko dôkladne zalepíme a pozakrývame fóliou. Tento proces bývá časovo najnáročnejší.
+                    Pri strojovom maľovaní si lepenie vyžaduje ešte väčšiu dôslednosť.
                 </p>
-                <div class="image-before-paint">
-                    <p>Fotka pred maľovaním</p>
+                <div class="image-before-paint-box">
+                    <div class="image-holder">
+                        <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="before">
+                    </div>
                 </div>
             </article>
-
-            <aside class="cartoon-person">
-                <div class="cartoon-person-align">
-                    <img
-                        src="../../assets/img/person.png"
-                        alt="Cartoon person"
-                    />
-                </div>
-            </aside>
-
-            <aside class="decoration-line-box">
-                <div class="article-left-side-decoration-line-hr"></div>
-                <div class="article-left-side-decoration-line-vr"></div>
-            </aside>
-
         </div>
 
         <article class="article-second-box">
             <div class="center">
                     <div class="second-box-paragraph">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor dunt ut labore et dolore
-                            magna aliqua. Ut fffffenim ad minim veniam, quis nostrud
-                            itation ullamco laboris nisi ut aliquip ex commodo
-                            consequat. Duis aute irure
+                            <strong>Počas maľovania:</strong> V tejto fáze sa ukážu všetky nedostatky ako napríklad praskliny na stenách, strope
+                            alebo okolo okien. Všetko čo treba povyspravujeme a zasádrujeme.
                         </p>
                     </div>
                     <div class="image-painting-box">
-                        <div class="image-painting">
-                            <p>Fotka počas maľovania</p>
+                        <div class="image-holder">
+                            <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="in progress">
                         </div>
                     </div>
                 </div>
-            <div class="article-bottom-decoration-line-vr"></div>
         </article>
 
         <article class="article-bottom">
             <div class="article-bottom-box">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor dunt ut labore et dolore magna
-                    aliqua. Ut eni ad minim veniam, quis nostru
+                   <strong>Po maľovaní:</strong> Ak sme s výsledkom spokojný môžeme začať s upratovacími prácami. 
+                    Všetko dôklade vyzametáme, poumývame a povysávame.
                 </p>
-                <div class="image-after-paint">
-                    <p>Fotka po maľovaní</p>
+                <div class="image-after-paint-box">
+                    <div class="image-holder">
+                        <img src="../../assets/img/gallery/IMG_20200824_122141.jpg" alt="after">
+                    </div>
                 </div>
             </div>
         </article>
 
     </section>
+    
 </template>
 
-<script>
-    export default {
-        
-    }
-</script>
 
 <style lang="scss" scoped>
 
@@ -108,25 +84,48 @@
         .center{
             width: $sm-width-container; 
             margin: 0 auto;
-            padding: 3rem 0;
+            padding-bottom: 2rem;
 
             .article-title {
                 padding: 0;
                 text-align: center;
-                h3 {
+                h2 {
                     font: {
-                        size: 24px;
-                        weight: 600;
+                        size: 30px;
+                        weight: 300;
                     }
                 }
+
+            h2::before,
+            h2::after{
+                content: "";
+                display: inline-block;
+                position: relative;
+                width: 19%;
+                height: 2px;
+                top: -0.4rem;
+                background: $fancy;
             }
+            
+            h2::before{
+                right: 0.5rem;
+            }
+            h2:after{
+                left: 0.5rem;
+            }
+        }
 
             p {
-                padding: 1rem 0;
-                text-align: center;
+                padding: 2rem 0 1rem 0;
+                text-align: justify;
                 font: {
                     size: 14px;
                     weight: 300;
+                }
+                strong {
+                    font:{
+                        weight: 500;
+                    }
                 }
             }
         }
@@ -141,79 +140,36 @@
     .article-first-box {
         position: relative;
         width: 100%;
-        padding: 2.5rem 0;
+
         p {
+            padding-top: 2rem;
+            text-align: justify;
             font: {
                 size: 14px;
                 weight: 300;
             }
-        }
-        .image-before-paint {
-            
-            width: 12.5rem;
-            height: 16.563rem;
-            margin-top: 2rem;
-            z-index: 3;
-            border: 5px solid $primary-light;
-            background-color: $primary-semi-dark;
-            box-shadow: 5px 5px 5px rgba($darkest, 16%);
-            p {
-                min-width: 100%;
-                padding-top: 7rem;
-                text-align: center;
-                font: {
-                    size: 11px;
-                    weight: 300;
+
+            strong {
+                font:{
+                    weight: 500;
                 }
-                color: $primary-light;
             }
         }
-    }
 
-    .cartoon-person {
-        position: relative;
-
-        .cartoon-person-align {
-            position: relative;
-            width: 7rem;
-            height: auto;
-            top: 15px;
-            left: 60%;
-            margin-top: -19rem;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    .decoration-line-box{
-        position: relative;
-
-        .article-left-side-decoration-line-hr {
-            position: absolute;
-            width: 60%;
-            height: 0.313rem;
-            top: -2rem;
-            left: 1.2rem;
-            z-index: 1;
-            background-color: $fancy;
-            box-shadow: 5px 0px 1px rgba($darkest, 16%);
-        }
-
-        .article-left-side-decoration-line-vr {
-            position: absolute;
-            width: 0.313rem;
-            height: 23.813rem;
-            top: -2rem;
-            left: 1.2rem;
-            z-index: 2;
-            background-color: $fancy;
-            box-shadow: 5px 0px 2px rgba($darkest, 16%);
+        .image-before-paint-box {
+            padding: 2rem 0;
+            
+            .image-holder{
+    
+               img{
+                   width: 100%;
+               }
+           }
         }
     }
 
     .article-second-box {
+
         position: relative;
         z-index: 1;
         background-color: $primary-light;
@@ -226,42 +182,30 @@
         }
 
         .second-box-paragraph {
-            display:flex;
-            justify-content: flex-end;
-            width: 100%;
+            margin: 0 auto;
             padding: 2rem 0;
-            text-align: right;
-
+            text-align: justify;
             p {
-                width: 86%;
+                margin: 0 auto;
                 font: {
                     size: 14px;
                     weight: 300;
                 }
+
+                strong {
+                    font:{
+                        weight: 500;
+                    }
+                }
             }
         }
 
-        .image-painting-box {
-            display:flex;
-            justify-content: flex-end;
+        .image-painting-box {    
             padding-bottom: 2rem;
 
-            .image-painting {
-                width: 12.5rem;
-                height: 16.563rem;
-                border: 5px solid $primary-light;
-                background-color: $primary-semi-dark;
-                box-shadow: 5px 5px 5px rgba($darkest, 16%);
-
-                p {
-                    min-width: 100%;
-                    padding-top: 7rem;
-                    text-align: center;
-                    font: {
-                        size: 11px;
-                        weight: 300;
-                    }
-                    color: $primary-light;
+            .image-holder{
+                img{
+                    width: 100%;
                 }
             }
         }
@@ -284,38 +228,86 @@
         top: -1.5rem;
         padding-top: 1.5rem;
         padding-bottom: 2rem;
-        background-color: $primary-semi-dark;
+        background-color: $primary-soft;
         p {
-            text-align: center;
-            padding-top: 1.5rem;
+            text-align: justify;
+            padding-top: 2rem;
+            margin: 0 auto;
             font: {
                 size: 14px;
                 weight: 300;
             }
-            color: $primary-light;
+            color: $darkest;
+            strong {
+                font:{
+                    weight: 500;
+                }
+            }
         }
 
         .article-bottom-box {
-            max-width: 300px;
+            max-width: $sm-width-container;
             margin: 0 auto;
         }
+        .image-after-paint-box{
+            width: 100%;   
+            padding-top: 2rem;
 
-        .image-after-paint {
-            width: 300px;
-            height: 180px;
-            background-color: #ececec;
-            border: 5px solid white;
-            margin-top: 1.5rem;
-            p {
-                color: $darkest;
-                padding-top: 5rem;
+            .image-holder{
+                img{
+                    width: 100%;
+                }
             }
         }
+            
     }
 
 }
 
-@media screen and ( min-width: 375px ) {
+@media screen and ( min-width: 350px ) {
+
+    .article-top{
+        .center {
+            p {
+                font: {
+                    size: 16px;
+                }
+            }
+        }
+    }
+
+    .article-first-box {
+        position: relative;
+        width: 100%;
+        p {
+            font: {
+                size: 16px;
+                weight: 300;
+            }
+        }
+    }
+
+    .article-second-box {
+        .second-box-paragraph {
+            p {
+                font: {
+                    size: 16px;
+                }
+            }
+        }
+    }
+
+    .article-bottom{
+
+        .article-bottom-box{
+            p{
+                font:{
+                    size: 16px;
+                }
+            }
+        }
+    }
+
 }
 
 </style>

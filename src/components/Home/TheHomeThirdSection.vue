@@ -78,7 +78,7 @@
         width: 100%;
 
         p {
-            text-align: center;
+            text-align: justify;
             font: {
                 weight: 300;
             }

@@ -236,6 +236,7 @@ export default {
             p {
                 width: 15rem;
                 margin: 0 auto;
+                text-align: justify;
                 font: {
                     size: 14px;
                     weight: 300;
@@ -311,12 +312,18 @@ export default {
                 }
             }
             p {
-                width: 19rem;
+                width: 90%;
+                max-width: 21rem;
                 margin: 0 auto;
                 font: {
                     size: 16px;
                     weight: 300;
                 }
+            }
+
+            .image-holder::before,
+            .image-holder::after {
+                width: 30%;
             }
         }
     }
@@ -333,6 +340,15 @@ export default {
     .aside {
         h5 {
             width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+
+    .to-do-box {
+        .box-container {
+            width: 65%;
         }
     }
 }
