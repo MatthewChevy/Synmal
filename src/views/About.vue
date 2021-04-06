@@ -21,7 +21,6 @@
         <the-about-footer />
 
     </footer>
-
 </template>
 
 <script>
@@ -45,12 +44,12 @@ export default {
 
 <style lang="scss" scoped>
 
+// body{
+//     background-color: $primary-semi-light;
+// }
+
 header {
     padding-top: 3.4rem;
-}
-
-main{
-    margin-top: 63%;
 }
 
 footer {
@@ -58,7 +57,7 @@ footer {
     width: 100%;
     padding: 1rem 0 3rem 0; 
     top: -2rem;
-    background-color: $primary-soft;
+    background-color: $primary-semi-light;
 }
 
 </style>
