@@ -342,6 +342,7 @@ export default {
         p {
             width: 55rem;
             padding-top: 1rem;
+            text-align: center;
             font: {
                 weight: 300;
             }

@@ -233,7 +233,6 @@
 
     .p-2 {
         margin-top: 3rem;
-        text-align: left;
     }
 }
 
