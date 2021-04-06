@@ -36,6 +36,18 @@
                 </div>
             </div>
 
+            <div class="article-paragraph lg">
+                <div class="paragraph-box">
+                    <p>
+                        Náš najväčší úspech je že môžeme vykonávať remeslo
+                        ktoré nás už dlhé roky baví napĺňa a pomáha ľudom.
+                        Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
+                        S.C.P. sú spoločnosti s ktorým sme mali možnosť
+                        pomôcť vymaľovať ich priestory.
+                    </p>
+                </div>
+            </div>
+
             <span class="decorative-line"></span>
 
         </article>
@@ -46,7 +58,11 @@
 <style lang="scss" scoped>
 
 @media screen and ( min-width: 0px ) {
-    
+
+    .lg{
+        display: none;
+    }
+ 
     .section {
         position: relative;
         width: 100%;
@@ -95,7 +111,7 @@
         position: relative;
         width: 100%;
         top: -3rem;
-        padding: 2rem 0;
+        padding: 2rem 0 3rem 0;
         z-index: 1;
         background-color: $primary-dark;
         box-shadow: 8px 8px 5px rgba($darkest, 16%);
@@ -156,12 +172,12 @@
 
 
             .bottom-box-paragraph {
-                width: 100%;
+                width: $sm-width-container;
                 position: relative;
                 z-index: 3;
 
                 p {
-                    text-align: center;
+                    text-align: justify;
                     font: {
                         size: 14px;
                         weight: 300;
@@ -222,6 +238,63 @@
     }
 
 
+}
+
+@media screen and ( min-width: 660px ) {
+
+    .lg{
+        display: block;
+    }
+
+    .article{
+
+        padding: 5rem 0;
+        border-top: 1px solid $primary;
+        border-bottom: 1px solid $primary;
+        background-color: $primary-soft;
+        box-shadow: none;
+
+        .top-box,
+        .bottom-box{
+            display: none;
+        }
+
+        .article-title{
+            h3{
+                color: $darkest
+            }
+        }
+    }
+
+    .article-paragraph{
+
+        .paragraph-box{
+            width: 37rem;
+            text-align: center;
+            margin: 0 auto;
+            text-align: justify;
+        }
+    }
+}
+     
+@media screen and ( min-width: 1024px ) {     
+    .cartoon-person {
+        width: 7.688rem;
+        height: 11.4rem;
+        top: -14.3rem;
+        left: -38%;
+    }
+
+    .decorative-circle-box {
+
+        .decorative-circle-bigger {
+            position: absolute;
+            width: 15rem;
+            height: 15rem;
+            top: -2rem;
+            right: 5rem;
+        }
+    }
 }
 
 </style>

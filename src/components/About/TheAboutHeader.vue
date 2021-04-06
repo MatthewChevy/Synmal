@@ -1,11 +1,16 @@
 <template>
-       <h3 class="width">Width: {{ width }}</h3>
+       <!-- <h3 class="width">Width: {{ width }}</h3>
         <h3 class="height">Height: {{ height }}</h3>
-    <img
-        class="welcome-image"
-        src="../../assets/img/brothers.jpg"
-        alt="brothers"
-    />
+    <div>
+        <img
+            class="welcome-image"
+            src="../../assets/img/bucket.jpg"
+            alt="brothers"
+        />
+    </div> -->
+
+    <div></div>
+
 </template>
 
 <script>
@@ -35,12 +40,11 @@ export default {
         color: purple;
     }
 
-    .welcome-image {
-        position: fixed;
-        max-width: 100%;
-        z-index: -2;
-        opacity: 100%;
-    }
+        .welcome-image {
+            width: 100%;
+            z-index: -2;
+            opacity: 100%;
+        }
 } 
 
 </style>

@@ -127,7 +127,38 @@
     
 }
 
-@media screen and ( min-width: 400px ) {  
+@media screen and ( min-width: 500px ) {  
+
+    .section {
+        margin-top: 2rem;
+    }
 }
 
+@media screen and ( min-width: 768px ){
+    .article-box{
+        .article-paragraph {
+            margin:0 auto;
+
+            p {
+                width: 37rem;
+            }
+        }
+    }
+}
+
+@media screen and ( min-width: 1024px ){
+
+    .section {
+        margin-top: 4rem;
+    }
+
+     header{
+        .h1-box{
+            h1::before,
+            h1::after{
+                width: 14rem; 
+            }
+        }
+    }
+}
 </style>
