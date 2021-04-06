@@ -405,7 +405,7 @@ export default {
             }
 
             p {
-                width: 18rem;
+                width: 16rem;
                 font: {
                     size: 15px;
                     weight: 300;
