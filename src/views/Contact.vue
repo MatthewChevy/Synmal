@@ -1,9 +1,4 @@
 <template>
-    <header>
-        <div class="decorative-circle">
-            <div class="decorative-circle-colored"></div>
-        </div>
-    </header>
     <main>
         <section class="contact-form-center">
             <div class="contact-form-contaniner">
@@ -97,182 +92,252 @@
             <div class="company-decoration-line"></div>
         </section>
     </main>
-    <footer>
-        <div class="footer-decorative-circle">
-            <div class="footer-decorative-circle-colored"></div>
-        </div>
-    </footer>
 </template>
 
 <style lang="scss" scoped>
-//contact from------------------------------
 
-header {
-    background-color: $primary-semi-light;
-}
+@media screen and ( min-width: 0px) {
 
-.decorative-circle {
-    position: relative;
-    width: 12.5rem;
-    height: 12.5rem;
-    top: 0;
-    left: -0.625rem;
-    border-radius: 50%;
-    background-color: $primary;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-}
-
-.decorative-circle-colored {
-    position: relative;
-    width: 6.25rem;
-    height: 6.25rem;
-    top: 4.2rem;
-    left: 1rem;
-    border-radius: 50%;
-    background-color: $fancy;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-}
-
-main {
-    background-color: $primary-semi-light;
-}
-
-.contact-form-center {
-    position: relative;
-    width: 20.5rem;
-    top: -4rem;
-    margin: 0 auto;
-    z-index: 1;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-}
-
-.contact-form-contaniner {
-    padding: 17px;
-    border-radius: 5px;
-    background-color: $primary-semi-dark;
-}
-
-.contact-form-title {
-    padding: 0.025rem 0 0.938rem 0;
-    color: $primary-light;
-    h3 {
-        font: {
-            size: 19px;
-            weight: 500;
-        }
+    main {
+        background-color: $primary-soft;
+        height: 65rem;
     }
-}
 
-.form-name {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem 0;
+    .contact-form-center {
+        position: relative;
+        width: 20.5rem;
+        top: 7rem;
+        margin: 0 auto;
+        z-index: 1;
+        box-shadow: 5px 5px 3px rgba($darkest, 16%);
+    }
 
-    .form-name-label {
-        padding-top: 0.375rem;
-        font: {
-            size: 13px;
-            weight: 400;
-        }
+    .contact-form-contaniner {
+        padding: 17px;
+        border-radius: 5px;
+        background-color: $primary-semi-dark;
+    }
+
+    .contact-form-title {
+        padding: 0.025rem 0 0.938rem 0;
         color: $primary-light;
-    }
-
-    .form-name-input {
-        width: 11.5rem;
-        height: 1.875rem;
-        border: none;
-        box-shadow: 5px 5px 3px rgba($darkest, 16%);
-    }
-
-    .form-name-input:focus {
-        outline: none;
-    }
-}
-
-.form-email {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0.813rem;
-
-    .form-email-label {
-        padding-top: 0.375rem;
-        font: {
-            size: 13px;
-            weight: 400;
-        }
-        color: $primary-light;
-    }
-
-    .form-email-input {
-        width: 12.813rem;
-        height: 1.875rem;
-        border: none;
-        box-shadow: 5px 5px 3px rgba($darkest, 16%);
-    }
-
-    .form-email-input:focus {
-        outline: none;
-    }
-}
-
-.form-textarea {
-    position: relative;
-    z-index: 1;
-
-    ::placeholder {
-        padding-left: 0.313rem;
-        font: {
-            size: 13px;
-            weight: 400;
+        h3 {
+            font: {
+                size: 20px;
+                weight: 300;
+            }
         }
     }
-    textarea {
-        max-width: 18.375rem;
-        min-width: 18.375rem;
-        min-height: 8.7rem;
-        max-height: 18.375rem;
-        margin: 0;
-        border: none;
+
+    .form-name {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+
+        .form-name-label {
+            padding-top: 0.375rem;
+            font: {
+                size: 13px;
+                weight: 300;
+            }
+            color: $primary-light;
+        }
+
+        .form-name-input {
+            width: 11.5rem;
+            height: 1.875rem;
+            border: none;
+            box-shadow: 5px 5px 3px rgba($darkest, 16%);
+        }
+
+        .form-name-input:focus {
+            outline: none;
+        }
+    }
+
+    .form-email {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0.813rem;
+
+        .form-email-label {
+            padding-top: 0.375rem;
+            font: {
+                size: 13px;
+                weight: 300;
+            }
+            color: $primary-light;
+        }
+
+        .form-email-input {
+            width: 12.813rem;
+            height: 1.875rem;
+            border: none;
+            box-shadow: 5px 5px 3px rgba($darkest, 16%);
+        }
+
+        .form-email-input:focus {
+            outline: none;
+        }
+    }
+
+    .form-textarea {
+        position: relative;
+        z-index: 1;
+
+        ::placeholder {
+            padding-left: 0.313rem;
+            font: {
+                size: 13px;
+                weight: 400;
+            }
+        }
+        textarea {
+            max-width: 18.375rem;
+            min-width: 18.375rem;
+            min-height: 8.7rem;
+            max-height: 18.375rem;
+            margin: 0;
+            border: none;
+            box-shadow: 5px 5px 3px rgba($darkest, 16%);
+        }
+        textarea:focus {
+            outline: none;
+        }
+    }
+
+    .form-button {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 0.6rem;
+        padding-bottom: 0.625rem;
+
+        button {
+            width: 9.063rem;
+            height: 1.438rem;
+            padding-top: 2px;
+            background-color: $fancy;
+            border: none;
+            box-shadow: 5px 5px 3px rgba($darkest, 16%);
+            font:{
+                size: 13px;
+                weight: 300;
+            }
+        }
+    }
+
+    //company-information------------------------------
+
+    .company-information-center {
+        position: relative;
+        width: 20.5rem;
+        margin: 10rem auto -3rem auto;
+        z-index: 1;
+    }
+
+    .company-information-contaniner {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-radius: 5px;
+        background-color: $primary;
         box-shadow: 5px 5px 3px rgba($darkest, 16%);
     }
-    textarea:focus {
-        outline: none;
+
+    .contact-information-title {
+        padding-right: 1rem;
+        padding-bottom: 1.25rem;
+        text-align: right;
+
+        h3 {
+            font: {
+                size: 18px;
+                weight: 400;
+            }
+        }
     }
-}
 
-.form-button {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 0.313rem;
-    padding-bottom: 0.625rem;
+    .decorative-paint-roller {
+        position: absolute;
+        width: 5.188rem;
+        height: 5.188rem;
+        top: 0;
+        left: -4.6rem;
+        z-index: 3;
+        transform: rotate3d(0, 0, 1, 89deg);
 
-    button {
-        width: 9.063rem;
-        height: 1.438rem;
-        padding-top: 2px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .contact-information-list-handler {
+        position: absolute;
+        right: 0;
+    }
+
+    .contact-information-list {
+        width: 14.625rem;
+        padding: 0.375rem 0;
+        background-color: $primary-light;
+        box-shadow: 0px 5px 4px rgba($darkest, 16%);
+
+        li {
+            padding: 0.063rem 0.938rem;
+            font: {
+                size: 14px;
+                weight: 400;
+            }
+        }
+    }
+
+    .billing-information {
+        position: relative;
+        width: 90%;
+        margin: 8rem auto 0 auto;
+        z-index: 1;
+    }
+
+    .billing-information-title {
+        padding-left: 1rem;
+
+        h3 {
+            font: {
+                size: 18px;
+                weight: 400;
+            }
+        }
+    }
+
+    .billing-information-list {
+        padding: 1.063rem;
+
+        li {
+            padding-bottom: 0.313rem;
+            color: $darkest;
+            letter-spacing: 0.2px;
+            font: {
+                size: 14px;
+                weight: 300;
+            }
+
+            strong {
+                font: {
+                    weight: 400;
+                }
+            }
+        }
+    }
+
+    .company-decoration-line {
+        position: absolute;
+        width: 0.313rem;
+        height: 100%;
+        bottom: 0;
+        left: 1.2rem;
+        z-index: 0;
         background-color: $fancy;
-        border: none;
-        box-shadow: 5px 5px 3px rgba($darkest, 16%);
     }
-}
-
-.form-decoration-line {
-    position: absolute;
-    width: 0.313rem;
-    height: 27.5rem;
-    top: 9rem;
-    left: 1.4rem;
-    z-index: 0;
-    background-color: $fancy;
-    box-shadow: 5px 0px 2px rgba($darkest, 16%);
-}
-
-.decorative-rectangle {
-    position: absolute;
-    width: 100%;
-    height: 29rem;
-    top: 26rem;
-    background-color: $primary-light;
+ 
 }
 
 @media screen and (max-width: 374px) {
@@ -307,159 +372,96 @@ main {
             box-shadow: 5px 5px 3px rgba($darkest, 16%);
         }
     }
-}
 
-//company-information------------------------------
-
-.company-information-center {
-    position: relative;
-    width: 20.5rem;
-    margin: 0 auto;
-    z-index: 1;
-}
-
-.company-information-contaniner {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-radius: 5px;
-    background-color: $primary;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-}
-
-.contact-information-title {
-    padding-right: 1rem;
-    padding-bottom: 1.25rem;
-    text-align: right;
-
-    h3 {
-        font: {
-            size: 18px;
-            weight: 500;
-        }
-    }
-}
-
-.decorative-paint-roller {
-    position: absolute;
-    width: 5.188rem;
-    height: 5.188rem;
-    top: 0;
-    left: -4.6rem;
-    z-index: 3;
-    transform: rotate3d(0, 0, 1, 89deg);
-
-    img {
-        width: 100%;
-    }
-}
-
-.contact-information-list-handler {
-    position: absolute;
-    right: 0;
-}
-
-.contact-information-list {
-    width: 14.625rem;
-    padding: 0.375rem 0;
-    background-color: $primary-light;
-    box-shadow: 0px 5px 4px rgba($darkest, 16%);
-
-    li {
-        padding: 0.063rem 0.938rem;
-        font: {
-            size: 14px;
-            weight: 400;
-        }
-    }
-}
-
-.billing-information {
-    position: relative;
-    width: 90%;
-    margin: 8rem auto 0 auto;
-    z-index: 1;
-}
-
-.billing-information-title {
-    padding-left: 1rem;
-    padding-bottom: 1.25rem;
-
-    h3 {
-        font: {
-            size: 18px;
-            weight: 500;
-        }
-    }
-}
-
-.billing-information-list {
-    padding: 1.063rem;
-    border-radius: 5px;
-    background: $primary-semi-dark;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-
-    li {
-        padding-bottom: 0.313rem;
-        color: $primary;
-        letter-spacing: 0.2px;
-        font: {
-            size: 14px;
-            weight: 300;
-        }
-
-        strong {
-            font: {
-                weight: 500;
-            }
-        }
-    }
-}
-
-.company-decoration-line {
-    position: absolute;
-    width: 0.313rem;
-    height: 36.4rem;
-    bottom: 0;
-    left: 1.4rem;
-    z-index: 0;
-    background-color: $fancy;
-    box-shadow: 5px 0px 2px rgb(0 0 0 / 16%);
-}
-
-@media screen and (max-width: 374px) {
     .company-information-center {
         width: 100%;
     }
 }
 
-//footer--------------------------------------
+@media screen and (min-width: 375px) {
+    
+    .contact-information-list{
+        width: 15.625rem;
 
-footer {
-    height: 10rem;
-    background-color: $primary-semi-light;
+        li{
+            padding: 0.063rem 2.4rem;
+        }
+    }
 }
 
-.footer-decorative-circle {
-    position: absolute;
-    width: 12.5rem;
-    height: 12.5rem;
-    left: 1rem;
-    margin-top: -4rem;
-    margin-bottom: 0rem;
-    z-index: 0;
-    border-radius: 50%;
-    background-color: $primary-light;
-    box-shadow: 5px 5px 6px rgba($darkest, 16%);
-}
+@media screen and (min-width: 400px) {
 
-.footer-decorative-circle-colored {
-    position: absolute;
-    width: 7.5rem;
-    height: 7.5rem;
-    top: 1rem;
-    left: 1rem;
-    border-radius: 50%;
-    background-color: $fancy;
-    box-shadow: 5px 5px 6px rgba($darkest, 16%);
+    .contact-form-center {
+        width: 23rem;
+    }
+
+    .contact-form-title{
+        h3{
+            font:{
+                size: 22px
+            }
+        }
+    }
+
+    .form-name{
+        .form-name-label{
+            font:{
+                size: 15px
+            }
+        }
+        .form-name-input{
+            width: 12.5rem;
+        }
+    } 
+
+    .form-email{
+        .form-email-label{
+            font:{
+                size: 15px
+            }
+        }
+        .form-email-input{
+            width: 14rem;
+        }
+    } 
+    
+    .form-textarea{
+        textarea{
+            max-width: 20.875rem;
+            min-width: 20.875rem;
+        }
+    }
+
+    .form-button {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 0.6rem;
+        padding-bottom: 0.625rem;
+
+        button {
+            width: 10rem;
+            height: 1.5rem;
+            padding-top: 2px;
+            background-color: $fancy;
+            border: none;
+            box-shadow: 5px 5px 3px rgba($darkest, 16%);
+            font:{
+                size: 14px;
+                weight: 300;
+            }
+        }
+    }
+
+    .company-information-center {
+        width: 22.5rem;
+    }
+
+    .billing-information-title, .contact-information-title{
+        h3{
+            font:{
+                size: 22px
+            }
+        }
+    }
 }
 </style>
