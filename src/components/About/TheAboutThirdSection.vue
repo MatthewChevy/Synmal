@@ -26,6 +26,7 @@
                         <div class="image-holder">
                             <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="before">
                         </div>
+                        <h3>Pred maľovaním</h3>
                     </div>
                 </div>
             </article>
@@ -40,6 +41,7 @@
                         <div class="image-holder">
                             <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="in progress">
                         </div>
+                        <h3>Počas maľovania</h3>
                     </div>
                 </div>
             </article>
@@ -54,6 +56,7 @@
                         <div class="image-holder">
                             <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="after">
                         </div>
+                        <h3>Po maľovaní</h3>
                     </div>
                 </div>
             </article>
@@ -156,6 +159,7 @@
 
         .article-image {
             padding: 2rem 0;
+            
 
                img{
                    width: 100%;
@@ -333,22 +337,44 @@
         }
     }
 
+    .flex-box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem 0;
+    }
+
     .article-box{
-        width: 19rem;
+
+        width: 33.333%;
+
+        .center{
+            .article-image{
+                h3{
+                    position: relative;
+                    width: 100%;
+                    text-align: center;
+                    top: -5rem;
+                    font:{
+                        size: 30px;
+                        width: 700;
+                        style: italic
+                    }
+                    text-transform: uppercase;
+                    color: $primary-soft
+                }
+            }
+        }
         p{
+            display: none;
             text-align: center;
             width: 98%;
             margin: 0 auto;
         }
-    }
 
-    .flex-box{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: $lg-width-container;
-        margin: 0 auto;
-        padding: 4rem 0;
+        
     }
 
     .last{
@@ -357,32 +383,32 @@
 
 }
 
-@media screen and ( min-width: 1200px ) {
+// @media screen and ( min-width: 1200px ) {
 
-    .article-box{
-        width: 21rem;
-        p{
-            text-align: center;
-            width: 100%;
-            margin: 0 auto;
-        }
-    }
+//     .article-box{
+//         width: 21rem;
+//         p{
+//             text-align: center;
+//             width: 100%;
+//             margin: 0 auto;
+//         }
+//     }
 
-    .flex-box{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 70rem;
-        margin: 0 auto;
-        padding: 4rem 0;
-    }
+//     .flex-box{
+//         display: flex;
+//         justify-content: space-between;
+//         flex-wrap: wrap;
+//         width: 70rem;
+//         margin: 0 auto;
+//         padding: 4rem 0;
+//     }
 
-    .last{
-        margin: unset
-    }
+//     .last{
+//         margin: unset
+//     }
 
     
-}
+// }
 
 
 
