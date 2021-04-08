@@ -113,7 +113,7 @@
         top: -3rem;
         padding: 2rem 0 3rem 0;
         z-index: 1;
-        background-color: $primary-dark;
+        background-color: $primary-soft;
         box-shadow: 8px 8px 5px rgba($darkest, 16%);
 
         .article-title {
@@ -124,7 +124,7 @@
             h3 {
                 padding-bottom: 1.5rem;
                 text-align: center;
-                color: $primary-light;
+                color: $darkest;
                 font: {
                     size: 30px;
                     weight: 300;
