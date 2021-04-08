@@ -12,6 +12,8 @@
 
         <the-about-second-section />
 
+        <the-about-background-photo-section />
+
         <the-about-third-section />
 
     </main>
@@ -28,6 +30,7 @@
 import TheAboutHeader from '../components/About/TheAboutHeader';
 import TheAboutFirstSection from '../components/About/TheAboutFirstSection';
 import TheAboutSecondSection from '../components/About/TheAboutSecondSection';
+import TheAboutBackgroundPhotoSection from '../components/About/TheAboutBackgroundPhotoSection';
 import TheAboutThirdSection from '../components/About/TheAboutThirdSection';
 import TheAboutFooter from '../components/About/TheAboutFooter';
 
@@ -36,6 +39,7 @@ export default {
         TheAboutHeader,
         TheAboutFirstSection,
         TheAboutSecondSection,
+        TheAboutBackgroundPhotoSection,
         TheAboutThirdSection,
         TheAboutFooter
     },
