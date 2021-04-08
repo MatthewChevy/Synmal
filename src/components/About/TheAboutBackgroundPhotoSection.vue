@@ -1,14 +1,15 @@
 <template>
     <section>
         <div class="background">
-            <h2>Rychlosť, Odbornosť, Spoľahlivosť</h2>
-            <p>Chcete nás videť v plnom nasadení ? Pozrite na do našej <a @click="$router.push({ path: 'gallery' })">Galérie</a></p>
+            <div class="container">
+                <h2>Rýchlosť, Odbornosť, Spoľahlivosť</h2>
+                <p>Chcete nás videť v plnom nasadení ? Pozrite na do našej <a @click="$router.push({ path: 'gallery' })">Galérie</a></p>
 
-            <aside>Naša práca je založená na individuálnom prístupe - snažíme sa nájsť optimálne 
-                   finančné riešenie pre jednotlivcov ako aj organizácie pri dodržaní kvality práce.
-            </aside>
+                <aside>Naša práca je založená na individuálnom prístupe - snažíme sa nájsť optimálne 
+                    finančné riešenie pre jednotlivcov ako aj organizácie pri dodržaní kvality práce.
+                </aside>
+            </div>
         </div>
-         
     </section>
    
 </template>
@@ -21,14 +22,15 @@
 
 <style lang="scss" scoped>
 
+@media screen and ( min-width: 0px){
+
 
     section{
         position: relative;
         background-image: url("../../assets/img/wallpaper.jpg");
         background-position: center center;
-        background-attachment: fixed;
         background-size: cover;
-        height: 25rem;
+        height: 27rem;
         top: -3rem;
 
         .background{
@@ -37,56 +39,96 @@
             background-size: cover;
             background-position: center center;
             z-index: 2;
-            height: 25rem;
+            height: 27rem;
             
         }
     }
 
-    h2{
-        width: 90%;
+    .container{
+        width: $sm-width-container;
         margin: 0 auto;
-        position: relative;
-        padding-top: 3rem;
-        z-index: 3;
-        font:{
-            size: 40px;
-            weight: 400
+    
+        h2{
+            margin: 0 auto;
+            position: relative;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+            z-index: 3;
+            font:{
+                size: 30px;
+                weight: 500
+            }
+            text-transform: uppercase;
+            color: $primary-soft;
+            text-align: center;
         }
 
-        color: white;
-        text-align: center;
-    }
-
-    p{
-        width: 90%;
-        margin: 0 auto;
-        padding-bottom: 1rem;
-        font:{
-            size: 20px;
-            weight: 400
+        p{
+            margin: 0 auto;
+            padding-bottom: 3rem;
+            font:{
+                size: inherit;
+                weight: 300
+            }
+            text-align: center;
+            color: $primary-soft;
+            border-bottom: 1px solid $primary-soft;
+                a{
+                    text-decoration: underline;
+                    font-style: italic;
+                    cursor: pointer;
+                }
         }
-        text-align: center;
-        color: white;
-        border-bottom: 1px solid white;
 
-        a{
-            text-decoration: underline;
-            font-style: italic;
-            cursor: pointer;
+        aside{
+            margin: 1rem auto;
+            padding-top: 2rem;
+            font:{
+                size: inherit;
+                weight: 300
+            } 
+            text-align: center;
+            color: $primary-soft;
+        }
+    }
+}
 
+@media screen and ( min-width: 960px){
+
+
+    section{
+        background-attachment: fixed;
+        height: 25rem;
+
+        .background{
+            height: 25rem; 
         }
     }
 
-    aside{
-        width: 40rem;
-        margin: 1rem auto;
-        padding-top: 3rem;
-        font:{
-            size: 20px;
-            weight: 500
-        } 
-        text-align: center;
-        color: white;
+    .container{
+        width: $lg-width-container;
+        h2{
+            font:{
+                size: 40px;
+                weight: 500
+            }
+        }
+
+        p{
+            font:{
+                size: 20px;
+                weight: 400
+            }
+        }
+
+        aside{
+            font:{
+                size: 20px;
+                weight: 500
+            } 
+        }
     }
+    
+}
 
 </style>
