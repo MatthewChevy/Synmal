@@ -7,56 +7,77 @@
                 <div class="article-title">
                     <h2>Priebeh práce</h2>
                 </div>
-                <p>
-                    <strong>Kontakt:</strong> Po kontakte s Vami urobíme osobnú prehliadku Vašich
-                    priestorov, na základe ktorej vypracujeme cenovú
-                    ponuku a dohodneme termín
-                </p>
+                <div class="contact-paragraph">
+                    <div class="center">
+                        <h3>Kontakt</h3>
+                        <p>
+                            Po kontakte s Vami urobíme osobnú prehliadku Vašich
+                            priestorov, na základe ktorej vypracujeme cenovú
+                            ponuku a dohodneme termín
+                        </p>
+                    </div>
+                </div>
+
+                <div class="paragraphs-holder">
+
+                    <div class="paragraph-box">
+                        <h4>Pred maľovaním</h4>
+                        <p>
+                            Všetko dôkladne zalepíme a pozakrývame fóliou. Tento proces bývá časovo najnáročnejší.
+                            Pri strojovom maľovaní si lepenie vyžaduje ešte väčšiu dôslednosť.
+                        </p>
+                    </div>
+                    
+                    <div class="paragraph-box center-box">
+                        <h4>Počas maľovania</h4>
+                        <p>
+                            V tejto fáze sa ukážu všetky nedostatky ako napríklad praskliny na stenách, strope
+                            alebo okolo okien. Všetko čo treba povyspravujeme a zasádrujeme.
+                        </p>
+                    </div>
+
+                    <div class="paragraph-box">
+                        <h4>Po maľovaní</h4>
+                        <p>
+                            Ak sme s výsledkom spokojný môžeme začať s upratovacími prácami. Všetko dôklade vyzametáme, poumývame a povysávame. 
+                            Po skončení sa možete tešiť z vymalovných priestorov.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </article>
 
-        <div class="flex-box">
+        <div class="photo-box">
             <article class="article-box">
                 <div class="center">
-                    <p>
-                        <strong>Pred maľovaním:</strong> Všetko dôkladne zalepíme a pozakrývame fóliou. Tento proces bývá časovo najnáročnejší.
-                        Pri strojovom maľovaní si lepenie vyžaduje ešte väčšiu dôslednosť.
-                    </p>
-                    <div class="article-image">
-                        <div class="image-holder">
-                            <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="before">
-                        </div>
-                        <h3>Pred maľovaním</h3>
+                    <div class="image-holder">
+                        <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="before">
+                    </div>
+                    <div class="h3-box">
+                        <h3>Pred</h3>
                     </div>
                 </div>
             </article>
 
             <article class="article-box">
                 <div class="center">
-                    <p>
-                        <strong>Počas maľovania:</strong> V tejto fáze sa ukážu všetky nedostatky ako napríklad praskliny na stenách, strope
-                        alebo okolo okien. Všetko čo treba povyspravujeme a zasádrujeme.
-                    </p>
-                    <div class="article-image">
-                        <div class="image-holder">
-                            <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="in progress">
-                        </div>
-                        <h3>Počas maľovania</h3>
+                    <div class="image-holder">
+                        <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="in progress">
+                    </div>
+                    <div class="h3-box">
+                        <h3>Počas</h3>
                     </div>
                 </div>
             </article>
 
             <article class="article-box last">
                 <div class="center">
-                    <p>
-                    <strong>Po maľovaní:</strong> Ak sme s výsledkom spokojný môžeme začať s upratovacími prácami. Všetko dôklade vyzametáme, poumývame a povysávame. 
-                    Po skončení sa možete tešiť z vymalovných priestorov.
-                    </p>
-                    <div class="article-image">
-                        <div class="image-holder">
-                            <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="after">
-                        </div>
-                        <h3>Po maľovaní</h3>
+                    <div class="image-holder">
+                        <img src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg" alt="after">
+                    </div>
+                    <div class="h3-box">
+                        <h3>Po</h3>
                     </div>
                 </div>
             </article>
@@ -71,7 +92,7 @@
 
 @media screen and ( min-width: 0px ) {
     
-    .center{
+    .container{
         width: $sm-width-container;
         margin: 0 auto;
     }
@@ -90,7 +111,7 @@
         padding-bottom: 2rem;
 
         .article-title {
-            padding: 0;
+            padding-bottom: 3rem;
             text-align: center;
 
             h2 {
@@ -118,61 +139,109 @@
                 left: 0.5rem;
             }
         }
+    }
 
-        p {
-            padding: 2rem 0 1rem 0;
-            text-align: justify;
-            font: {
-                size: 14px;
-                weight: 300;
+    .contact-paragraph{
+        width: $sm-width-container;
+        margin: 0 auto;
+
+        .center{
+            text-align: center;
+            h3 {
+                padding-bottom: 1rem;
+                font: {
+                    size: 20px;
+                    weight: 400;
+                }
             }
-            strong {
-                font:{
-                    weight: 500;
+
+            p {
+                text-align: justify;
+                font: {
+                    size: 16px;
+                    weight: 300;
+                }
+                strong {
+                    font:{
+                        weight: 500;
+                    }
                 }
             }
         }
     }
 
-    .flex-box{
-        padding-top: 2rem;
+    .paragraphs-holder{
+        width: $sm-width-container;
+        margin: 0 auto;
+
+        .paragraph-box{
+            width: 100%;
+            margin: 2rem auto;
+            padding-top: 2rem;
+            border-top: 1px solid $fancy;
+        
+            h4{
+                padding-bottom: 1rem;
+                text-align: center;
+                font:{
+                    size: 20px;
+                    weight: 400;
+                }
+            }
+
+            p{
+                font:{
+                    size: 16px;
+                    weight: 300;
+                }
+                width: 100%;
+                text-align: justify;
+            }
+        }
+    }
+
+    .photo-box{
     }
 
     .article-box {
         position: relative;
         width: 100%;
+        line-height: 0;
 
-        p {
-            // padding-top: 2rem;
-            text-align: justify;
-            font: {
-                size: 14px;
-                weight: 300;
-            }
+        .center{
+            .image-holder{ 
 
-            strong {
-                font:{
-                    weight: 500;
+                img{
+                    max-width: 100%;
                 }
             }
-        }
 
-        .article-image {
-            padding: 2rem 0;
-            
-
-               img{
-                   width: 100%;
-               }
+            .h3-box{
+                position: absolute;
+                 z-index: 5;
+                bottom: 2rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                    h3{
+                        font: {
+                            size: 30px                 
+                        };
+                    text-transform: uppercase;
+                    letter-spacing: -1.5px;
+                    color: white;
+                    
+                    }
+            }
         }
-        
-    }
+    } 
+    
 }
 
 @media screen and ( min-width: 350px ) {
 
     .article-top{
-        .center {
+        .container {
             p {
                 font: {
                     size: 16px;
@@ -181,11 +250,13 @@
         }
     }
 
-    .article-box {
-        p {
-            font: {
-                size: 16px;
-                weight: 300;
+    .paragraphs-holder {
+        .paragraph-box{
+            p {
+                font: {
+                    size: 16px;
+                    weight: 300;
+                }
             }
         }
     }
@@ -194,7 +265,7 @@
 
 @media screen and ( min-width: 768px ) {
     
-    .center{
+    .container{
         width: unset;
         margin: 0 auto;
     }
@@ -234,39 +305,42 @@
             h2:after{
                 left: 1rem;
             }
-        }
+        }  
+    }
 
-        p {
-            width: 37rem;
-            margin: 0 auto;
-            padding: 1rem 0 1rem 0;
-            text-align: center;
-            font: {
-                size: 14px;
-                weight: 300;
+    .paragraphs-holder{
+        width: 90%;
+
+        .paragraph-box{
+
+            h3{
+
             }
-            strong {
-                font:{
-                    weight: 500;
-                }
-            }
+            p {
+               margin: 0 auto;
+               padding: 1rem 0 1rem 0;
+               text-align: center;
+               font: {
+                   size: 14px;
+                   weight: 300;
+               }
+           }
         }
     }
 
-
-    .article-box{
-        width: 37rem;
-        p{
-            text-align: center;
-        }
-    }
-
-    .flex-box{
+    .photo-box{
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
         width: 100%;
         margin: 0 auto;
+
+        .article-box{
+            width: 37rem;
+            p{
+                text-align: center;
+            }
+        }
     }
 
     .last{
@@ -337,7 +411,56 @@
         }
     }
 
-    .flex-box{
+    .paragraphs-holder{
+        width: 60rem;
+        margin: 3rem auto 0 auto;
+        display: flex;
+
+        .center-box::before{
+            position: absolute;
+            display: inline-block; 
+            content: '';
+            width: 1px;
+            height: 17rem;
+            top: 12rem;
+            color: $fancy;
+            margin-left: -1rem;
+            background-color: $fancy;
+        }
+
+        .center-box::after{
+            position: absolute;
+            display: inline-block; 
+            content: '';
+            width: 1px;
+            height: 17rem;
+            top: 12rem;
+            color: $fancy;
+            margin-right: -1rem;
+            background-color: $fancy;
+        }
+        
+        .paragraph-box{
+            width: 30%;
+            margin: 0 auto;
+        
+            h4{
+                text-align: center;
+                font:{
+                    size: 20px;
+                    weight: 400;
+                }
+            }
+
+            p{
+                width: 100%;
+                text-align: justify;
+            }
+        }
+
+    }
+
+    .photo-box{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -367,14 +490,7 @@
                 }
             }
         }
-        p{
-            display: none;
-            text-align: center;
-            width: 98%;
-            margin: 0 auto;
-        }
 
-        
     }
 
     .last{
@@ -394,7 +510,7 @@
 //         }
 //     }
 
-//     .flex-box{
+//     .photo-box{
 //         display: flex;
 //         justify-content: space-between;
 //         flex-wrap: wrap;
