@@ -59,8 +59,7 @@ header {
 footer {
     position: relative;
     width: 100%;
-    padding: 1rem 0 3rem 0; 
-    top: -2rem;
+    padding: 1rem 0 3rem 0;
     background-color: $primary-semi-light;
 }
 
