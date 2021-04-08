@@ -133,7 +133,6 @@
                 />
             </div>
         </section>
-        <div class="background-splitter"></div>
     </main>
     <footer class="footer">
         <div class="footer-center">
@@ -164,7 +163,7 @@
 main {
     position: relative;
     padding-top: 3.4rem;
-    background-color: $primary;
+    background-color: $primary-soft;
     z-index: 1;
 }
 
@@ -238,7 +237,7 @@ main {
     width: 100%;
     height: 5rem;
     z-index: 10;
-    background-color: $primary-semi-dark;
+    background-color: $primary-soft;
 }
 
 .footer-center {
