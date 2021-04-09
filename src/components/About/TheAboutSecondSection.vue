@@ -1,6 +1,5 @@
 <template>
     <section class="section">
-
         <aside class="cartoon-person">
             <img src="../../assets/img/person2.png" alt="Cartoon person" />
         </aside>
@@ -12,7 +11,6 @@
         </span>
 
         <article class="article">
-
             <div class="article-title">
                 <h3>Naše najväčšie úspechy</h3>
             </div>
@@ -20,8 +18,8 @@
             <div class="top-box">
                 <div class="top-box-paragraph">
                     <p>
-                        Náš najväčší úspech je že môžeme vykonávať remeslo
-                        ktoré nás už dlhé roky baví napĺňa a pomáha ľudom
+                        Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
+                        nás už dlhé roky baví napĺňa a pomáha ľudom
                     </p>
                 </div>
             </div>
@@ -30,8 +28,8 @@
                 <div class="bottom-box-paragraph">
                     <p>
                         Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
-                        S.C.P. sú spoločnosti s ktorým sme mali možnosť
-                        pomôcť vymaľovať ich priestory.
+                        S.C.P. sú spoločnosti s ktorým sme mali možnosť pomôcť
+                        vymaľovať ich priestory.
                     </p>
                 </div>
             </div>
@@ -39,30 +37,24 @@
             <div class="article-paragraph lg">
                 <div class="paragraph-box">
                     <p>
-                        Náš najväčší úspech je že môžeme vykonávať remeslo
-                        ktoré nás už dlhé roky baví napĺňa a pomáha ľudom.
-                        Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
-                        S.C.P. sú spoločnosti s ktorým sme mali možnosť
-                        pomôcť vymaľovať ich priestory.
+                        Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
+                        nás už dlhé roky baví napĺňa a pomáha ľudom. Jaslovské
+                        Bohunice, Bešeňová, VW Group, alebo Mondi S.C.P. sú
+                        spoločnosti s ktorým sme mali možnosť pomôcť vymaľovať
+                        ich priestory.
                     </p>
                 </div>
             </div>
-
-            <span class="decorative-line"></span>
-
         </article>
-
     </section>
 </template>
 
 <style lang="scss" scoped>
-
-@media screen and ( min-width: 0px ) {
-
-    .lg{
+@media screen and (min-width: 0px) {
+    .lg {
         display: none;
     }
- 
+
     .section {
         position: relative;
         width: 100%;
@@ -84,7 +76,6 @@
     }
 
     .decorative-circle-box {
-
         .decorative-circle-bigger {
             position: absolute;
             width: 15rem;
@@ -111,9 +102,9 @@
         position: relative;
         width: 100%;
         top: -3rem;
-        padding: 2rem 0 3rem 0;
+        padding: 3rem 0 2rem 0;
         z-index: 1;
-        background-color: $primary-soft;
+        background-color: $primary-light;
         box-shadow: 8px 8px 5px rgba($darkest, 16%);
 
         .article-title {
@@ -122,7 +113,7 @@
             z-index: 1;
 
             h3 {
-                padding-bottom: 1.5rem;
+                padding-bottom: 3rem;
                 text-align: center;
                 color: $darkest;
                 font: {
@@ -137,39 +128,39 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            width: 76%;
-            padding: 1rem 0;
+            width: 100%;
+            padding: 2rem 0;
             z-index: 2;
-            background-color: $primary;
+            background-color: $primary-soft;
             border-radius: 0 5px 5px 0;
+            border-top: 1px solid $primary;
+            border-bottom: 1px solid $primary;
 
-            .top-box-paragraph{  
+            .top-box-paragraph {
                 position: relative;
                 max-width: 85%;
                 text-align: justify;
                 z-index: 2;
 
                 p {
-                font: {
+                    font: {
                         size: 14px;
                         weight: 300;
                     }
                 }
             }
-
         }
 
-        .bottom-box{
+        .bottom-box {
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin-top: 2rem;
-            padding: 1rem;
+            margin-top: 1rem;
+            padding: 1rem 0;
             z-index: 1;
             background-color: $primary-light;
-
 
             .bottom-box-paragraph {
                 width: $sm-width-container;
@@ -185,27 +176,14 @@
                 }
             }
         }
-
-    }
-
-    .decorative-line {
-        position: absolute;
-        width: 0.313rem;
-        height: 100%;
-        top: 0;
-        left: 1rem;
-        z-index: 0;
-        background-color: $fancy;
     }
 }
 
-@media screen and ( min-width: 350px ) {
-
-    .article{
-        .top-box{ 
-            padding: 1.25rem 0;
-            .top-box-paragraph{
-                p{
+@media screen and (min-width: 350px) {
+    .article {
+        .top-box {
+            .top-box-paragraph {
+                p {
                     font: {
                         size: 16px;
                         weight: 300;
@@ -214,10 +192,9 @@
             }
         }
 
-        .bottom-box{
-            padding: 1.25rem 0;
-            .bottom-box-paragraph{
-                p{
+        .bottom-box {
+            .bottom-box-paragraph {
+                p {
                     font: {
                         size: 16px;
                         weight: 300;
@@ -226,49 +203,34 @@
             }
         }
     }
-
 }
 
-@media screen and ( min-width: 500px ) {
-
-    .article{
-        .top-box{
-            width: 70%;
-        }
-    }
-
-
-}
-
-@media screen and ( min-width: 660px ) {
-
-    .lg{
+@media screen and (min-width: 660px) {
+    .lg {
         display: block;
     }
 
-    .article{
-
+    .article {
         padding: 5rem 0;
         border-top: 1px solid $primary;
         border-bottom: 1px solid $primary;
-        background-color: $primary-soft;
+        background-color: $primary-light;
         box-shadow: none;
 
         .top-box,
-        .bottom-box{
+        .bottom-box {
             display: none;
         }
 
-        .article-title{
-            h3{
-                color: $darkest
+        .article-title {
+            h3 {
+                color: $darkest;
             }
         }
     }
 
-    .article-paragraph{
-
-        .paragraph-box{
+    .article-paragraph {
+        .paragraph-box {
             width: 37rem;
             text-align: center;
             margin: 0 auto;
@@ -276,8 +238,8 @@
         }
     }
 }
-     
-@media screen and ( min-width: 1024px ) {     
+
+@media screen and (min-width: 1024px) {
     .cartoon-person {
         width: 7.688rem;
         height: 11.4rem;
@@ -286,7 +248,6 @@
     }
 
     .decorative-circle-box {
-
         .decorative-circle-bigger {
             position: absolute;
             width: 15rem;
@@ -296,5 +257,4 @@
         }
     }
 }
-
 </style>

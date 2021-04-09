@@ -1,17 +1,16 @@
 <template>
     <article>
         <div class="image-wrapper">
-            <img
+            <!-- <img
                 class="welcome-image sm"
                 src="../../assets/img/city.jpg"
                 alt="painting"
             />
-            <!-- Component -->
             <img
                 class="welcome-image lg"
-                src="../../assets/img/lagre-wallpaper.jpg"
+                src="../../assets/img/DCS02.jpg"
                 alt="painting"
-            />
+            /> -->
         </div>
         <div class="title-container">
             <div class="box">

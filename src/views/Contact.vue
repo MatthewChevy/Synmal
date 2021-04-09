@@ -95,9 +95,7 @@
 </template>
 
 <style lang="scss" scoped>
-
-@media screen and ( min-width: 0px) {
-
+@media screen and (min-width: 0px) {
     main {
         background-color: $primary-soft;
         height: 65rem;
@@ -219,7 +217,7 @@
             background-color: $fancy;
             border: none;
             box-shadow: 5px 5px 3px rgba($darkest, 16%);
-            font:{
+            font: {
                 size: 13px;
                 weight: 300;
             }
@@ -337,7 +335,6 @@
         z-index: 0;
         background-color: $fancy;
     }
- 
 }
 
 @media screen and (max-width: 374px) {
@@ -379,54 +376,52 @@
 }
 
 @media screen and (min-width: 375px) {
-    
-    .contact-information-list{
+    .contact-information-list {
         width: 15.625rem;
 
-        li{
+        li {
             padding: 0.063rem 2.4rem;
         }
     }
 }
 
 @media screen and (min-width: 400px) {
-
     .contact-form-center {
         width: 23rem;
     }
 
-    .contact-form-title{
-        h3{
-            font:{
-                size: 22px
+    .contact-form-title {
+        h3 {
+            font: {
+                size: 22px;
             }
         }
     }
 
-    .form-name{
-        .form-name-label{
-            font:{
-                size: 15px
+    .form-name {
+        .form-name-label {
+            font: {
+                size: 15px;
             }
         }
-        .form-name-input{
+        .form-name-input {
             width: 12.5rem;
         }
-    } 
+    }
 
-    .form-email{
-        .form-email-label{
-            font:{
-                size: 15px
+    .form-email {
+        .form-email-label {
+            font: {
+                size: 15px;
             }
         }
-        .form-email-input{
+        .form-email-input {
             width: 14rem;
         }
-    } 
-    
-    .form-textarea{
-        textarea{
+    }
+
+    .form-textarea {
+        textarea {
             max-width: 20.875rem;
             min-width: 20.875rem;
         }
@@ -445,7 +440,7 @@
             background-color: $fancy;
             border: none;
             box-shadow: 5px 5px 3px rgba($darkest, 16%);
-            font:{
+            font: {
                 size: 14px;
                 weight: 300;
             }
@@ -456,10 +451,11 @@
         width: 22.5rem;
     }
 
-    .billing-information-title, .contact-information-title{
-        h3{
-            font:{
-                size: 22px
+    .billing-information-title,
+    .contact-information-title {
+        h3 {
+            font: {
+                size: 22px;
             }
         }
     }

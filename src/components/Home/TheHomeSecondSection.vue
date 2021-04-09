@@ -62,7 +62,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .sm-screen {
         display: block;
@@ -93,7 +92,7 @@
         margin: 2rem auto;
 
         width: 21.3rem;
-        margin: 2rem 0; 
+        margin: 2rem 0;
         text-align: left;
         padding: 0;
 
@@ -102,9 +101,9 @@
             font-size: 19px;
             font-weight: 400;
 
-            strong{
-                font:{
-                    weight: 600
+            strong {
+                font: {
+                    weight: 600;
                 }
             }
         }
@@ -164,8 +163,7 @@
 }
 
 @media screen and (min-width: 500px) {
-
-    .h3-handler{
+    .h3-handler {
         width: 100%;
         text-align: left;
     }
@@ -259,9 +257,9 @@
             font-size: 20px;
             font-weight: 300;
 
-            strong{
-                font:{
-                    weight: 400
+            strong {
+                font: {
+                    weight: 400;
                 }
             }
         }
@@ -299,7 +297,7 @@
         }
     }
 
-    .flex{
+    .flex {
         justify-content: space-evenly;
     }
 
@@ -311,5 +309,4 @@
         }
     }
 }
-
 </style>

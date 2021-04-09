@@ -49,11 +49,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@media screen and (min-width: 0px){
-
+@media screen and (min-width: 0px) {
     .button-wrapper {
-        margin: 0.938rem
+        margin: 0.938rem;
     }
 
     .menu-toggle {
@@ -61,14 +59,14 @@ export default {
         display: block;
         width: 1.875rem;
         height: 1.25rem;
-        font:{
-            size: 0
-        };
+        font: {
+            size: 0;
+        }
         border-top: 2px solid;
         border-bottom: 2px solid;
         color: darken($primary-light, 15%);
         background: transparent;
-        transition: all .25s ease-in-out;
+        transition: all 0.25s ease-in-out;
 
         &:before,
         &:after {
@@ -81,7 +79,7 @@ export default {
             left: 50%;
             background: currentColor;
             transform: translate(-50%, -50%);
-            transition: transform .25s ease-in-out;
+            transition: transform 0.25s ease-in-out;
         }
     }
 

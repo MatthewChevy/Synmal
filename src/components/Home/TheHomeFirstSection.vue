@@ -9,7 +9,6 @@
             </div>
 
             <article class="to-do-box">
-
                 <div class="box-container">
                     <h4>Malovanie interiérov</h4>
                     <div class="image-holder">
@@ -84,7 +83,10 @@
             <aside class="aside">
                 <h5>Máte špecálne požiadavky alebo otázky ?</h5>
                 <div class="button">
-                    <the-path-button :textButton="'Kontaktuje nás'" :path="'contact'"/>
+                    <the-path-button
+                        :textButton="'Kontaktuje nás'"
+                        :path="'contact'"
+                    />
                 </div>
             </aside>
         </div>
@@ -95,14 +97,13 @@
 <script>
 import tableMixin from '../../mixins/tableMixins.js'
 
-import ThePathButton from '../ThePathButton.vue';
+import ThePathButton from '../ThePathButton.vue'
 
 import { debounce } from 'lodash-es'
 
 export default {
-
     components: {
-        ThePathButton,
+        ThePathButton
     },
 
     mixins: [tableMixin],
@@ -179,9 +180,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     section {
         position: relative;
         background-color: $primary-light;
@@ -300,7 +299,6 @@ export default {
 }
 
 @media screen and (min-width: 350px) {
-
     .to-do-box {
         .box-container {
             border-radius: 10px;
@@ -330,7 +328,6 @@ export default {
 }
 
 @media screen and (min-width: 500px) {
-
     .to-do-box {
         .box-container {
             width: 70%;
@@ -345,7 +342,6 @@ export default {
 }
 
 @media screen and (min-width: 700px) {
-
     .to-do-box {
         .box-container {
             width: 65%;
@@ -354,7 +350,6 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-
     .to-do-box {
         .box-container {
             width: 20.5rem;
@@ -369,8 +364,7 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
-    .sm-screen{
+    .sm-screen {
         display: none;
     }
 
@@ -419,18 +413,18 @@ export default {
             }
         }
 
-        .active{
+        .active {
             background-color: $primary-semi-light;
         }
 
-        .center-border{
+        .center-border {
             border: unset;
         }
     }
 
-    .aside{
+    .aside {
         padding: 3rem 0;
-        
+
         h5 {
             font: {
                 size: 20px;
@@ -441,8 +435,7 @@ export default {
 }
 
 @media screen and (min-width: 1280px) {
-
-    .sm-screen{
+    .sm-screen {
         display: none;
     }
 

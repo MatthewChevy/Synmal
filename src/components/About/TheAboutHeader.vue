@@ -1,5 +1,5 @@
 <template>
-       <!-- <h3 class="width">Width: {{ width }}</h3>
+    <!-- <h3 class="width">Width: {{ width }}</h3>
         <h3 class="height">Height: {{ height }}</h3>
     <div>
         <img
@@ -10,24 +10,21 @@
     </div> -->
 
     <div></div>
-
 </template>
 
 <script>
 export default {
-       data() {
+    data() {
         return {
             width: window.innerWidth,
-            height: window.innerHeight,
+            height: window.innerHeight
         }
-    },
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
-@media screen and ( min-width: 0px ) {
-
+@media screen and (min-width: 0px) {
     .width {
         position: absolute;
         top: 4rem;
@@ -40,11 +37,10 @@ export default {
         color: purple;
     }
 
-        .welcome-image {
-            width: 100%;
-            z-index: -2;
-            opacity: 100%;
-        }
-} 
-
+    .welcome-image {
+        width: 100%;
+        z-index: -2;
+        opacity: 100%;
+    }
+}
 </style>

@@ -182,7 +182,7 @@
         display: block;
     }
 
-    .section{
+    .section {
         padding: 5rem 0;
     }
 
@@ -190,10 +190,9 @@
         width: $lg-width-container;
     }
 
-    .decorative-bucket-box{
+    .decorative-bucket-box {
         justify-content: space-evenly;
     }
-
 
     .decorative-bucket {
         width: 44%;

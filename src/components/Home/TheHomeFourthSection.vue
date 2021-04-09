@@ -32,7 +32,10 @@
                         kontaktovať, tešíme sa na Vás.
                     </p>
                     <div class="button">
-                        <the-path-button :textButton="'Kontaktovať'" :path="'contact'"/>
+                        <the-path-button
+                            :textButton="'Kontaktovať'"
+                            :path="'contact'"
+                        />
                     </div>
                 </div>
             </div>
@@ -41,23 +44,17 @@
 </template>
 
 <script>
-    
-import ThePathButton from '../ThePathButton.vue';
+import ThePathButton from '../ThePathButton.vue'
 
 export default {
-
     components: {
-        ThePathButton,
-    },
-    
+        ThePathButton
+    }
 }
-
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .section {
         width: 100%;
         position: relative;
@@ -157,7 +154,6 @@ export default {
 }
 
 @media screen and (min-width: 350px) {
-
     .why-us {
         h2::before,
         h2::after {
@@ -178,7 +174,6 @@ export default {
 }
 
 @media screen and (min-width: 375px) {
-
     .why-us {
         h2::before,
         h2::after {
@@ -196,7 +191,6 @@ export default {
 }
 
 @media screen and (min-width: 500px) {
-
     .why-us {
         h2::before,
         h2::after {
@@ -214,7 +208,6 @@ export default {
 }
 
 @media screen and (min-width: 640px) {
-
     .paragraph-box {
         width: 35rem;
         margin: 0 auto;
@@ -222,7 +215,6 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-
     section {
         padding-top: 1rem;
     }
@@ -287,7 +279,7 @@ export default {
             }
         }
     }
-    
+
     .paragraph-box {
         width: 25rem;
         border-left: 1px solid $fancy;
@@ -304,7 +296,6 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
     section {
         padding-top: 1rem;
     }
@@ -367,7 +358,6 @@ export default {
     }
 
     .paragraph-box {
-
         width: 47%;
         padding-left: 3rem;
         font: {
@@ -379,5 +369,4 @@ export default {
         }
     }
 }
-
 </style>

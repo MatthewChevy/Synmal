@@ -73,9 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-    
     .banner {
         position: fixed;
         display: flex;
@@ -111,11 +109,9 @@ export default {
         color: $primary-light;
         transition: 0.25s;
     }
-
 }
 
 @media screen and (min-width: 1024px) {
-
     .banner {
         height: 4.688rem;
     }
@@ -139,7 +135,7 @@ export default {
 
     li:hover {
         color: $fancy;
-        transition: .25s;
+        transition: 0.25s;
     }
 }
 </style>

@@ -11,26 +11,20 @@
 </template>
 
 <script>
-
-export default{
-
+export default {
     props: {
         textButton: {
-            type: String,
+            type: String
         },
         path: {
-            type: String,
+            type: String
         }
     }
-
 }
-
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .contact-link-button {
         max-width: 12rem;
         margin: 0 auto;
@@ -40,19 +34,18 @@ export default{
         background-color: $fancy;
         cursor: pointer;
 
-        a{
+        a {
             font: {
                 size: 16px;
-                weight: 300
+                weight: 300;
             }
         }
     }
 
     .contact-link-button:hover,
     :focus {
-        transition: .35s;
+        transition: 0.35s;
         background-color: darken($fancy, 10%);
     }
 }
-
 </style>

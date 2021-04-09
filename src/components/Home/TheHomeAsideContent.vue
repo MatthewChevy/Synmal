@@ -8,29 +8,24 @@
                 </h4>
             </div>
             <div class="button">
-                <the-path-button :textButton="'Kliknite sem'" :path="'about'"/>
+                <the-path-button :textButton="'Kliknite sem'" :path="'about'" />
             </div>
         </aside>
     </article>
 </template>
 
 <script>
-
-import ThePathButton from '../ThePathButton.vue';
+import ThePathButton from '../ThePathButton.vue'
 
 export default {
-
     components: {
-        ThePathButton,
-    },
-    
+        ThePathButton
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     article {
         position: relative;
         width: 100%;
@@ -63,7 +58,6 @@ export default {
 }
 
 @media screen and (min-width: 640px) {
-
     .title-box {
         width: 30rem;
     }
@@ -83,5 +77,4 @@ export default {
         }
     }
 }
-
 </style>

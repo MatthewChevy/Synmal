@@ -12,9 +12,7 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-    
     .container {
         max-width: 2.75rem;
         display: flex;
@@ -39,7 +37,7 @@
 
 @media screen and (min-width: 1024px) {
     .container {
-        max-width: 3.75rem
+        max-width: 3.75rem;
     }
 
     img {

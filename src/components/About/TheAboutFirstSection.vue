@@ -1,6 +1,5 @@
 <template>
     <section class="section">
-
         <header>
             <div class="h1-box">
                 <h1>O nás</h1>
@@ -10,12 +9,12 @@
         <article class="article-box">
             <div class="article-paragraph">
                 <p>
-                    Sme spoločnosť, ktorej hodnoty sú postavené na
-                    úprimnosti, poctivej práci a zodpovednému prístupu ku
-                    klientom. S dlhoročnými skúsenosťami sme sa stali v
-                    našom odbore silnou konkurenciou. Našou výhodou je
-                    zodpovednosť, spoľahlivosť. Disponujeme bohatým
-                    technickým vybavením. Pôsobíme prevažne na
+                    Sme spoločnosť, ktorej hodnoty sú postavené na úprimnosti,
+                    poctivej práci a zodpovednému prístupu ku klientom. S
+                    dlhoročnými skúsenosťami sme sa stali v našom odbore silnou
+                    konkurenciou. Našou výhodou je zodpovednosť, spoľahlivosť.
+                    Disponujeme bohatým technickým vybavením. Pôsobíme prevažne
+                    na
                     <strong>Liptove</strong> ale po vzájomnej dohode robíme
                     kompromisy.
                 </p>
@@ -24,11 +23,8 @@
     </section>
 </template>
 
-
 <style lang="scss" scoped>
-
-@media screen and ( min-width: 0px ) {
-
+@media screen and (min-width: 0px) {
     .section {
         position: relative;
         width: 100%;
@@ -36,8 +32,8 @@
         border-radius: 10px 10px 0 0;
     }
 
-    header{
-        .h1-box{
+    header {
+        .h1-box {
             text-align: center;
 
             h1 {
@@ -49,8 +45,8 @@
                 }
             }
             h1::before,
-            h1::after{
-                content: "";
+            h1::after {
+                content: '';
                 display: inline-block;
                 position: relative;
                 width: 25%;
@@ -58,22 +54,22 @@
                 top: -0.4rem;
                 background: $fancy;
             }
-            
-            h1::before{
+
+            h1::before {
                 right: 1rem;
             }
-            h1::after{
+            h1::after {
                 left: 1rem;
             }
         }
     }
 
     .container {
-        width: $sm-width-container;  
+        width: $sm-width-container;
         margin: 0 auto;
     }
 
-    .article-box{
+    .article-box {
         position: relative;
         width: 100%;
         padding-top: 0.563rem;
@@ -94,7 +90,7 @@
 
         .article-paragraph {
             width: $sm-width-container;
-            margin:0 auto;
+            margin: 0 auto;
 
             p {
                 margin: 0 auto;
@@ -112,32 +108,28 @@
     }
 }
 
-@media screen and ( min-width: 350px ) {
-
-    .article-box{
-        .article-paragraph{
-            p{
-                font:{
-                    size:16px
+@media screen and (min-width: 350px) {
+    .article-box {
+        .article-paragraph {
+            p {
+                font: {
+                    size: 16px;
                 }
             }
         }
-
     }
-    
 }
 
-@media screen and ( min-width: 500px ) {  
-
+@media screen and (min-width: 500px) {
     .section {
         margin-top: 2rem;
     }
 }
 
-@media screen and ( min-width: 768px ){
-    .article-box{
+@media screen and (min-width: 768px) {
+    .article-box {
         .article-paragraph {
-            margin:0 auto;
+            margin: 0 auto;
 
             p {
                 width: 37rem;
@@ -146,17 +138,16 @@
     }
 }
 
-@media screen and ( min-width: 1024px ){
-
+@media screen and (min-width: 1024px) {
     .section {
         margin-top: 4rem;
     }
 
-     header{
-        .h1-box{
+    header {
+        .h1-box {
             h1::before,
-            h1::after{
-                width: 14rem; 
+            h1::after {
+                width: 14rem;
             }
         }
     }
