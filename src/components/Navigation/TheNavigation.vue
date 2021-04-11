@@ -1,5 +1,5 @@
 <template>
-    <div class="banner">
+    <div class="main-banner">
         <navigation-logo />
         <navigation-menu-button
             @menu-button="toggleMenu"
@@ -74,7 +74,8 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
-    .banner {
+
+    .main-banner {
         position: fixed;
         display: flex;
         width: 100%;
@@ -112,7 +113,7 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-    .banner {
+    .main-banner {
         height: 4.688rem;
     }
 

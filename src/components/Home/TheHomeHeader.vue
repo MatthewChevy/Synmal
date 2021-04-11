@@ -1,16 +1,7 @@
 <template>
     <article>
-        <div class="image-wrapper">
-            <!-- <img
-                class="welcome-image sm"
-                src="../../assets/img/city.jpg"
-                alt="painting"
-            />
-            <img
-                class="welcome-image lg"
-                src="../../assets/img/DCS02.jpg"
-                alt="painting"
-            /> -->
+        <div class="bg-image-box">
+            <div class="bg-image"></div>
         </div>
         <div class="title-container">
             <div class="box">
@@ -66,7 +57,18 @@ export default {
         this.subTitleBlock.addEventListener('animationend', () => {
             this.$emit('end-ani-titles', true)
         })
-    }
+
+        window.addEventListener( 'scroll', () => {
+            this.parallax('bg-image-box', window.scrollY, 0.15)
+        })
+    },
+
+    methods: {
+        parallax( element, distance, speed) {
+            const item = document.getElementsByClassName(element)[0]
+            item.style.transform = `translateY(${distance * speed}px)` 
+        }
+    },
 }
 </script>
 
@@ -74,16 +76,29 @@ export default {
 
 @media screen and (min-width: 0px) {
 
-    .lg {
-        display: none;
-    }
-
-    .sm {
-        display: block;
-    }
-
     article {
         position: relative;
+    }
+
+    .bg-image-box{
+        position: fixed;
+        background-image: url("../../assets/img/city.jpg");
+        background-position: center center;
+        background-size: cover;
+        // background-attachment: fixed;
+        height: 51.1rem;
+        width: 100%;
+        top: -3.5rem;
+
+        .bg-image{
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.0);
+            background-size: cover;
+            background-position: center center;
+            z-index: 2;
+            height: 51.1rem;
+            width: 100%;
+        }
     }
 
     .title-container {
@@ -131,7 +146,7 @@ export default {
             size: 8.2vw;
             
         }
-        color: $title-decoration;
+        color: $primary-soft;
         opacity: 0;
         animation: mainFadeIn 2s 1.6s forwards;
 
@@ -177,17 +192,9 @@ export default {
         margin-left: 2.5%;
         text-transform: uppercase;
         opacity: 0;
-        color: $title-decoration;
+        color: $primary-soft;
         letter-spacing: 5px;
         animation: secFadeIn 2s 3.2s forwards;
-    }
-
-    .welcome-image {
-        position: fixed;
-        max-width: 100%;
-        margin-top: 3rem;
-        z-index: 0;
-        background-repeat: no-repeat;
     }
 
     h3 {
@@ -359,13 +366,6 @@ export default {
 
 @media screen and (min-width: 1024px) {
 
-    .lg {
-        display: block;
-    }
-
-    .sm {
-        display: none;
-    }
 }
 
 </style>
