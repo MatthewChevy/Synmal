@@ -99,7 +99,7 @@ import tableMixin from '../../mixins/tableMixins.js'
 
 import ThePathButton from '../ThePathButton.vue'
 
-import { debounce } from 'lodash-es'
+import { throttle } from 'lodash-es'
 
 export default {
     components: {
@@ -112,22 +112,16 @@ export default {
         return {
             toDoBox: Object,
             percentage: 70, // 60% percent from height of box-container
-            timer: 100
+            timer: 200
         }
     },
 
     mounted() {
         this.boxContainer = document.getElementsByClassName('box-container')
-
-        // this.boxContainer[1].addEventListener('mouseover', () => {   //foreach
-        //      for (let i = 0; i < this.boxContainer.length; i++) {
-        //         this.boxContainer[i].classList.add('active');
-        //      }
-        // })
-
+        
         window.addEventListener(
             'scroll',
-            debounce(() => {
+            throttle(() => {
                 if (this.actualyWidnowSize <= this.breakpointmd) {
                     this.scrollSelectBox()
                 }
@@ -136,7 +130,7 @@ export default {
 
         window.addEventListener(
             'resize',
-            debounce(() => {
+            throttle(() => {
                 if (this.actualyWidnowSize > this.breakpointmd) {
                     for (let i = 0; i < this.boxContainer.length; i++) {
                         this.boxContainer[i].classList.remove(
