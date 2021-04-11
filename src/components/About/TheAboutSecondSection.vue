@@ -49,7 +49,28 @@
     </section>
 </template>
 
+<script>
+export default {
+    
+
+    mounted(){
+            window.addEventListener( 'scroll', () => {
+            this.parallax('decorative-circle-smaller', window.scrollY, 0.1)
+            this.parallax('decorative-circle-bigger', window.scrollY, 0.05)
+        })
+    },
+
+    methods: {
+        parallax( element, distance, speed) {
+            const item = document.getElementsByClassName(element)[0]
+            item.style.transform = `translateY(${distance * speed}px)` 
+        }
+    },
+}
+</script>
+
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .lg {
         display: none;
@@ -91,6 +112,7 @@
                 width: 6rem;
                 height: 6rem;
                 top: -1rem;
+                right: 2rem;
                 background: $fancy;
                 border-radius: 50%;
                 box-shadow: 5px 5px 5px rgba($darkest, 16%);
@@ -240,6 +262,8 @@
 }
 
 @media screen and (min-width: 1024px) {
+
+
     .cartoon-person {
         width: 7.688rem;
         height: 11.4rem;
@@ -254,6 +278,25 @@
             height: 15rem;
             top: -2rem;
             right: 5rem;
+        }
+    }
+
+    .paragraph-box{
+        p{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .section{
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    .decorative-circle-box{
+        .decorative-circle-bigger{
+            right: 7rem;
         }
     }
 }

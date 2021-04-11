@@ -24,6 +24,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .section {
         position: relative;
@@ -143,6 +144,16 @@
         margin-top: 4rem;
     }
 
+    .article-box{
+        box-shadow: unset;
+
+        .article-paragraph{
+            p{
+                text-align: center;
+            }
+        }
+    }
+
     header {
         .h1-box {
             h1::before,
@@ -152,4 +163,5 @@
         }
     }
 }
+
 </style>

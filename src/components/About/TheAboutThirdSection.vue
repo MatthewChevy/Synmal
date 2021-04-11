@@ -1,5 +1,6 @@
 <template>
     <section class="section">
+
         <article class="article-top">
             <div class="center">
                 <div class="article-title">
@@ -7,13 +8,21 @@
                 </div>
                 <div class="contact-paragraph">
                     <div class="center">
-                        <h3>Kontakt</h3>
+                        <!-- <h3>Kontakt</h3> -->
                         <p>
-                            Po kontakte s Vami urobíme osobnú prehliadku Vašich
+                            Po <strong>kontakte</strong> s Vami urobíme osobnú prehliadku Vašich
                             priestorov, na základe ktorej vypracujeme cenovú
                             ponuku a dohodneme termín
                         </p>
                     </div>
+
+                    <div class="button">
+                        <the-path-button
+                            :path="'contact'"
+                            :textButton="'Kontaktujte nás'"
+                        />
+                    </div>
+
                 </div>
 
                 <div class="paragraphs-holder">
@@ -91,11 +100,26 @@
                 </div>
             </article>
         </div>
+
     </section>
 </template>
 
+<script>
+    import ThePathButton from '../ThePathButton.vue'
+
+export default {
+
+    components: {
+        ThePathButton,
+    },
+}
+
+</script>
+
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
+
     .container {
         width: $sm-width-container;
         margin: 0 auto;
@@ -115,7 +139,7 @@
         padding-bottom: 2rem;
 
         .article-title {
-            padding-bottom: 3rem;
+            padding-bottom: 2rem;
             text-align: center;
 
             h2 {
@@ -147,12 +171,12 @@
 
     .contact-paragraph {
         width: $sm-width-container;
+        max-width: 30rem;
         margin: 0 auto;
 
         .center {
             text-align: center;
             h3 {
-                padding-bottom: 1rem;
                 font: {
                     size: 20px;
                     weight: 400;
@@ -172,10 +196,15 @@
                 }
             }
         }
+
+        .button{
+            margin: 2rem auto 3rem;
+        }
     }
 
     .paragraphs-holder {
         width: $sm-width-container;
+        max-width: 30rem;
         margin: 0 auto;
 
         .paragraph-box {
@@ -265,12 +294,14 @@
 }
 
 @media screen and (min-width: 768px) {
+
     .container {
         width: unset;
         margin: 0 auto;
     }
 
     .article-top {
+
         width: 100%;
         background: $primary-light;
         z-index: 0;
@@ -278,7 +309,6 @@
         padding-bottom: 2rem;
 
         .article-title {
-            padding: 0;
             text-align: center;
 
             h2 {
@@ -312,14 +342,12 @@
         width: 90%;
 
         .paragraph-box {
-            h3 {
-            }
             p {
                 margin: 0 auto;
                 padding: 1rem 0 1rem 0;
                 text-align: center;
                 font: {
-                    size: 14px;
+                    size: 16px;
                     weight: 300;
                 }
             }
@@ -347,9 +375,25 @@
 }
 
 @media screen and (min-width: 1024px) {
+
     .center {
         width: unset;
         margin: 0 auto;
+    }
+
+    .contact-paragraph{
+        max-width: unset;
+        margin: 2rem auto;
+
+        .center{
+            h3{
+                padding-bottom: unset;
+            }
+            p{
+                text-align: center;
+            }
+        }
+
     }
 
     .article-top {
@@ -357,10 +401,10 @@
         background: $primary-light;
         z-index: 0;
         border-bottom: 1px solid $primary;
-        padding: 3rem 0 5rem 0;
+        padding: 1rem 0 3rem 0;
 
         .article-title {
-            padding: 0;
+            padding: unset;
             text-align: center;
 
             h2 {
@@ -390,7 +434,7 @@
         }
 
         p {
-            width: 37rem;
+            width: 47rem;
             margin: 0 auto;
             padding: 1rem 0 1rem 0;
             text-align: center;
@@ -407,33 +451,9 @@
     }
 
     .paragraphs-holder {
-        width: 60rem;
-        margin: 3rem auto 0 auto;
+        max-width: 100%;
+        margin: 2rem auto 0 auto;
         display: flex;
-
-        .center-box::before {
-            position: absolute;
-            display: inline-block;
-            content: '';
-            width: 1px;
-            height: 17rem;
-            top: 12rem;
-            color: $fancy;
-            margin-left: -1rem;
-            background-color: $fancy;
-        }
-
-        .center-box::after {
-            position: absolute;
-            display: inline-block;
-            content: '';
-            width: 1px;
-            height: 17rem;
-            top: 12rem;
-            color: $fancy;
-            margin-right: -1rem;
-            background-color: $fancy;
-        }
 
         .paragraph-box {
             width: 30%;
@@ -460,7 +480,8 @@
         flex-wrap: wrap;
         width: 100%;
         margin: 0 auto;
-        padding: 4rem 0;
+        padding:  0;
+        max-width: 80rem;
 
         .article-box {
             width: 33.333%;
@@ -489,29 +510,10 @@
     }
 }
 
-// @media screen and ( min-width: 1200px ) {
+@media screen and (min-width: 1280px) {
 
-//     .article-box{
-//         width: 21rem;
-//         p{
-//             text-align: center;
-//             width: 100%;
-//             margin: 0 auto;
-//         }
-//     }
-
-//     .photo-box{
-//         display: flex;
-//         justify-content: space-between;
-//         flex-wrap: wrap;
-//         width: 70rem;
-//         margin: 0 auto;
-//         padding: 4rem 0;
-//     }
-
-//     .last{
-//         margin: unset
-//     }
-
-// }
+    .paragraphs-holder{
+        max-width: 80rem;
+    }
+}
 </style>
