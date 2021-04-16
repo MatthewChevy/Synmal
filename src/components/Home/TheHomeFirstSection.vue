@@ -9,13 +9,14 @@
             </div>
 
             <article class="to-do-box">
-                <div class="box-container">
+                <div class="box-container" :data-aos="slideRight">
                     <h4>Malovanie interiérov</h4>
-                    <div class="image-holder" data-aos="zoom-in">
-                        <img
-                            src="../../assets/img/painbrush.png"
-                            alt="Roof painting"
-                        />
+
+                <div class="image-holder" :data-aos="zoom">
+                    <img
+                        src="../../assets/img/painbrush.png"
+                        alt="Roof painting"
+                    />
                     </div>
                     <p>
                         Postaráme sa o všetky Vaše kancelárske obchodné, bytové
@@ -27,9 +28,9 @@
                     </p>
                 </div>
 
-                <div class="box-container center-border active">
+                <div class="box-container center-border active" :data-aos="slideDown">
                     <h4>Malovanie exteriérov</h4>
-                    <div class="image-holder" data-aos="zoom-in">
+                    <div class="image-holder" :data-aos="zoom">
                         <img
                             src="../../assets/img/painbrush.png"
                             alt="Roof painting"
@@ -45,9 +46,9 @@
                     </p>
                 </div>
 
-                <div class="box-container center-border">
+                <div class="box-container center-border" :data-aos="slideLeft">
                     <h4>Nátery striech</h4>
-                    <div class="image-holder" data-aos="zoom-in">
+                    <div class="image-holder" :data-aos="zoom">
                         <img
                             src="../../assets/img/painbrush.png"
                             alt="Roof painting"
@@ -64,7 +65,7 @@
 
                 <div class="box-container last-box sm-screen">
                     <h4>Nátery drevených profilov</h4>
-                    <div class="image-holder" data-aos="zoom-in">
+                    <div class="image-holder" :data-aos="zoom">
                         <img
                             src="../../assets/img/painbrush.png"
                             alt="Roof painting"
@@ -113,21 +114,34 @@ export default {
             boxContainer: Object,
             percentage: 70, // 60% percent from height of box-container
             timer: 100,
+            zoom: 'zoom-in',
+            slideRight: String,
+            slideDown: String,
+            slideLeft: String,
+
         }
     },
 
     mounted() {
 
         this.boxContainer = document.getElementsByClassName('box-container')
+
+        if( this.actualyWidnowSize > this.breakpoint){
+            this.zoom = '';
+            this.slideRight = 'fade-right'
+            this.slideDown = 'fade-down'
+            this.slideLeft = 'fade-left'
+        } 
+
         window.addEventListener(
             'scroll',
             throttle(() => {
                 if (this.actualyWidnowSize <= this.breakpointmd) {
-                    this.scrollSelectBox()
+                    this.scrollSelectBox() 
                 }
             }, this.timer)
         )
-        window.addEventListener(
+        window.addEventListener(  
             'resize',
             throttle(() => {
                 if (this.actualyWidnowSize > this.breakpointmd) {
@@ -136,6 +150,18 @@ export default {
                             'box-container-bg'
                         )
                     }
+                }
+
+                if( this.actualyWidnowSize > this.breakpoint ){  // AOS responsive
+                    this.zoom = ''
+                    this.slideRight = 'fade-right'
+                    this.slideDown = 'fade-up'
+                    this.slideLeft = 'fade-left'
+                } else {
+                    this.zoom = 'zoom-in'
+                    this.slideRight = ''
+                    this.slideUp = ''
+                    this.slideLeft = ''
                 }
             }, this.timer)
         )
@@ -173,7 +199,13 @@ export default {
 
 <style lang="scss" scoped>
 
+
+
 @media screen and (min-width: 0px) {
+
+    //move animation
+
+
     section {
         width: 100%;
         position: relative;

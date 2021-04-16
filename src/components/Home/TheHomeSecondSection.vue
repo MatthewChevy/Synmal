@@ -8,8 +8,8 @@
                 </h3>
             </div>
             <article>
-                <div class="airless-box">
-                    <div class="logo-holder" data-aos="fade-right">
+                <div class="airless-box" style="overflow-x: hidden">
+                    <div class="logo-holder" data-aos="fade-left">
                         <img
                             class="sm-screen"
                             src="../../assets/img/wagner.png"
@@ -19,7 +19,7 @@
                     <div class="flex">
                         <div class="paragraph-box">
                             <div class="logo-holder">
-                                <img
+                                <img data-aos="fade-right"
                                     class="lg-screen"
                                     src="../../assets/img/wagner.png"
                                     alt="wagner logo"

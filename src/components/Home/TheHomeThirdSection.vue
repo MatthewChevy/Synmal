@@ -1,8 +1,8 @@
 <template>
     <section class="section">
         <div class="container">
-            <div class="decorative-bucket-box">
-                <div class="decorative-bucket lg-screen">
+            <div class="decorative-bucket-box" style="overflow-x: hidden">
+                <div class="decorative-bucket lg-screen" data-aos="fade-left">
                     <img src="../../assets/img/jupol.png" alt="Jupol bucket" />
                 </div>
                 <div class="decorative-bucket-paragraph">
@@ -12,7 +12,7 @@
                         schopnosťou je pre nás veľkým favoritom.
                     </p>
 
-                    <div class="decorative-bucket sm-screen" data-aos="fade-right">
+                    <div class="decorative-bucket sm-screen" data-aos="fade-left">
                         <img
                             src="../../assets/img/jupol.png"
                             alt="Jupol bucket"
