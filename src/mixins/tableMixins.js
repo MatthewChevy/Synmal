@@ -4,6 +4,7 @@ export default {
     data() {
         return {
             actualyWidnowSize: Number,
+            breakpoint: 1024,
             breakpointmd: 767
         }
     },
@@ -18,9 +19,8 @@ export default {
             return (this.actualyWidnowSize = e.srcElement.innerWidth)
         },
 
-        // parallax( element, distance, speed ) {
-        //     const item = document.getElementsByClassName(element)[0]
-        //     item.style.transform = `translateY(${distance * speed}px)` 
-        // }
+        parallax( element, distance, speed ) {
+            element.style.transform = `translateY(${distance * speed}px)` 
+        }
     }
 }
