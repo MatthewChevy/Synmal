@@ -148,6 +148,7 @@ export default {
             weight: 300;
         }
         color: $primary-light;
+        border-bottom: none ;
     }
 
     li:hover {
