@@ -1,6 +1,6 @@
 <template>
     <header>
-        <the-home-header @end-ani-titles="startMottoAni = $event" />
+        <the-home-header />
     </header>
     <main>
         <the-home-first-section />
@@ -33,24 +33,20 @@ export default {
         TheHomeThirdSection,
         TheHomeFourthSection
     },
-
-    data() {
-        return {
-            startMottoAni: Boolean
-        }
-    }
 }
 </script>
 
 <style lang="scss" scoped>
+
 header {
     position: relative;
-    height: calc(100% - 3.35rem); //3.35rem is height of URL bar on
+    height: 47.625rem
 }
 
 @media screen and (min-width: 1024px) {
+    
     header {
-        height: 45rem;
+        height: 61rem;
     }
 }
 </style>
