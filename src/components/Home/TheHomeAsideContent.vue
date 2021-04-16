@@ -1,6 +1,6 @@
 <template>
     <article>
-        <aside class="container">
+        <aside class="container" data-aos="zoom-in-up">
             <div class="title-box">
                 <h4>
                     Zaujíma Vás pribeh našej práce alebo informácie o našej

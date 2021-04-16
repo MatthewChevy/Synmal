@@ -2,14 +2,14 @@
     <section class="section">
         <div class="container">
             <div class="h3-handler">
-                <h3>
+                <h3 data-aos="fade-right">
                     Interérové a exterierové nátery stien a fasád realizujeme aj
                     <strong>strojovím maľovaním</strong>
                 </h3>
             </div>
             <article>
                 <div class="airless-box">
-                    <div class="logo-holder">
+                    <div class="logo-holder" data-aos="fade-right">
                         <img
                             class="sm-screen"
                             src="../../assets/img/wagner.png"
@@ -25,20 +25,20 @@
                                     alt="wagner logo"
                                 />
                             </div>
-                            <p class="p-1">
+                            <p class="p-1" data-aos="fade-right">
                                 Pracujeme s prvotriednou technológiou od firmy
                                 <strong>WAGNER</strong>. Primárnou výhodou
                                 vysokotlakových bezvzduchových striekacích
                                 zariadení je vysoký plošný výkon, rýchlosť a
                                 nízky odpad striekaného materiálu.
                             </p>
-                            <div class="paint-machine-image sm-screen">
+                            <div class="paint-machine-image sm-screen" data-aos="zoom-in-up">
                                 <img
                                     src="../../assets/img/wagner-machine.jpg"
                                     alt="airless painting unit"
                                 />
                             </div>
-                            <p class="p-2">
+                            <p class="p-2" data-aos="fade-right">
                                 Tieto zariadenia sú väčšinou konštruované tak,
                                 že nasávanie materiálu je priamo z vedra.
                                 Materiál sa na upravovaný podklad nanáša bez
@@ -47,7 +47,7 @@
                                 trysku.
                             </p>
                         </div>
-                        <div class="paint-machine-image lg-screen">
+                        <div class="paint-machine-image lg-screen" data-aos="fade-right">
                             <img
                                 src="../../assets/img/wagner-machine.jpg"
                                 alt="airless painting unit"
@@ -61,6 +61,12 @@
     </section>
 </template>
 
+<script>
+export default {
+
+}
+</script>
+
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
     .sm-screen {
@@ -72,6 +78,7 @@
     }
 
     .section {
+        width: 100%;
         position: relative;
         padding-top: 2rem;
         border: {

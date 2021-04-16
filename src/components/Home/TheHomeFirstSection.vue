@@ -2,16 +2,16 @@
     <section>
         <div class="container">
             <div class="h3-wrapper">
-                <h3>
-                    Naša ponuka
-                </h3>
-                <span>⇩</span>
+                <h3>Naša ponuka</h3>
+                <div class="arrow-box">
+                    <span>⇩</span>
+                </div>
             </div>
 
             <article class="to-do-box">
                 <div class="box-container">
                     <h4>Malovanie interiérov</h4>
-                    <div class="image-holder">
+                    <div class="image-holder" data-aos="zoom-in">
                         <img
                             src="../../assets/img/painbrush.png"
                             alt="Roof painting"
@@ -29,7 +29,7 @@
 
                 <div class="box-container center-border active">
                     <h4>Malovanie exteriérov</h4>
-                    <div class="image-holder">
+                    <div class="image-holder" data-aos="zoom-in">
                         <img
                             src="../../assets/img/painbrush.png"
                             alt="Roof painting"
@@ -47,7 +47,7 @@
 
                 <div class="box-container center-border">
                     <h4>Nátery striech</h4>
-                    <div class="image-holder">
+                    <div class="image-holder" data-aos="zoom-in">
                         <img
                             src="../../assets/img/painbrush.png"
                             alt="Roof painting"
@@ -64,7 +64,7 @@
 
                 <div class="box-container last-box sm-screen">
                     <h4>Nátery drevených profilov</h4>
-                    <div class="image-holder">
+                    <div class="image-holder" data-aos="zoom-in">
                         <img
                             src="../../assets/img/painbrush.png"
                             alt="Roof painting"
@@ -81,12 +81,14 @@
             </article>
 
             <aside class="aside">
-                <h5>Máte špecálne požiadavky alebo otázky ?</h5>
-                <div class="button">
-                    <the-path-button
-                        :textButton="'Kontaktuje nás'"
-                        :path="'contact'"
-                    />
+                <div class="aside-box" data-aos="fade-down">
+                    <h5>Máte špecálne požiadavky alebo otázky ?</h5>
+                    <div class="button">
+                        <the-path-button
+                            :textButton="'Kontaktuje nás'"
+                            :path="'contact'"
+                        />
+                    </div>
                 </div>
             </aside>
         </div>
@@ -96,29 +98,27 @@
 
 <script>
 import tableMixin from '../../mixins/tableMixins.js'
-
 import ThePathButton from '../ThePathButton.vue'
-
 import { throttle } from 'lodash-es'
 
 export default {
-    components: {
-        ThePathButton
-    },
 
     mixins: [tableMixin],
 
-    data() {
+    components: {
+        ThePathButton
+    },
+    data(){
         return {
-            toDoBox: Object,
+            boxContainer: Object,
             percentage: 70, // 60% percent from height of box-container
-            timer: 200
+            timer: 100,
         }
     },
 
     mounted() {
+
         this.boxContainer = document.getElementsByClassName('box-container')
-        
         window.addEventListener(
             'scroll',
             throttle(() => {
@@ -127,7 +127,6 @@ export default {
                 }
             }, this.timer)
         )
-
         window.addEventListener(
             'resize',
             throttle(() => {
@@ -152,7 +151,6 @@ export default {
                             this.boxContainer[i].offsetHeight
                 ) {
                     this.boxContainer[i].classList.add('box-container-bg')
-
                     if (
                         window.scrollY >
                         this.boxContainer[i].offsetTop +
@@ -174,10 +172,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     section {
+        width: 100%;
         position: relative;
         background-color: $primary-light;
+        border-radius: 10px 10px 0 0;
     }
 
     .container {
@@ -200,10 +201,14 @@ export default {
             color: $primary-semi-dark;
         }
 
-        span {
-            color: $fancy;
-            font: {
-                size: 50px;
+        .arrow-box{
+            animation: bounce 2s infinite ease-in-out;
+            span {
+                color: $fancy;
+                font: {
+                    size: 50px;
+                }
+                
             }
         }
     }
@@ -347,6 +352,8 @@ export default {
     .to-do-box {
         .box-container {
             width: 20.5rem;
+            border-top: unset;
+            border-bottom: unset;
         }
     }
 
@@ -436,5 +443,13 @@ export default {
     .container {
         max-width: $xl-width-container;
     }
+}
+
+//animations
+
+@keyframes bounce {
+    0% { transform: translateY( 0rem ); }
+    50% { transform: translateY( 1rem ); }
+    100% { transform: translateY( 0rem ); }
 }
 </style>

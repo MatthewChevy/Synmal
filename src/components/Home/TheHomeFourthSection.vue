@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div class="container">
-            <div class="why-us">
+            <div class="why-us" data-aos="zoom-in">
                 <h2>Prečo si vybrať práve nás ?</h2>
                 <p>
                     Maľovanie so sebou nesie riziká, niektoré sa ukážu až pri
@@ -14,18 +14,18 @@
             <div class="notes-box">
                 <div class="list-box">
                     <ul>
-                        <li>Široké možnosti maliarskych prác</li>
-                        <li>Bezplatná obhliadka</li>
-                        <li>Záruka je samozrejmosťou</li>
-                        <li>Upratovanie po prácach</li>
-                        <li>20 rokov skúseností</li>
-                        <li>Pracujeme aj počas víkendu</li>
-                        <li>Individálny prístup</li>
-                        <li>Odborne vykonaná práca</li>
+                        <li data-aos="fade-right">Široké možnosti maliarskych prác</li>
+                        <li data-aos="fade-right">Bezplatná obhliadka</li>
+                        <li data-aos="fade-right">Záruka je samozrejmosťou</li>
+                        <li data-aos="fade-right">Upratovanie po prácach</li>
+                        <li data-aos="fade-right">20 rokov skúseností</li>
+                        <li data-aos="fade-right">Pracujeme aj počas víkendu</li>
+                        <li data-aos="fade-right">Individálny prístup</li>
+                        <li data-aos="fade-right">Odborne vykonaná práca</li>
                     </ul>
                 </div>
 
-                <div class="paragraph-box">
+                <div class="paragraph-box" data-aos="fade-up">
                     <p>
                         <strong>Liptov a okolie</strong> - miesto kde pôsobíme.
                         Treba Vám čokoľvek vymalovať ? Neváhajte nás
