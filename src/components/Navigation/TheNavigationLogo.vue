@@ -1,55 +1,69 @@
 <template>
-    <div class="container">
-        <router-link to="/">
-            <img
-                class="navigation-logo"
-                src="../../assets/img/logo.png"
-                alt="Logo"
-            />
-        </router-link>
-    </div>
-    <h4>Maliarske práce</h4>
+    <router-link to="/">
+        <div class="container-logo">
+            <div class="img-box">
+                <img
+                    class="navigation-logo"
+                    src="../../assets/img/logo.png"
+                    alt="Logo"
+                />
+            </div>
+            <div class="h4-box">
+                <h4>Maliarske práce</h4>
+            </div>
+        </div>
+    </router-link>
 </template>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
-    .container {
-        max-width: 2.75rem;
+    .container-logo {
         display: flex;
-    }
-
-    img {
+        align-items: center;
         width: 100%;
-        margin: 0.563rem 0.625rem;
+        padding-top: 0.5rem;
     }
 
-    h4 {
-        position: absolute;
-        top: 1.05rem;
-        left: 4.2rem;
-        color: $primary-light;
-        font: {
-            size: 12px;
-            weight: 300;
+    .img-box{
+        width: 3rem;
+        img {
+            width: 100%;
+        }
+    }
+
+    .h4-box{
+        margin-top: -0.5rem;
+        margin-left: 0.5rem;
+        h4 {
+            color: $primary-light;
+            text-decoration: none;
+            font: {
+                size: 12px;
+                weight: 300;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
-        max-width: 3.75rem;
+
+    .container-logo {
+        padding-top: 0.7rem;
     }
 
-    img {
-        margin: 0.813rem 1.25rem;
+    .img-box{
+        width: 4rem;
     }
 
-    h4 {
-        top: 1.4rem;
-        left: 6.1rem;
-        font: {
-            size: 17px;
+    .h4-box{
+        h4 {
+            font: {
+                size: 16px;
+                weight: 300;
+            }
         }
     }
+
 }
 </style>
