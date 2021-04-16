@@ -92,15 +92,17 @@
 @media screen and (min-width: 960px) {
     section {
         background-attachment: fixed;
-        height: 25rem;
+        height: 30rem;
 
         .background {
-            height: 25rem;
+            height: 30rem;
         }
     }
 
     .container {
+
         width: $lg-width-container;
+        padding-top: 4rem;
         h2 {
             font: {
                 size: 40px;
