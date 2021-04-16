@@ -50,21 +50,29 @@
 </template>
 
 <script>
+import tableMixins from '../../mixins/tableMixins.js';
+
 export default {
+
+    mixins: [tableMixins],
+
+    data() {
+        return {
+            smallCircle: Object,
+            bigCircle: Object
+        }
+    },
     
 
     mounted(){
-            window.addEventListener( 'scroll', () => {
-            this.parallax('decorative-circle-smaller', window.scrollY, 0.1)
-            this.parallax('decorative-circle-bigger', window.scrollY, 0.05)
-        })
-    },
 
-    methods: {
-        parallax( element, distance, speed) {
-            const item = document.getElementsByClassName(element)[0]
-            item.style.transform = `translateY(${distance * speed}px)` 
-        }
+        this.smallCircle = document.getElementsByClassName('decorative-circle-smaller')[0]
+        this.bigCircle =  document.getElementsByClassName('decorative-circle-bigger')[0]
+
+            window.addEventListener( 'scroll', () => {
+            this.parallax(this.smallCircle, window.scrollY, 0.1)
+            this.parallax( this.smallCircle, window.scrollY, 0.05)
+        })
     },
 }
 </script>
