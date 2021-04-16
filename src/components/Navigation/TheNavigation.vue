@@ -1,46 +1,53 @@
 <template>
-    <div class="main-banner">
-        <navigation-logo />
-        <navigation-menu-button
-            @menu-button="toggleMenu"
-            :activeMenu="activeMenu"
-        />
-    </div>
-    <nav>
-        <ul
-            v-if="activeMenu || breakPointLarge < actualyWidnowSize"
-            @click="activeMenu = false"
-        >
-            <li
-                class="list-item"
-                tabindex="1"
-                @click="$router.push({ path: '/' })"
-            >
-                DOMOV
-            </li>
-            <li
-                class="list-item"
-                tabindex="1"
-                @click="$router.push({ path: 'about' })"
-            >
-                O NAS
-            </li>
-            <li
-                class="list-item"
-                tabindex="1"
-                @click="$router.push({ path: '/contact' })"
-            >
-                KONTAKT
-            </li>
-            <li
-                class="list-item"
-                tabindex="1"
-                @click="$router.push({ path: '/gallery' })"
-            >
-                GALÉRIA
-            </li>
-        </ul>
-    </nav>
+    <section class="section">
+        <div class="container">
+
+            <navigation-logo />    
+
+            <div class="navigtion-box">
+                <navigation-menu-button
+                    @menu-button="toggleMenu"
+                    :activeMenu="activeMenu"
+                />
+
+                <nav>
+                    <ul
+                        v-if="activeMenu || breakPointLarge < actualyWidnowSize"
+                        @click="activeMenu = false"
+                    >
+                        <li
+                            class="list-item"
+                            tabindex="1"
+                            @click="$router.push({ path: '/' })"
+                        >
+                            DOMOV
+                        </li>
+                        <li
+                            class="list-item"
+                            tabindex="1"
+                            @click="$router.push({ path: 'about' })"
+                        >
+                            O NAS
+                        </li>
+                        <li
+                            class="list-item"
+                            tabindex="1"
+                            @click="$router.push({ path: '/contact' })"
+                        >
+                            KONTAKT
+                        </li>
+                        <li
+                            class="list-item"
+                            tabindex="1"
+                            @click="$router.push({ path: '/gallery' })"
+                        >
+                            GALÉRIA
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -73,22 +80,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
 
-    .main-banner {
+    .section {
         position: fixed;
-        display: flex;
         width: 100%;
         height: 3.438rem;
         z-index: 10;
         background: $primary-dark;
-        justify-content: space-between;
+        
+        .container{
+            width: 95%;
+            display: flex;
+            margin: 0rem auto;
+            justify-content: space-between;
+        }
     }
 
     nav {
         position: fixed;
         width: 100%;
-        margin-top: 3.438rem;
+        right: 0;
+        margin-top: .338rem;
         z-index: 10;
         color: $darkest;
         text-align: center;
@@ -96,13 +110,14 @@ export default {
     }
 
     li {
+        color: $primary-dark;
         font: {
             size: 14px;
             weight: 500;
         }
         padding: 0.938rem 0;
-        border-bottom: 1px solid $primary-dark;
         cursor: pointer;
+        border-bottom: 0.25px solid $primary;
     }
 
     li:focus {
@@ -113,15 +128,16 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-    .main-banner {
+    .section {
         height: 4.688rem;
+        background: rgba( $primary-dark, 75% )
     }
 
     nav {
         display: flex;
         justify-content: flex-end;
-        margin-top: 1.5rem;
-        background: none;
+        margin-top: 1.5rem; 
+        background: inherit;  
     }
 
     li {
