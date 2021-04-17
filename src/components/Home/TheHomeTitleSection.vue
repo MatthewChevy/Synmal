@@ -11,7 +11,9 @@
             </div>
             <div class="text-bottom">
                 <div class="h1-box">
-                    <h1 class="h1">Realizujeme maliarske práce na Liptove a okolí</h1>
+                    <h1 class="h1">
+                        Realizujeme maliarske práce na Liptove a okolí
+                    </h1>
                 </div>
             </div>
             <div class="button">
@@ -30,74 +32,72 @@
 </template>
 
 <script>
-// import { debounce } from 'lodash-es'
 import tableMixins from '../../mixins/tableMixins.js'
 
 export default {
-
     mixins: [tableMixins],
 
     data() {
         return {
             sectionTitle: Object,
-            throttleTimer: 5000
         }
     },
 
-    mounted () {
+    mounted() {
         this.sectionTitle = document.getElementsByClassName('section-title')[0]
+        window.addEventListener('scroll', () => { this.titleParallax() })
+    },
 
-        window.addEventListener('scroll', () => {
-        //    this.parallax(this.sectionTitle, window.scrollY, -0.25) //1024+
-        //    this.parallax(this.sectionTitle, window.scrollY, 1.2)
-        })
+    methods: {
+        titleParallax() {
+            if( this.actualyWidnowSize >= this.breakpoint){ //1024+
+                this.parallax(this.sectionTitle, window.scrollY, -0.25) 
+            }
+        }
     },
 }
 </script>
 
 <style lang="scss" scoped>
-
-@media screen and ( min-width: 0px ){
-
-    .section-title{
+@media screen and (min-width: 0px) {
+    .section-title {
         position: absolute;
     }
 
-    .container-titles{
+    .container-titles {
     }
 
-    .text-top{
+    .text-top {
         position: absolute;
         width: 100%;
         top: 11rem;
         animation: textTopFadeIn 1s 1.5s ease-in-out both;
 
-        .h2-box{
+        .h2-box {
             width: 100vw;
             text-align: center;
-            h2{
+            h2 {
                 width: 100vw;
                 position: absolute;
                 color: $primary-soft;
                 text-transform: uppercase;
-                font:{
+                font: {
                     size: 28px;
                     weight: 500;
                     family: $font-lora;
                 }
             }
         }
-
     }
 
-    .span-box{
+    .span-box {
         position: absolute;
         width: 100vw;
         top: 15.5rem;
         display: flex;
         justify-content: center;
 
-        .span{
+        .span {
             display: block;
             position: absolute;
             width: unset;
@@ -107,7 +107,7 @@ export default {
         }
     }
 
-    .text-bottom{
+    .text-bottom {
         position: absolute;
         width: 100vw;
         display: flex;
@@ -117,14 +117,14 @@ export default {
         opacity: 0;
         animation: textBottomFadeIn 0.5s 2.5s ease-in-out forwards;
 
-        h1{
+        h1 {
             width: 90vw;
             max-width: 35rem;
             text-align: center;
             color: $primary-soft;
             padding-bottom: 3rem;
             letter-spacing: -1px;
-            font:{
+            font: {
                 size: 40px;
                 family: $font-lora;
                 weight: 400;
@@ -132,7 +132,7 @@ export default {
         }
     }
 
-    .button{
+    .button {
         position: absolute;
         top: 30rem;
         width: 100vw;
@@ -158,23 +158,22 @@ export default {
             }
         }
 
-        .contact-link-button:hover,:focus {
+        .contact-link-button:hover,
+        :focus {
             transition: 0.35s;
-            transform: scale( 1.2, 1.2 );
+            transform: scale(1.2, 1.2);
         }
-
     }
 }
 
-@media screen and ( min-width: 1024px ){
-
-    .section-title{
+@media screen and (min-width: 1024px) {
+    .section-title {
         position: fixed;
         width: 100%;
         margin: 0 auto;
     }
 
-    .container-titles{
+    .container-titles {
         position: relative;
         width: 100%;
         display: flex;
@@ -184,16 +183,15 @@ export default {
         text-align: center;
     }
 
-    .text-top{
+    .text-top {
         position: fixed;
         opacity: 0;
         animation: textTopFadeIn 1s 1.5s ease-in-out both;
-        h2{
-
+        h2 {
             color: $primary-soft;
             text-transform: uppercase;
             letter-spacing: 3px;
-            font:{
+            font: {
                 size: 35px;
                 weight: 500;
                 family: $font-lora;
@@ -202,14 +200,14 @@ export default {
         }
     }
 
-    .span-box{
+    .span-box {
         position: fixed;
         width: 100%;
         display: flex;
         justify-content: center;
         padding-top: 4rem;
 
-        .span{
+        .span {
             position: fixed;
             display: inline-block;
             content: '-';
@@ -221,18 +219,18 @@ export default {
         }
     }
 
-    .text-bottom{
+    .text-bottom {
         position: fixed;
         max-width: 55rem;
         margin: 0 auto;
         padding-top: 6rem;
         opacity: 0;
         animation: textBottomFadeIn 0.5s 2.5s ease-in-out forwards;
-        h1{
+        h1 {
             color: $primary-soft;
             padding-bottom: 3rem;
             letter-spacing: -1px;
-            font:{
+            font: {
                 size: 62px;
                 family: $font-lora;
                 weight: 400;
@@ -260,28 +258,26 @@ export default {
         }
     }
 
-    .contact-link-button:hover,:focus {
+    .contact-link-button:hover,
+    :focus {
         transition: 0.35s;
-        transform: scale( 1.2, 1.2);
+        transform: scale(1.2, 1.2);
     }
 }
 
 //Animation
 
 @keyframes spanFadeIn {
-
     0% {
         width: 0rem;
     }
 
-    100%{
+    100% {
         width: 20rem;
     }
-    
 }
 
 @keyframes textTopFadeIn {
-
     0% {
         transform: scaleY(0%);
         opacity: 0;
@@ -289,13 +285,11 @@ export default {
 
     100% {
         transform: scaleY(100%);
-         opacity: 1;
+        opacity: 1;
     }
-    
 }
 
 @keyframes textBottomFadeIn {
-
     0% {
         transform: translateY(-20%);
         opacity: 0;
@@ -303,22 +297,17 @@ export default {
 
     100% {
         transform: translateY(0%);
-         opacity: 1;
+        opacity: 1;
     }
-    
 }
 
 @keyframes contactButtonFadeIn {
-
-    0% { 
+    0% {
         opacity: 0;
     }
 
     100% {
-         opacity: 1;
+        opacity: 1;
     }
-    
 }
-
-
 </style>

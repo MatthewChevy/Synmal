@@ -32,19 +32,17 @@ export default {
         TheHomeAsideContent,
         TheHomeThirdSection,
         TheHomeFourthSection
-    },
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 header {
     position: relative;
-    height: 47.625rem
+    height: 47.625rem;
 }
 
 @media screen and (min-width: 1024px) {
-    
     header {
         height: 61rem;
     }

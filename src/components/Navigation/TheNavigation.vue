@@ -1,8 +1,7 @@
 <template>
     <section class="section">
         <div class="container">
-
-            <navigation-logo />    
+            <navigation-logo />
 
             <div class="navigtion-box">
                 <navigation-menu-button
@@ -80,17 +79,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .section {
         position: fixed;
         width: 100%;
         height: 3.438rem;
         z-index: 10;
         background: $primary-dark;
-        
-        .container{
+
+        .container {
             width: 95%;
             display: flex;
             margin: 0rem auto;
@@ -102,7 +99,7 @@ export default {
         position: fixed;
         width: 100%;
         right: 0;
-        margin-top: .338rem;
+        margin-top: 0.338rem;
         z-index: 10;
         color: $darkest;
         text-align: center;
@@ -130,14 +127,14 @@ export default {
 @media screen and (min-width: 1024px) {
     .section {
         height: 4.688rem;
-        background: rgba( $primary-dark, 75% )
+        background: rgba($primary-dark, 75%);
     }
 
     nav {
         display: flex;
         justify-content: flex-end;
-        margin-top: 1.5rem; 
-        background: inherit;  
+        margin-top: 1.5rem;
+        background: inherit;
     }
 
     li {
@@ -148,7 +145,7 @@ export default {
             weight: 300;
         }
         color: $primary-light;
-        border-bottom: none ;
+        border-bottom: none;
     }
 
     li:hover {

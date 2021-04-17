@@ -12,7 +12,6 @@ export default {
     created() {
         this.actualyWidnowSize = window.innerWidth
         window.addEventListener('resize', throttle(this.sizeWindow, 350))
-
     },
 
     methods: {
@@ -20,8 +19,8 @@ export default {
             return (this.actualyWidnowSize = e.srcElement.innerWidth)
         },
 
-        parallax( element, distance, speed ) {
-            element.style.transform = `translateY(${distance * speed}px)` 
+        parallax(element, distance, speed) {
+            element.style.transform = `translateY(${distance * speed}px)`
         }
     }
 }

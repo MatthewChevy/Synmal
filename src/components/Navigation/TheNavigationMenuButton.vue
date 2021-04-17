@@ -49,7 +49,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .button-wrapper {
         margin: 0.938rem 0;

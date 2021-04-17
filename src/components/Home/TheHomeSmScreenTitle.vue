@@ -27,9 +27,7 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .title-container {
         display: flex;
         justify-content: center;
@@ -70,10 +68,9 @@
         display: flex;
         align-items: baseline;
         margin-left: 2.5%;
-        font:{
+        font: {
             family: $font-family;
             size: 8.2vw;
-            
         }
         color: $primary-soft;
         opacity: 0;
@@ -89,7 +86,8 @@
             margin-left: 0.313rem;
             border-radius: 50%;
             background: $title-decoration;
-            animation: popIn .8s 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            animation: popIn 0.8s 2s cubic-bezier(0.74, 0.06, 0.4, 0.92)
+                forwards;
         }
     }
 
@@ -113,7 +111,7 @@
 
     p {
         position: fixed;
-        font:{
+        font: {
             size: 4vw;
             weight: 600;
             family: $second-font-family;
@@ -204,7 +202,7 @@
         80% {
             width: 0.625rem;
             height: 0.625rem;
-            bottom: 1.25rem
+            bottom: 1.25rem;
         }
         100% {
             width: 0.438rem;
@@ -226,7 +224,6 @@
 }
 
 @media screen and (min-width: 600px) {
-
     @keyframes popIn {
         50% {
             width: 0.938rem;
@@ -256,7 +253,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
     @keyframes popIn {
         0% {
             width: 0rem;
@@ -267,7 +263,7 @@
         }
         50% {
             width: 1rem;
-            height:  1rem;
+            height: 1rem;
             bottom: 3rem;
             opacity: 1;
             background: $title-decoration-light;
@@ -280,7 +276,7 @@
         80% {
             width: 0.813rem;
             height: 0.813rem;
-            bottom: 1.438rem
+            bottom: 1.438rem;
         }
         100% {
             width: 0.813rem;
@@ -291,6 +287,4 @@
         }
     }
 }
-
-
 </style>

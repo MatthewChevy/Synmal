@@ -16,6 +16,7 @@
 
 import TheHomeTitleSection from './TheHomeTitleSection'
 import tableMixins from '../../mixins/tableMixins.js'
+import { debounce } from 'lodash-es'
 
 export default {
 
@@ -32,17 +33,34 @@ export default {
         return {
             width: window.innerWidth,
             height: window.innerHeight,
-            bgImageBox: Object
+            bgImageBox: Object,
+            ratio: Number
         }
     },
 
     mounted () {
-        this.bgImageBox = document.getElementsByClassName('bg-image-box')[0]
 
+        this.bgImageBox = document.getElementsByClassName('bg-image-box')[0]
+        this.setParallaxRatio()
+        
         window.addEventListener('scroll', () => {
-        //    this.parallax(this.bgImageBox, window.scrollY, -0.1) //lg
-            this.parallax(this.bgImageBox, window.scrollY, 0.15)
+            this.parallax(this.bgImageBox, window.scrollY, this.ratio)
         })
+
+         window.addEventListener('resize', () => { 
+             this.ratioWindowSizeChanger() 
+        })
+    },
+
+    methods: {
+
+        ratioWindowSizeChanger: debounce( function() {
+            this.actualyWidnowSize > this.breakpoint ? this.ratio = -0.1 : this.ratio = 0.15
+        }, 150),
+
+        setParallaxRatio(){
+            this.actualyWidnowSize > this.breakpoint ? this.ratio = -0.1 : this.ratio = 0.15
+        }
     },
 
 }

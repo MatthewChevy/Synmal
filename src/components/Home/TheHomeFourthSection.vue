@@ -14,12 +14,16 @@
             <div class="notes-box">
                 <div class="list-box">
                     <ul>
-                        <li data-aos="fade-right">Široké možnosti maliarskych prác</li>
+                        <li data-aos="fade-right">
+                            Široké možnosti maliarskych prác
+                        </li>
                         <li data-aos="fade-right">Bezplatná obhliadka</li>
                         <li data-aos="fade-right">Záruka je samozrejmosťou</li>
                         <li data-aos="fade-right">Upratovanie po prácach</li>
                         <li data-aos="fade-right">20 rokov skúseností</li>
-                        <li data-aos="fade-right">Pracujeme aj počas víkendu</li>
+                        <li data-aos="fade-right">
+                            Pracujeme aj počas víkendu
+                        </li>
                         <li data-aos="fade-right">Individálny prístup</li>
                         <li data-aos="fade-right">Odborne vykonaná práca</li>
                     </ul>

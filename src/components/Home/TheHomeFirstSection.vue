@@ -12,11 +12,11 @@
                 <div class="box-container" :data-aos="slideRight">
                     <h4>Malovanie interiérov</h4>
 
-                <div class="image-holder" :data-aos="zoom">
-                    <img
-                        src="../../assets/img/painbrush.png"
-                        alt="Roof painting"
-                    />
+                    <div class="image-holder" :data-aos="zoom">
+                        <img
+                            src="../../assets/img/painbrush.png"
+                            alt="Roof painting"
+                        />
                     </div>
                     <p>
                         Postaráme sa o všetky Vaše kancelárske obchodné, bytové
@@ -28,7 +28,10 @@
                     </p>
                 </div>
 
-                <div class="box-container center-border active" :data-aos="slideDown">
+                <div
+                    class="box-container center-border active"
+                    :data-aos="slideDown"
+                >
                     <h4>Malovanie exteriérov</h4>
                     <div class="image-holder" :data-aos="zoom">
                         <img
@@ -100,112 +103,111 @@
 <script>
 import tableMixin from '../../mixins/tableMixins.js'
 import ThePathButton from '../ThePathButton.vue'
-import { throttle } from 'lodash-es'
+import { throttle, debounce } from 'lodash-es'
 
 export default {
-
     mixins: [tableMixin],
 
     components: {
         ThePathButton
     },
-    data(){
+    data() {
         return {
             boxContainer: Object,
             percentage: 70, // 60% percent from height of box-container
-            timer: 100,
             zoom: 'zoom-in',
             slideRight: String,
             slideDown: String,
-            slideLeft: String,
-
+            slideLeft: String
         }
     },
 
     mounted() {
-
         this.boxContainer = document.getElementsByClassName('box-container')
+        this.setAOSProperty()
 
-        if( this.actualyWidnowSize > this.breakpoint){
-            this.zoom = '';
-            this.slideRight = 'fade-right'
-            this.slideDown = 'fade-down'
-            this.slideLeft = 'fade-left'
-        } 
+        window.addEventListener('scroll', () => {
+            this.scrollSelectBox()
+        })
 
-        window.addEventListener(
-            'scroll',
-            throttle(() => {
-                if (this.actualyWidnowSize <= this.breakpointmd) {
-                    this.scrollSelectBox() 
-                }
-            }, this.timer)
-        )
-        window.addEventListener(  
-            'resize',
-            throttle(() => {
-                if (this.actualyWidnowSize > this.breakpointmd) {
-                    for (let i = 0; i < this.boxContainer.length; i++) {
-                        this.boxContainer[i].classList.remove(
-                            'box-container-bg'
-                        )
-                    }
-                }
-
-                if( this.actualyWidnowSize > this.breakpoint ){  // AOS responsive
-                    this.zoom = ''
-                    this.slideRight = 'fade-right'
-                    this.slideDown = 'fade-up'
-                    this.slideLeft = 'fade-left'
-                } else {
-                    this.zoom = 'zoom-in'
-                    this.slideRight = ''
-                    this.slideUp = ''
-                    this.slideLeft = ''
-                }
-            }, this.timer)
-        )
+        window.addEventListener('resize', () => {
+            this.removeClass()
+            this.responsiveASO()
+        })
     },
-
+    
     methods: {
-        scrollSelectBox() {
-            for (let i = 0; i < this.boxContainer.length; i++) {
-                if (
-                    window.scrollY >
-                    this.boxContainer[i].offsetTop +
-                        (this.percentage / 100) *
-                            this.boxContainer[i].offsetHeight
-                ) {
-                    this.boxContainer[i].classList.add('box-container-bg')
+        scrollSelectBox: throttle(function() {
+            //Box selecting
+            if (this.actualyWidnowSize <= this.breakpointmd) {
+                for (let i = 0; i < this.boxContainer.length; i++) {
                     if (
                         window.scrollY >
                         this.boxContainer[i].offsetTop +
-                            (this.boxContainer[i].offsetHeight +
-                                (this.percentage / 100) *
-                                    this.boxContainer[i].offsetHeight)
+                            (this.percentage / 100) *
+                                this.boxContainer[i].offsetHeight
                     ) {
+                        this.boxContainer[i].classList.add('box-container-bg')
+                        if (
+                            window.scrollY >
+                            this.boxContainer[i].offsetTop +
+                                (this.boxContainer[i].offsetHeight +
+                                    (this.percentage / 100) *
+                                        this.boxContainer[i].offsetHeight)
+                        ) {
+                            this.boxContainer[i].classList.remove(
+                                'box-container-bg'
+                            )
+                        }
+                    } else {
                         this.boxContainer[i].classList.remove(
                             'box-container-bg'
                         )
                     }
-                } else {
+                }
+            }
+        }, 100),
+
+        removeClass: debounce(function() {
+            // Remove class base on screen size
+
+            if (this.actualyWidnowSize > this.breakpointmd) {
+                for (let i = 0; i < this.boxContainer.length; i++) {
                     this.boxContainer[i].classList.remove('box-container-bg')
                 }
             }
-        }
+        }, 100),
+    
+        responsiveASO: debounce(function() {  
+            if (this.actualyWidnowSize > this.breakpoint) {
+                // AOS responsive
+                this.zoom = ''
+                this.slideRight = 'fade-right'
+                this.slideDown = 'fade-down'
+                this.slideLeft = 'fade-left'
+            } else {
+                this.zoom = 'zoom-in'
+                this.slideRight = ''
+                this.slideDown = ''
+                this.slideLeft = ''
+            }
+        },100),
+
+        setAOSProperty: debounce(function() {
+            if (this.actualyWidnowSize > this.breakpoint) {
+                this.zoom = ''
+                this.slideRight = 'fade-right'
+                this.slideDown = 'fade-down'
+                this.slideLeft = 'fade-left'
+            }
+        })
     }
+
 }
 </script>
 
 <style lang="scss" scoped>
-
-
-
 @media screen and (min-width: 0px) {
-
-    //move animation
-
-
     section {
         width: 100%;
         position: relative;
@@ -233,14 +235,13 @@ export default {
             color: $primary-semi-dark;
         }
 
-        .arrow-box{
+        .arrow-box {
             animation: bounce 2s infinite ease-in-out;
             span {
                 color: $fancy;
                 font: {
                     size: 50px;
                 }
-                
             }
         }
     }
@@ -480,8 +481,14 @@ export default {
 //animations
 
 @keyframes bounce {
-    0% { transform: translateY( 0rem ); }
-    50% { transform: translateY( 1rem ); }
-    100% { transform: translateY( 0rem ); }
+    0% {
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
 }
 </style>

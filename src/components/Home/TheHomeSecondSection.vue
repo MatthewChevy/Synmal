@@ -19,7 +19,8 @@
                     <div class="flex">
                         <div class="paragraph-box">
                             <div class="logo-holder">
-                                <img data-aos="fade-right"
+                                <img
+                                    data-aos="fade-right"
                                     class="lg-screen"
                                     src="../../assets/img/wagner.png"
                                     alt="wagner logo"
@@ -32,7 +33,10 @@
                                 zariadení je vysoký plošný výkon, rýchlosť a
                                 nízky odpad striekaného materiálu.
                             </p>
-                            <div class="paint-machine-image sm-screen" data-aos="zoom-in-up">
+                            <div
+                                class="paint-machine-image sm-screen"
+                                data-aos="zoom-in-up"
+                            >
                                 <img
                                     src="../../assets/img/wagner-machine.jpg"
                                     alt="airless painting unit"
@@ -47,7 +51,10 @@
                                 trysku.
                             </p>
                         </div>
-                        <div class="paint-machine-image lg-screen" data-aos="fade-right">
+                        <div
+                            class="paint-machine-image lg-screen"
+                            data-aos="fade-right"
+                        >
                             <img
                                 src="../../assets/img/wagner-machine.jpg"
                                 alt="airless painting unit"
@@ -62,9 +69,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

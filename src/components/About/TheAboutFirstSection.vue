@@ -24,7 +24,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .section {
         position: relative;
@@ -144,11 +143,11 @@
         margin-top: 4rem;
     }
 
-    .article-box{
+    .article-box {
         box-shadow: unset;
 
-        .article-paragraph{
-            p{
+        .article-paragraph {
+            p {
                 text-align: center;
             }
         }
@@ -163,5 +162,4 @@
         }
     }
 }
-
 </style>

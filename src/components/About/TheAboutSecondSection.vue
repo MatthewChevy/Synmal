@@ -50,10 +50,9 @@
 </template>
 
 <script>
-import tableMixins from '../../mixins/tableMixins.js';
+import tableMixins from '../../mixins/tableMixins.js'
 
 export default {
-
     mixins: [tableMixins],
 
     data() {
@@ -62,23 +61,24 @@ export default {
             bigCircle: Object
         }
     },
-    
 
-    mounted(){
+    mounted() {
+        this.smallCircle = document.getElementsByClassName(
+            'decorative-circle-smaller'
+        )[0]
+        this.bigCircle = document.getElementsByClassName(
+            'decorative-circle-bigger'
+        )[0]
 
-        this.smallCircle = document.getElementsByClassName('decorative-circle-smaller')[0]
-        this.bigCircle =  document.getElementsByClassName('decorative-circle-bigger')[0]
-
-            window.addEventListener( 'scroll', () => {
+        window.addEventListener('scroll', () => {
             this.parallax(this.smallCircle, window.scrollY, 0.1)
-            this.parallax( this.smallCircle, window.scrollY, 0.05)
+            this.parallax(this.smallCircle, window.scrollY, 0.05)
         })
-    },
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .lg {
         display: none;
@@ -270,8 +270,6 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
-
     .cartoon-person {
         width: 7.688rem;
         height: 11.4rem;
@@ -289,21 +287,21 @@ export default {
         }
     }
 
-    .paragraph-box{
-        p{
+    .paragraph-box {
+        p {
             text-align: center;
         }
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .section{
+    .section {
         max-width: 80rem;
         margin: 0 auto;
     }
 
-    .decorative-circle-box{
-        .decorative-circle-bigger{
+    .decorative-circle-box {
+        .decorative-circle-bigger {
             right: 7rem;
         }
     }

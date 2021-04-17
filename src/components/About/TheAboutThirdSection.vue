@@ -1,6 +1,5 @@
 <template>
     <section class="section">
-
         <article class="article-top">
             <div class="center">
                 <div class="article-title">
@@ -10,9 +9,9 @@
                     <div class="center">
                         <!-- <h3>Kontakt</h3> -->
                         <p>
-                            Po <strong>kontakte</strong> s Vami urobíme osobnú prehliadku Vašich
-                            priestorov, na základe ktorej vypracujeme cenovú
-                            ponuku a dohodneme termín
+                            Po <strong>kontakte</strong> s Vami urobíme osobnú
+                            prehliadku Vašich priestorov, na základe ktorej
+                            vypracujeme cenovú ponuku a dohodneme termín
                         </p>
                     </div>
 
@@ -22,7 +21,6 @@
                             :textButton="'Kontaktujte nás'"
                         />
                     </div>
-
                 </div>
 
                 <div class="paragraphs-holder">
@@ -100,26 +98,21 @@
                 </div>
             </article>
         </div>
-
     </section>
 </template>
 
 <script>
-    import ThePathButton from '../ThePathButton.vue'
+import ThePathButton from '../ThePathButton.vue'
 
 export default {
-
     components: {
-        ThePathButton,
-    },
+        ThePathButton
+    }
 }
-
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .container {
         width: $sm-width-container;
         margin: 0 auto;
@@ -197,7 +190,7 @@ export default {
             }
         }
 
-        .button{
+        .button {
             margin: 2rem auto 3rem;
         }
     }
@@ -294,14 +287,12 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-
     .container {
         width: unset;
         margin: 0 auto;
     }
 
     .article-top {
-
         width: 100%;
         background: $primary-light;
         z-index: 0;
@@ -375,25 +366,23 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
     .center {
         width: unset;
         margin: 0 auto;
     }
 
-    .contact-paragraph{
+    .contact-paragraph {
         max-width: unset;
         margin: 2rem auto;
 
-        .center{
-            h3{
+        .center {
+            h3 {
                 padding-bottom: unset;
             }
-            p{
+            p {
                 text-align: center;
             }
         }
-
     }
 
     .article-top {
@@ -480,7 +469,7 @@ export default {
         flex-wrap: wrap;
         width: 100%;
         margin: 0 auto;
-        padding:  0;
+        padding: 0;
         max-width: 80rem;
 
         .article-box {
@@ -511,8 +500,7 @@ export default {
 }
 
 @media screen and (min-width: 1280px) {
-
-    .paragraphs-holder{
+    .paragraphs-holder {
         max-width: 80rem;
     }
 }

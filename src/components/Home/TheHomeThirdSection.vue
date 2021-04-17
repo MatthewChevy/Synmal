@@ -12,7 +12,10 @@
                         schopnosťou je pre nás veľkým favoritom.
                     </p>
 
-                    <div class="decorative-bucket sm-screen" data-aos="fade-left">
+                    <div
+                        class="decorative-bucket sm-screen"
+                        data-aos="fade-left"
+                    >
                         <img
                             src="../../assets/img/jupol.png"
                             alt="Jupol bucket"
@@ -32,7 +35,6 @@
         </div>
     </section>
 </template>
-
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {

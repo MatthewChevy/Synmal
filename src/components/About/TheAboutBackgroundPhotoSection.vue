@@ -19,11 +19,10 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     section {
         position: relative;
-        background-image: url("../../assets/img/DCS01.jpg");
+        background-image: url('../../assets/img/DCS01.jpg');
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
@@ -100,7 +99,6 @@
     }
 
     .container {
-
         width: $lg-width-container;
         padding-top: 4rem;
         h2 {
