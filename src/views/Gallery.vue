@@ -1,10 +1,10 @@
 <template>
     <main>
-        <section class="title-section">
-            <div class="title-handler">
-                <h3>Vitajte v našej galerií</h3>
+        <header class="title-section">
+            <div class="h1-box" data-aos="fade-down">
+                <h1>Vitajte v galérií</h1>
             </div>
-        </section>
+        </header>
 
         <section class="gallery">
             <!-- <div class="big-size-photo mb">
@@ -133,135 +133,127 @@
                 />
             </div>
         </section>
-    </main>
-    <footer class="footer">
-        <div class="footer-center">
-            <div
-                class="contact-link-button-wrapper"
-                tabindex="1"
-                @click="$router.push({ path: '/contact' })"
-            >
-                <p class="contact-link-button">Kontaktujte nás</p>
-            </div>
+
+        <div class="button" data-aos="zoom-out" data-aos-offset="10">
+            <the-path-button
+                :path="'contact'"
+                :textButton="'Kontaktujte nás'"
+            />
         </div>
-    </footer>
+    </main>
 </template>
 
+<script>
+
+import ThePathButton from '../components/ThePathButton.vue'
+
+export default {
+    
+    components: {
+        ThePathButton
+    },
+}
+</script>
+
 <style lang="scss" scoped>
-.mt {
-    margin-top: 0.3rem;
-}
 
-.mb {
-    margin-bottom: 0.3rem;
-}
+@media screen and (min-width: 0px){
 
-.l-mb {
-    margin-bottom: 2em;
-}
+    main{
+        overflow-x: hidden;
+    }
 
-main {
-    position: relative;
-    padding-top: 3.4rem;
-    background-color: $primary-soft;
-    z-index: 1;
-}
+    header {
+        .h1-box {
+            text-align: center;
 
-.title-section {
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
-    z-index: 1;
-}
+            h1 {
+                padding: 2rem 0;
+                color: $primary-dark;
+                font: {
+                    size: 30px;
+                    weight: 300;
+                }
+            }
+            h1::before,
+            h1::after {
+                content: '';
+                display: inline-block;
+                position: relative;
+                width: 18%;
+                height: 2px;
+                top: -0.4rem;
+                background: $fancy;
+            }
 
-.title-handler {
-    margin-top: 3rem;
-    padding: 1rem 1.25rem;
-    text-align: right;
-    background-color: $primary-semi-dark;
-    border-radius: 3px;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-
-    h3 {
-        font: {
-            size: 18px;
-            weight: 400;
+            h1::before {
+                right: 0.75rem;
+            }
+            h1::after {
+                left: 0.75rem;
+            }
         }
-        color: $primary-light;
     }
-}
 
-.gallery {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-    margin: 1rem auto 0 auto;
-    z-index: 2;
-}
-
-.big-size-photo {
-    max-width: 100%;
-    border: 5px solid $primary-light;
-    border-radius: 5px;
-    line-height: 0;
-
-    img {
-        width: 100%;
+    .mt {
+        margin-top: 0.3rem;
     }
-}
 
-.medium-size-photo {
-    max-width: 49.5%;
-    border: 5px solid $primary-light;
-    border-radius: 5px;
-    line-height: 0;
-
-    img {
-        width: 100%;
+    .mb {
+        margin-bottom: 0.3rem;
     }
-}
 
-.background-splitter {
-    position: absolute;
-    width: 100%;
-    height: 83.7rem;
-    top: 110.1rem;
-    background-color: $primary-semi-dark;
-    z-index: 0;
-}
+    .l-mb {
+        margin-bottom: 2em;
+    }
 
-.footer {
-    position: relative;
-    width: 100%;
-    height: 5rem;
-    z-index: 10;
-    background-color: $primary-soft;
-}
+    main {
+        position: relative;
+        padding-top: 3.4rem;
+        background-color: $primary-soft;
+        z-index: 1;
+    }
 
-.footer-center {
-    max-width: 80%;
-    margin: 0 auto;
-}
+    .title-section {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        z-index: 1;
+    }
 
-.contact-link-button-wrapper {
-    width: 11rem;
-    margin: 0 auto;
-    padding-top: 1rem;
-    text-align: center;
-}
+    .gallery {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 90%;
+        margin: 1rem auto 0 auto;
+    }
 
-.contact-link-button {
-    background-color: $fancy;
-    padding: 1px 0px;
-    box-shadow: 5px 5px 3px rgba($darkest, 16%);
-    cursor: pointer;
-}
+    .big-size-photo {
+        max-width: 100%;
+        border-radius: 5px;
+        line-height: 0;
 
-.contact-link-button:focus {
-    background-color: $primary-light;
-    transition: 0.25s;
+        img {
+            width: 100%;
+        }
+    }
+
+    .medium-size-photo {
+        max-width: 49.5%;
+        border-radius: 5px;
+        line-height: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .button {
+        margin: 0rem auto 3rem;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 640px) {
@@ -274,7 +266,7 @@ main {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
     .gallery {
         position: relative;
         display: grid;
@@ -298,5 +290,12 @@ main {
 
         width: 100%;
     }
+
+    .button {
+        margin: 3rem auto 3rem;
+    }
 }
+
+
+
 </style>
