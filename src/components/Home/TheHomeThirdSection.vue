@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div class="container">
-            <div class="decorative-bucket-box" style="overflow-x: hidden">
+            <div class="decorative-bucket-box">
                 <div class="decorative-bucket lg-screen" data-aos="fade-left">
                     <img src="../../assets/img/jupol.png" alt="Jupol bucket" />
                 </div>
@@ -64,6 +64,7 @@
         align-items: center;
         width: 100%;
         margin: 0 auto;
+        overflow-x: hidden;
     }
 
     .decorative-bucket {

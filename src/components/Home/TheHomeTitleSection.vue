@@ -59,19 +59,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
+
     .section-title {
         position: absolute;
-    }
-
-    .container-titles {
     }
 
     .text-top {
         position: absolute;
         width: 100%;
         top: 11rem;
-        animation: textTopFadeIn 1s 1.5s ease-in-out both;
+        animation: textTopFadeIn 1s 0.5s ease-in-out both;
 
         .h2-box {
             width: 100vw;
@@ -103,7 +102,7 @@ export default {
             width: unset;
             height: 0.15rem;
             background-color: $primary-soft;
-            animation: spanFadeIn 0.5s 1s ease-in-out both;
+            animation: spanFadeIn 0.5s 0.25s ease-in-out both;
         }
     }
 
@@ -115,7 +114,7 @@ export default {
         top: 18rem;
         text-align: left;
         opacity: 0;
-        animation: textBottomFadeIn 0.5s 2.5s ease-in-out forwards;
+        animation: textBottomFadeIn 0.5s 1s ease-in-out forwards;
 
         h1 {
             width: 90vw;
@@ -139,15 +138,15 @@ export default {
         text-align: center;
 
         .contact-link-button {
-            width: 16rem;
+            width: 14rem;
             margin: 0 auto;
-            padding: 0.313rem 1.875rem;
+            padding: 0.10rem 1.5rem;
             color: $primary-soft;
-            border: 2px solid $primary-soft;
+            border: 1.5px solid $primary-soft;
             background-color: transparent;
             cursor: pointer;
             opacity: 0;
-            animation: contactButtonFadeIn 0.5s 3s ease-in-out forwards;
+            animation: contactButtonFadeIn 0.5s 1.25s ease-in-out forwards;
 
             a {
                 letter-spacing: 2px;
@@ -164,9 +163,56 @@ export default {
             transform: scale(1.2, 1.2);
         }
     }
+
+
+    @keyframes spanFadeIn {
+        0% {
+            width: 0rem;
+        }
+
+        100% {
+            width: 20rem;
+        }
+    }
+
+    @keyframes textTopFadeIn {
+        0% {
+            transform: scaleY(0%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scaleY(100%);
+            opacity: 1;
+        }
+    }   
+
+    @keyframes textBottomFadeIn {
+        0% {
+            transform: translateY(-20%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes contactButtonFadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
+
     .section-title {
         position: fixed;
         width: 100%;
@@ -184,130 +230,60 @@ export default {
     }
 
     .text-top {
-        position: fixed;
-        opacity: 0;
-        animation: textTopFadeIn 1s 1.5s ease-in-out both;
-        h2 {
-            color: $primary-soft;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font: {
-                size: 35px;
-                weight: 500;
-                family: $font-lora;
+        top: 0rem;
+        text-align: center;
+
+        .h2-box{
+            h2 {
+                top: 0px;
+                font: {
+                    size: 35px;
+                }
             }
-            padding-bottom: 1rem;
         }
     }
 
     .span-box {
-        position: fixed;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: 4rem;
-
-        .span {
-            position: fixed;
-            display: inline-block;
-            content: '-';
-            width: 20rem;
-            height: 0.15rem;
-            transform: scaleX(0);
-            background-color: $primary-soft;
-            animation: spanFadeIn 0.5s 1s ease-in-out forwards;
-        }
+        top: 4.7rem;
     }
 
     .text-bottom {
-        position: fixed;
+        top: 0rem;
         max-width: 55rem;
         margin: 0 auto;
         padding-top: 6rem;
-        opacity: 0;
-        animation: textBottomFadeIn 0.5s 2.5s ease-in-out forwards;
-        h1 {
-            color: $primary-soft;
-            padding-bottom: 3rem;
-            letter-spacing: -1px;
-            font: {
-                size: 62px;
-                family: $font-lora;
-                weight: 400;
+
+        .h1-box{
+            h1 {
+                max-width: 60rem;
+                font: {
+                    size: 62px;
+                }
             }
         }
     }
 
-    .contact-link-button {
-        max-width: 12rem;
-        margin: 0 auto;
-        padding: 3px 30px;
-        color: $primary-soft;
-        border: 1px solid $primary-soft;
-        background-color: transparent;
-        cursor: pointer;
-        opacity: 0;
-        animation: contactButtonFadeIn 0.5s 3s ease-in-out forwards;
+    .button{
+       top: 21rem; 
+    }
 
-        a {
-            letter-spacing: 2px;
-            font: {
-                size: 18px;
-                weight: 400;
-            }
-        }
+    .contact-link-button {
+        max-width: 14rem;
     }
 
     .contact-link-button:hover,
     :focus {
-        transition: 0.35s;
-        transform: scale(1.2, 1.2);
+        transform: scale(1.1, 1.1);
+    }
+
+    @keyframes spanFadeIn {
+        0% {
+            width: 0rem;
+        }
+        100% {
+            width: 30rem;
+        }
     }
 }
 
-//Animation
-
-@keyframes spanFadeIn {
-    0% {
-        width: 0rem;
-    }
-
-    100% {
-        width: 20rem;
-    }
-}
-
-@keyframes textTopFadeIn {
-    0% {
-        transform: scaleY(0%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scaleY(100%);
-        opacity: 1;
-    }
-}
-
-@keyframes textBottomFadeIn {
-    0% {
-        transform: translateY(-20%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
-@keyframes contactButtonFadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 </style>

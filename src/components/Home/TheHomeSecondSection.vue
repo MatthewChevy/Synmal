@@ -8,7 +8,7 @@
                 </h3>
             </div>
             <article>
-                <div class="airless-box" style="overflow-x: hidden">
+                <div class="airless-box">
                     <div class="logo-holder" data-aos="fade-left">
                         <img
                             class="sm-screen"
@@ -129,6 +129,7 @@ export default {}
     .airless-box {
         align-items: center;
         margin: 0 auto 4rem auto;
+        overflow-x: hidden;
     }
 
     .logo-holder {
