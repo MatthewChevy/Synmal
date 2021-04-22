@@ -2,20 +2,20 @@
     <section class="section">
         <article class="article-top">
             <div class="center">
-                <div class="article-title">
+                <div class="article-title" data-aos="zoom-out">
                     <h2>Priebeh práce</h2>
                 </div>
                 <div class="contact-paragraph">
                     <div class="center">
                         <!-- <h3>Kontakt</h3> -->
-                        <p>
+                        <p data-aos="fade-right">
                             Po <strong>kontakte</strong> s Vami urobíme osobnú
                             prehliadku Vašich priestorov, na základe ktorej
                             vypracujeme cenovú ponuku a dohodneme termín
                         </p>
                     </div>
 
-                    <div class="button">
+                    <div class="button" data-aos="zoom-out">
                         <the-path-button
                             :path="'contact'"
                             :textButton="'Kontaktujte nás'"
@@ -23,8 +23,8 @@
                     </div>
                 </div>
 
-                <div class="paragraphs-holder">
-                    <div class="paragraph-box">
+                <div class="paragraphs-holder" >
+                    <div class="paragraph-box" data-aos="fade-right">
                         <h4>Pred maľovaním</h4>
                         <p>
                             Všetko dôkladne zalepíme a pozakrývame fóliou. Tento
@@ -33,7 +33,7 @@
                         </p>
                     </div>
 
-                    <div class="paragraph-box center-box">
+                    <div class="paragraph-box center-box" data-aos="fade-center">
                         <h4>Počas maľovania</h4>
                         <p>
                             V tejto fáze sa ukážu všetky nedostatky ako
@@ -42,7 +42,7 @@
                         </p>
                     </div>
 
-                    <div class="paragraph-box">
+                    <div class="paragraph-box" data-aos="fade-left">
                         <h4>Po maľovaní</h4>
                         <p>
                             Ak sme s výsledkom spokojný môžeme začať s
@@ -56,7 +56,7 @@
         </article>
 
         <div class="photo-box">
-            <article class="article-box">
+            <article class="article-box" :data-aos="boxLeft">
                 <div class="center">
                     <div class="image-holder">
                         <img
@@ -64,13 +64,13 @@
                             alt="before"
                         />
                     </div>
-                    <div class="h3-box">
+                    <div class="h3-box" :data-aos="textInPhoto">
                         <h3>Pred</h3>
                     </div>
                 </div>
             </article>
 
-            <article class="article-box">
+            <article class="article-box" :data-aos="boxCenter">
                 <div class="center">
                     <div class="image-holder">
                         <img
@@ -78,13 +78,13 @@
                             alt="in progress"
                         />
                     </div>
-                    <div class="h3-box">
+                    <div class="h3-box" :data-aos="textInPhoto">
                         <h3>Počas</h3>
                     </div>
                 </div>
             </article>
 
-            <article class="article-box last">
+            <article class="article-box last" :data-aos="boxRight">
                 <div class="center">
                     <div class="image-holder">
                         <img
@@ -92,7 +92,7 @@
                             alt="after"
                         />
                     </div>
-                    <div class="h3-box">
+                    <div class="h3-box" :data-aos="textInPhoto" data-aos-offset="10">
                         <h3>Po</h3>
                     </div>
                 </div>
@@ -103,15 +103,53 @@
 
 <script>
 import ThePathButton from '../ThePathButton.vue'
+import tableMixins from '../../mixins/tableMixins.js'
 
 export default {
+
+    mixins: [tableMixins],
+
     components: {
         ThePathButton
-    }
+    },
+
+    data() {
+        return {
+            textInPhoto: String,
+            boxLeft: String,
+            boxCenter: String,
+            boxRight: String,
+        }
+    },
+
+    mounted () {
+        this.aosSettings()
+
+        window.addEventListener('resize', () => {
+            this.aosSettings()
+        })
+    },
+
+    methods: {
+        aosSettings() {
+            if(  this.actualyWidnowSize > this.breakpoint ){
+                this.textInPhoto = '' 
+                this.boxLeft = 'fade-right'
+                this.boxCenter = 'fade-down' 
+                this.boxRight = 'fade-left'
+            } else {
+                this.textInPhoto = 'zoom-in'
+                this.boxLeft = ''
+                this.boxCenter = '' 
+                this.boxRight = ''
+            }
+        }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .container {
         width: $sm-width-container;
@@ -122,12 +160,14 @@ export default {
         position: relative;
         width: 100%;
         background: $primary-semi-light;
+        overflow-x: hidden;
     }
 
     .article-top {
         width: 100%;
         background: $primary-light;
         z-index: 0;
+        padding-top: 2.5rem;
         border-bottom: 1px solid $primary;
         padding-bottom: 2rem;
 
@@ -147,17 +187,17 @@ export default {
                 content: '';
                 display: inline-block;
                 position: relative;
-                width: 19%;
+                width: 10%;
                 height: 2px;
                 top: -0.4rem;
                 background: $fancy;
             }
 
             h2::before {
-                right: 0.5rem;
+                right: 0.25rem;
             }
             h2:after {
-                left: 0.5rem;
+                left: 0.25rem;
             }
         }
     }
@@ -192,6 +232,7 @@ export default {
 
         .button {
             margin: 2rem auto 3rem;
+            text-align: center;
         }
     }
 
@@ -264,7 +305,23 @@ export default {
 }
 
 @media screen and (min-width: 350px) {
+
     .article-top {
+        .center{
+            .article-title {
+                h2::before,
+                h2::after {
+                    width: 15%;
+                }
+                h2::before {
+                    right: 0.5rem;
+                }
+
+                h2:after {
+                    left: 0.5rem;
+                }
+            }
+        }
         .container {
             p {
                 font: {
@@ -281,6 +338,18 @@ export default {
                     size: 16px;
                     weight: 300;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px){
+
+    .center{
+        .article-title {
+            h2::before,
+            h2::after {
+                width: 19%;
             }
         }
     }
@@ -366,14 +435,19 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .section{
+        top: 0;
+    }
+
     .center {
         width: unset;
-        margin: 0 auto;
+        margin: 3rem auto 0 auto;
     }
 
     .contact-paragraph {
         max-width: unset;
-        margin: 2rem auto;
+        margin: 2rem auto 0 auto;
 
         .center {
             h3 {
@@ -475,6 +549,7 @@ export default {
         .article-box {
             width: 33.333%;
             .center {
+                margin: 0 auto;
                 .article-image {
                     h3 {
                         position: relative;
@@ -500,8 +575,10 @@ export default {
 }
 
 @media screen and (min-width: 1280px) {
+
     .paragraphs-holder {
         max-width: 80rem;
     }
 }
+
 </style>

@@ -1,51 +1,53 @@
 <template>
     <section class="section">
-        <aside class="cartoon-person">
-            <img src="../../assets/img/person2.png" alt="Cartoon person" />
-        </aside>
+        <div class="container">
+            <aside class="cartoon-person" data-aos="fade-right">
+                <img src="../../assets/img/person2.png" alt="Cartoon person"/>
+            </aside>
 
-        <span class="decorative-circle-box">
-            <div class="decorative-circle-bigger">
-                <div class="decorative-circle-smaller"></div>
-            </div>
-        </span>
-
-        <article class="article">
-            <div class="article-title">
-                <h3>Naše najväčšie úspechy</h3>
-            </div>
-
-            <div class="top-box">
-                <div class="top-box-paragraph">
-                    <p>
-                        Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
-                        nás už dlhé roky baví napĺňa a pomáha ľudom
-                    </p>
+            <span class="decorative-circle-box" >
+                <div class="decorative-circle-bigger" data-aos="fade-left">
+                    <div class="decorative-circle-smaller" data-aos="fade-left"></div>
                 </div>
-            </div>
+            </span>
 
-            <div class="bottom-box">
-                <div class="bottom-box-paragraph">
-                    <p>
-                        Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
-                        S.C.P. sú spoločnosti s ktorým sme mali možnosť pomôcť
-                        vymaľovať ich priestory.
-                    </p>
+            <article class="article">
+                <div class="article-title" data-aos="zoom-in">
+                    <h3>Naše najväčšie úspechy</h3>
                 </div>
-            </div>
 
-            <div class="article-paragraph lg">
-                <div class="paragraph-box">
-                    <p>
-                        Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
-                        nás už dlhé roky baví napĺňa a pomáha ľudom. Jaslovské
-                        Bohunice, Bešeňová, VW Group, alebo Mondi S.C.P. sú
-                        spoločnosti s ktorým sme mali možnosť pomôcť vymaľovať
-                        ich priestory.
-                    </p>
+                <div class="top-box">
+                    <div class="top-box-paragraph" data-aos="fade-right">
+                        <p>
+                            Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
+                            nás už dlhé roky baví napĺňa a pomáha ľudom
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </article>
+
+                <div class="bottom-box">
+                    <div class="bottom-box-paragraph" data-aos="fade-left">
+                        <p>
+                            Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
+                            S.C.P. sú spoločnosti s ktorým sme mali možnosť pomôcť
+                            vymaľovať ich priestory.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="article-paragraph lg">
+                    <div class="paragraph-box" data-aos="fade-right">
+                        <p>
+                            Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
+                            nás už dlhé roky baví napĺňa a pomáha ľudom. Jaslovské
+                            Bohunice, Bešeňová, VW Group, alebo Mondi S.C.P. sú
+                            spoločnosti s ktorým sme mali možnosť pomôcť vymaľovať
+                            ich priestory.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
     </section>
 </template>
 
@@ -79,6 +81,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .lg {
         display: none;
@@ -88,16 +91,17 @@ export default {
         position: relative;
         width: 100%;
         background: $primary-light;
+        overflow-x: hidden;
     }
 
     .cartoon-person {
         position: relative;
         width: 5.688rem;
         height: 18.4rem;
-        top: -1.3rem;
+        top: 1.6rem;
         right: 33%;
         margin: 0 auto;
-        z-index: 1;
+        z-index: 4;
 
         img {
             max-width: 100%;
@@ -109,7 +113,7 @@ export default {
             position: absolute;
             width: 15rem;
             height: 15rem;
-            top: 3rem;
+            top: 5rem;
             right: 0;
             background: $primary;
             border-radius: 50%;
@@ -131,11 +135,10 @@ export default {
     .article {
         position: relative;
         width: 100%;
-        top: -3rem;
-        padding: 3rem 0 2rem 0;
+        padding: 3rem 0 1rem 0;
         z-index: 1;
         background-color: $primary-light;
-        box-shadow: 8px 8px 5px rgba($darkest, 16%);
+        border-top: 1px solid $primary;;
 
         .article-title {
             position: relative;
@@ -242,8 +245,6 @@ export default {
 
     .article {
         padding: 5rem 0;
-        border-top: 1px solid $primary;
-        border-bottom: 1px solid $primary;
         background-color: $primary-light;
         box-shadow: none;
 
@@ -270,10 +271,15 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .section {
+        overflow-x: unset;
+    }
+
     .cartoon-person {
         width: 7.688rem;
         height: 11.4rem;
-        top: -14.3rem;
+        top: -11.3rem;
         left: -38%;
     }
 
@@ -290,20 +296,30 @@ export default {
     .paragraph-box {
         p {
             text-align: center;
+            font:{
+                weight: 300;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1280px) {
     .section {
+        width: 100%;
+        
+    }
+    
+    .container{
         max-width: 80rem;
         margin: 0 auto;
     }
 
     .decorative-circle-box {
         .decorative-circle-bigger {
-            right: 7rem;
+            right: 5rem;
+            top: -7rem;
         }
     }
 }
+
 </style>

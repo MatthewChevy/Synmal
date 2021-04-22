@@ -1,33 +1,75 @@
 <template>
-    <section>
-        <div class="background">
-            <div class="container">
-                <h2>Rýchlosť, Odbornosť, Spoľahlivosť</h2>
-                <p>
-                    Chcete nás videť v plnom nasadení ? Pozrite na do našej
-                    <a @click="$router.push({ path: 'gallery' })">Galérie</a>
-                </p>
+    <section class="section">
+        <div class="section-box">
+            <img v-if="wsvga" src="../../assets/img/background/DCS01.jpg" alt="bg">
+            <img v-else src=";p--" alt="bg">
+            <div class="background">
+                <div class="container" data-aos="zoom-in">
+                    <h2>Rýchlosť, Odbornosť, Spoľahlivosť</h2>
+                    <p>
+                        Chcete nás videť v plnom nasadení ? Pozrite na do našej
+                        <a class="link" @click="$router.push({ path: 'gallery' })">Galérie</a>
+                    </p>
 
-                <aside>
-                    Naša práca je založená na individuálnom prístupe - snažíme
-                    sa nájsť optimálne finančné riešenie pre jednotlivcov ako aj
-                    organizácie pri dodržaní kvality práce.
-                </aside>
+                    <aside>
+                        Naša práca je založená na individuálnom prístupe - snažíme
+                        sa nájsť optimálne finančné riešenie pre jednotlivcov ako aj
+                        organizácie pri dodržaní kvality práce.
+                    </aside>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
+<script>
+
+import tableMixins from '../../mixins/tableMixins.js'
+
+export default {
+
+    mixins: [tableMixins],
+
+    data() {
+        return {
+            wsvga: Boolean
+        }
+    },
+
+    mounted () {
+        this.windowSize();
+    },
+
+    methods: {
+        windowSize() {
+            this.actualyWidnowSize > this.breakpoint ? this.wsvga = true : this.wsvga = false
+        }
+    },
+
+
+}
+</script>
+
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
-    section {
-        position: relative;
-        background-image: url('../../assets/img/DCS01.jpg');
-        background-position: center center;
-        background-size: cover;
-        background-attachment: fixed;
-        height: 27rem;
-        top: -3rem;
+
+    .section{
+        height: 34rem;
+ 
+    }
+    .section-box{
+
+        img{
+            width: 100%;
+            min-height: 100vh;
+            position: fixed;
+            background-image: url('../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg');
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+            top: 0rem;
+        }
 
         .background {
             position: relative;
@@ -35,7 +77,11 @@
             background-size: cover;
             background-position: center center;
             z-index: 2;
-            height: 27rem;
+            height: 3rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -46,7 +92,6 @@
         h2 {
             margin: 0 auto;
             position: relative;
-            padding-top: 3rem;
             padding-bottom: 1rem;
             z-index: 3;
             font: {
@@ -68,7 +113,7 @@
             text-align: center;
             color: $primary-soft;
             border-bottom: 1px solid $primary-soft;
-            a {
+            .link {
                 text-decoration: underline;
                 font-style: italic;
                 cursor: pointer;
@@ -88,7 +133,22 @@
     }
 }
 
+@media screen and (min-width: 402px) {
+
+    .section{
+        height: 29rem;
+ 
+    }
+    .section-box{
+        .background {
+ 
+            height: 29rem;
+        }
+    }
+}
+
 @media screen and (min-width: 960px) {
+
     section {
         background-attachment: fixed;
         height: 30rem;
@@ -120,6 +180,15 @@
                 size: 20px;
                 weight: 500;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .section-box {
+        .background {
+            height: 29rem;
         }
     }
 }

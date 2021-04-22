@@ -1,12 +1,12 @@
 <template>
     <section class="section">
         <header>
-            <div class="h1-box">
+            <div class="h1-box" data-aos="fade-down">
                 <h1>O nás</h1>
             </div>
         </header>
 
-        <article class="article-box">
+        <article class="article-box" data-aos="zoom-out">
             <div class="article-paragraph">
                 <p>
                     Sme spoločnosť, ktorej hodnoty sú postavené na úprimnosti,
@@ -24,12 +24,13 @@
 </template>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .section {
         position: relative;
         width: 100%;
         background: $primary-light;
-        border-radius: 10px 10px 0 0;
+        overflow-x: hidden;
     }
 
     header {
@@ -120,12 +121,6 @@
     }
 }
 
-@media screen and (min-width: 500px) {
-    .section {
-        margin-top: 2rem;
-    }
-}
-
 @media screen and (min-width: 768px) {
     .article-box {
         .article-paragraph {
@@ -140,7 +135,7 @@
 
 @media screen and (min-width: 1024px) {
     .section {
-        margin-top: 4rem;
+        padding-top: 4rem;
     }
 
     .article-box {
