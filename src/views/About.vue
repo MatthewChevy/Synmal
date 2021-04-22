@@ -12,10 +12,6 @@
 
         <the-about-third-section />
     </main>
-
-    <footer>
-        <the-about-footer />
-    </footer>
 </template>
 
 <script>
@@ -24,7 +20,6 @@ import TheAboutFirstSection from '../components/About/TheAboutFirstSection'
 import TheAboutSecondSection from '../components/About/TheAboutSecondSection'
 import TheAboutBackgroundPhotoSection from '../components/About/TheAboutBackgroundPhotoSection'
 import TheAboutThirdSection from '../components/About/TheAboutThirdSection'
-import TheAboutFooter from '../components/About/TheAboutFooter'
 
 export default {
     components: {
@@ -33,7 +28,6 @@ export default {
         TheAboutSecondSection,
         TheAboutBackgroundPhotoSection,
         TheAboutThirdSection,
-        TheAboutFooter
     }
 }
 </script>
@@ -45,6 +39,9 @@ export default {
 
 header {
     padding-top: 3.4rem;
+    background-color: $primary-light;
+    position: relative;
+    z-index: 1;
 }
 
 footer {
