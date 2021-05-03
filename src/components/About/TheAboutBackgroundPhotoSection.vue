@@ -1,20 +1,33 @@
 <template>
     <section class="section">
         <div class="section-box">
-            <img v-if="wsvga" src="../../assets/img/background/DCS01.jpg" alt="bg">
-            <img v-else src=";p--" alt="bg">
+            <img
+                v-if="wsvga"
+                src="../../assets/img/background/bg-image-desktop.jpg"
+                alt="bg"
+            />
+            <img
+                v-else
+                src="../../assets/img/background/bg-image-mobile.jpg"
+                alt="bg"
+            />
             <div class="background">
                 <div class="container" data-aos="zoom-in">
                     <h2>Rýchlosť, Odbornosť, Spoľahlivosť</h2>
                     <p>
                         Chcete nás videť v plnom nasadení ? Pozrite na do našej
-                        <a class="link" @click="$router.push({ path: 'gallery' })">Galérie</a>
+                        <a
+                            class="link"
+                            @click="$router.push({ path: 'gallery' })"
+                            >Galérie</a
+                        >
                     </p>
 
                     <aside>
-                        Naša práca je založená na individuálnom prístupe - snažíme
-                        sa nájsť optimálne finančné riešenie pre jednotlivcov ako aj
-                        organizácie pri dodržaní kvality práce.
+                        Naša práca je založená na individuálnom prístupe -
+                        snažíme sa nájsť optimálne finančné riešenie pre
+                        jednotlivcov ako aj organizácie pri dodržaní kvality
+                        práce.
                     </aside>
                 </div>
             </div>
@@ -23,11 +36,9 @@
 </template>
 
 <script>
-
 import tableMixins from '../../mixins/tableMixins.js'
 
 export default {
-
     mixins: [tableMixins],
 
     data() {
@@ -36,34 +47,32 @@ export default {
         }
     },
 
-    mounted () {
-        this.windowSize();
+    mounted() {
+        this.windowSize()
     },
 
     methods: {
         windowSize() {
-            this.actualyWidnowSize > this.breakpoint ? this.wsvga = true : this.wsvga = false
+            this.actualyWidnowSize > this.breakpoint
+                ? (this.wsvga = true)
+                : (this.wsvga = false)
         }
-    },
-
-
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
 
-    .section{
-        height: 34rem;
- 
+    .section {
+        height: 29rem;
     }
-    .section-box{
-
-        img{
+    .section-box {
+        img {
             width: 100%;
             min-height: 100vh;
             position: fixed;
-            background-image: url('../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg');
+            background-image: url('../../assets/img/background/bg-image-mobile.jpg');
             background-position: center center;
             background-size: cover;
             background-attachment: fixed;
@@ -77,7 +86,7 @@ export default {
             background-size: cover;
             background-position: center center;
             z-index: 2;
-            height: 3rem;
+            height: 29rem;
 
             display: flex;
             justify-content: center;
@@ -133,22 +142,9 @@ export default {
     }
 }
 
-@media screen and (min-width: 402px) {
 
-    .section{
-        height: 29rem;
- 
-    }
-    .section-box{
-        .background {
- 
-            height: 29rem;
-        }
-    }
-}
 
 @media screen and (min-width: 960px) {
-
     section {
         background-attachment: fixed;
         height: 30rem;
@@ -185,7 +181,6 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
     .section-box {
         .background {
             height: 29rem;

@@ -7,7 +7,6 @@
                 </div>
                 <div class="contact-paragraph">
                     <div class="center">
-                        <!-- <h3>Kontakt</h3> -->
                         <p data-aos="fade-right">
                             Po <strong>kontakte</strong> s Vami urobíme osobnú
                             prehliadku Vašich priestorov, na základe ktorej
@@ -23,7 +22,7 @@
                     </div>
                 </div>
 
-                <div class="paragraphs-holder" >
+                <div class="paragraphs-holder">
                     <div class="paragraph-box" data-aos="fade-right">
                         <h4>Pred maľovaním</h4>
                         <p>
@@ -33,7 +32,10 @@
                         </p>
                     </div>
 
-                    <div class="paragraph-box center-box" data-aos="fade-center">
+                    <div
+                        class="paragraph-box center-box"
+                        data-aos="fade-center"
+                    >
                         <h4>Počas maľovania</h4>
                         <p>
                             V tejto fáze sa ukážu všetky nedostatky ako
@@ -60,7 +62,7 @@
                 <div class="center">
                     <div class="image-holder">
                         <img
-                            src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg"
+                            src="../../assets/img/gallery/box.jpg"
                             alt="before"
                         />
                     </div>
@@ -74,7 +76,7 @@
                 <div class="center">
                     <div class="image-holder">
                         <img
-                            src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg"
+                            src="../../assets/img/gallery/box.jpg"
                             alt="in progress"
                         />
                     </div>
@@ -88,11 +90,15 @@
                 <div class="center">
                     <div class="image-holder">
                         <img
-                            src="../../assets/img/gallery/123965699_688014581857556_6128033632594933054_n.jpg"
+                            src="../../assets/img/gallery/box.jpg"
                             alt="after"
                         />
                     </div>
-                    <div class="h3-box" :data-aos="textInPhoto" data-aos-offset="10">
+                    <div
+                        class="h3-box"
+                        :data-aos="textInPhoto"
+                        data-aos-offset="10"
+                    >
                         <h3>Po</h3>
                     </div>
                 </div>
@@ -106,7 +112,6 @@ import ThePathButton from '../ThePathButton.vue'
 import tableMixins from '../../mixins/tableMixins.js'
 
 export default {
-
     mixins: [tableMixins],
 
     components: {
@@ -118,11 +123,11 @@ export default {
             textInPhoto: String,
             boxLeft: String,
             boxCenter: String,
-            boxRight: String,
+            boxRight: String
         }
     },
 
-    mounted () {
+    mounted() {
         this.aosSettings()
 
         window.addEventListener('resize', () => {
@@ -132,24 +137,23 @@ export default {
 
     methods: {
         aosSettings() {
-            if(  this.actualyWidnowSize > this.breakpoint ){
-                this.textInPhoto = '' 
+            if (this.actualyWidnowSize > this.breakpoint) {
+                this.textInPhoto = ''
                 this.boxLeft = 'fade-right'
-                this.boxCenter = 'fade-down' 
+                this.boxCenter = 'fade-down'
                 this.boxRight = 'fade-left'
             } else {
                 this.textInPhoto = 'zoom-in'
                 this.boxLeft = ''
-                this.boxCenter = '' 
+                this.boxCenter = ''
                 this.boxRight = ''
             }
         }
-    },
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .container {
         width: $sm-width-container;
@@ -167,7 +171,7 @@ export default {
         width: 100%;
         background: $primary-light;
         z-index: 0;
-        padding-top: 2.5rem;
+        padding-top: 3.5rem;
         border-bottom: 1px solid $primary;
         padding-bottom: 2rem;
 
@@ -305,9 +309,8 @@ export default {
 }
 
 @media screen and (min-width: 350px) {
-
     .article-top {
-        .center{
+        .center {
             .article-title {
                 h2::before,
                 h2::after {
@@ -343,9 +346,8 @@ export default {
     }
 }
 
-@media screen and (min-width: 375px){
-
-    .center{
+@media screen and (min-width: 375px) {
+    .center {
         .article-title {
             h2::before,
             h2::after {
@@ -435,8 +437,7 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
-    .section{
+    .section {
         top: 0;
     }
 
@@ -575,10 +576,8 @@ export default {
 }
 
 @media screen and (min-width: 1280px) {
-
     .paragraphs-holder {
         max-width: 80rem;
     }
 }
-
 </style>

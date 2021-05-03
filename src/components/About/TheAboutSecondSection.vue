@@ -2,25 +2,31 @@
     <section class="section">
         <div class="container">
             <aside class="cartoon-person" data-aos="fade-right">
-                <img src="../../assets/img/person2.png" alt="Cartoon person"/>
+                <img
+                    src="../../assets/img/decoration/person2.png"
+                    alt="Cartoon person"
+                />
             </aside>
 
-            <span class="decorative-circle-box" >
+            <span class="decorative-circle-box">
                 <div class="decorative-circle-bigger" data-aos="fade-left">
-                    <div class="decorative-circle-smaller" data-aos="fade-left"></div>
+                    <div
+                        class="decorative-circle-smaller"
+                        data-aos="fade-left"
+                    ></div>
                 </div>
             </span>
 
             <article class="article">
-                <div class="article-title" data-aos="zoom-in">
-                    <h3>Naše najväčšie úspechy</h3>
+                <div class="h2-box" data-aos="fade-down">
+                    <h2>Naše úspechy</h2>
                 </div>
 
                 <div class="top-box">
                     <div class="top-box-paragraph" data-aos="fade-right">
                         <p>
-                            Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
-                            nás už dlhé roky baví napĺňa a pomáha ľudom
+                            Náš najväčší úspech je že môžeme vykonávať remeslo
+                            ktoré nás už dlhé roky baví napĺňa a pomáha ľudom
                         </p>
                     </div>
                 </div>
@@ -29,8 +35,8 @@
                     <div class="bottom-box-paragraph" data-aos="fade-left">
                         <p>
                             Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
-                            S.C.P. sú spoločnosti s ktorým sme mali možnosť pomôcť
-                            vymaľovať ich priestory.
+                            S.C.P. sú spoločnosti s ktorým sme mali možnosť
+                            pomôcť vymaľovať ich priestory.
                         </p>
                     </div>
                 </div>
@@ -38,11 +44,11 @@
                 <div class="article-paragraph lg">
                     <div class="paragraph-box" data-aos="fade-right">
                         <p>
-                            Náš najväčší úspech je že môžeme vykonávať remeslo ktoré
-                            nás už dlhé roky baví napĺňa a pomáha ľudom. Jaslovské
-                            Bohunice, Bešeňová, VW Group, alebo Mondi S.C.P. sú
-                            spoločnosti s ktorým sme mali možnosť pomôcť vymaľovať
-                            ich priestory.
+                            Náš najväčší úspech je že môžeme vykonávať remeslo
+                            ktoré nás už dlhé roky baví napĺňa a pomáha ľudom.
+                            Jaslovské Bohunice, Bešeňová, VW Group, alebo Mondi
+                            S.C.P. sú spoločnosti s ktorým sme mali možnosť
+                            pomôcť vymaľovať ich priestory.
                         </p>
                     </div>
                 </div>
@@ -81,7 +87,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .lg {
         display: none;
@@ -97,8 +102,8 @@ export default {
     .cartoon-person {
         position: relative;
         width: 5.688rem;
-        height: 18.4rem;
-        top: 1.6rem;
+        height: 19.4rem;
+        top: 2.6rem;
         right: 33%;
         margin: 0 auto;
         z-index: 4;
@@ -138,22 +143,42 @@ export default {
         padding: 3rem 0 1rem 0;
         z-index: 1;
         background-color: $primary-light;
-        border-top: 1px solid $primary;;
+        border-top: 1px solid $primary;
+    
+        .h2-box {
+            text-align: center;
 
-        .article-title {
-            position: relative;
-            margin: 0 auto;
-            z-index: 1;
-
-            h3 {
-                padding-bottom: 3rem;
-                text-align: center;
-                color: $darkest;
+            h2 {
+                padding-bottom: 2.5rem;
+                color: $primary-dark;
                 font: {
                     size: 30px;
                     weight: 300;
                 }
             }
+            h2::before,
+            h2::after {
+                content: '';
+                display: inline-block;
+                position: relative;
+                width: 10%;
+                height: 2px;
+                top: -0.4rem;
+                background: $fancy;
+            }
+
+            h2::before {
+                right: 0.5rem;
+            }
+            h2::after {
+                left: 0.5rem;
+            }
+        }
+
+        .article-title {
+            position: relative;
+            margin: 0 auto;
+            z-index: 1;
         }
 
         .top-box {
@@ -213,7 +238,22 @@ export default {
 }
 
 @media screen and (min-width: 350px) {
+
     .article {
+
+        .h2-box {
+            h2::before,
+            h2::after {
+                width: 13%; 
+            }
+
+            h2::before {
+                right: 1rem;
+            }
+            h2::after {
+                left: 1rem;
+            }
+        }
         .top-box {
             .top-box-paragraph {
                 p {
@@ -248,6 +288,13 @@ export default {
         background-color: $primary-light;
         box-shadow: none;
 
+        .h2-box {
+            h2::before,
+            h2::after {
+                width: 15%; 
+            }
+        }
+
         .top-box,
         .bottom-box {
             display: none;
@@ -266,12 +313,17 @@ export default {
             text-align: center;
             margin: 0 auto;
             text-align: justify;
+
+            p{
+                font:{
+                    weight: 300;
+                }
+            }
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
-
     .section {
         overflow-x: unset;
     }
@@ -296,7 +348,7 @@ export default {
     .paragraph-box {
         p {
             text-align: center;
-            font:{
+            font: {
                 weight: 300;
             }
         }
@@ -306,10 +358,9 @@ export default {
 @media screen and (min-width: 1280px) {
     .section {
         width: 100%;
-        
     }
-    
-    .container{
+
+    .container {
         max-width: 80rem;
         margin: 0 auto;
     }
@@ -321,5 +372,4 @@ export default {
         }
     }
 }
-
 </style>
