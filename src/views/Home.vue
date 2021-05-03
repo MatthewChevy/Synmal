@@ -17,7 +17,6 @@
 
 <script>
 import TheHomeHeader from '../components/Home/TheHomeHeader.vue'
-
 import TheHomeFirstSection from '../components/Home/TheHomeFirstSection.vue'
 import TheHomeSecondSection from '../components/Home/TheHomeSecondSection.vue'
 import TheHomeAsideContent from '../components/Home/TheHomeAsideContent.vue'
