@@ -1,14 +1,17 @@
 <template>
     <header>
-        <div class="h2-box">
+        <div class="h2-box" data-aos="fade-down">
             <h2>Kontaktujte nás</h2>
         </div>
-        <div class="background-box">
-            <img src="../assets/img/email-background.png" alt="email ilustration">
+        <div class="background-box" data-aos="zoom-out">
+            <img
+                src="../assets/img/decoration/email-background.png"
+                alt="email ilustration"
+            />
         </div>
     </header>
     <main>
-        <div class="contact-form">
+        <div class="contact-form" data-aos="zoom-out">
             <form class="form" method="GET">
                 <div class="form-name">
                     <input
@@ -36,9 +39,12 @@
                 </div>
 
                 <div class="checkbox-holder">
-                    <label for="checkbox">Súhlasím zo spracovaním <a href="#">osobných údajov</a></label>
+                    <label for="checkbox"
+                        >Súhlasím zo spracovaním
+                        <a href="#">osobných údajov</a></label
+                    >
                     <div class="checkbox-center">
-                        <input type="checkbox" name="" required>
+                        <input type="checkbox" name="" required />
                     </div>
                 </div>
 
@@ -49,31 +55,38 @@
         </div>
 
         <div class="container">
-
-            <div class="email-box">
+            <div class="email-box" :data-aos="emailBox">
                 <div class="email-img">
-                    <img src="../assets/img/icons/email.icon.png" alt="email-cartoon">
+                    <img
+                        src="../assets/img/icons/email-icon.png"
+                        alt="email-cartoon"
+                    />
                 </div>
                 <div class="email-content">
-                    <a href="mailto: matej.sevcik11@gmail.com">synmal.inbox@gmail.com</a>
+                    <a href="mailto: matej.sevcik11@gmail.com"
+                        >synmal.inbox@gmail.com</a
+                    >
                 </div>
             </div>
-
-
-            <div class="telephone-box">
+            <div class="telephone-box" :data-aos="telephoneBox">
                 <div class="telephone-img">
-                    <img src="../assets/img/icons/telephone.icon.png" alt="telephone-cartoon">
+                    <img
+                        src="../assets/img/icons/telephone-icon.png"
+                        alt="telephone-cartoon"
+                    />
                 </div>
-                <div class="telephone-content"> 
+                <div class="telephone-content">
                     <a href="tel:+421948880678">0948880678</a>
                 </div>
             </div>
-
-            <div class="navigation-box">
+            <div class="navigation-box" :data-aos="navigationBox">
                 <div class="navigation-img">
-                    <img src="../assets/img/icons/navigation.icon.png" alt="navigation-cartoon">
+                    <img
+                        src="../assets/img/icons/navigation-icon.png"
+                        alt="navigation-cartoon"
+                    />
                 </div>
-                <div class="navigation-content"> 
+                <div class="navigation-content">
                     <ul>
                         <li>Ivachnová 183</li>
                         <li>034 83 Ivachnová</li>
@@ -82,15 +95,45 @@
                 </div>
             </div>
         </div>
-
     </main>
 </template>
 
+<script>
+import tableMixins from '../mixins/tableMixins.js'
+import { debounce } from 'lodash-es'
+
+export default {
+    data() {
+        return {
+            emailBox: 'fade-right',
+            telephoneBox: 'fade-left',
+            navigationBox: 'fade-down'
+        }
+    },
+
+    mixins: [tableMixins],
+
+    mounted() {
+        this.setAOSProperty()
+
+        window.addEventListener('resize', () => {
+            this.setAOSProperty()
+        })
+    },
+
+    methods: {
+        setAOSProperty: debounce(function() {
+            if (this.actualyWidnowSize >= this.breakpoint) {
+                this.telephoneBox = 'zoom-out'
+                this.navigationBox = 'fade-left'
+            }
+        }, 100)
+    }
+}
+</script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     header {
         position: relative;
         background-color: $primary-light;
@@ -114,6 +157,7 @@
                 content: '';
                 display: inline-block;
                 position: relative;
+                max-width: 12rem;
                 width: 14%;
                 height: 2px;
                 top: -0.4rem;
@@ -125,15 +169,16 @@
             }
             h2::after {
                 left: 0.5rem;
-           }
+            }
         }
 
-        .background-box{
+        .background-box {
             position: relative;
+            width: 90%;
             max-width: 30rem;
             margin: 0 auto;
             z-index: 1;
-            img{
+            img {
                 position: relative;
                 top: 1rem;
                 right: 0;
@@ -148,40 +193,21 @@
         margin: 0 auto;
         background-color: $primary-light;
         z-index: 0;
-
     }
 
-    .contact-form{
+    .contact-form {
         position: relative;
         width: $sm-width-container;
         top: 5rem;
         margin: 0 auto;
 
-        .form{
-            text-align: center
+        .form {
+            text-align: center;
         }
     }
 
-    .form-name{
-        input[type="name"]{
-            width: 100%;
-            height: 3rem;
-            padding: 0 1rem;
-            border-radius: 20px;
-            border: 1px solid $primary;
-        } 
-
-        input:focus[type="name"]{
-            outline: none;
-            background-color: $primary-soft;
-            transition: 0.2s;
-        }
-    }
-
-    .form-email{
-        margin-top: 1rem;
-
-        input[type="email"]{
+    .form-name {
+        input[type='name'] {
             width: 100%;
             height: 3rem;
             padding: 0 1rem;
@@ -189,52 +215,72 @@
             border: 1px solid $primary;
         }
 
-        input:focus[type="email"]{
+        input:focus[type='name'] {
             outline: none;
             background-color: $primary-soft;
             transition: 0.2s;
         }
-
     }
 
-    .form-textarea{
+    .form-email {
         margin-top: 1rem;
-        textarea{
+
+        input[type='email'] {
             width: 100%;
-            height: 12rem;
+            height: 3rem;
+            padding: 0 1rem;
+            border-radius: 20px;
+            border: 1px solid $primary;
+        }
+
+        input:focus[type='email'] {
+            outline: none;
+            background-color: $primary-soft;
+            transition: 0.2s;
+        }
+    }
+
+    .form-textarea {
+        margin-top: 1rem;
+        textarea {
+            max-width: 23rem;
+            min-width: 23rem;
+            width: 100%;
+            min-height: 16rem;
+            max-height: 25rem;
             padding: 1rem 0.5rem 1rem 1rem;
             border-radius: 20px;
             border: 1px solid $primary;
-            font:{
+            font: {
                 size: 14px;
             }
         }
 
-        textarea:focus{
+        textarea:focus {
             outline: none;
             background-color: $primary-soft;
             transition: 0.2s;
         }
     }
 
-    .checkbox-holder{
+    .checkbox-holder {
         position: relative;
         top: 1rem;
 
-        label{
-            font:{
+        label {
+            font: {
                 size: 15px;
                 weight: 300;
             }
         }
-    }   
+    }
 
-    .checkbox-center{
+    .checkbox-center {
         position: relative;
         top: 1rem;
     }
 
-    input[type="checkbox"]{
+    input[type='checkbox'] {
         position: relative;
         width: 50px;
         height: 20px;
@@ -242,16 +288,16 @@
         background: $primary;
         outline: none;
         border-radius: 20px;
-        box-shadow: inset 0 0 5px rgb(0,0,0,.2);
-        transition: .5s;
+        box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.2);
+        transition: 0.5s;
     }
 
-    input:checked[type="checkbox"]{
+    input:checked[type='checkbox'] {
         background: $fancy;
         transition: 1.5s;
     }
 
-    input[type="checkbox"]:before{
+    input[type='checkbox']:before {
         content: '';
         position: absolute;
         width: 20px;
@@ -260,17 +306,17 @@
         top: 0;
         left: 0;
         background: $primary-light;
-        transition: .5s;
+        transition: 0.5s;
         transform: scale(1.1);
-        box-shadow: 0 2px 5px rgba(0,0,0,.2);
-        transition: .5s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
     }
 
-    input:checked[type="checkbox"]:before{
+    input:checked[type='checkbox']:before {
         transform: translateX(30px);
     }
-   
-    .form-button{
+
+    .form-button {
         position: relative;
         top: 4rem;
         button {
@@ -287,15 +333,24 @@
                 weight: 300;
             }
         }
-
     }
 
-    .container{
+    .form-button:hover,
+    :focus {
+        button {
+            transform: scale(1.05);
+            background-color: darken($fancy, 5%);
+            transition: 0.5s;
+        }
+    }
+
+    .container {
         position: relative;
         top: 10rem;
+        overflow-x: hidden;
     }
 
-    .email-box{
+    .email-box {
         position: relative;
         width: 100%;
         margin-top: 5rem;
@@ -304,19 +359,19 @@
         border-top: 1px solid $primary;
         border-bottom: 1px solid $primary;
 
-        .email-img{   
+        .email-img {
             width: 5rem;
-            margin:  0 auto;
-            img{
+            margin: 0 auto;
+            img {
                 width: 100%;
             }
         }
 
-        .email-content{
+        .email-content {
             width: 100%;
             text-align: center;
             margin-top: 1rem;
-            a{
+            a {
                 color: $primary-dark;
                 font-size: 22px;
                 font-weight: 300;
@@ -324,25 +379,25 @@
         }
     }
 
-    .telephone-box{
+    .telephone-box {
         position: relative;
         width: 100%;
         margin: 3rem 0;
         padding: 3rem 0 5rem 0;
 
-        .telephone-img{   
+        .telephone-img {
             width: 4rem;
-            margin:  0 auto;
+            margin: 0 auto;
 
-            img{
+            img {
                 width: 100%;
             }
         }
 
-        .telephone-content{
+        .telephone-content {
             text-align: center;
             margin-top: 1rem;
-            a{
+            a {
                 color: $primary-dark;
                 font-size: 22px;
                 font-weight: 300;
@@ -350,7 +405,7 @@
         }
     }
 
-    .navigation-box{
+    .navigation-box {
         position: relative;
         width: 100%;
         text-align: center;
@@ -359,20 +414,20 @@
         background-color: $primary-soft;
         border-top: 1px solid $primary;
         border-bottom: 1px solid $primary;
-        .navigation-img{   
+        .navigation-img {
             width: 3.5rem;
-            margin:  0 auto;
-            img{
+            margin: 0 auto;
+            img {
                 width: 100%;
             }
         }
 
-        .navigation-content{
+        .navigation-content {
             width: 100%;
             text-align: center;
             margin-top: 1rem;
-            ul{
-                li{
+            ul {
+                li {
                     color: $primary-dark;
                     font-size: 22px;
                     font-weight: 300;
@@ -383,14 +438,13 @@
 }
 
 @media screen and (min-width: 400px) {
-
     header {
         .h2-box h2 {
             font: {
                 size: 30px;
             }
         }
-        .h2-box{
+        .h2-box {
             h2::before,
             h2::after {
                 width: 15%;
@@ -406,34 +460,66 @@
         }
     }
 
-    .contact-form{
+    .contact-form {
         width: 100%;
     }
 
-    .form-name{
-        input[type="name"]{
-            height: 3.5rem;
-            width: 23rem;
-        } 
-    }
-
-    .form-email{
-        input[type="email"]{
+    .form-name {
+        input[type='name'] {
             height: 3.5rem;
             width: 23rem;
         }
     }
 
-    .form-textarea{
-        textarea{
+    .form-email {
+        input[type='email'] {
+            height: 3.5rem;
+            width: 23rem;
+        }
+    }
+
+    .form-textarea {
+        textarea {
             width: 23rem;
         }
     }
 }
 
+@media screen and (min-width: 1024px) {
+    header {
+        top: 6rem;
+    }
 
-@media screen and (min-width: 968px) {
+    main {
+        top: 3rem;
+    }
 
+    .form {
+        width: 25rem;
+        margin: 0 auto;
+    }
+
+    .container {
+        display: flex;
+        top: 15rem;
+    }
+
+    .email-box,
+    .telephone-box,
+    .navigation-box {
+        width: 25rem;
+        margin: 0 auto;
+        border-top: none;
+        border-bottom: none;
+        background-color: unset;
+    }
+
+    .telephone-box {
+        padding: 6rem 0 5rem 0;
+    }
+
+    .navigation-box {
+        padding: 5.1rem 0 5rem 0;
+    }
 }
-
 </style>
