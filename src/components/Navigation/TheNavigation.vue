@@ -26,7 +26,7 @@
                             tabindex="1"
                             @click="$router.push({ path: 'about' })"
                         >
-                            O NAS
+                            O NÁS
                         </li>
                         <li
                             class="list-item"

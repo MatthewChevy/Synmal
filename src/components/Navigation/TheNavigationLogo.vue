@@ -4,7 +4,7 @@
             <div class="img-box">
                 <img
                     class="navigation-logo"
-                    src="../../assets/img/logo.png"
+                    src="../../assets/img/decoration/logo.png"
                     alt="Logo"
                 />
             </div>
