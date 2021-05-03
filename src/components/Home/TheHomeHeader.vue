@@ -1,89 +1,79 @@
 <template>
     <article>
         <div class="bg-image-box">
-            <div class="bg-image">
-            </div>
+            <div class="bg-image"></div>
         </div>
 
         <the-home-title-section />
-    
-        <h3 class="width">Width: {{ width }}</h3>
-        <h3 class="height">Height: {{ height }}</h3>
     </article>
 </template>
 
 <script>
-
 import TheHomeTitleSection from './TheHomeTitleSection'
 import tableMixins from '../../mixins/tableMixins.js'
 import { debounce } from 'lodash-es'
 
 export default {
-
     mixins: [tableMixins],
 
     components: {
-
-        TheHomeTitleSection,
+        TheHomeTitleSection
     },
 
     emits: ['end-ani-titles'],
 
     data() {
         return {
-            width: window.innerWidth,
-            height: window.innerHeight,
             bgImageBox: Object,
             ratio: Number
         }
     },
 
-    mounted () {
-
+    mounted() {
         this.bgImageBox = document.getElementsByClassName('bg-image-box')[0]
         this.setParallaxRatio()
-        
+
         window.addEventListener('scroll', () => {
             this.parallax(this.bgImageBox, window.scrollY, this.ratio)
         })
 
-         window.addEventListener('resize', () => { 
-             this.ratioWindowSizeChanger() 
+        window.addEventListener('resize', () => {
+            this.ratioWindowSizeChanger()
         })
     },
 
     methods: {
-
-        ratioWindowSizeChanger: debounce( function() {
-            this.actualyWidnowSize > this.breakpoint ? this.ratio = -0.1 : this.ratio = 0.15
+        ratioWindowSizeChanger: debounce(function() {
+            this.actualyWidnowSize > this.breakpoint
+                ? (this.ratio = -0.1)
+                : (this.ratio = 0.15)
         }, 150),
 
-        setParallaxRatio(){
-            this.actualyWidnowSize > this.breakpoint ? this.ratio = -0.1 : this.ratio = 0.15
+        setParallaxRatio() {
+            this.actualyWidnowSize > this.breakpoint
+                ? (this.ratio = -0.1)
+                : (this.ratio = 0.15)
         }
-    },
-
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     article {
         position: relative;
     }
 
-    .bg-image-box{
+    .bg-image-box {
         position: fixed;
-        background-image: url("../../assets/img/city.jpg");
+        background-image: url('../../assets/img/background/bg-image-mobile.jpg');
         background-position: center center;
         background-size: cover;
         height: 51.1rem;
         width: 100%;
         top: -3.5rem;
 
-        .bg-image{
+        .bg-image {
             position: absolute;
             background-color: rgba(0, 0, 0, 30%);
             background-size: cover;
@@ -96,16 +86,15 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
-    .bg-image-box{
-        background-image: url("../../assets/img/DCS02.jpg");
+    .bg-image-box {
+        background-image: url('../../assets/img/background/bg-image-desktop.jpg');
         background-position: center center;
         background-size: cover;
         height: 64rem;
         width: 100%;
         top: -3.5rem;
 
-        .bg-image{
+        .bg-image {
             position: absolute;
             background-size: cover;
             background-position: center center;
@@ -115,5 +104,4 @@ export default {
         }
     }
 }
-
 </style>

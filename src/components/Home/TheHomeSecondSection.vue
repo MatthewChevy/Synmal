@@ -12,7 +12,7 @@
                     <div class="logo-holder" data-aos="fade-left">
                         <img
                             class="sm-screen"
-                            src="../../assets/img/wagner.png"
+                            src="../../assets/img/decoration/wagner.png"
                             alt="wagner logo"
                         />
                     </div>
@@ -22,7 +22,7 @@
                                 <img
                                     data-aos="fade-right"
                                     class="lg-screen"
-                                    src="../../assets/img/wagner.png"
+                                    src="../../assets/img/decoration/wagner.png"
                                     alt="wagner logo"
                                 />
                             </div>
@@ -38,7 +38,7 @@
                                 data-aos="zoom-in-up"
                             >
                                 <img
-                                    src="../../assets/img/wagner-machine.jpg"
+                                    src="../../assets/img/decoration/wagner-machine.jpg"
                                     alt="airless painting unit"
                                 />
                             </div>
@@ -56,7 +56,7 @@
                             data-aos="fade-right"
                         >
                             <img
-                                src="../../assets/img/wagner-machine.jpg"
+                                src="../../assets/img/decoration/wagner-machine.jpg"
                                 alt="airless painting unit"
                             />
                         </div>
@@ -67,10 +67,6 @@
         <aside class="decorative-line"></aside>
     </section>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
@@ -103,7 +99,7 @@ export default {}
         width: 100%;
         margin: 2rem auto;
 
-        width: 21.3rem;
+        width: 21rem;
         margin: 2rem 0;
         text-align: left;
         padding: 0;
@@ -111,7 +107,7 @@ export default {}
         h3 {
             color: $darkest;
             font-size: 19px;
-            font-weight: 400;
+            font-weight: 300;
 
             strong {
                 font: {

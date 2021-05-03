@@ -14,7 +14,7 @@
 
                     <div class="image-holder" :data-aos="zoom">
                         <img
-                            src="../../assets/img/painbrush.png"
+                            src="../../assets/img/decoration/painbrush.png"
                             alt="Roof painting"
                         />
                     </div>
@@ -35,7 +35,7 @@
                     <h4>Malovanie exteriérov</h4>
                     <div class="image-holder" :data-aos="zoom">
                         <img
-                            src="../../assets/img/painbrush.png"
+                            src="../../assets/img/decoration/painbrush.png"
                             alt="Roof painting"
                         />
                     </div>
@@ -53,7 +53,7 @@
                     <h4>Nátery striech</h4>
                     <div class="image-holder" :data-aos="zoom">
                         <img
-                            src="../../assets/img/painbrush.png"
+                            src="../../assets/img/decoration/painbrush.png"
                             alt="Roof painting"
                         />
                     </div>
@@ -70,7 +70,7 @@
                     <h4>Nátery drevených profilov</h4>
                     <div class="image-holder" :data-aos="zoom">
                         <img
-                            src="../../assets/img/painbrush.png"
+                            src="../../assets/img/decoration/painbrush.png"
                             alt="Roof painting"
                         />
                     </div>
@@ -135,7 +135,7 @@ export default {
             this.responsiveASO()
         })
     },
-    
+
     methods: {
         scrollSelectBox: throttle(function() {
             //Box selecting
@@ -177,8 +177,8 @@ export default {
                 }
             }
         }, 100),
-    
-        responsiveASO: debounce(function() {  
+
+        responsiveASO: debounce(function() {
             if (this.actualyWidnowSize > this.breakpoint) {
                 // AOS responsive
                 this.zoom = ''
@@ -191,18 +191,17 @@ export default {
                 this.slideDown = ''
                 this.slideLeft = ''
             }
-        },100),
+        }, 100),
 
-        setAOSProperty: debounce(function() {
+        setAOSProperty() {
             if (this.actualyWidnowSize > this.breakpoint) {
                 this.zoom = ''
                 this.slideRight = 'fade-right'
                 this.slideDown = 'fade-down'
                 this.slideLeft = 'fade-left'
             }
-        })
+        }
     }
-
 }
 </script>
 

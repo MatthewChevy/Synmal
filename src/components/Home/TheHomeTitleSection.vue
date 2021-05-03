@@ -39,29 +39,30 @@ export default {
 
     data() {
         return {
-            sectionTitle: Object,
+            sectionTitle: Object
         }
     },
 
     mounted() {
         this.sectionTitle = document.getElementsByClassName('section-title')[0]
-        window.addEventListener('scroll', () => { this.titleParallax() })
+        window.addEventListener('scroll', () => {
+            this.titleParallax()
+        })
     },
 
     methods: {
         titleParallax() {
-            if( this.actualyWidnowSize >= this.breakpoint){ //1024+
-                this.parallax(this.sectionTitle, window.scrollY, -0.25) 
+            if (this.actualyWidnowSize >= this.breakpoint) {
+                //1024+
+                this.parallax(this.sectionTitle, window.scrollY, -0.25)
             }
         }
-    },
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .section-title {
         position: absolute;
     }
@@ -123,6 +124,7 @@ export default {
             color: $primary-soft;
             padding-bottom: 3rem;
             letter-spacing: -1px;
+            line-height: 45px;
             font: {
                 size: 40px;
                 family: $font-lora;
@@ -140,7 +142,7 @@ export default {
         .contact-link-button {
             width: 14rem;
             margin: 0 auto;
-            padding: 0.10rem 1.5rem;
+            padding: 0.1rem 1.5rem;
             color: $primary-soft;
             border: 1.5px solid $primary-soft;
             background-color: transparent;
@@ -164,7 +166,6 @@ export default {
         }
     }
 
-
     @keyframes spanFadeIn {
         0% {
             width: 0rem;
@@ -185,7 +186,7 @@ export default {
             transform: scaleY(100%);
             opacity: 1;
         }
-    }   
+    }
 
     @keyframes textBottomFadeIn {
         0% {
@@ -208,11 +209,9 @@ export default {
             opacity: 1;
         }
     }
-
 }
 
 @media screen and (min-width: 1024px) {
-
     .section-title {
         position: fixed;
         width: 100%;
@@ -233,7 +232,7 @@ export default {
         top: 0rem;
         text-align: center;
 
-        .h2-box{
+        .h2-box {
             h2 {
                 top: 0px;
                 font: {
@@ -253,7 +252,7 @@ export default {
         margin: 0 auto;
         padding-top: 6rem;
 
-        .h1-box{
+        .h1-box {
             h1 {
                 max-width: 60rem;
                 font: {
@@ -263,8 +262,8 @@ export default {
         }
     }
 
-    .button{
-       top: 21rem; 
+    .button {
+        top: 21rem;
     }
 
     .contact-link-button {
@@ -285,5 +284,4 @@ export default {
         }
     }
 }
-
 </style>

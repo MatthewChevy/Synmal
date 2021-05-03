@@ -3,7 +3,10 @@
         <div class="container">
             <div class="decorative-bucket-box">
                 <div class="decorative-bucket lg-screen" data-aos="fade-left">
-                    <img src="../../assets/img/jupol.png" alt="Jupol bucket" />
+                    <img
+                        src="../../assets/img/decoration/jupol.png"
+                        alt="Jupol bucket"
+                    />
                 </div>
                 <div class="decorative-bucket-paragraph">
                     <p class="p-1">
@@ -17,7 +20,7 @@
                         data-aos="fade-left"
                     >
                         <img
-                            src="../../assets/img/jupol.png"
+                            src="../../assets/img/decoration/jupol.png"
                             alt="Jupol bucket"
                         />
                     </div>
