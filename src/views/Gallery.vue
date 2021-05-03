@@ -191,6 +191,7 @@ export default {
         }
     }
 }
+
 </script>
 
 <style lang="scss">
@@ -380,7 +381,5 @@ export default {
         }
     }
 }
-
-
 
 </style>
