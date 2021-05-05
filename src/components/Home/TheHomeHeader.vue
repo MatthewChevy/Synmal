@@ -52,7 +52,7 @@ export default {
         setParallaxRatio() {
             this.actualyWidnowSize > this.breakpoint
                 ? (this.ratio = -0.1)
-                : (this.ratio = 0.15)
+                : (this.ratio = -0.5)
         }
     }
 }
