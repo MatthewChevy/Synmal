@@ -1,113 +1,130 @@
 <template>
-    <header>
-        <div class="h2-box" data-aos="fade-down">
-            <h2>Kontaktujte nás</h2>
-        </div>
-        <div class="background-box" data-aos="zoom-out">
-            <img
-                src="../assets/img/decoration/email-background.png"
-                alt="email ilustration"
-            />
-        </div>
-    </header>
-    <main>
-        <div class="contact-form" data-aos="zoom-out">
-            <form class="form" method="GET">
-                <div class="form-name">
-                    <input
-                        type="name"
-                        name="name"
-                        placeholder="Meno a Priezvisko"
-                        required
-                    />
-                </div>
+    <div class="contact-box">
+        <header>
+            <div class="h2-box" data-aos="fade-down">
+                <h2>Kontaktujte nás</h2>
+            </div>
+            <div class="background-box" data-aos="zoom-out">
+                <img
+                    src="../assets/img/decoration/email-background.png"
+                    alt="email ilustration"
+                />
+            </div>
+        </header>
+        <main>
+            <div class="contact-form">
+                <form class="form" method="GET" @submit.prevent="sendEmail">
+                    <div class="form-name">
+                        <input
+                            v-model="name"
+                            type="name"
+                            name="name"
+                            placeholder="Meno a Priezvisko"
+                            required
+                        />
+                    </div>
 
-                <div class="form-email">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        required
-                    />
-                </div>
+                    <div class="form-email">
+                        <input
+                            v-model="email"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
 
-                <div class="form-textarea">
-                    <textarea
-                        name="message"
-                        placeholder="Vaša správa"
-                    ></textarea>
-                </div>
+                    <div class="form-textarea">
+                        <textarea
+                            v-model="textarea"
+                            name="message"
+                            placeholder="Vaša správa"
+                            required
+                        ></textarea>
+                    </div>
 
-                <div class="checkbox-holder">
-                    <label for="checkbox"
-                        >Súhlasím zo spracovaním
-                        <a href="#">osobných údajov</a></label
-                    >
-                    <div class="checkbox-center">
-                        <input type="checkbox" name="" required />
+                    <div class="checkbox-holder">
+                        <label for="checkbox"
+                            >Súhlasím zo spracovaním
+                            <a href="#">osobných údajov</a></label
+                        >
+                        <div class="checkbox-center">
+                            <input type="checkbox" name="" required />
+                        </div>
+                    </div>
+
+                    <div class="form-button">
+                        <button type="submit">Odoslať správu</button>
+                    </div>
+                </form>
+                <div class="notification-box">
+                    <div class="notification">
+                        <div>Váš email bol odoslaný</div> 
+                    </div>
+                </div>    
+            </div>
+
+            <div class="container">
+                <div class="email-box" :data-aos="emailBox">
+                    <div class="email-img">
+                        <img
+                            src="../assets/img/icons/email-icon.png"
+                            alt="email-cartoon"
+                        />
+                    </div>
+                    <div class="email-content">
+                        <a href="mailto: matej.sevcik11@gmail.com"
+                            >synmal.inbox@gmail.com</a
+                        >
                     </div>
                 </div>
+                <div class="telephone-box" :data-aos="telephoneBox">
+                    <div class="telephone-img">
+                        <img
+                            src="../assets/img/icons/telephone-icon.png"
+                            alt="telephone-cartoon"
+                        />
+                    </div>
+                    <div class="telephone-content">
+                        <a href="tel:+421948880678">0948880678</a>
+                    </div>
+                </div>
+                <div class="navigation-box" :data-aos="navigationBox">
+                    <div class="navigation-img">
+                        <img
+                            src="../assets/img/icons/navigation-icon.png"
+                            alt="navigation-cartoon"
+                        />
+                    </div>
+                    <div class="navigation-content">
+                        <ul>
+                            <li>Ivachnová 183</li>
+                            <li>034 83 Ivachnová</li>
+                            <li>Slovenská Republika</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-                <div class="form-button">
-                    <button type="submit">Odoslať správu</button>
-                </div>
-            </form>
-        </div>
-
-        <div class="container">
-            <div class="email-box" :data-aos="emailBox">
-                <div class="email-img">
-                    <img
-                        src="../assets/img/icons/email-icon.png"
-                        alt="email-cartoon"
-                    />
-                </div>
-                <div class="email-content">
-                    <a href="mailto: matej.sevcik11@gmail.com"
-                        >synmal.inbox@gmail.com</a
-                    >
-                </div>
-            </div>
-            <div class="telephone-box" :data-aos="telephoneBox">
-                <div class="telephone-img">
-                    <img
-                        src="../assets/img/icons/telephone-icon.png"
-                        alt="telephone-cartoon"
-                    />
-                </div>
-                <div class="telephone-content">
-                    <a href="tel:+421948880678">0948880678</a>
-                </div>
-            </div>
-            <div class="navigation-box" :data-aos="navigationBox">
-                <div class="navigation-img">
-                    <img
-                        src="../assets/img/icons/navigation-icon.png"
-                        alt="navigation-cartoon"
-                    />
-                </div>
-                <div class="navigation-content">
-                    <ul>
-                        <li>Ivachnová 183</li>
-                        <li>034 83 Ivachnová</li>
-                        <li>Slovenská Republika</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </template>
 
 <script>
 import tableMixins from '../mixins/tableMixins.js'
 import { debounce } from 'lodash-es'
 
+import emailjs from 'emailjs-com';
+
 export default {
     data() {
         return {
             emailBox: 'fade-right',
             telephoneBox: 'fade-left',
-            navigationBox: 'fade-down'
+            navigationBox: 'fade-down',
+            name: '',
+            email:'',
+            textarea: '',
         }
     },
 
@@ -121,19 +138,83 @@ export default {
         })
     },
 
+
+
     methods: {
         setAOSProperty: debounce(function() {
             if (this.actualyWidnowSize >= this.breakpoint) {
                 this.telephoneBox = 'zoom-out'
                 this.navigationBox = 'fade-left'
             }
-        }, 100)
+        }, 100),
+
+        sendEmail(e) {
+            emailjs.sendForm('service_2z0lgh8', 'template_4abbbgf', e.target, 'user_okHWgjLSsIuRCUvM9r751')
+            this.name = ''
+            this.email = ''
+            this.textarea = ''
+
+            const notificationBox = document.getElementsByClassName('notification-box')[0]
+
+            notificationBox.classList.add('notification-animation')
+            setTimeout(() => {
+                notificationBox.classList.remove('notification-animation')
+            }, 5000);
+        },
+        
+ 
     }
 }
 </script>
 
 <style lang="scss" scoped>
+
+    .notification-box{
+        position: absolute;
+        display: flex;
+        width: 100vw;  
+        justify-content: center;
+        align-items: center;
+        margin-top: -30rem;
+        z-index: 10;
+        visibility: hidden;
+
+        .notification{
+            position: fixed;
+            width: 100%;
+            max-width: 20rem;
+            display: flex;
+            height: 4rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #4fd4b593;
+            z-index: 10;
+            border-radius: 10px;
+
+            div{
+                color: $primary-semi-dark;
+                font:{
+                    size: 18px;
+                    weight: 300;
+                }
+            }
+        }
+    }
+    
+    .notification-animation{
+        animation: smoothNotification 4s 0.25s ease-in-out backwards;
+    }
+
+    @keyframes smoothNotification {
+        0% { visibility: visible; opacity: 0.5;}
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { visibility: hidden; opacity: 0; }
+    }
+
 @media screen and (min-width: 0px) {
+
     header {
         position: relative;
         background-color: $primary-light;
@@ -200,6 +281,7 @@ export default {
         width: $sm-width-container;
         top: 5rem;
         margin: 0 auto;
+        z-index: 10;
 
         .form {
             text-align: center;
@@ -244,7 +326,7 @@ export default {
         margin-top: 1rem;
         textarea {
             max-width: 23rem;
-            min-width: 23rem;
+            min-width: auto;
             width: 100%;
             min-height: 16rem;
             max-height: 25rem;
@@ -347,7 +429,7 @@ export default {
     .container {
         position: relative;
         top: 10rem;
-        overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     .email-box {
@@ -502,6 +584,8 @@ export default {
     .container {
         display: flex;
         top: 15rem;
+        overflow-x: unset;
+
     }
 
     .email-box,
@@ -520,6 +604,15 @@ export default {
 
     .navigation-box {
         padding: 5.1rem 0 5rem 0;
+    }
+
+    .notification-box{
+
+        margin-top: -50rem;
+        .notification{
+            max-width: 30rem;
+            height: 5rem;
+        }
     }
 }
 </style>

@@ -63,7 +63,6 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
-
     .section {
         height: 29rem;
     }
@@ -141,8 +140,6 @@ export default {
         }
     }
 }
-
-
 
 @media screen and (min-width: 960px) {
     section {

@@ -144,7 +144,7 @@ export default {
         z-index: 1;
         background-color: $primary-light;
         border-top: 1px solid $primary;
-    
+
         .h2-box {
             text-align: center;
 
@@ -238,13 +238,11 @@ export default {
 }
 
 @media screen and (min-width: 350px) {
-
     .article {
-
         .h2-box {
             h2::before,
             h2::after {
-                width: 13%; 
+                width: 13%;
             }
 
             h2::before {
@@ -285,13 +283,14 @@ export default {
 
     .article {
         padding: 5rem 0;
-        background-color: $primary-light;
+        background: rgb(240,240,240);
+        background: radial-gradient(circle, rgba(240,240,240,1) 60%, rgba(255,255,255,1) 90%);
         box-shadow: none;
 
         .h2-box {
             h2::before,
             h2::after {
-                width: 15%; 
+                width: 15%;
             }
         }
 
@@ -314,8 +313,8 @@ export default {
             margin: 0 auto;
             text-align: justify;
 
-            p{
-                font:{
+            p {
+                font: {
                     weight: 300;
                 }
             }
