@@ -401,6 +401,11 @@ export default {
         display: none;
     }
 
+    .arrow-box {
+        position: relative;
+        top: 1rem;
+    }
+
     .container {
         max-width: $lg-width-container;
         padding: 3rem 0 1.5rem 0;
