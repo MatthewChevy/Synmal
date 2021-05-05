@@ -283,8 +283,12 @@ export default {
 
     .article {
         padding: 5rem 0;
-        background: rgb(240,240,240);
-        background: radial-gradient(circle, rgba(240,240,240,1) 60%, rgba(255,255,255,1) 90%);
+        background: rgb(240, 240, 240);
+        background: radial-gradient(
+            circle,
+            rgba(240, 240, 240, 1) 60%,
+            rgba(255, 255, 255, 1) 90%
+        );
         box-shadow: none;
 
         .h2-box {

@@ -254,7 +254,7 @@ export default {
 
         .h1-box {
             h1 {
-            line-height: 80px;
+                line-height: 80px;
                 max-width: 60rem;
                 font: {
                     size: 62px;

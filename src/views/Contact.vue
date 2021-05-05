@@ -59,9 +59,9 @@
                 </form>
                 <div class="notification-box">
                     <div class="notification">
-                        <div>Váš email bol odoslaný</div> 
+                        <div>Váš email bol odoslaný</div>
                     </div>
-                </div>    
+                </div>
             </div>
 
             <div class="container">
@@ -105,7 +105,6 @@
                     </div>
                 </div>
             </div>
-
         </main>
     </div>
 </template>
@@ -114,7 +113,7 @@
 import tableMixins from '../mixins/tableMixins.js'
 import { debounce } from 'lodash-es'
 
-import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com'
 
 export default {
     data() {
@@ -123,8 +122,8 @@ export default {
             telephoneBox: 'fade-left',
             navigationBox: 'fade-down',
             name: '',
-            email:'',
-            textarea: '',
+            email: '',
+            textarea: ''
         }
     },
 
@@ -138,8 +137,6 @@ export default {
         })
     },
 
-
-
     methods: {
         setAOSProperty: debounce(function() {
             if (this.actualyWidnowSize >= this.breakpoint) {
@@ -149,72 +146,85 @@ export default {
         }, 100),
 
         sendEmail(e) {
-            emailjs.sendForm('service_2z0lgh8', 'template_4abbbgf', e.target, 'user_okHWgjLSsIuRCUvM9r751')
+            emailjs.sendForm(
+                'service_2z0lgh8',
+                'template_4abbbgf',
+                e.target,
+                'user_okHWgjLSsIuRCUvM9r751'
+            )
             this.name = ''
             this.email = ''
             this.textarea = ''
 
-            const notificationBox = document.getElementsByClassName('notification-box')[0]
+            const notificationBox = document.getElementsByClassName(
+                'notification-box'
+            )[0]
 
             notificationBox.classList.add('notification-animation')
             setTimeout(() => {
                 notificationBox.classList.remove('notification-animation')
-            }, 5000);
-        },
-        
- 
+            }, 5000)
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.notification-box {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30rem;
+    z-index: 10;
+    visibility: hidden;
 
-    .notification-box{
-        position: absolute;
+    .notification {
+        position: fixed;
+        width: 100%;
+        max-width: 20rem;
         display: flex;
-        width: 100vw;  
+        height: 4rem;
         justify-content: center;
         align-items: center;
-        margin-top: -30rem;
+        text-align: center;
+        background-color: #4fd4b593;
         z-index: 10;
-        visibility: hidden;
+        border-radius: 10px;
 
-        .notification{
-            position: fixed;
-            width: 100%;
-            max-width: 20rem;
-            display: flex;
-            height: 4rem;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background-color: #4fd4b593;
-            z-index: 10;
-            border-radius: 10px;
-
-            div{
-                color: $primary-semi-dark;
-                font:{
-                    size: 18px;
-                    weight: 300;
-                }
+        div {
+            color: $primary-semi-dark;
+            font: {
+                size: 18px;
+                weight: 300;
             }
         }
     }
-    
-    .notification-animation{
-        animation: smoothNotification 4s 0.25s ease-in-out backwards;
-    }
+}
 
-    @keyframes smoothNotification {
-        0% { visibility: visible; opacity: 0.5;}
-        10% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { visibility: hidden; opacity: 0; }
+.notification-animation {
+    animation: smoothNotification 4s 0.25s ease-in-out backwards;
+}
+
+@keyframes smoothNotification {
+    0% {
+        visibility: visible;
+        opacity: 0.5;
     }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
 
 @media screen and (min-width: 0px) {
-
     header {
         position: relative;
         background-color: $primary-light;
@@ -585,7 +595,6 @@ export default {
         display: flex;
         top: 15rem;
         overflow-x: unset;
-
     }
 
     .email-box,
@@ -606,10 +615,9 @@ export default {
         padding: 5.1rem 0 5rem 0;
     }
 
-    .notification-box{
-
+    .notification-box {
         margin-top: -50rem;
-        .notification{
+        .notification {
             max-width: 30rem;
             height: 5rem;
         }

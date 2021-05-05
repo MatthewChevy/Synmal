@@ -57,7 +57,7 @@ import { throttle } from 'lodash-es'
 
 export default {
     mixins: [tableMixin],
-    
+
     components: {
         NavigationLogo,
         NavigationMenuButton
@@ -68,22 +68,18 @@ export default {
             breakPointLarge: 1023, //px
             activeMenu: false,
             navigation: Object,
-            lastScrollPosition: 0,
-            listItems: 
+            lastScrollPosition: 0
         }
     },
 
-   mounted() {
-       this.navigation = document.getElementsByClassName('section')[0]
-        window.addEventListener("scroll", () => { 
-            this.actualyWidnowSize > this.breakpoint ? this.hideNavBarWhenScroll() : false  
-        }) 
-
-
-
-        console.log( listItems );
-
-   },
+    mounted() {
+        this.navigation = document.getElementsByClassName('section')[0]
+        window.addEventListener('scroll', () => {
+            this.actualyWidnowSize > this.breakpoint
+                ? this.hideNavBarWhenScroll()
+                : false
+        })
+    },
 
     methods: {
         toggleMenu() {
@@ -92,46 +88,55 @@ export default {
                 : (this.activeMenu = true)
         },
 
-        hideNavBarWhenScroll: throttle( function(){ 
+        hideNavBarWhenScroll: throttle(function() {
+            let viewPosition =
+                window.pageYOffset || document.documentElement.scrollTop
 
-            let viewPosition = window.pageYOffset || document.documentElement.scrollTop
-
-            if ( viewPosition > this.lastScrollPosition ){
+            if (viewPosition > this.lastScrollPosition) {
                 this.navigation.classList.add('hide-navigation')
-                this.navigation.classList.contains('show-navigation') ? this.navigation.classList.remove('show-navigation') : false
+                this.navigation.classList.contains('show-navigation')
+                    ? this.navigation.classList.remove('show-navigation')
+                    : false
             } else {
                 this.navigation.classList.add('show-navigation')
-                this.navigation.classList.contains('hide-navigation') ? this.navigation.classList.remove('hide-navigation') : false
+                this.navigation.classList.contains('hide-navigation')
+                    ? this.navigation.classList.remove('hide-navigation')
+                    : false
             }
             this.lastScrollPosition = viewPosition <= 0 ? 0 : viewPosition
-        },250)
-        
+        }, 250)
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
-    .show-navigation{
+    .show-navigation {
         transform: translateY(0%);
         animation: showNav 0.25s ease-in-out backwards;
     }
 
-    .hide-navigation{
+    .hide-navigation {
         transform: translateY(-100%);
         animation: hideNav 0.25s ease-in-out backwards;
     }
 
     @keyframes hideNav {
-        0% { transform: translateY( 0% ); }
-        100% { transform: translateY( -100% ); }
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
     }
 
     @keyframes showNav {
-        0% { transform: translateY( -100% ); }
-        100% { transform: translateY( 0% ); }
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
     }
 
     .section {
