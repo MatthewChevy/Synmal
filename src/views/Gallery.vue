@@ -7,105 +7,360 @@
         </header>
         <section v-if="actualyWidnowSize < breakpoint" class="gallery">
             <div class="column">
-                <img src="../assets/img/gallery/DSC_0001.jpg" alt="Maľovanie fásady rodinného domu"  />
-                <img src="../assets/img/gallery/DSC_0003.jpg" alt="Maľovanie fásady rodinného domu" />
-                <img src="../assets/img/gallery/DSC_0047.jpg" alt="Vyspravovanie prasklín" />
-                <img src="../assets/img/gallery/DSC_0012.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0009.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0011.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0006.jpg" alt="Renovácia kovovej konštrukcie" />
-                <img src="../assets/img/gallery/DSC_0024.jpg" alt="Obyvačka v rodinnom dome po prvej vrstve" />
-                <img src="../assets/img/gallery/DSC_0008.jpg" alt="Hotový posledný náter" />
-                <img src="../assets/img/gallery/DSC_0022.jpg" alt="Pripravené na striekanie" />
-                <img src="../assets/img/gallery/DSC_0044.jpg" alt="Dôsledné zalepenie" />
-                <img src="../assets/img/gallery/DSC_0021.jpg" alt="Airless maľovanie" />
-                <img src="../assets/img/gallery/DSC_0013.jpg" alt="Lakovanie drevených lát" />
-                <img src="../assets/img/gallery/DSC_0014.jpg" alt="Lakovanie drevených lát" />
-                <img src="../assets/img/gallery/DSC_0015.jpg" alt="Nový náter plechovej strechy" />
-                <img src="../assets/img/gallery/DSC_0016.jpg" alt="Striekanie interiéru rodinného domu" />
-                <img src="../assets/img/gallery/DSC_0017.jpg" alt="Striekanie interiéru novostavby" />
-                <img src="../assets/img/gallery/DSC_0018.jpg" alt="Striekanie interiéru novostavby s dreveným stropom" />
-                <img src="../assets/img/gallery/DSC_0019.jpg" alt="Príprava na striekanie" />
-                <img src="../assets/img/gallery/DSC_0020.jpg" alt="Nastriekaná posledná vrstva" />
-                <img src="../assets/img/gallery/DSC_0040.jpg" alt="Náš oblúbený jupolček" /> 
-                <img src="../assets/img/gallery/DSC_0031.jpg" alt="Lakovanie podbitia preshu strechy" />  
-            </div>    
-            <div class="column">
-                <img src="../assets/img/gallery/DSC_0002.jpg" alt="Maľovanie fásady papiernickej predajne" />
-                <img src="../assets/img/gallery/DSC_0004.jpg" alt="Striekanie ochranných plechov" />
-                <img src="../assets/img/gallery/DSC_0005.jpg" alt="Striekanie ochranných plechov" />
-                <img src="../assets/img/gallery/DSC_0010.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0026.jpg" alt="Opravovanie fasády za pomoci vysokozdvižnej rampy" />
-                <img src="../assets/img/gallery/DSC_0025.jpg" alt="Opravovanie fasády za pomoci vysokozdvižnej rampy" />
-                <img src="../assets/img/gallery/DSC_0030.jpg" alt="Renovácia kovovej konštrukcie" />
-                <img src="../assets/img/gallery/DSC_0027.jpg" alt="Finálny výsledok v novostabe rodinného domu" />
-                <img src="../assets/img/gallery/DSC_0028.jpg" alt="Finálny výsledok v novostabe rodinného domu" />           
-                <img src="../assets/img/gallery/DSC_0042.jpg" alt="Kúpeľňa v rodinnom dome po prvej vrstve" />
-                <img src="../assets/img/gallery/DSC_0046.jpg" alt="Kúpeľňa v rodinnom dome po prvej vrstve" />  
-                <img src="../assets/img/gallery/DSC_0045.jpg" alt="Všetko poriadne zalepíme" /> 
-                <img src="../assets/img/gallery/DSC_0038.jpg" alt="Nový náter plechovej strechy" />
-                <img src="../assets/img/gallery/DSC_0039.jpg" alt="Chodba v rodinnom dome po prvej vrstve" />
-                <img src="../assets/img/gallery/DSC_0033.jpg" alt="Renovácia fasády" />
-                <img src="../assets/img/gallery/DSC_0041.jpg" alt="Airless maľovanie" />
-                <img src="../assets/img/gallery/DSC_0035.jpg" alt="Renovácia školých priestorov / pred" />
-                <img src="../assets/img/gallery/DSC_0036.jpg" alt="Renovácia školých priestorov / po" />   
-                <img src="../assets/img/gallery/DSC_0034.jpg" alt="Renovácia školých priestorov / pred" />
-                <img src="../assets/img/gallery/DSC_0037.jpg" alt="Renovácia školých priestorov / po" />
-            </div>  
-        </section>
-
-        <section  v-else class="gallery">
-            <div class="column">
-                <img src="../assets/img/gallery/DSC_0001.jpg" alt="Maľovanie fásady rodinného domu"  />
-                <img src="../assets/img/gallery/DSC_0003.jpg" alt="Maľovanie fásady rodinného domu" />
-                <img src="../assets/img/gallery/DSC_0002.jpg" alt="Maľovanie fásady papiernickej predajne" />
-                <img src="../assets/img/gallery/DSC_0004.jpg" alt="Striekanie ochranných plechov" />
-                <img src="../assets/img/gallery/DSC_0005.jpg" alt="Striekanie ochranných plechov" />
-                <img src="../assets/img/gallery/DSC_0047.jpg" alt="Vyspravovanie prasklín" />
-                <img src="../assets/img/gallery/DSC_0006.jpg" alt="Renovácia kovovej konštrukcie" />
-                <img src="../assets/img/gallery/DSC_0024.jpg" alt="Obyvačka v rodinnom dome po prvej vrstve" />
-                <img src="../assets/img/gallery/DSC_0008.jpg" alt="Hotový posledný náter" />
-                <img src="../assets/img/gallery/DSC_0022.jpg" alt="Pripravené na striekanie" />
-               <img src="../assets/img/gallery/DSC_0020.jpg" alt="Nastriekaná posledná vrstva" />
-            </div>  
-            <div class="column">
-                <img src="../assets/img/gallery/DSC_0021.jpg" alt="Airless maľovanie" />
-                <img src="../assets/img/gallery/DSC_0013.jpg" alt="Lakovanie drevených lát" />
-                <img src="../assets/img/gallery/DSC_0014.jpg" alt="Lakovanie drevených lát" />
-                <img src="../assets/img/gallery/DSC_0015.jpg" alt="Nový náter plechovej strechy" />
-                <img src="../assets/img/gallery/DSC_0016.jpg" alt="Striekanie interiéru rodinného domu" />
-                <img src="../assets/img/gallery/DSC_0017.jpg" alt="Striekanie interiéru novostavby" />
-                <img src="../assets/img/gallery/DSC_0018.jpg" alt="Striekanie interiéru novostavby s dreveným stropom" />
-                <img src="../assets/img/gallery/DSC_0019.jpg" alt="Príprava na striekanie" />
-                <img src="../assets/img/gallery/DSC_0040.jpg" alt="Náš oblúbený jupolček" /> 
-                <img src="../assets/img/gallery/DSC_0031.jpg" alt="Lakovanie podbitia preshu strechy" /> 
-                <img src="../assets/img/gallery/DSC_0030.jpg" alt="Lakovanie podbitia preshu strechy" /> 
-            </div>     
-            <div class="column">
-                <img src="../assets/img/gallery/DSC_0044.jpg" alt="Dôsledné zalepenie" />
-                <img src="../assets/img/gallery/DSC_0026.jpg" alt="Opravovanie fasády za pomoci vysokozdvižnej rampy" />
-                <img src="../assets/img/gallery/DSC_0025.jpg" alt="Opravovanie fasády za pomoci vysokozdvižnej rampy" />
-                <img src="../assets/img/gallery/DSC_0012.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0009.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0011.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0010.jpg" alt="Sauny v Aquaparku Bešeňová" />
-                <img src="../assets/img/gallery/DSC_0007.jpg" alt="Renovácia kovovej konštrukcie" />
-                <img src="../assets/img/gallery/DSC_0027.jpg" alt="Finálny výsledok v novostabe rodinného domu" />
-                <img src="../assets/img/gallery/DSC_0028.jpg" alt="Finálny výsledok v novostabe rodinného domu" />           
-                <img src="../assets/img/gallery/DSC_0042.jpg" alt="Kúpeľňa v rodinnom dome po prvej vrstve" />
+                <img
+                    src="../assets/img/gallery/DSC_0001.jpg"
+                    alt="Maľovanie fásady rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0003.jpg"
+                    alt="Maľovanie fásady rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0047.jpg"
+                    alt="Vyspravovanie prasklín"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0012.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0009.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0011.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0006.jpg"
+                    alt="Renovácia kovovej konštrukcie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0024.jpg"
+                    alt="Obyvačka v rodinnom dome po prvej vrstve"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0008.jpg"
+                    alt="Hotový posledný náter"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0022.jpg"
+                    alt="Pripravené na striekanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0044.jpg"
+                    alt="Dôsledné zalepenie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0021.jpg"
+                    alt="Airless maľovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0013.jpg"
+                    alt="Lakovanie drevených lát"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0014.jpg"
+                    alt="Lakovanie drevených lát"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0015.jpg"
+                    alt="Nový náter plechovej strechy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0016.jpg"
+                    alt="Striekanie interiéru rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0017.jpg"
+                    alt="Striekanie interiéru novostavby"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0018.jpg"
+                    alt="Striekanie interiéru novostavby s dreveným stropom"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0019.jpg"
+                    alt="Príprava na striekanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0020.jpg"
+                    alt="Nastriekaná posledná vrstva"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0040.jpg"
+                    alt="Náš oblúbený jupolček"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0031.jpg"
+                    alt="Lakovanie podbitia preshu strechy"
+                />
             </div>
             <div class="column">
-                <img src="../assets/img/gallery/DSC_0046.jpg" alt="Kúpeľňa v rodinnom dome po prvej vrstve" />  
-                <img src="../assets/img/gallery/DSC_0045.jpg" alt="Všetko poriadne zalepíme" /> 
-                <img src="../assets/img/gallery/DSC_0038.jpg" alt="Nový náter plechovej strechy" />
-                <img src="../assets/img/gallery/DSC_0039.jpg" alt="Chodba v rodinnom dome po prvej vrstve" />
-                <img src="../assets/img/gallery/DSC_0033.jpg" alt="Renovácia fasády" />
-                <img src="../assets/img/gallery/DSC_0041.jpg" alt="Airless maľovanie" />
-                <img src="../assets/img/gallery/DSC_0035.jpg" alt="Renovácia školých priestorov / pred" />
-                <img src="../assets/img/gallery/DSC_0036.jpg" alt="Renovácia školých priestorov / po" />   
-                <img src="../assets/img/gallery/DSC_0034.jpg" alt="Renovácia školých priestorov / pred" />
-                <img src="../assets/img/gallery/DSC_0037.jpg" alt="Renovácia školých priestorov / po" />
-            </div>  
+                <img
+                    src="../assets/img/gallery/DSC_0002.jpg"
+                    alt="Maľovanie fásady papiernickej predajne"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0004.jpg"
+                    alt="Striekanie ochranných plechov"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0005.jpg"
+                    alt="Striekanie ochranných plechov"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0010.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0026.jpg"
+                    alt="Opravovanie fasády za pomoci vysokozdvižnej rampy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0025.jpg"
+                    alt="Opravovanie fasády za pomoci vysokozdvižnej rampy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0030.jpg"
+                    alt="Renovácia kovovej konštrukcie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0027.jpg"
+                    alt="Finálny výsledok v novostabe rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0028.jpg"
+                    alt="Finálny výsledok v novostabe rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0042.jpg"
+                    alt="Kúpeľňa v rodinnom dome po prvej vrstve"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0046.jpg"
+                    alt="Kúpeľňa v rodinnom dome po prvej vrstve"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0045.jpg"
+                    alt="Všetko poriadne zalepíme"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0038.jpg"
+                    alt="Nový náter plechovej strechy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0039.jpg"
+                    alt="Chodba v rodinnom dome po prvej vrstve"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0033.jpg"
+                    alt="Renovácia fasády"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0041.jpg"
+                    alt="Airless maľovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0035.jpg"
+                    alt="Renovácia školých priestorov / pred"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0036.jpg"
+                    alt="Renovácia školých priestorov / po"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0034.jpg"
+                    alt="Renovácia školých priestorov / pred"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0037.jpg"
+                    alt="Renovácia školých priestorov / po"
+                />
+            </div>
+        </section>
+
+        <section v-else class="gallery">
+            <div class="column">
+                <img
+                    src="../assets/img/gallery/DSC_0001.jpg"
+                    alt="Maľovanie fásady rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0003.jpg"
+                    alt="Maľovanie fásady rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0002.jpg"
+                    alt="Maľovanie fásady papiernickej predajne"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0004.jpg"
+                    alt="Striekanie ochranných plechov"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0005.jpg"
+                    alt="Striekanie ochranných plechov"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0047.jpg"
+                    alt="Vyspravovanie prasklín"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0006.jpg"
+                    alt="Renovácia kovovej konštrukcie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0024.jpg"
+                    alt="Obyvačka v rodinnom dome po prvej vrstve"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0008.jpg"
+                    alt="Hotový posledný náter"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0022.jpg"
+                    alt="Pripravené na striekanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0020.jpg"
+                    alt="Nastriekaná posledná vrstva"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../assets/img/gallery/DSC_0021.jpg"
+                    alt="Airless maľovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0013.jpg"
+                    alt="Lakovanie drevených lát"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0014.jpg"
+                    alt="Lakovanie drevených lát"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0015.jpg"
+                    alt="Nový náter plechovej strechy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0016.jpg"
+                    alt="Striekanie interiéru rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0017.jpg"
+                    alt="Striekanie interiéru novostavby"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0018.jpg"
+                    alt="Striekanie interiéru novostavby s dreveným stropom"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0019.jpg"
+                    alt="Príprava na striekanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0040.jpg"
+                    alt="Náš oblúbený jupolček"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0031.jpg"
+                    alt="Lakovanie podbitia preshu strechy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0030.jpg"
+                    alt="Lakovanie podbitia preshu strechy"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../assets/img/gallery/DSC_0044.jpg"
+                    alt="Dôsledné zalepenie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0026.jpg"
+                    alt="Opravovanie fasády za pomoci vysokozdvižnej rampy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0025.jpg"
+                    alt="Opravovanie fasády za pomoci vysokozdvižnej rampy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0012.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0009.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0011.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0010.jpg"
+                    alt="Sauny v Aquaparku Bešeňová"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0007.jpg"
+                    alt="Renovácia kovovej konštrukcie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0027.jpg"
+                    alt="Finálny výsledok v novostabe rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0028.jpg"
+                    alt="Finálny výsledok v novostabe rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0042.jpg"
+                    alt="Kúpeľňa v rodinnom dome po prvej vrstve"
+                />
+            </div>
+            <div class="column">
+                <img
+                    src="../assets/img/gallery/DSC_0046.jpg"
+                    alt="Kúpeľňa v rodinnom dome po prvej vrstve"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0045.jpg"
+                    alt="Všetko poriadne zalepíme"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0038.jpg"
+                    alt="Nový náter plechovej strechy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0039.jpg"
+                    alt="Chodba v rodinnom dome po prvej vrstve"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0033.jpg"
+                    alt="Renovácia fasády"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0041.jpg"
+                    alt="Airless maľovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0035.jpg"
+                    alt="Renovácia školých priestorov / pred"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0036.jpg"
+                    alt="Renovácia školých priestorov / po"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0034.jpg"
+                    alt="Renovácia školých priestorov / pred"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0037.jpg"
+                    alt="Renovácia školých priestorov / po"
+                />
+            </div>
         </section>
     </main>
 </template>
@@ -114,7 +369,6 @@
 import tableMixins from '../mixins/tableMixins.js'
 
 export default {
-
     mixins: [tableMixins],
 
     data() {
@@ -130,10 +384,9 @@ export default {
     },
 
     mounted() {
-
         //---------------------------
 
-        window.addEventListener('resize', () =>{
+        window.addEventListener('resize', () => {
             this.width = window.innerWidth
             this.height = window.innerHeight
         })
@@ -180,24 +433,21 @@ export default {
                     this.newImage.src = image.src
                     this.alter.innerText = image.alt
 
-                    while(this.lightbox.firstChild) {
+                    while (this.lightbox.firstChild) {
                         this.lightbox.removeChild(this.lightbox.firstChild)
-                    };
+                    }
 
-                    this.lightbox.appendChild( this.newImage )
-                    this.lightbox.appendChild( this.alter )
+                    this.lightbox.appendChild(this.newImage)
+                    this.lightbox.appendChild(this.alter)
                 })
             })
         }
     }
 }
-
 </script>
 
 <style lang="scss">
-
 @media screen and (min-width: 0px) {
-
     #lightbox {
         position: fixed;
         display: none;
@@ -210,7 +460,7 @@ export default {
 
     #lightbox img {
         width: 100%;
-        border: 3px solid $primary;  
+        border: 3px solid $primary;
     }
 
     #lightbox span {
@@ -218,10 +468,10 @@ export default {
         z-index: 11;
         color: $primary-light;
         text-align: center;
-        font:{
+        font: {
             size: 16px;
-            weight: 300
-        } 
+            weight: 300;
+        }
     }
 
     #lightbox.active {
@@ -270,14 +520,12 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     main {
         overflow-x: hidden;
         position: relative;
         top: 3.5rem;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
     header {
@@ -313,7 +561,7 @@ export default {
         }
     }
 
-    img{
+    img {
         max-width: 100%;
     }
 
@@ -321,55 +569,54 @@ export default {
         padding: 3rem 0;
     }
 
-    .gallery{
+    .gallery {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .column{
+    .column {
         flex: 50%;
         max-width: 50%;
         line-height: 0;
-        img{
+        img {
             padding: 1px;
         }
 
-        .too-height{
+        .too-height {
             width: 100%;
-            height: 30rem; 
+            height: 30rem;
         }
     }
 }
 
 @media screen and (min-width: 768px) {
-    .gallery{
+    .gallery {
         margin: 0 auto;
         width: 90%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-
-    main{
+    main {
         padding-bottom: 5rem;
     }
 
-    .gallery{
+    .gallery {
         margin: 0 auto;
         width: 90%;
     }
 
-    .column{
+    .column {
         flex: 25%;
         max-width: 25%;
         line-height: 0;
-        img{
+        img {
             padding: 3px;
         }
     }
 
     header {
-        .h1-box{
+        .h1-box {
             h1 {
                 padding: 5rem 0 5rem 0;
                 color: $primary-dark;
@@ -381,5 +628,4 @@ export default {
         }
     }
 }
-
 </style>
