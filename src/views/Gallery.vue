@@ -5,6 +5,7 @@
                 <h1>Vitajte v galérií</h1>
             </div>
         </header>
+
         <section v-if="actualyWidnowSize < breakpoint" class="gallery">
             <div class="column">
                 <img
@@ -373,27 +374,25 @@ export default {
 
     data() {
         return {
-            width: window.innerWidth,
-            height: window.innerHeight,
             images: Object,
             main: Object,
             lightbox: Object,
             newImage: Object,
-            alter: String
+            leftArrow: Object,
+            rightArrow: Object,
+            indexOfFocusImage: Number
         }
     },
 
     mounted() {
-        //---------------------------
-
-        window.addEventListener('resize', () => {
-            this.width = window.innerWidth
-            this.height = window.innerHeight
-        })
-
-        //---------------------------
         this.lightbox = document.createElement('div')
+        this.leftArrow = document.createElement('div')
+        this.rightArrow = document.createElement('div')
+
         this.lightbox.id = 'lightbox'
+        this.leftArrow.id = 'leftarrow'
+        this.rightArrow.id = 'rightarrow'
+
         this.main = document.querySelector('main')
         this.main.appendChild(this.lightbox)
         this.images = document.querySelectorAll('img')
@@ -401,6 +400,7 @@ export default {
         this.appendImage()
 
         window.addEventListener('keydown', e => {
+            // after keydown escape switch-off lightbox
             if (
                 this.lightbox.classList.contains('active') &&
                 e.key === 'Escape'
@@ -410,35 +410,87 @@ export default {
         })
 
         window.addEventListener('scroll', () => {
+            // after scrolldown switch-off lightbox
             if (this.lightbox.classList.contains('active')) {
                 this.lightbox.classList.remove('active')
             }
         })
 
         this.lightbox.addEventListener('click', e => {
-            if (e.target !== e.currentTarget)
+            // after click on image switch-off lightbox
+            if (e.target == e.currentTarget)
                 this.lightbox.classList.remove('active')
+        })
+
+        this.rightArrow.addEventListener('click', () => {
+            // after click on right arrow slide image
+            this.slideImage(true)
+        })
+
+        this.leftArrow.addEventListener('click', () => {
+            // after click on left arrow slide image
+            this.slideImage(false)
         })
     },
 
     methods: {
+        slideImage(boolean) {
+            // after click on arrows slide image
+            let images = (this.allImagesArr = Array.prototype.slice.call(
+                this.allImagesArr
+            ))
+            if (boolean) {
+                if (this.indexOfFocusImage === images.length - 1) {
+                    this.newImage.src = images[1]
+                    this.indexOfFocusImage = 0
+                } else {
+                    this.newImage.src = images[this.indexOfFocusImage + 1]
+                }
+                this.indexOfFocusImage++
+            } else {
+                if (this.indexOfFocusImage === 1) {
+                    this.newImage.src = images[images.length - 1]
+                    this.indexOfFocusImage = images.length - 1
+                } else {
+                    this.newImage.src = images[this.indexOfFocusImage - 1]
+                    this.indexOfFocusImage--
+                }
+            }
+        },
+
+        saveImages(imgSrc) {
+            let tempArray = Array.prototype.slice.call(this.images)
+            let arrOfImages = []
+
+            tempArray.forEach(element => {
+                // push elements in to the array
+                arrOfImages.push(element.src)
+            })
+
+            if (arrOfImages.indexOf(imgSrc.target.currentSrc) != -1) {
+                // if the image url is located in array
+                this.indexOfFocusImage = arrOfImages.indexOf(
+                    imgSrc.target.currentSrc
+                ) // take index of image
+            }
+            this.allImagesArr = arrOfImages
+        },
+
         appendImage() {
             this.images.forEach(image => {
-                image.addEventListener('click', () => {
+                image.addEventListener('click', event => {
+                    this.saveImages(event)
                     this.lightbox.classList.add('active')
-
                     this.newImage = document.createElement('img')
-                    this.alter = document.createElement('span')
 
                     this.newImage.src = image.src
-                    this.alter.innerText = image.alt
 
                     while (this.lightbox.firstChild) {
                         this.lightbox.removeChild(this.lightbox.firstChild)
                     }
-
                     this.lightbox.appendChild(this.newImage)
-                    this.lightbox.appendChild(this.alter)
+                    this.lightbox.appendChild(this.leftArrow)
+                    this.lightbox.appendChild(this.rightArrow)
                 })
             })
         }
@@ -489,6 +541,36 @@ export default {
         to {
             opacity: 100%;
         }
+    }
+
+    #leftarrow {
+        content: url('../assets/img/icons/arrow.png');
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 2rem;
+        height: 2rem;
+        left: 2rem;
+        background-color: #ffffff98;
+        border-radius: 30%;
+        transform: rotateZ(90deg);
+        color: $fancy;
+        z-index: 11;
+    }
+
+    #rightarrow {
+        content: url('../assets/img/icons/arrow.png');
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 2rem;
+        height: 2rem;
+        right: 2rem;
+        background-color: #ffffff98;
+        border-radius: 30%;
+        transform: rotateZ(-90deg);
+        color: $fancy;
+        z-index: 11;
     }
 }
 
@@ -563,6 +645,7 @@ export default {
 
     img {
         max-width: 100%;
+        cursor: pointer;
     }
 
     .button {

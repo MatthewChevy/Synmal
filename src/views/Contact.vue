@@ -54,14 +54,11 @@
                     </div>
 
                     <div class="form-button">
-                        <button type="submit">Odoslať správu</button>
+                        <button @click="recaptcha" type="submit">
+                            Odoslať správu
+                        </button>
                     </div>
                 </form>
-                <div class="notification-box">
-                    <div class="notification">
-                        <div>Váš email bol odoslaný</div>
-                    </div>
-                </div>
             </div>
 
             <div class="container">
@@ -106,6 +103,11 @@
                 </div>
             </div>
         </main>
+    </div>
+    <div class="notification-box">
+        <div class="notification">
+            <div>Váš email bol odoslaný</div>
+        </div>
     </div>
 </template>
 
@@ -170,60 +172,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.notification-box {
-    position: absolute;
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    margin-top: -30rem;
-    z-index: 10;
-    visibility: hidden;
-
-    .notification {
-        position: fixed;
-        width: 100%;
-        max-width: 20rem;
-        display: flex;
-        height: 4rem;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: #4fd4b593;
-        z-index: 10;
-        border-radius: 10px;
-
-        div {
-            color: $primary-semi-dark;
-            font: {
-                size: 18px;
-                weight: 300;
-            }
-        }
-    }
-}
-
-.notification-animation {
-    animation: smoothNotification 4s 0.25s ease-in-out backwards;
-}
-
-@keyframes smoothNotification {
-    0% {
-        visibility: visible;
-        opacity: 0.5;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
 @media screen and (min-width: 0px) {
     header {
         position: relative;
@@ -527,6 +475,60 @@ export default {
             }
         }
     }
+
+    .notification-box {
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        top: 15rem;
+        z-index: 10;
+        visibility: hidden;
+
+        .notification {
+            position: fixed;
+            width: 100%;
+            max-width: 20rem;
+            display: flex;
+            height: 4rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #4fd4b593;
+            z-index: 10;
+            border-radius: 10px;
+
+            div {
+                color: $primary-semi-dark;
+                font: {
+                    size: 18px;
+                    weight: 300;
+                }
+            }
+        }
+    }
+
+    .notification-animation {
+        animation: smoothNotification 4s 0.25s ease-in-out backwards;
+    }
+
+    @keyframes smoothNotification {
+        0% {
+            visibility: visible;
+            opacity: 0.5;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
 }
 
 @media screen and (min-width: 400px) {
@@ -616,7 +618,6 @@ export default {
     }
 
     .notification-box {
-        margin-top: -50rem;
         .notification {
             max-width: 30rem;
             height: 5rem;

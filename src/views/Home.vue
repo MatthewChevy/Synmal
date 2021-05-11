@@ -39,6 +39,7 @@ export default {
 header {
     position: relative;
     height: 47.625rem;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 1024px) {

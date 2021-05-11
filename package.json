@@ -15,9 +15,9 @@
     "mitt": "^2.1.0",
     "vue": "^3.0.0",
     "vue-gallery-slideshow": "^1.5.2",
-    "vue-lazyload": "^1.3.3",
     "vue-recaptcha-v3": "^2.0.1",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vue3-lazyload": "^0.2.2-beta"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.4",
