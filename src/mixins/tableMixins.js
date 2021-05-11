@@ -5,7 +5,7 @@ export default {
         return {
             actualyWidnowSize: Number,
             breakpoint: 1024,
-            breakpointmd: 767
+            breakpointmd: 768
         }
     },
 
