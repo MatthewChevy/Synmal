@@ -28,7 +28,7 @@ export default {
     .contact-link-button {
         max-width: 12rem;
         margin: 0 auto;
-        padding: 3px 30px;
+        padding: 10px 20px;
         border-radius: 3px;
         color: $darkest;
         background-color: $fancy;
