@@ -1,5 +1,5 @@
 <template>
-    <router-link to="/">
+    <router-link class="link" to="/">
         <div class="container-logo">
             <div class="img-box">
                 <img
@@ -42,6 +42,11 @@
                 weight: 300;
             }
         }
+    }
+
+    .link {
+        text-decoration: none;
+        cursor: pointer;
     }
 }
 
