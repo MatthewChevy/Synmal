@@ -2,19 +2,19 @@
     <section class="section">
         <article class="article-top">
             <div class="center">
-                <div class="article-title" data-aos="zoom-out">
+                <div class="article-title" data-aos="fade-up">
                     <h2>Priebeh práce</h2>
                 </div>
-                <div class="contact-paragraph">
+                <div class="contact-paragraph" data-aos="zoom-in">
                     <div class="center">
-                        <p data-aos="fade-right">
+                        <p>
                             Po <strong>kontakte</strong> s Vami urobíme osobnú
                             prehliadku Vašich priestorov, na základe ktorej
                             vypracujeme cenovú ponuku a dohodneme termín
                         </p>
                     </div>
 
-                    <div class="button" data-aos="zoom-out">
+                    <div class="button">
                         <the-path-button
                             :path="'contact'"
                             :textButton="'Kontaktujte nás'"
@@ -30,21 +30,46 @@
                             proces bývá časovo najnáročnejší. Pri strojovom
                             maľovaní si lepenie vyžaduje ešte väčšiu dôslednosť.
                         </p>
+                        <div
+                            class="center"
+                            v-if="actualyWidnowSize < breakpoint"
+                        >
+                            <div class="image-holder">
+                                <img
+                                    src="../../assets/img/gallery/box.jpg"
+                                    alt="before"
+                                />
+                            </div>
+                            <div class="h3-box">
+                                <h3>Pred</h3>
+                            </div>
+                        </div>
                     </div>
 
-                    <div
-                        class="paragraph-box center-box"
-                        data-aos="fade-center"
-                    >
+                    <div class="paragraph-box center-box" data-aos="fade-left">
                         <h4>Počas maľovania</h4>
                         <p>
                             V tejto fáze sa ukážu všetky nedostatky ako
                             napríklad praskliny na stenách, strope alebo okolo
                             okien. Všetko čo treba povyspravujeme a zasádrujeme.
                         </p>
+                        <div
+                            class="center"
+                            v-if="actualyWidnowSize < breakpoint"
+                        >
+                            <div class="image-holder">
+                                <img
+                                    src="../../assets/img/gallery/box.jpg"
+                                    alt="before"
+                                />
+                            </div>
+                            <div class="h3-box">
+                                <h3>Počas</h3>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="paragraph-box" data-aos="fade-left">
+                    <div class="paragraph-box" data-aos="fade-right">
                         <h4>Po maľovaní</h4>
                         <p>
                             Ak sme s výsledkom spokojný môžeme začať s
@@ -52,12 +77,26 @@
                             poumývame a povysávame. Po skončení sa možete tešiť
                             z vymalovných priestorov.
                         </p>
+                        <div
+                            class="center"
+                            v-if="actualyWidnowSize < breakpoint"
+                        >
+                            <div class="image-holder">
+                                <img
+                                    src="../../assets/img/gallery/box.jpg"
+                                    alt="before"
+                                />
+                            </div>
+                            <div class="h3-box">
+                                <h3>Po</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </article>
 
-        <div class="photo-box">
+        <div class="photo-box" v-if="actualyWidnowSize > breakpoint">
             <article class="article-box" :data-aos="boxLeft">
                 <div class="center">
                     <div class="image-holder">
@@ -164,7 +203,6 @@ export default {
         position: relative;
         width: 100%;
         background: $primary-semi-light;
-        overflow-x: hidden;
     }
 
     .article-top {
@@ -271,38 +309,34 @@ export default {
         }
     }
 
-    .photo-box {
-    }
-
     .article-box {
         position: relative;
         width: 100%;
         line-height: 0;
+    }
 
-        .center {
-            .image-holder {
+    .center {
+        width: 100%;
+        .image-holder {
+            margin-top: 2rem;
+            max-width: 100%;
+            img {
                 max-width: 100%;
-
-                img {
-                    max-width: 100%;
-                }
             }
+        }
+    }
 
-            .h3-box {
-                position: absolute;
-                z-index: 5;
-                bottom: 2rem;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                h3 {
-                    font: {
-                        size: 30px;
-                    }
-                    text-transform: uppercase;
-                    letter-spacing: -1.5px;
-                    color: white;
-                }
+    .h3-box {
+        position: relative;
+        width: 100%;
+        top: -3.5rem;
+        text-align: center;
+
+        h3 {
+            color: $primary-light;
+            font: {
+                size: 35px;
+                weight: 600;
             }
         }
     }
@@ -333,7 +367,6 @@ export default {
             }
         }
     }
-
     .paragraphs-holder {
         .paragraph-box {
             p {

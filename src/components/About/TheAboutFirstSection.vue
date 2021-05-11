@@ -1,23 +1,27 @@
 <template>
     <section class="section">
-        <header>
-            <div class="h1-box" data-aos="fade-down">
-                <h1>O nás</h1>
-            </div>
-        </header>
-
-        <article class="article-box" data-aos="zoom-out">
+        <article class="article-box" data-aos="fade-down">
             <div class="article-paragraph">
+                <header>
+                    <div class="h1-box" data-aos="fade-down">
+                        <h1>O nás</h1>
+                    </div>
+                </header>
                 <p>
-                    Sme spoločnosť, ktorej hodnoty sú postavené na úprimnosti,
-                    poctivej práci a zodpovednému prístupu ku klientom. S
-                    dlhoročnými skúsenosťami sme sa stali v našom odbore silnou
-                    konkurenciou. Našou výhodou je zodpovednosť, spoľahlivosť.
-                    Disponujeme bohatým technickým vybavením. Pôsobíme prevažne
-                    na
-                    <strong>Liptove</strong> ale po vzájomnej dohode robíme
-                    kompromisy.
+                    <strong>Synmal</strong> je spoľahlivou firmou s dlhoročnými
+                    skúsenosťami. Na trhu sme už od roku 2001, od vtedy sme sa
+                    stali v našom odbore silnou konkurenciou. Disponujeme
+                    bohatými zručnosťami a kvalitným technickým vybavením.
+                    Pôsobíme prevažne na <strong>Liptove</strong>
+                    ale po vzájomnej dohode robíme kompromisy. Našim hlavným
+                    cieľom je maximálna spokojnosť klienta.
                 </p>
+            </div>
+            <div class="article-image" data-aos="fade-right">
+                <img
+                    src="../../assets/img/decoration/wall-painter.png"
+                    alt="Cartoon wall painter"
+                />
             </div>
         </article>
     </section>
@@ -94,6 +98,8 @@
             margin: 0 auto;
 
             p {
+                width: 100%;
+                max-width: 30rem;
                 margin: 0 auto;
                 text-align: justify;
                 font: {
@@ -104,6 +110,15 @@
                 strong {
                     font-weight: 500;
                 }
+            }
+        }
+
+        .article-image {
+            padding-top: 2rem;
+            width: 21rem;
+            margin: 0 auto;
+            img {
+                width: 100%;
             }
         }
     }
@@ -130,6 +145,13 @@
                 width: 37rem;
             }
         }
+
+        .article-image {
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -140,12 +162,9 @@
 
     .article-box {
         box-shadow: unset;
-
-        .article-paragraph {
-            p {
-                text-align: center;
-            }
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     header {
@@ -153,7 +172,29 @@
             padding-top: 2rem;
             h1::before,
             h1::after {
-                width: 14rem;
+                width: 10rem;
+            }
+        }
+    }
+
+    .article-box {
+        max-width: 75rem;
+        margin: 0 auto;
+
+        .article-paragraph {
+            margin: 0 auto;
+
+            p {
+                width: 37rem;
+            }
+        }
+
+        .article-image {
+            margin: 0 auto;
+            width: 65%;
+            padding-top: 1rem;
+            img {
+                max-width: 24rem;
             }
         }
     }

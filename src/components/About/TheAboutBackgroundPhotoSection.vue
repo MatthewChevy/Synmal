@@ -102,6 +102,8 @@ export default {
             position: relative;
             padding-bottom: 1rem;
             z-index: 3;
+            letter-spacing: 1.5px;
+            line-height: 2rem;
             font: {
                 size: 30px;
                 weight: 500;
