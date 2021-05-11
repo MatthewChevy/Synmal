@@ -1,32 +1,17 @@
 <template>
     <section class="section">
         <div class="container">
-            <div class="h3-handler">
-                <h3 data-aos="fade-right">
+            <div class="h3-handler" data-aos="fade-down">
+                <h3>
                     Interérové a exterierové nátery stien a fasád realizujeme aj
                     <strong>strojovím maľovaním</strong>
                 </h3>
             </div>
             <article>
                 <div class="airless-box">
-                    <div class="logo-holder" data-aos="fade-left">
-                        <img
-                            class="sm-screen"
-                            src="../../assets/img/decoration/wagner.png"
-                            alt="wagner logo"
-                        />
-                    </div>
-                    <div class="flex">
+                    <div class="flex" :data-aos="aosBox">
                         <div class="paragraph-box">
-                            <div class="logo-holder">
-                                <img
-                                    data-aos="fade-right"
-                                    class="lg-screen"
-                                    src="../../assets/img/decoration/wagner.png"
-                                    alt="wagner logo"
-                                />
-                            </div>
-                            <p class="p-1" data-aos="fade-right">
+                            <p class="p-1" :data-aos="firstParagraph">
                                 Pracujeme s prvotriednou technológiou od firmy
                                 <strong>WAGNER</strong>. Primárnou výhodou
                                 vysokotlakových bezvzduchových striekacích
@@ -35,14 +20,14 @@
                             </p>
                             <div
                                 class="paint-machine-image sm-screen"
-                                data-aos="zoom-in-up"
+                                :data-aos="imageParagraph"
                             >
                                 <img
                                     src="../../assets/img/decoration/wagner-machine.jpg"
                                     alt="airless painting unit"
                                 />
                             </div>
-                            <p class="p-2" data-aos="fade-right">
+                            <p class="p-2" :data-aos="secondParagraph">
                                 Tieto zariadenia sú väčšinou konštruované tak,
                                 že nasávanie materiálu je priamo z vedra.
                                 Materiál sa na upravovaný podklad nanáša bez
@@ -51,10 +36,7 @@
                                 trysku.
                             </p>
                         </div>
-                        <div
-                            class="paint-machine-image lg-screen"
-                            data-aos="fade-right"
-                        >
+                        <div class="paint-machine-image lg-screen">
                             <img
                                 src="../../assets/img/decoration/wagner-machine.jpg"
                                 alt="airless painting unit"
@@ -67,6 +49,47 @@
         <aside class="decorative-line"></aside>
     </section>
 </template>
+
+<script>
+import { throttle } from 'lodash-es'
+
+import tableMixin from '../../mixins/tableMixins.js'
+export default {
+    mixins: [tableMixin],
+
+    data() {
+        return {
+            aosBox: String,
+            firstParagraph: String,
+            imageParagraph: String,
+            secondParagraph: String
+        }
+    },
+
+    mounted() {
+        window.addEventListener('resize', () => {
+            this.aosSetup()
+        })
+        this.aosSetup()
+    },
+
+    methods: {
+        aosSetup: throttle(function() {
+            if (this.actualyWidnowSize <= this.breakpointmd) {
+                this.aosBox = ''
+                this.firstParagraph = 'fade-right'
+                this.imageParagraph = 'fade-left'
+                this.secondParagraph = 'fade-right'
+            } else {
+                this.aosBox = 'fade-up'
+                this.firstParagraph = ''
+                this.imageParagraph = ''
+                this.secondParagraph = ''
+            }
+        }, 100)
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
@@ -97,11 +120,8 @@
 
     .h3-handler {
         width: 100%;
-        margin: 2rem auto;
-
-        width: 21rem;
-        margin: 2rem 0;
-        text-align: left;
+        margin: 0 auto 3rem 0;
+        text-align: center;
         padding: 0;
 
         h3 {
@@ -129,12 +149,21 @@
     }
 
     .logo-holder {
-        width: 80%;
-        padding-top: 1rem;
+        position: relative;
+        width: 60%;
+        top: 5rem;
+        padding-bottom: 0.5rem;
+        margin: 0 auto;
+        left: -4rem;
+        z-index: 1;
 
         img {
             width: 100%;
         }
+    }
+
+    .flex {
+        overflow-y: hidden;
     }
 
     .p-1,
@@ -152,7 +181,6 @@
     }
 
     .p-2 {
-        width: 95%;
         margin: 0 auto;
         text-align: justify;
     }
@@ -171,25 +199,42 @@
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 375px) {
     .h3-handler {
         width: 100%;
-        text-align: left;
-    }
+        margin: 2rem auto 3rem auto;
+        text-align: center;
+        padding: 0;
 
-    .p-1 {
-        width: 26rem;
+        h3 {
+            text-align: center;
+            line-height: 1.75rem;
+            color: $darkest;
+            font-size: 23px;
+            font-weight: 300;
+
+            strong {
+                font: {
+                    weight: 600;
+                }
+            }
+        }
     }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 500px) {
     .h3-handler {
-        width: 28rem;
-        margin: 2rem 0;
+        width: 100%;
+
+        h3 {
+            text-align: center;
+        }
     }
 
-    .logo-holder {
-        width: 24rem;
+    .p-1,
+    .p-2 {
+        margin: 0 auto;
+        width: 100%;
     }
 }
 
@@ -203,14 +248,25 @@
     }
 
     .h3-handler {
-        width: 34rem;
-        margin: 0rem auto;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        top: 3rem;
+        width: 100%;
+        margin: 0 auto;
         padding: 0;
-        text-align: right;
 
         h3 {
+            text-align: left;
+            width: 38rem;
             font-size: 20px;
             font-weight: 300;
+
+            strong {
+                font: {
+                    weight: 400;
+                }
+            }
         }
     }
 
@@ -220,13 +276,14 @@
     }
 
     .paint-machine-image {
-        width: 60%;
+        width: 43%;
     }
 
     .flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 2.5rem;
     }
 
     .p-1,
@@ -243,6 +300,30 @@
     }
 }
 
+@media screen and (min-width: 950px) {
+    .h3-handler {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        top: 5rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+
+        h3 {
+            width: 38rem;
+            font-size: 22px;
+            font-weight: 300;
+
+            strong {
+                font: {
+                    weight: 400;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .section {
         padding-top: 2rem;
@@ -255,22 +336,12 @@
     }
 
     .h3-handler {
-        display: flex;
-        justify-content: flex-end;
         width: 93%;
-        margin: 2rem auto;
         padding: 0;
 
         h3 {
-            width: 38rem;
-            font-size: 20px;
-            font-weight: 300;
-
-            strong {
-                font: {
-                    weight: 400;
-                }
-            }
+            font-size: 25px;
+            line-height: 2rem;
         }
     }
 
@@ -280,6 +351,7 @@
 
     .airless-box {
         margin: 0 auto 5rem auto;
+        overflow-y: hidden;
     }
 
     .logo-holder {

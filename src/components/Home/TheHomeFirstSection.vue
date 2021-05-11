@@ -103,7 +103,7 @@
 <script>
 import tableMixin from '../../mixins/tableMixins.js'
 import ThePathButton from '../ThePathButton.vue'
-import { throttle, debounce } from 'lodash-es'
+import { throttle } from 'lodash-es'
 
 export default {
     mixins: [tableMixin],
@@ -123,62 +123,15 @@ export default {
     },
 
     mounted() {
-        this.boxContainer = document.getElementsByClassName('box-container')
         this.setAOSProperty()
 
-        window.addEventListener('scroll', () => {
-            this.scrollSelectBox()
-        })
-
         window.addEventListener('resize', () => {
-            this.removeClass()
             this.responsiveASO()
         })
     },
 
     methods: {
-        scrollSelectBox: throttle(function() {
-            //Box selecting
-            if (this.actualyWidnowSize <= this.breakpointmd) {
-                for (let i = 0; i < this.boxContainer.length; i++) {
-                    if (
-                        window.scrollY >
-                        this.boxContainer[i].offsetTop +
-                            (this.percentage / 100) *
-                                this.boxContainer[i].offsetHeight
-                    ) {
-                        this.boxContainer[i].classList.add('box-container-bg')
-                        if (
-                            window.scrollY >
-                            this.boxContainer[i].offsetTop +
-                                (this.boxContainer[i].offsetHeight +
-                                    (this.percentage / 100) *
-                                        this.boxContainer[i].offsetHeight)
-                        ) {
-                            this.boxContainer[i].classList.remove(
-                                'box-container-bg'
-                            )
-                        }
-                    } else {
-                        this.boxContainer[i].classList.remove(
-                            'box-container-bg'
-                        )
-                    }
-                }
-            }
-        }, 100),
-
-        removeClass: debounce(function() {
-            // Remove class base on screen size
-
-            if (this.actualyWidnowSize > this.breakpointmd) {
-                for (let i = 0; i < this.boxContainer.length; i++) {
-                    this.boxContainer[i].classList.remove('box-container-bg')
-                }
-            }
-        }, 100),
-
-        responsiveASO: debounce(function() {
+        responsiveASO: throttle(function() {
             if (this.actualyWidnowSize > this.breakpoint) {
                 // AOS responsive
                 this.zoom = ''
@@ -290,19 +243,11 @@ export default {
             }
         }
 
-        .box-container-bg {
-            background-color: $primary-soft;
-        }
-
         .center-border {
             border: {
                 top: 1px solid $primary-soft;
                 bottom: 1px solid $primary-soft;
             }
-        }
-
-        .last-box {
-            margin-bottom: 3rem;
         }
     }
 
@@ -341,8 +286,8 @@ export default {
                 }
             }
             p {
-                width: 90%;
-                max-width: 21rem;
+                width: 100%;
+
                 margin: 0 auto;
                 font: {
                     size: 16px;

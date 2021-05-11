@@ -2,30 +2,27 @@
     <section class="section">
         <div class="container">
             <div class="decorative-bucket-box">
-                <div class="decorative-bucket lg-screen" data-aos="fade-left">
+                <div class="decorative-bucket lg-screen">
                     <img
                         src="../../assets/img/decoration/jupol.png"
                         alt="Jupol bucket"
                     />
                 </div>
                 <div class="decorative-bucket-paragraph">
-                    <p class="p-1">
+                    <p class="p-1" data-aos="fade-up">
                         Vo veľkej miere využívame produkty od firmy
                         <strong>JUB</strong>. Cenou, kvalitou a krycou
                         schopnosťou je pre nás veľkým favoritom.
                     </p>
 
-                    <div
-                        class="decorative-bucket sm-screen"
-                        data-aos="fade-left"
-                    >
+                    <div class="decorative-bucket sm-screen" data-aos="zoom-in">
                         <img
                             src="../../assets/img/decoration/jupol.png"
                             alt="Jupol bucket"
                         />
                     </div>
 
-                    <p class="p-2">
+                    <p class="p-2" data-aos="fade-down">
                         <strong>JUPOL</strong> Classic získal od nemeckého
                         inštitútu <i>eco-INSTITUT</i> certifikát, ktorý ju
                         zaraďuje do triedy A, čo znamená, že farba má veľmi
@@ -113,7 +110,7 @@
 @media screen and (min-width: 500px) {
     .decorative-bucket-paragraph {
         p {
-            text-align: left;
+            text-align: center;
         }
     }
 }

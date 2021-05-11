@@ -76,7 +76,7 @@ export default {
         margin: 0 auto;
 
         h2 {
-            margin: 2rem 0 1rem 0;
+            margin: 2rem 0 1.5rem 0;
             font-size: 20px;
             font-weight: 300;
         }
@@ -126,7 +126,6 @@ export default {
 
         ul {
             margin: 0 auto;
-            width: 95%;
             text-align: left;
             li {
                 padding: 0.15rem 0;
@@ -146,12 +145,13 @@ export default {
     .paragraph-box {
         width: 100%;
         padding-top: 2rem;
-        text-align: center;
+        text-align: justify;
         font: {
             weight: 300;
         }
 
         .button {
+            text-align: center;
             margin: 2rem 0;
         }
     }

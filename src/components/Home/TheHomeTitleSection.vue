@@ -123,7 +123,7 @@ export default {
             text-align: center;
             color: $primary-soft;
             padding-bottom: 3rem;
-            letter-spacing: -1px;
+            letter-spacing: 1px;
             line-height: 45px;
             font: {
                 size: 40px;
@@ -142,7 +142,7 @@ export default {
         .contact-link-button {
             width: 14rem;
             margin: 0 auto;
-            padding: 0.1rem 1.5rem;
+            padding: 7px 20px;
             color: $primary-soft;
             border: 1.5px solid $primary-soft;
             background-color: transparent;
@@ -157,12 +157,6 @@ export default {
                     weight: 300;
                 }
             }
-        }
-
-        .contact-link-button:hover,
-        :focus {
-            transition: 0.35s;
-            transform: scale(1.2, 1.2);
         }
     }
 
@@ -216,6 +210,7 @@ export default {
         position: fixed;
         width: 100%;
         margin: 0 auto;
+        top: -5rem;
     }
 
     .container-titles {
@@ -255,6 +250,7 @@ export default {
         .h1-box {
             h1 {
                 line-height: 80px;
+                letter-spacing: 2px;
                 max-width: 60rem;
                 font: {
                     size: 62px;
@@ -273,6 +269,7 @@ export default {
 
     .contact-link-button:hover,
     :focus {
+        transition: 0.5s;
         transform: scale(1.1, 1.1);
     }
 

@@ -1,6 +1,6 @@
 <template>
     <article>
-        <aside class="container" data-aos="zoom-in-up">
+        <aside class="container" data-aos="zoom-in">
             <div class="title-box">
                 <h4>
                     Zaujíma Vás pribeh našej práce alebo informácie o našej
@@ -63,9 +63,14 @@ export default {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .title-box {
+        width: $lg-width-container;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .container {
-        width: $lg-width-container;
         padding: 5rem 0;
     }
 
