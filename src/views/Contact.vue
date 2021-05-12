@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-box">
+    <div class="contact-box" v-if='actualyWidnowSize < breakpoint'>
         <header>
             <div class="h2-box" data-aos="fade-down">
                 <h2>Kontaktujte nás</h2>
@@ -62,7 +62,7 @@
             </div>
 
             <div class="container">
-                <div class="email-box" :data-aos="emailBox">
+                <div class="email-box">
                     <div class="email-img">
                         <img
                             src="../assets/img/icons/email-icon.png"
@@ -75,7 +75,7 @@
                         >
                     </div>
                 </div>
-                <div class="telephone-box" :data-aos="telephoneBox">
+                <div class="telephone-box">
                     <div class="telephone-img">
                         <img
                             src="../assets/img/icons/telephone-icon.png"
@@ -86,7 +86,7 @@
                         <a href="tel:+421948880678">0948880678</a>
                     </div>
                 </div>
-                <div class="navigation-box" :data-aos="navigationBox">
+                <div class="navigation-box" >
                     <div class="navigation-img">
                         <img
                             src="../assets/img/icons/navigation-icon.png"
@@ -104,11 +104,126 @@
             </div>
         </main>
     </div>
+
+    <div class="contact-box" v-else>
+        <header>
+            <div class="h2-box" data-aos="fade-down">
+                <h2>Kontaktujte nás</h2>
+            </div>
+        </header>
+
+        <main>      
+            <div class="container">
+                <div class="email-box" data-aos='fade-right'>
+                    <div class="email-img">
+                        <img
+                            src="../assets/img/icons/email-icon.png"
+                            alt="email-cartoon"
+                        />
+                    </div>
+                    <div class="email-content">
+                        <a href="mailto: matej.sevcik11@gmail.com"
+                            >synmal.inbox@gmail.com</a
+                        >
+                    </div>
+                </div>
+                <div class="telephone-box" data-aos='fade-down'>
+                    <div class="telephone-img">
+                        <img
+                            src="../assets/img/icons/telephone-icon.png"
+                            alt="telephone-cartoon"
+                        />
+                    </div>
+                    <div class="telephone-content">
+                        <a href="tel:+421948880678">0948880678</a>
+                    </div>
+                </div>
+                <div class="navigation-box" data-aos='fade-left'>
+                    <div class="navigation-img">
+                        <img
+                            src="../assets/img/icons/navigation-icon.png"
+                            alt="navigation-cartoon"
+                        />
+                    </div>
+                    <div class="navigation-content">
+                        <ul>
+                            <li>Ivachnová 183</li>
+                            <li>034 83 Ivachnová</li>
+                            <li>Slovenská Republika</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-wrapper">
+                <div class="background-box" data-aos="zoom-out">
+                    <img
+                        src="../assets/img/decoration/email-background.png"
+                        alt="email ilustration"
+                    />
+                </div>
+                
+                <div class="contact-form" data-aos='fade-left'>
+                    <div class="h3-box">
+                        <h3>Kontaktný formulár</h3>
+                    </div>
+                    <form class="form" method="GET" @submit.prevent="sendEmail">
+                        <div class="form-name">
+                            <input
+                                v-model="name"
+                                type="name"
+                                name="name"
+                                placeholder="Meno a Priezvisko"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-email">
+                            <input
+                                v-model="email"
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                required
+                            />
+                        </div>
+
+                        <div class="form-textarea">
+                            <textarea
+                                v-model="textarea"
+                                name="message"
+                                placeholder="Vaša správa"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="checkbox-holder">
+                            <label for="checkbox"
+                                >Súhlasím zo spracovaním
+                                <a href="#">osobných údajov</a></label
+                            >
+                            <div class="checkbox-center">
+                                <input type="checkbox" name="" required />
+                            </div>
+                        </div>
+
+                        <div class="form-button">
+                            <button @click="recaptcha" type="submit">
+                                Odoslať správu
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
     <div class="notification-box">
         <div class="notification">
             <div>Váš email bol odoslaný</div>
         </div>
     </div>
+    
 </template>
 
 <script>
@@ -172,6 +287,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     header {
         position: relative;
@@ -580,12 +696,82 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-    header {
+    header{
         top: 6rem;
     }
 
-    main {
-        top: 3rem;
+    main{
+        overflow-x: hidden;
+
+          .background-box{
+              max-width: 45%;
+              margin: unset;
+            img{
+                max-width: 100%;
+                padding: 2rem 0;
+                right: 12rem;
+            }
+        }
+    }
+
+    .flex-wrapper{
+        max-width: 80rem;
+        padding-top: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 15rem;
+    
+    }
+
+    .container{
+        max-width: 80rem;
+        display: flex;
+        flex-flow: row;
+        margin: 0 auto;
+        top: 7rem;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .contact-form{
+        position: relative;
+        top: 1rem;
+        max-width: 50%;
+        margin: unset;
+
+        .h3-box {
+            text-align: center;
+            padding-bottom: 2rem;
+
+            h3 {
+                padding: 2rem 0;
+                color: $primary-dark;
+                font: {
+                    size: 25px;
+                    weight: 300;
+                }
+            }
+            h3::before,
+            h3::after {
+                content: '';
+                display: inline-block;
+                position: relative;
+                width: 17%;
+                height: 2px;
+                top: -0.4rem;
+                background: $fancy;
+            }
+
+            h3::before {
+                right: 1rem;
+            }
+            h3::after {
+                left: 1rem;
+            }
+        }
+
     }
 
     .form {
@@ -593,16 +779,11 @@ export default {
         margin: 0 auto;
     }
 
-    .container {
-        display: flex;
-        top: 15rem;
-        overflow-x: unset;
-    }
 
     .email-box,
     .telephone-box,
     .navigation-box {
-        width: 25rem;
+        width: 20rem;
         margin: 0 auto;
         border-top: none;
         border-bottom: none;
@@ -624,4 +805,5 @@ export default {
         }
     }
 }
+
 </style>
