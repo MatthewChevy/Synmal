@@ -54,12 +54,13 @@ export default {
         titleParallax() {
             if (this.actualyWidnowSize >= this.breakpoint) {
                 //1024+
-                this.parallax(this.sectionTitle, window.scrollY, -0.25)
+                this.parallax(this.sectionTitle, window.scrollY,-0.3)
             }
         }
     }
 }
 </script>
+
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {

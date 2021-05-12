@@ -45,13 +45,13 @@ export default {
     methods: {
         ratioWindowSizeChanger: debounce(function() {
             this.actualyWidnowSize > this.breakpoint
-                ? (this.ratio = -0.1)
+                ? (this.ratio = -0.20)
                 : (this.ratio = 0.15)
         }, 150),
 
         setParallaxRatio() {
             this.actualyWidnowSize > this.breakpoint
-                ? (this.ratio = -0.1)
+                ? (this.ratio = -0.20)
                 : (this.ratio = 0.15)
         }
     }

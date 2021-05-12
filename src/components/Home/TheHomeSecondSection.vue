@@ -119,10 +119,12 @@ export default {
     }
 
     .h3-handler {
+        position: relative;
         width: 100%;
         margin: 0 auto 3rem 0;
         text-align: center;
         padding: 0;
+        z-index: 1;
 
         h3 {
             color: $darkest;

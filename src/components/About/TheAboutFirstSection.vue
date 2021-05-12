@@ -178,7 +178,7 @@
     }
 
     .article-box {
-        max-width: 75rem;
+        max-width: 80rem;
         margin: 0 auto;
 
         .article-paragraph {

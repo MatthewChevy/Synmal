@@ -50,6 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .section {
         position: relative;
@@ -184,7 +185,7 @@ export default {
     }
 
     .container {
-        max-width: 75rem;
+        max-width: 80rem;
         margin: 0 auto;
     }
 
