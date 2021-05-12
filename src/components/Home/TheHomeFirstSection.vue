@@ -159,6 +159,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     section {
         width: 100%;
@@ -382,7 +383,7 @@ export default {
             }
 
             p {
-                width: 16rem;
+                width: 17rem;
                 font: {
                     size: 15px;
                     weight: 300;
@@ -394,10 +395,6 @@ export default {
                     width: 20%;
                 }
             }
-        }
-
-        .active {
-            background-color: $primary-semi-light;
         }
 
         .center-border {
@@ -424,6 +421,14 @@ export default {
 
     .container {
         max-width: $xl-width-container;
+
+        .to-do-box {
+            .box-container {
+                p {
+                    width: 20rem;
+                }
+            }
+        }
     }
 }
 
