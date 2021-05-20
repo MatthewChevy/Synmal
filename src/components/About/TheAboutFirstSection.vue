@@ -28,6 +28,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .section {
         position: relative;
@@ -200,4 +201,5 @@
         }
     }
 }
+
 </style>
