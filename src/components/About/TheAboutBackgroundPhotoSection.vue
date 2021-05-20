@@ -58,15 +58,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .section {
         height: 29rem;
     }
+
     .section-box {
         .img {
             position: fixed;
             background-image: url('../../assets/img/background/background2.jpg');
-            // background-position: 70% 10%;
             background-position: 50% 100%;
             height: 100vh;
             width: 100%;
@@ -189,4 +190,5 @@ export default {
         }
     }
 }
+
 </style>

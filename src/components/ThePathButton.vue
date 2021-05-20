@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
     .contact-link-button {
         max-width: 12rem;
@@ -48,4 +49,5 @@ export default {
         background-color: darken($fancy, 10%);
     }
 }
+
 </style>
