@@ -195,11 +195,17 @@ export default {
         align-items: center;
 
         .article-text {
-            width: 30rem;
+            margin: 0 auto;
+            p{
+                max-width: 40rem;
+                text-align: justify;
+            }
         }
 
         .article-image {
+            padding-left: 4rem;
             img {
+
                 width: 17rem;
             }
         }
