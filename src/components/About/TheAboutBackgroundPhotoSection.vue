@@ -1,16 +1,12 @@
 <template>
     <section class="section">
         <div class="section-box">
-            <img
-                v-if="wsvga"
-                src="../../assets/img/background/bg-image-desktop.jpg"
+            <div class="img"></div>
+            <!-- <img
+            
+                src="../../assets/img/background/background2.jpg"
                 alt="bg"
-            />
-            <img
-                v-else
-                src="../../assets/img/background/bg-image-mobile.jpg"
-                alt="bg"
-            />
+            /> -->
             <div class="background">
                 <div class="container" data-aos="zoom-in">
                     <h2>Rýchlosť, Odbornosť, Spoľahlivosť</h2>
@@ -67,16 +63,15 @@ export default {
         height: 29rem;
     }
     .section-box {
-        img {
-            width: 100%;
-            min-height: 100vh;
+        .img {
             position: fixed;
-            background-image: url('../../assets/img/background/bg-image-mobile.jpg');
-            background-position: center center;
-            background-size: cover;
-            background-attachment: fixed;
+            background-image: url('../../assets/img/background/background2.jpg');
+            // background-position: 70% 10%;
+            background-position: 50% 100%;
+            height: 100vh;
+            width: 100%;
+            top: 3.4rem;
             z-index: -1;
-            top: 0rem;
         }
 
         .background {
@@ -86,7 +81,6 @@ export default {
             background-position: center center;
             z-index: 2;
             height: 29rem;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -183,6 +177,15 @@ export default {
     .section-box {
         .background {
             height: 29rem;
+        }
+        .img {
+            position: fixed;
+            background-image: url('../../assets/img/background/background2.jpg');
+            background-position: 0%;
+            background-size: cover;
+            height: 64rem;
+            width: 100%;
+            top: 0;
         }
     }
 }
