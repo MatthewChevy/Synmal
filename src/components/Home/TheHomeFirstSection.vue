@@ -193,7 +193,7 @@ export default {
             span {
                 color: $fancy;
                 font: {
-                    size: 50px;
+                    size: 36px;
                 }
             }
         }
@@ -299,6 +299,18 @@ export default {
             .image-holder::before,
             .image-holder::after {
                 width: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .h3-wrapper {
+        .arrow-box {
+            span {
+                font: {
+                    size: 50px;
+                }
             }
         }
     }
