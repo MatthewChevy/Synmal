@@ -157,7 +157,7 @@
 
 @media screen and (min-width: 1024px) {
     .section {
-        padding-top: 4rem;
+        padding-top: 5rem;
     }
 
     .article-box {
@@ -185,7 +185,8 @@
             margin: 0 auto;
 
             p {
-                width: 37rem;
+                max-width: 40rem;
+                text-align: justify;
             }
         }
 
