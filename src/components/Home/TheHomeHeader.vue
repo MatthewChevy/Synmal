@@ -66,8 +66,9 @@ export default {
 
     .bg-image-box {
         position: fixed;
-        background-image: url('../../assets/img/background/bg-image-mobile.jpg');
-        background-position: center center;
+        // background-image: url('../../assets/img/background/bg-image-mobile.jpg');
+        background-image: url('../../assets/img/background/background.jpg');
+        background-position: 35%;
         background-size: cover;
         height: 51.1rem;
         width: 100%;
@@ -75,7 +76,7 @@ export default {
 
         .bg-image {
             position: absolute;
-            background-color: rgba(0, 0, 0, 30%);
+            background-color: rgba(0, 0, 0, 40%);
             background-size: cover;
             background-position: center center;
             z-index: 2;
@@ -87,7 +88,7 @@ export default {
 
 @media screen and (min-width: 1024px) {
     .bg-image-box {
-        background-image: url('../../assets/img/background/bg-image-desktop.jpg');
+        background-image: url('../../assets/img/background/background.jpg');
         background-position: center center;
         background-size: cover;
         height: 64rem;

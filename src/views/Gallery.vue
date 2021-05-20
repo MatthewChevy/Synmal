@@ -97,6 +97,7 @@
                     alt="Lakovanie podbitia preshu strechy"
                 />
             </div>
+
             <div class="column">
                 <img
                     src="../assets/img/gallery/DSC_0002.jpg"
@@ -228,6 +229,7 @@
                     alt="Nastriekaná posledná vrstva"
                 />
             </div>
+
             <div class="column">
                 <img
                     src="../assets/img/gallery/DSC_0021.jpg"
@@ -274,6 +276,7 @@
                     alt="Lakovanie podbitia preshu strechy"
                 />
             </div>
+
             <div class="column">
                 <img
                     src="../assets/img/gallery/DSC_0044.jpg"
@@ -320,6 +323,7 @@
                     alt="Kúpeľňa v rodinnom dome po prvej vrstve"
                 />
             </div>
+
             <div class="column">
                 <img
                     src="../assets/img/gallery/DSC_0046.jpg"
@@ -364,6 +368,15 @@
             </div>
         </section>
     </main>
+
+    <div class="lightbox">
+        <div class="image-box">
+            <div class="close-cross"></div>
+            <img src="../assets/img/gallery/DSC_0037.jpg" alt="#">
+        </div>
+        <div class="left-arrow"></div>
+        <div class="right-arrow"></div>
+    </div>
 </template>
 
 <script>
@@ -380,22 +393,17 @@ export default {
             newImage: Object,
             leftArrow: Object,
             rightArrow: Object,
+            closeCross: Object,
             indexOfFocusImage: Number
         }
     },
 
     mounted() {
-        this.lightbox = document.createElement('div')
-        this.leftArrow = document.createElement('div')
-        this.rightArrow = document.createElement('div')
-
-        this.lightbox.id = 'lightbox'
-        this.leftArrow.id = 'leftarrow'
-        this.rightArrow.id = 'rightarrow'
-
-        this.main = document.querySelector('main')
-        this.main.appendChild(this.lightbox)
-        this.images = document.querySelectorAll('img')
+        this.images = document.querySelectorAll('.column img')
+        this.lightbox = document.getElementsByClassName('lightbox')[0]
+        this.closeCross = document.querySelectorAll('.close-cross')[0]
+        this.leftArrow = document.querySelectorAll('.left-arrow')[0]
+        this.rightArrow = document.querySelectorAll('.right-arrow')[0]
 
         this.appendImage()
 
@@ -414,6 +422,10 @@ export default {
             if (this.lightbox.classList.contains('active')) {
                 this.lightbox.classList.remove('active')
             }
+        })
+
+        this.closeCross.addEventListener('click', () => {
+                this.lightbox.classList.remove('active')
         })
 
         this.lightbox.addEventListener('click', e => {
@@ -481,16 +493,13 @@ export default {
                 image.addEventListener('click', event => {
                     this.saveImages(event)
                     this.lightbox.classList.add('active')
-                    this.newImage = document.createElement('img')
+                    this.newImage = document.querySelectorAll('.image-box img')[0]
 
                     this.newImage.src = image.src
 
-                    while (this.lightbox.firstChild) {
-                        this.lightbox.removeChild(this.lightbox.firstChild)
-                    }
-                    this.lightbox.appendChild(this.newImage)
-                    this.lightbox.appendChild(this.leftArrow)
-                    this.lightbox.appendChild(this.rightArrow)
+                    // while (this.lightbox.firstChild) {
+                    //     this.lightbox.removeChild(this.lightbox.firstChild)
+                    // }
                 })
             })
         }
@@ -498,111 +507,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@media screen and (min-width: 0px) {
-    #lightbox {
-        position: fixed;
-        display: none;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    #lightbox img {
-        width: 100%;
-        border: 3px solid $primary;
-    }
-
-    #lightbox span {
-        padding-top: 0.5rem;
-        z-index: 11;
-        color: $primary-light;
-        text-align: center;
-        font: {
-            size: 16px;
-            weight: 300;
-        }
-    }
-
-    #lightbox.active {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation: fadeImage 0.25s ease-in-out forwards;
-    }
-
-    @keyframes fadeImage {
-        from {
-            opacity: 0%;
-        }
-        to {
-            opacity: 100%;
-        }
-    }
-
-    #leftarrow {
-        content: url('../assets/img/icons/arrow.png');
-        position: absolute;
-        display: flex;
-        justify-content: flex-end;
-        width: 2rem;
-        height: 2rem;
-        left: 2rem;
-        background-color: #ffffff98;
-        border-radius: 30%;
-        transform: rotateZ(90deg);
-        color: $fancy;
-        z-index: 11;
-    }
-
-    #rightarrow {
-        content: url('../assets/img/icons/arrow.png');
-        position: absolute;
-        display: flex;
-        justify-content: flex-end;
-        width: 2rem;
-        height: 2rem;
-        right: 2rem;
-        background-color: #ffffff98;
-        border-radius: 30%;
-        transform: rotateZ(-90deg);
-        color: $fancy;
-        z-index: 11;
-    }
-}
-
-@media screen and (min-width: 400px) {
-    #lightbox img {
-        width: 90%;
-    }
-}
-
-@media screen and (min-width: 530px) {
-    #lightbox img {
-        max-height: calc(100vh - 5%);
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #lightbox img {
-        max-height: calc(100vh - 5%);
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    #lightbox img {
-        max-width: 60%;
-        width: auto;
-        max-height: 90vh;
-    }
-}
-</style>
-
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
+
     main {
         overflow-x: hidden;
         position: relative;
@@ -711,4 +619,180 @@ export default {
         }
     }
 }
+
+// LIGHT BOX
+
+@media screen and (min-width: 0px) {
+
+    .lightbox {
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.8);
+
+        .image-box{
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .imagebox img {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: 0 auto;
+            border: 3px solid $primary;
+        }
+    }
+
+    .lightbox.active {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        animation: fadeImage 0.25s ease-in-out forwards;
+    }
+
+    .left-arrow {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 2rem;
+        height: 2rem;
+        left: 1rem;
+        background-color: #ffffff98;
+        border-radius: 50%;
+        transform: rotateZ(90deg);
+        color: $fancy;
+        z-index: 11;
+        cursor: pointer;
+    }
+
+    .left-arrow::before {
+        content: '>';
+        position: relative;
+        top: 0.1rem;
+        right: 0.45rem;
+        font-size: 50px;
+        font-weight: 300;
+        color: $darkest;
+        transform: rotateZ(90deg);
+    }
+
+    .right-arrow {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        width: 2rem;
+        height: 2rem;
+        right: 1rem;
+        background-color: #ffffff98;
+        border-radius: 50%;
+        transform: rotateZ(-90deg);
+        color: $fancy;
+        z-index: 11;
+        cursor: pointer;
+    }
+
+    .right-arrow::before {
+        content: '>';
+        position: relative;
+        top: 0.1rem;
+        right: 0.45rem;
+        font-size: 50px;
+        font-weight: 300;
+        color: $darkest;
+        transform: rotateZ(90deg);
+    }
+
+    .right-arrow:focus {outline:none}
+
+    .close-cross{
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        background-color: #ffffff98;
+        border-radius: 50%;
+        z-index: 15;
+        cursor: pointer;
+        right: 0rem;
+        top: -1rem;
+    }
+
+    .close-cross::before{
+         content: 'X';
+         position: relative;
+         left: 0.64rem;
+         top: 0.25rem;
+         font-size: 18px;
+    }
+
+    @keyframes fadeImage {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .image-box img {
+        width: 90%;
+    }
+
+    .close-cross{
+        right: 1rem;
+    }
+
+    .left-arrow {
+        left: 2rem;
+    }
+
+    .right-arrow {
+        right: 2rem;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .image-box img {
+        max-height: calc(100vh - 5%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .image-box img {
+        max-width: 77%;
+        max-height: calc(100vh - 5%);
+    }
+
+    .close-cross{
+        right: 5rem;
+    }
+
+    .left-arrow {
+        left: 4.5rem;
+    }
+
+    .right-arrow {
+        right: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .image-box img {
+        max-width: 100%;
+        width: 100%;
+        max-height: 90vh
+    }
+
+    .close-cross{
+        right: -1rem;
+    }
+}
+
 </style>

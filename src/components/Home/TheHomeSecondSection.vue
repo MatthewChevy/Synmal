@@ -290,7 +290,7 @@ export default {
 
     .p-1,
     .p-2 {
-        width: 23rem;
+        width: 24rem;
     }
 
     .p-1 {

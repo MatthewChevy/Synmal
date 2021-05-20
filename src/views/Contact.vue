@@ -156,7 +156,7 @@
             </div>
 
             <div class="flex-wrapper">
-                <div class="background-box" data-aos="zoom-out">
+                <div class="background-box">
                     <img
                         src="../assets/img/decoration/email-background.png"
                         alt="email ilustration"
@@ -719,7 +719,6 @@ export default {
         padding-top: 7rem;
         display: flex;
         justify-content: center;
-        align-items: center;
         margin: 0 auto;
         margin-bottom: 15rem;
     

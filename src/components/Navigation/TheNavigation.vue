@@ -78,6 +78,8 @@ export default {
             this.actualyWidnowSize > this.breakpoint
                 ? this.hideNavBarWhenScroll()
                 : false
+
+            this.activeMenu = false
         })
     },
 
@@ -113,7 +115,7 @@ export default {
 @media screen and (min-width: 0px) {
     .show-navigation {
         transform: translateY(0%);
-        animation: showNav 0.25s ease-in-out backwards;
+        animation: showNav 1s ease-in-out backwards;
     }
 
     .hide-navigation {
