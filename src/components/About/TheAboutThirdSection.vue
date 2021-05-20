@@ -36,7 +36,7 @@
                         >
                             <div class="image-holder">
                                 <img
-                                    src="../../assets/img/gallery/box.jpg"
+                                    src="../../assets/img/gallery/before.jpg"
                                     alt="before"
                                 />
                             </div>
@@ -59,7 +59,7 @@
                         >
                             <div class="image-holder">
                                 <img
-                                    src="../../assets/img/gallery/box.jpg"
+                                    src="../../assets/img/gallery/during.jpg"
                                     alt="before"
                                 />
                             </div>
@@ -83,7 +83,7 @@
                         >
                             <div class="image-holder">
                                 <img
-                                    src="../../assets/img/gallery/box.jpg"
+                                    src="../../assets/img/gallery/after.jpg"
                                     alt="before"
                                 />
                             </div>
@@ -101,7 +101,7 @@
                 <div class="center">
                     <div class="image-holder">
                         <img
-                            src="../../assets/img/gallery/box.jpg"
+                            src="../../assets/img/gallery/before.jpg"
                             alt="before"
                         />
                     </div>
@@ -115,7 +115,7 @@
                 <div class="center">
                     <div class="image-holder">
                         <img
-                            src="../../assets/img/gallery/box.jpg"
+                            src="../../assets/img/gallery/during.jpg"
                             alt="in progress"
                         />
                     </div>
@@ -129,7 +129,7 @@
                 <div class="center">
                     <div class="image-holder">
                         <img
-                            src="../../assets/img/gallery/box.jpg"
+                            src="../../assets/img/gallery/after.jpg"
                             alt="after"
                         />
                     </div>
@@ -162,7 +162,8 @@ export default {
             textInPhoto: String,
             boxLeft: String,
             boxCenter: String,
-            boxRight: String
+            boxRight: String,
+            articleBox: Object,
         }
     },
 
@@ -193,7 +194,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
+
     .container {
         width: $sm-width-container;
         margin: 0 auto;
@@ -282,6 +285,7 @@ export default {
         width: $sm-width-container;
         max-width: 30rem;
         margin: 0 auto;
+        overflow-x: hidden;
 
         .paragraph-box {
             width: 100%;
@@ -318,7 +322,8 @@ export default {
     .center {
         width: 100%;
         .image-holder {
-            margin-top: 2rem;
+            margin: 0.55rem;
+            padding-top: 0.5rem;
             max-width: 100%;
             img {
                 max-width: 100%;
