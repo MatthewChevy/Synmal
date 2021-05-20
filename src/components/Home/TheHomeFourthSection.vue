@@ -264,7 +264,7 @@ export default {
     }
 
     .notes-box {
-        padding: 4rem 0;
+        padding: 4rem 0 6rem 0;
         width: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -345,7 +345,6 @@ export default {
     }
 
     .notes-box {
-        padding: 4rem 0;
         width: 100%;
     }
 
