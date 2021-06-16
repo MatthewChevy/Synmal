@@ -11,7 +11,7 @@
                 <div class="container" data-aos="zoom-in">
                     <h2>Rýchlosť, Odbornosť, Spoľahlivosť</h2>
                     <p>
-                        Chcete nás videť v plnom nasadení ? Pozrite na do našej
+                        Chcete nás videť v plnom nasadení ? Pozrite sa do našej
                         <a
                             class="link"
                             @click="$router.push({ path: 'gallery' })"
@@ -58,7 +58,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .section {
         height: 29rem;
@@ -190,5 +189,4 @@ export default {
         }
     }
 }
-
 </style>

@@ -28,7 +28,7 @@
                     <p>
                         Pomohli sme zrekonštruovať priestory rodinám, veľkým aj
                         malým firmám, detské domovy, paneláky, domy a mnoho
-                        iného. Za 20 rokov na Liptove, nie je kút v ktorom by
+                        iného. Za 18 rokov na Liptove, nie je kút v ktorom by
                         sme nedržali v ruke štetec a valec. Je to zadosťučinenie
                         prechádzať Liptovom a spomínať na to kde všade sme boli
                         a komu sme pomohli. Naša práca nás po dvoch dekádach
@@ -50,7 +50,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .section {
         position: relative;
@@ -196,7 +195,7 @@ export default {
 
         .article-text {
             margin: 0 auto;
-            p{
+            p {
                 max-width: 40rem;
                 text-align: justify;
             }
@@ -205,7 +204,6 @@ export default {
         .article-image {
             padding-left: 4rem;
             img {
-
                 width: 17rem;
             }
         }

@@ -8,7 +8,7 @@
                 <div class="contact-paragraph" data-aos="zoom-in">
                     <div class="center">
                         <p>
-                            Po <strong>kontakte</strong> s Vami urobíme osobnú
+                            Po <strong>kontakte</strong> s Vami, urobíme osobnú
                             prehliadku Vašich priestorov, na základe ktorej
                             vypracujeme cenovú ponuku a dohodneme termín
                         </p>
@@ -72,10 +72,13 @@
                     <div class="paragraph-box" data-aos="fade-right">
                         <h4>Po maľovaní</h4>
                         <p>
-                            Ak sme s výsledkom spokojný môžeme začať s
-                            upratovacími prácami. Všetko dôklade vyzametáme,
-                            poumývame a povysávame. Po skončení sa možete tešiť
-                            z vymalovných priestorov.
+                            Ak sme s výsledkom spokojní,
+                            <strong
+                                >môžeme začať s upratovacími prácami.</strong
+                            >
+                            Všetko dôklade vyzametáme, poumývame a povysávame.
+                            Po skončení sa možete tešiť z vymaľovných
+                            priestorov.
                         </p>
                         <div
                             class="center"
@@ -163,7 +166,7 @@ export default {
             boxLeft: String,
             boxCenter: String,
             boxRight: String,
-            articleBox: Object,
+            articleBox: Object
         }
     },
 
@@ -194,9 +197,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .container {
         width: $sm-width-container;
         margin: 0 auto;
@@ -322,7 +323,6 @@ export default {
     .center {
         width: 100%;
         .image-holder {
-            margin: 0.55rem;
             padding-top: 0.5rem;
             max-width: 100%;
             img {

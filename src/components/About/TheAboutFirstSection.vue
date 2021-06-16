@@ -9,11 +9,11 @@
                 </header>
                 <p>
                     <strong>Synmal</strong> je spoľahlivou firmou s dlhoročnými
-                    skúsenosťami. Na trhu sme už od roku 2001, od vtedy sme sa
+                    skúsenosťami. Na trhu sme už od roku 2003, od vtedy sme sa
                     stali v našom odbore silnou konkurenciou. Disponujeme
                     bohatými zručnosťami a kvalitným technickým vybavením.
                     Pôsobíme prevažne na <strong>Liptove</strong>
-                    ale po vzájomnej dohode robíme kompromisy. Našim hlavným
+                    ale po vzájomnej dohode robíme kompromisy. Naším hlavným
                     cieľom je maximálna spokojnosť klienta.
                 </p>
             </div>
@@ -28,7 +28,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     .section {
         position: relative;
@@ -201,5 +200,4 @@
         }
     }
 }
-
 </style>
