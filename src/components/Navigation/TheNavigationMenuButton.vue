@@ -17,11 +17,7 @@ export default {
 
     emits: ['menu-button'],
 
-    props: {
-        activeMenu: {
-            type: Boolean
-        }
-    },
+    props: ['activeMenu'],
 
     data() {
         return {
@@ -29,21 +25,24 @@ export default {
         }
     },
 
+    mounted() {
+        this.button = document.getElementsByTagName('button')[0]
+    },
+
     methods: {
         buttonToggle() {
-            this.button.classList.toggle('is-active')
+            if( this.actualyWidnowSize < this.breakpoint ){
+                this.button.classList.toggle('is-active')
+            }
         }
     },
 
     watch: {
         activeMenu() {
-            if (this.activeMenu === false)
-                this.button.classList.remove('is-active')
+           if( this.actualyWidnowSize < this.breakpoint ){
+            this.button.classList.toggle('is-active')
+           }
         }
-    },
-
-    mounted() {
-        this.button = document.getElementsByTagName('button')[0]
     }
 }
 </script>
@@ -51,7 +50,7 @@ export default {
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
     .button-wrapper {
-        margin: 0.938rem 0;
+        margin: 1.05rem 0.25rem;
     }
 
     .menu-toggle {

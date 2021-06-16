@@ -15,30 +15,54 @@
     </router-link>
 </template>
 
+<script>
+import tableMixin from '../../mixins/tableMixins.js'
+
+export default {
+    mixins: [tableMixin]
+}
+</script>
+
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
     .container-logo {
         display: flex;
         align-items: center;
         width: 100%;
-        padding-top: 0.5rem;
+        padding-top: 0.38rem;
+        padding-left: 0.25rem;
+        cursor: pointer;
     }
 
     .img-box {
-        width: 3rem;
+        width: 2.6rem;
+        cursor: pointer;
         img {
             width: 100%;
+            cursor: pointer;
         }
     }
 
     .h4-box {
         margin-top: -0.5rem;
         margin-left: 0.5rem;
+        display: flex;
         h4 {
             color: $primary-light;
-            text-decoration: none;
+            letter-spacing: 0.5px;
             font: {
-                size: 12px;
+                size: 13px;
+                weight: 300;
+            }
+        }
+
+        a {
+            color: $primary-light;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            padding-left: 0.4rem;
+            font: {
+                size: 13px;
                 weight: 300;
             }
         }
@@ -52,11 +76,12 @@
 
 @media screen and (min-width: 1024px) {
     .container-logo {
-        padding-top: 0.7rem;
+        padding-top: 0.6rem;
+        padding-left: 1.2rem;
     }
 
     .img-box {
-        width: 4rem;
+        width: 3.5rem;
     }
 
     .h4-box {

@@ -10,10 +10,7 @@
                 />
 
                 <nav>
-                    <ul
-                        v-if="activeMenu || breakPointLarge < actualyWidnowSize"
-                        @click="activeMenu = false"
-                    >
+                    <ul class='ul' @click="switchButton()">
                         <li
                             class="list-item"
                             tabindex="1"
@@ -50,10 +47,10 @@
 </template>
 
 <script>
+import { throttle } from 'lodash'
 import tableMixin from '../../mixins/tableMixins.js'
 import NavigationLogo from '../Navigation/TheNavigationLogo.vue'
 import NavigationMenuButton from '../Navigation/TheNavigationMenuButton.vue'
-import { throttle } from 'lodash-es'
 
 export default {
     mixins: [tableMixin],
@@ -65,81 +62,71 @@ export default {
 
     data() {
         return {
-            breakPointLarge: 1023, //px
-            activeMenu: false,
-            navigation: Object,
-            lastScrollPosition: 0
+            activeMenu: Boolean,
+            nav: Object,
+            li: Object
         }
     },
-
     mounted() {
-        this.navigation = document.getElementsByClassName('section')[0]
-        window.addEventListener('scroll', () => {
-            this.actualyWidnowSize > this.breakpoint
-                ? this.hideNavBarWhenScroll()
-                : false
 
-            this.activeMenu = false
+        this.section = document.getElementsByClassName('section')[0]
+        this.nav = document.getElementsByClassName('ul')[0]
+
+        this.li = document.querySelectorAll('li')
+        this.li.forEach( li => {
+           li.addEventListener('click', () => {
+               this.hideNavigation()
+           }) 
+        })
+
+        window.addEventListener('resize', () => {
+            this.navigationSetup()
         })
     },
 
     methods: {
-        toggleMenu() {
-            this.activeMenu
-                ? (this.activeMenu = false)
-                : (this.activeMenu = true)
+
+        hideNavigation(){
+            for (let i = 0; i < this.li.length; i++) {
+                 this.li[i].classList.add('deactive')
+                 this.li[i].classList.remove('active')
+             }
         },
 
-        hideNavBarWhenScroll: throttle(function() {
-            let viewPosition =
-                window.pageYOffset || document.documentElement.scrollTop
-
-            if (viewPosition > this.lastScrollPosition) {
-                this.navigation.classList.add('hide-navigation')
-                this.navigation.classList.contains('show-navigation')
-                    ? this.navigation.classList.remove('show-navigation')
-                    : false
+        navigationSetup: throttle( function(){
+            if( this.actualyWidnowSize < this.breakpoint ){
+                this.nav.classList.remove('display')
             } else {
-                this.navigation.classList.add('show-navigation')
-                this.navigation.classList.contains('hide-navigation')
-                    ? this.navigation.classList.remove('hide-navigation')
-                    : false
+                this.nav.classList.add('display')
             }
-            this.lastScrollPosition = viewPosition <= 0 ? 0 : viewPosition
-        }, 250)
+        }, 250),
+
+        switchButton(){
+            if( this.activeMenu ){
+                this.activeMenu = false
+            } else {
+                this.activeMenu = true
+            }
+        },
+
+        toggleMenu() {
+            for ( let i = 0; i < this.li.length; i++ ) { 
+                if ( this.li[i].classList.contains('active') ){
+                    this.li[i].classList.remove('active')
+                    this.li[i].classList.add('deactive')
+                } else {
+                    this.li[i].classList.remove('deactive')
+                    this.li[i].classList.add('active')
+                }
+            }
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+
 @media screen and (min-width: 0px) {
-    .show-navigation {
-        transform: translateY(0%);
-        animation: showNav 1s ease-in-out backwards;
-    }
-
-    .hide-navigation {
-        transform: translateY(-100%);
-        animation: hideNav 0.25s ease-in-out backwards;
-    }
-
-    @keyframes hideNav {
-        0% {
-            transform: translateY(0%);
-        }
-        100% {
-            transform: translateY(-100%);
-        }
-    }
-
-    @keyframes showNav {
-        0% {
-            transform: translateY(-100%);
-        }
-        100% {
-            transform: translateY(0%);
-        }
-    }
 
     .section {
         position: fixed;
@@ -149,7 +136,7 @@ export default {
         background: $primary-dark;
 
         .container {
-            width: 95%;
+            width: 98%;
             display: flex;
             margin: 0rem auto;
             justify-content: space-between;
@@ -160,15 +147,17 @@ export default {
         position: fixed;
         width: 100%;
         right: 0;
-        margin-top: 0.338rem;
         z-index: 10;
         color: $darkest;
         text-align: center;
-        background: $primary-semi-light;
+        margin-top: 0.11rem
     }
 
     li {
+        display: none;
+        outline: none;
         color: $primary-dark;
+        background: $primary-semi-light;
         font: {
             size: 14px;
             weight: 500;
@@ -178,14 +167,76 @@ export default {
         border-bottom: 0.25px solid $primary;
     }
 
+    .display{
+        display: block;
+    }
+
+    li:first-child.active{
+        display: block;
+        transform: translateX( -100% );
+        animation: slideNav 0.5s 0.1s ease-in-out both;
+    }
+
+    li:nth-child(2).active{
+        display: block;
+        transform: translateX( -100% );
+        animation: slideNav 0.5s 0.20s ease-in-out both;
+    }
+
+    li:nth-child(3).active{
+        display: block;
+        transform: translateX( -100% );
+        animation: slideNav 0.5s 0s ease-in-out both;
+    }
+
+    li:nth-child(4).active{
+        display: block;
+        transform: translateX( -100% );
+        animation: slideNav 0.5s 0.15s ease-in-out both;
+    }
+
+    @keyframes slideNav {
+        0% { transform: translateX( -100% ) }
+        100% { transform: translateX( 0% ) }
+    }
+
+    li:first-child.deactive{
+        display: none;
+        transform: translateX( -110% );
+        animation: unslideNav 0.5s 0.1s ease-in-out both;
+    }
+
+    li:nth-child(2).deactive{
+        display: none;
+        transform: translateX( -110% );
+        animation: unslideNav 0.5s 0.2s ease-in-out both;
+    }
+
+    li:nth-child(3).deactive{
+        display: none;
+        transform: translateX( -110% );
+        animation: unslideNav 0.5s 0.35s ease-in-out both;
+    }
+
+    li:nth-child(4).deactive{
+        display: none;
+        transform: translateX( -110% );
+        animation: unslideNav 0.5s 0.15s ease-in-out both;
+    }
+
+    @keyframes unslideNav {
+        0% { transform: translateX( 0% ) }
+        100% { transform: translateX( 100% ) }
+    }
+
     li:focus {
-        background: $primary-semi-dark;
-        color: $primary-light;
+        background: $primary;
         transition: 0.25s;
     }
 }
 
 @media screen and (min-width: 1024px) {
+
     .section {
         height: 4.688rem;
         background: rgba($primary-dark, 75%);
@@ -207,9 +258,28 @@ export default {
             weight: 300;
         }
         color: $primary-light;
+        background-color: transparent;
         border-bottom: none;
     }
 
+    li:first-child.active,
+    li:nth-child(2).active,
+    li:nth-child(3).active,
+    li:nth-child(4).active{
+        display: unset;
+        animation: unset;
+        transform: translateX( 0 );
+    }
+
+    li:first-child.deactive,
+    li:nth-child(2).deactive,
+    li:nth-child(3).deactive,
+    li:nth-child(4).deactive{
+        display: unset;
+        animation: unset;
+        transform: translateX( 0 );
+    }
+    
     li:hover {
         color: $fancy;
         transition: 0.25s;
