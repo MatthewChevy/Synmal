@@ -8,5 +8,16 @@ module.exports = {
                 `
             }
         }
+    },
+
+    pluginOptions: {
+        sitemap: {
+            urls: [
+                'https://www.synmal.sk/',
+                'https://www.synmal.sk/about',
+                'https://www.synmal.sk/contact',
+                'https://www.synmal.sk/gallery',
+            ]
+        }
     }
 }
