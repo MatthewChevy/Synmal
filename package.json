@@ -14,6 +14,7 @@
     "lodash-es": "^4.17.21",
     "mitt": "^2.1.0",
     "vue": "^3.0.0",
+    "vue-easy-lightbox": "^1.2.0",
     "vue-gallery-slideshow": "^1.5.2",
     "vue-recaptcha-v3": "^2.0.1",
     "vue-router": "^4.0.0-0",
