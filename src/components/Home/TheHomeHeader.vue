@@ -45,13 +45,13 @@ export default {
     methods: {
         ratioWindowSizeChanger: debounce(function() {
             this.actualyWidnowSize > this.breakpoint
-                ? (this.ratio = -0.20)
+                ? (this.ratio = -0.2)
                 : (this.ratio = 0.15)
         }, 150),
 
         setParallaxRatio() {
             this.actualyWidnowSize > this.breakpoint
-                ? (this.ratio = -0.20)
+                ? (this.ratio = -0.2)
                 : (this.ratio = 0.15)
         }
     }
@@ -66,9 +66,32 @@ export default {
 
     .bg-image-box {
         position: fixed;
-        // background-image: url('../../assets/img/background/bg-image-mobile.jpg');
         background-image: url('../../assets/img/background/background.jpg');
         background-position: 35%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 51.1rem;
+        width: 100%;
+        top: -3.5rem;
+
+        .bg-image {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 40%);
+            background-size: cover;
+            background-position: center center;
+            z-index: 2;
+            height: 51.1rem;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .bg-image-box {
+        position: fixed;
+        background-image: url('../../assets/img/background/background.jpg');
+        background-position: 13%;
+        background-repeat: no-repeat;
         background-size: cover;
         height: 51.1rem;
         width: 100%;
