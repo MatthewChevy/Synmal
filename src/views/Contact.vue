@@ -218,7 +218,7 @@
                         </div>
 
                         <div class="form-button">
-                            <button @click="recaptcha" type="submit">
+                            <button type="submit">
                                 Odoslať správu
                             </button>
                         </div>
@@ -266,6 +266,7 @@ export default {
     },
 
     methods: {
+
         setAOSProperty: debounce(function() {
             if (this.actualyWidnowSize >= this.breakpoint) {
                 this.telephoneBox = 'zoom-out'
@@ -709,7 +710,6 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
     header {
         top: 6rem;
     }
@@ -790,7 +790,7 @@ export default {
         margin: 0 auto;
     }
 
-    .container{
+    .container {
         margin-top: 2rem;
     }
 
@@ -811,7 +811,6 @@ export default {
     .navigation-box {
         top: 0.7rem;
     }
-
 
     .notification-box {
         .notification {

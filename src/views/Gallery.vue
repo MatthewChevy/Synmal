@@ -1,5 +1,4 @@
 <template>
-
     <main>
         <header class="title-section">
             <div class="h1-box" data-aos="fade-down">
@@ -463,8 +462,8 @@ export default {
         VueEasyLightbox
     },
 
-    data(){
-        return{
+    data() {
+        return {
             prevBtn: true,
             first: true,
             allImgs: '',
@@ -475,15 +474,15 @@ export default {
         }
     },
 
-    mounted () {
+    mounted() {
         this.allImgs = document.querySelectorAll('.column img')
-        this.allImgs.forEach( img => {
-            img.addEventListener( 'click', () => {
+        this.allImgs.forEach(img => {
+            img.addEventListener('click', () => {
                 this.imgs = img.src
                 this.visible = true
                 this.saveImages()
-            }) 
-        });
+            })
+        })
     },
 
     methods: {
@@ -500,26 +499,25 @@ export default {
                 arrOfImages.push(element.src)
             })
 
-            if (arrOfImages.indexOf( this.imgs ) != -1) {
+            if (arrOfImages.indexOf(this.imgs) != -1) {
                 // if the image url is located in array
-                this.indexOfFocusImage = arrOfImages.indexOf( this.imgs) 
+                this.indexOfFocusImage = arrOfImages.indexOf(this.imgs)
             }
-        
         },
 
-        prev(){
-            if( this.indexOfFocusImage === 0){
-               this.indexOfFocusImage = this.allImgs.length - 1
-               this.imgs = this.allImgs[this.indexOfFocusImage].src
+        prev() {
+            if (this.indexOfFocusImage === 0) {
+                this.indexOfFocusImage = this.allImgs.length - 1
+                this.imgs = this.allImgs[this.indexOfFocusImage].src
             } else {
-                this.imgs = this.allImgs[this.indexOfFocusImage --].src
+                this.imgs = this.allImgs[this.indexOfFocusImage--].src
             }
         },
 
-        next(){
-            if( this.indexOfFocusImage === this.allImgs.length){
-               this.indexOfFocusImage = 0
-               this.imgs = this.allImgs[this.indexOfFocusImage].src
+        next() {
+            if (this.indexOfFocusImage === this.allImgs.length) {
+                this.indexOfFocusImage = 0
+                this.imgs = this.allImgs[this.indexOfFocusImage].src
             } else {
                 this.imgs = this.allImgs[this.indexOfFocusImage + 1].src
                 this.indexOfFocusImage++
@@ -530,110 +528,109 @@ export default {
 </script>
 
 <style lang="scss">
+.vel-btns-wrapper .btn__close {
+    top: 4.5rem;
+    // right: 5%;
+    background-color: #2d2d2da4;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 50px;
+}
 
+.left-arrow {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 2.7rem;
+    height: 2.7rem;
+    left: 1rem;
+    top: 50%;
+    background-color: #2d2d2d73;
+    border-radius: 50%;
+    transform: rotateZ(90deg);
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    background-color: #2d2d2de0;
+    transition: 0.25s;
+}
+
+.left-arrow::before {
+    content: '>';
+    position: relative;
+    top: 0.1rem;
+    right: 1.2rem;
+    font-size: 50px;
+    font-weight: 300;
+    color: #ffffff;
+    transform: rotateZ(90deg);
+}
+
+.right-arrow {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 2.7rem;
+    height: 2.7rem;
+    right: 1rem;
+    top: 50%;
+    background-color: #2d2d2da4;
+    border-radius: 50%;
+    transform: rotateZ(-90deg);
+    color: $fancy;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.right-arrow::before {
+    content: '>';
+    position: relative;
+    top: 0.1rem;
+    right: 1.2rem;
+    font-size: 50px;
+    font-weight: 300;
+    color: #ffffff;
+    transform: rotateZ(90deg);
+}
+
+.right-arrow:focus {
+    outline: none;
+}
+
+@media screen and (min-width: 500px) {
+    .vel-btns-wrapper .btn__close {
+        top: 3rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .vel-btns-wrapper .btn__close {
+        top: 2rem;
+    }
+}
+
+@media screen and (min-width: 750px) {
     .vel-btns-wrapper .btn__close {
         top: 4.5rem;
-        // right: 5%;
-        background-color: #2d2d2da4;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        font-size: 50px;
     }
+}
 
-    .left-arrow {
-        position: fixed;
-        display: flex;
-        justify-content: flex-end;
-        width: 2.7rem;
-        height: 2.7rem;
-        left: 1rem;
-        top: 50%;
-        background-color: #2d2d2d73;
-        border-radius: 50%;
-        transform: rotateZ(90deg);
-        z-index: 99999;
-        cursor: pointer;
+@media screen and (min-width: 1024px) {
+    w .vel-btns-wrapper .btn__close {
+        top: 2rem;
     }
-
-    .left-arrow:hover,.right-arrow:hover{
-        background-color: #2d2d2de0;;
-        transition: .25s;
-    }
-
-    .left-arrow::before {
-        content: '>';
-        position: relative;
-        top: 0.1rem;
-        right: 1.2rem;
-        font-size: 50px;
-        font-weight: 300;
-        color: #ffffff;
-        transform: rotateZ(90deg);
-    }
-
-    .right-arrow {
-        position: fixed;
-        display: flex;
-        justify-content: flex-end;
-        width: 2.7rem;
-        height: 2.7rem;
-        right: 1rem;
-        top: 50%;
-        background-color: #2d2d2da4;
-        border-radius: 50%;
-        transform: rotateZ(-90deg);
-        color: $fancy;
-        z-index: 99999;
-        cursor: pointer;
-    }
-
-    .right-arrow::before {
-        content: '>';
-        position: relative;
-        top: 0.1rem;
-        right: 1.2rem;
-        font-size: 50px;
-        font-weight: 300;
-        color: #ffffff;
-        transform: rotateZ(90deg);
-    }
-
-    .right-arrow:focus {
-        outline: none;
-    }
-
-    @media screen and ( min-width: 500px) {
-        .vel-btns-wrapper .btn__close {
-            top: 3rem;
-        }
-    }
-
-    @media screen and ( min-width: 550px) {
-        .vel-btns-wrapper .btn__close {
-            top: 2rem;
-        }
-    }
-
-    @media screen and ( min-width: 750px) {
-        .vel-btns-wrapper .btn__close {
-            top: 4.5rem;
-        }
-    }
-
-    @media screen and ( min-width: 1024px) {w
-        .vel-btns-wrapper .btn__close {
-            top: 2rem;
-        }
-    }
+}
 </style>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     main {
         overflow-x: hidden;
