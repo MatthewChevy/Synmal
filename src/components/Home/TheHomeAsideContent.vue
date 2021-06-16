@@ -3,7 +3,7 @@
         <aside class="container" data-aos="zoom-in">
             <div class="title-box">
                 <h4>
-                    Zaujíma Vás pribeh našej práce alebo informácie o našej
+                    Zaujíma Vás priebeh našej práce alebo informácie o našej
                     firme ?
                 </h4>
             </div>

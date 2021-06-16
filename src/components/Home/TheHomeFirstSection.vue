@@ -19,8 +19,8 @@
                         />
                     </div>
                     <p>
-                        Postaráme sa o všetky Vaše kancelárske obchodné, bytové
-                        a nebytové priestory, rodinné domy... Rôzne dekoratívne
+                        Postaráme sa o všetky Vaše kancelárske, obchodné, bytové
+                        a nebytové priestory, rodinné domy, rôzne dekoratívne
                         prvky, pačokovanie, vyspravenie prasklín, renovácia
                         povrchu, penetračné nátery. Všetko dôkladne pozakrývame,
                         zalepíme a prípravíme na malovanie. Po skončení prác
@@ -42,9 +42,9 @@
                     <p>
                         Tak isto ako v prípade interiérov, aj maľovanie
                         exteriérov zabezpečíme s najvyššou možnou kvalitou. Je u
-                        nás zvykom že v prípade rodiných domov zakryjeme fóliou
-                        nielen terasy, markízy, okná ale aj trávnik. Máme
-                        vymalovaných nespočetne rodinných domov a bytoviek po
+                        nás zvykom, že v prípade rodinných domov zakryjeme
+                        fóliou nielen terasy, markízy, okná ale aj trávnik. Máme
+                        vymaľovaných nespočetne rodinných domov a bytoviek po
                         celom Liptove a okolí.
                     </p>
                 </div>
@@ -60,8 +60,8 @@
                     <p>
                         Pri práci na strechách používame istiace a bezpečnostné
                         prvky. Máme platné všetky potvrdenia na vykonávanie prác
-                        vo výškach. V prípade potreby robíme opravy komínov.
-                        Najčastejšie používame dvojzložkové farby ktoré sa nám
+                        vo výškach. V prípade potreby, robíme opravy komínov.
+                        Najčastejšie používame dvojzložkové farby, ktoré sa nám
                         osvedčili a aj po rokoch je strecha vo výbornom stave.
                     </p>
                 </div>
@@ -76,8 +76,8 @@
                     </div>
                     <p>
                         Či už drevený plot, tatranský profil, drevené obklady,
-                        staupláty, altánky alebo drevenice o všetko drevo sa Vám
-                        postaráme aby bolo vo výbornej kondicií. Maľovanie dreva
+                        štaupláty, altánky alebo drevenice o všetko drevo sa Vám
+                        postaráme aby bolo vo výbornej kondicii. Maľovanie dreva
                         a drevených obkladov realizujeme v interiéri aj
                         exteriéri.
                     </p>
@@ -159,7 +159,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     section {
         width: 100%;
@@ -191,9 +190,13 @@ export default {
         .arrow-box {
             animation: bounce 2s infinite ease-in-out;
             span {
+                position: relative;
                 color: $fancy;
+                top: 1rem;
                 font: {
-                    size: 36px;
+                    family: $font-lora;
+                    size: 40px;
+                    weight: 300;
                 }
             }
         }
@@ -304,12 +307,13 @@ export default {
     }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 400px) {
     .h3-wrapper {
         .arrow-box {
             span {
                 font: {
-                    size: 50px;
+                    size: 60px;
+                    // weight: 600;
                 }
             }
         }

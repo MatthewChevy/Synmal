@@ -5,10 +5,10 @@
                 <h2>Prečo si vybrať práve nás ?</h2>
                 <p>
                     Maľovanie so sebou nesie riziká, niektoré sa ukážu až pri
-                    samotnom maľovaní. Za 2 dekády vykononávania nášho remesla
-                    sme si prešli už naozaj všetkým. Zvolíme vždy ten najlepší
+                    samotnom maľovaní. Za 2 dekády vykonávania nášho remesla sme
+                    si prešli už naozaj všetkým. Zvolíme vždy ten najlepší
                     spôsob prípravy podkladu. Pleseň, mastný povrch, praskliny,
-                    zadymené alebo mokré steny pre nás nieje problém.
+                    zadymené alebo mokré steny pre nás nie sú problém.
                 </p>
             </div>
             <div class="notes-box">
@@ -24,7 +24,7 @@
                         <li data-aos="fade-right">
                             Pracujeme aj počas víkendu
                         </li>
-                        <li data-aos="fade-right">Individálny prístup</li>
+                        <li data-aos="fade-right">Individuálny prístup</li>
                         <li data-aos="fade-right">Odborne vykonaná práca</li>
                     </ul>
                 </div>
