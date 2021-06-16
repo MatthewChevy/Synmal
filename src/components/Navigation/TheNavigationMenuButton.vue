@@ -31,7 +31,7 @@ export default {
 
     methods: {
         buttonToggle() {
-            if( this.actualyWidnowSize < this.breakpoint ){
+            if (this.actualyWidnowSize < this.breakpoint) {
                 this.button.classList.toggle('is-active')
             }
         }
@@ -39,9 +39,9 @@ export default {
 
     watch: {
         activeMenu() {
-           if( this.actualyWidnowSize < this.breakpoint ){
-            this.button.classList.toggle('is-active')
-           }
+            if (this.actualyWidnowSize < this.breakpoint) {
+                this.button.classList.toggle('is-active')
+            }
         }
     }
 }

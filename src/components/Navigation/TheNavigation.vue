@@ -10,7 +10,7 @@
                 />
 
                 <nav>
-                    <ul class='ul' @click="switchButton()">
+                    <ul class="ul" @click="switchButton()">
                         <li
                             class="list-item"
                             tabindex="1"
@@ -68,15 +68,14 @@ export default {
         }
     },
     mounted() {
-
         this.section = document.getElementsByClassName('section')[0]
         this.nav = document.getElementsByClassName('ul')[0]
 
         this.li = document.querySelectorAll('li')
-        this.li.forEach( li => {
-           li.addEventListener('click', () => {
-               this.hideNavigation()
-           }) 
+        this.li.forEach(li => {
+            li.addEventListener('click', () => {
+                this.hideNavigation()
+            })
         })
 
         window.addEventListener('resize', () => {
@@ -85,24 +84,23 @@ export default {
     },
 
     methods: {
-
-        hideNavigation(){
+        hideNavigation() {
             for (let i = 0; i < this.li.length; i++) {
-                 this.li[i].classList.add('deactive')
-                 this.li[i].classList.remove('active')
-             }
+                this.li[i].classList.add('deactive')
+                this.li[i].classList.remove('active')
+            }
         },
 
-        navigationSetup: throttle( function(){
-            if( this.actualyWidnowSize < this.breakpoint ){
+        navigationSetup: throttle(function() {
+            if (this.actualyWidnowSize < this.breakpoint) {
                 this.nav.classList.remove('display')
             } else {
                 this.nav.classList.add('display')
             }
         }, 250),
 
-        switchButton(){
-            if( this.activeMenu ){
+        switchButton() {
+            if (this.activeMenu) {
                 this.activeMenu = false
             } else {
                 this.activeMenu = true
@@ -110,8 +108,8 @@ export default {
         },
 
         toggleMenu() {
-            for ( let i = 0; i < this.li.length; i++ ) { 
-                if ( this.li[i].classList.contains('active') ){
+            for (let i = 0; i < this.li.length; i++) {
+                if (this.li[i].classList.contains('active')) {
                     this.li[i].classList.remove('active')
                     this.li[i].classList.add('deactive')
                 } else {
@@ -125,9 +123,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
-
     .section {
         position: fixed;
         width: 100%;
@@ -150,7 +146,7 @@ export default {
         z-index: 10;
         color: $darkest;
         text-align: center;
-        margin-top: 0.11rem
+        margin-top: 0.11rem;
     }
 
     li {
@@ -167,66 +163,74 @@ export default {
         border-bottom: 0.25px solid $primary;
     }
 
-    .display{
+    .display {
         display: block;
     }
 
-    li:first-child.active{
+    li:first-child.active {
         display: block;
-        transform: translateX( -100% );
+        transform: translateX(-100%);
         animation: slideNav 0.5s 0.1s ease-in-out both;
     }
 
-    li:nth-child(2).active{
+    li:nth-child(2).active {
         display: block;
-        transform: translateX( -100% );
-        animation: slideNav 0.5s 0.20s ease-in-out both;
+        transform: translateX(-100%);
+        animation: slideNav 0.5s 0.2s ease-in-out both;
     }
 
-    li:nth-child(3).active{
+    li:nth-child(3).active {
         display: block;
-        transform: translateX( -100% );
+        transform: translateX(-100%);
         animation: slideNav 0.5s 0s ease-in-out both;
     }
 
-    li:nth-child(4).active{
+    li:nth-child(4).active {
         display: block;
-        transform: translateX( -100% );
+        transform: translateX(-100%);
         animation: slideNav 0.5s 0.15s ease-in-out both;
     }
 
     @keyframes slideNav {
-        0% { transform: translateX( -100% ) }
-        100% { transform: translateX( 0% ) }
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
     }
 
-    li:first-child.deactive{
+    li:first-child.deactive {
         display: none;
-        transform: translateX( -110% );
+        transform: translateX(-110%);
         animation: unslideNav 0.5s 0.1s ease-in-out both;
     }
 
-    li:nth-child(2).deactive{
+    li:nth-child(2).deactive {
         display: none;
-        transform: translateX( -110% );
+        transform: translateX(-110%);
         animation: unslideNav 0.5s 0.2s ease-in-out both;
     }
 
-    li:nth-child(3).deactive{
+    li:nth-child(3).deactive {
         display: none;
-        transform: translateX( -110% );
+        transform: translateX(-110%);
         animation: unslideNav 0.5s 0.35s ease-in-out both;
     }
 
-    li:nth-child(4).deactive{
+    li:nth-child(4).deactive {
         display: none;
-        transform: translateX( -110% );
+        transform: translateX(-110%);
         animation: unslideNav 0.5s 0.15s ease-in-out both;
     }
 
     @keyframes unslideNav {
-        0% { transform: translateX( 0% ) }
-        100% { transform: translateX( 100% ) }
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
     }
 
     li:focus {
@@ -236,7 +240,6 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-
     .section {
         height: 4.688rem;
         background: rgba($primary-dark, 75%);
@@ -265,21 +268,21 @@ export default {
     li:first-child.active,
     li:nth-child(2).active,
     li:nth-child(3).active,
-    li:nth-child(4).active{
+    li:nth-child(4).active {
         display: unset;
         animation: unset;
-        transform: translateX( 0 );
+        transform: translateX(0);
     }
 
     li:first-child.deactive,
     li:nth-child(2).deactive,
     li:nth-child(3).deactive,
-    li:nth-child(4).deactive{
+    li:nth-child(4).deactive {
         display: unset;
         animation: unset;
-        transform: translateX( 0 );
+        transform: translateX(0);
     }
-    
+
     li:hover {
         color: $fancy;
         transition: 0.25s;
