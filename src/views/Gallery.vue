@@ -1,24 +1,17 @@
 <template>
+
     <main>
         <header class="title-section">
             <div class="h1-box" data-aos="fade-down">
-                <h1>Vitajte v galérií</h1>
+                <h1>Naša galéria</h1>
             </div>
         </header>
 
         <section v-if="actualyWidnowSize < breakpoint" class="gallery">
             <div class="column">
                 <img
-                    src="../assets/img/gallery/DSC_0001.jpg"
-                    alt="Maľovanie fásady rodinného domu"
-                />
-                <img
                     src="../assets/img/gallery/DSC_0003.jpg"
                     alt="Maľovanie fásady rodinného domu"
-                />
-                <img
-                    src="../assets/img/gallery/DSC_0047.jpg"
-                    alt="Vyspravovanie prasklín"
                 />
                 <img
                     src="../assets/img/gallery/DSC_0012.jpg"
@@ -49,10 +42,6 @@
                     alt="Pripravené na striekanie"
                 />
                 <img
-                    src="../assets/img/gallery/DSC_0044.jpg"
-                    alt="Dôsledné zalepenie"
-                />
-                <img
                     src="../assets/img/gallery/DSC_0021.jpg"
                     alt="Airless maľovanie"
                 />
@@ -81,6 +70,14 @@
                     alt="Striekanie interiéru novostavby s dreveným stropom"
                 />
                 <img
+                    src="../assets/img/gallery/DSC_0057.jpg"
+                    alt="Zalepenie schodiska"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0055.jpg"
+                    alt="Schodisko po skončení prác"
+                />
+                <img
                     src="../assets/img/gallery/DSC_0019.jpg"
                     alt="Príprava na striekanie"
                 />
@@ -95,6 +92,14 @@
                 <img
                     src="../assets/img/gallery/DSC_0031.jpg"
                     alt="Lakovanie podbitia preshu strechy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0048.jpg"
+                    alt="Strojové malovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0049.jpg"
+                    alt="Strojové malovanie"
                 />
             </div>
 
@@ -124,8 +129,12 @@
                     alt="Opravovanie fasády za pomoci vysokozdvižnej rampy"
                 />
                 <img
-                    src="../assets/img/gallery/DSC_0030.jpg"
-                    alt="Renovácia kovovej konštrukcie"
+                    src="../assets/img/gallery/DSC_0052.jpg"
+                    alt="Zalepenie interiéru"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0061.jpg"
+                    alt="Strojové malovanie"
                 />
                 <img
                     src="../assets/img/gallery/DSC_0027.jpg"
@@ -144,16 +153,16 @@
                     alt="Kúpeľňa v rodinnom dome po prvej vrstve"
                 />
                 <img
+                    src="../assets/img/gallery/DSC_0058.jpg"
+                    alt="Maľovanie fasády rodinného domu"
+                />
+                <img
                     src="../assets/img/gallery/DSC_0045.jpg"
                     alt="Všetko poriadne zalepíme"
                 />
                 <img
                     src="../assets/img/gallery/DSC_0038.jpg"
                     alt="Nový náter plechovej strechy"
-                />
-                <img
-                    src="../assets/img/gallery/DSC_0039.jpg"
-                    alt="Chodba v rodinnom dome po prvej vrstve"
                 />
                 <img
                     src="../assets/img/gallery/DSC_0033.jpg"
@@ -178,6 +187,10 @@
                 <img
                     src="../assets/img/gallery/DSC_0037.jpg"
                     alt="Renovácia školých priestorov / po"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0050.jpg"
+                    alt="Strojové malovanie"
                 />
             </div>
         </section>
@@ -228,6 +241,18 @@
                     src="../assets/img/gallery/DSC_0020.jpg"
                     alt="Nastriekaná posledná vrstva"
                 />
+                <img
+                    src="../assets/img/gallery/DSC_0048.jpg"
+                    alt="Strojové malovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0049.jpg"
+                    alt="Strojové malovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0050.jpg"
+                    alt="Strojové malovanie"
+                />
             </div>
 
             <div class="column">
@@ -274,6 +299,18 @@
                 <img
                     src="../assets/img/gallery/DSC_0030.jpg"
                     alt="Lakovanie podbitia preshu strechy"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0058.jpg"
+                    alt="Malovanie fadsády rodinného domu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0052.jpg"
+                    alt="Zalepenie interiéru"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0057.jpg"
+                    alt="Zalepenie schodiska"
                 />
             </div>
 
@@ -322,6 +359,18 @@
                     src="../assets/img/gallery/DSC_0042.jpg"
                     alt="Kúpeľňa v rodinnom dome po prvej vrstve"
                 />
+                <img
+                    src="../assets/img/gallery/DSC_0061.jpg"
+                    alt="Strojové malovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0063.jpg"
+                    alt="Po skončení renovácie stropu"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0055.jpg"
+                    alt="Schodisko po ukončení prác"
+                />
             </div>
 
             <div class="column">
@@ -365,113 +414,85 @@
                     src="../assets/img/gallery/DSC_0037.jpg"
                     alt="Renovácia školých priestorov / po"
                 />
+                <img
+                    src="../assets/img/gallery/DSC_0060.jpg"
+                    alt="Pred renováciou rámov okien"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0059.jpg"
+                    alt="Po renovácií rámov okien"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0062.jpg"
+                    alt="Po renováciou rámov okien"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0051.jpg"
+                    alt="Strojové malovanie"
+                />
+                <img
+                    src="../assets/img/gallery/DSC_0056.jpg"
+                    alt="Zalepenie interieru"
+                />
             </div>
         </section>
     </main>
 
-    <div class="lightbox">
-        <div class="image-box">
-            <div class="close-cross"></div>
-            <img src="../assets/img/gallery/DSC_0037.jpg" alt="#">
-        </div>
-        <div class="left-arrow"></div>
-        <div class="right-arrow"></div>
-    </div>
+    <vue-easy-lightbox
+        scrollDisabled
+        escDisabled
+        moveDisabled
+        :visible="visible"
+        :imgs="imgs"
+        :index="index"
+        @hide="handleHide"
+    >
+    </vue-easy-lightbox>
+    <div v-if="visible" @click="prev()" class="left-arrow"></div>
+    <div v-if="visible" @click="next()" class="right-arrow"></div>
 </template>
 
 <script>
 import tableMixins from '../mixins/tableMixins.js'
+import VueEasyLightbox from 'vue-easy-lightbox'
 
 export default {
     mixins: [tableMixins],
 
-    data() {
-        return {
-            images: Object,
-            main: Object,
-            lightbox: Object,
-            newImage: Object,
-            leftArrow: Object,
-            rightArrow: Object,
-            closeCross: Object,
-            indexOfFocusImage: Number
+    components: {
+        VueEasyLightbox
+    },
+
+    data(){
+        return{
+            prevBtn: true,
+            first: true,
+            allImgs: '',
+            imgs: [],
+            indexOfFocusImage: '',
+            visible: false,
+            index: 0 // default: 0
         }
     },
 
-    mounted() {
-        this.images = document.querySelectorAll('.column img')
-        this.lightbox = document.getElementsByClassName('lightbox')[0]
-        this.closeCross = document.querySelectorAll('.close-cross')[0]
-        this.leftArrow = document.querySelectorAll('.left-arrow')[0]
-        this.rightArrow = document.querySelectorAll('.right-arrow')[0]
-
-        this.appendImage()
-
-        window.addEventListener('keydown', e => {
-            // after keydown escape switch-off lightbox
-            if (
-                this.lightbox.classList.contains('active') &&
-                e.key === 'Escape'
-            ) {
-                this.lightbox.classList.remove('active')
-            }
-        })
-
-        window.addEventListener('scroll', () => {
-            // after scrolldown switch-off lightbox
-            if (this.lightbox.classList.contains('active')) {
-                this.lightbox.classList.remove('active')
-            }
-        })
-
-        this.closeCross.addEventListener('click', () => {
-                this.lightbox.classList.remove('active')
-        })
-
-        this.lightbox.addEventListener('click', e => {
-            // after click on image switch-off lightbox
-            if (e.target == e.currentTarget)
-                this.lightbox.classList.remove('active')
-        })
-
-        this.rightArrow.addEventListener('click', () => {
-            // after click on right arrow slide image
-            this.slideImage(true)
-        })
-
-        this.leftArrow.addEventListener('click', () => {
-            // after click on left arrow slide image
-            this.slideImage(false)
-        })
+    mounted () {
+        this.allImgs = document.querySelectorAll('.column img')
+        this.allImgs.forEach( img => {
+            img.addEventListener( 'click', () => {
+                this.imgs = img.src
+                this.visible = true
+                this.saveImages()
+            }) 
+        });
     },
 
     methods: {
-        slideImage(boolean) {
-            // after click on arrows slide image
-            let images = (this.allImagesArr = Array.prototype.slice.call(
-                this.allImagesArr
-            ))
-            if (boolean) {
-                if (this.indexOfFocusImage === images.length - 1) {
-                    this.newImage.src = images[1]
-                    this.indexOfFocusImage = 0
-                } else {
-                    this.newImage.src = images[this.indexOfFocusImage + 1]
-                }
-                this.indexOfFocusImage++
-            } else {
-                if (this.indexOfFocusImage === 1) {
-                    this.newImage.src = images[images.length - 1]
-                    this.indexOfFocusImage = images.length - 1
-                } else {
-                    this.newImage.src = images[this.indexOfFocusImage - 1]
-                    this.indexOfFocusImage--
-                }
-            }
+        handleHide() {
+            this.visible = false
         },
 
-        saveImages(imgSrc) {
-            let tempArray = Array.prototype.slice.call(this.images)
+        saveImages() {
+            let tempArray = Array.prototype.slice.call(this.allImgs)
             let arrOfImages = []
 
             tempArray.forEach(element => {
@@ -479,38 +500,141 @@ export default {
                 arrOfImages.push(element.src)
             })
 
-            if (arrOfImages.indexOf(imgSrc.target.currentSrc) != -1) {
+            if (arrOfImages.indexOf( this.imgs ) != -1) {
                 // if the image url is located in array
-                this.indexOfFocusImage = arrOfImages.indexOf(
-                    imgSrc.target.currentSrc
-                ) // take index of image
+                this.indexOfFocusImage = arrOfImages.indexOf( this.imgs) 
             }
-            this.allImagesArr = arrOfImages
+        
         },
 
-        appendImage() {
-            this.images.forEach(image => {
-                image.addEventListener('click', event => {
-                    this.saveImages(event)
-                    this.lightbox.classList.add('active')
-                    this.newImage = document.querySelectorAll('.image-box img')[0]
+        prev(){
+            if( this.indexOfFocusImage === 0){
+               this.indexOfFocusImage = this.allImgs.length - 1
+               this.imgs = this.allImgs[this.indexOfFocusImage].src
+            } else {
+                this.imgs = this.allImgs[this.indexOfFocusImage --].src
+            }
+        },
 
-                    this.newImage.src = image.src
-
-                    // while (this.lightbox.firstChild) {
-                    //     this.lightbox.removeChild(this.lightbox.firstChild)
-                    // }
-                })
-            })
+        next(){
+            if( this.indexOfFocusImage === this.allImgs.length){
+               this.indexOfFocusImage = 0
+               this.imgs = this.allImgs[this.indexOfFocusImage].src
+            } else {
+                this.imgs = this.allImgs[this.indexOfFocusImage + 1].src
+                this.indexOfFocusImage++
+            }
         }
     }
 }
 </script>
 
+<style lang="scss">
+
+    .vel-btns-wrapper .btn__close {
+        top: 4.5rem;
+        // right: 5%;
+        background-color: #2d2d2da4;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .left-arrow {
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        width: 2.7rem;
+        height: 2.7rem;
+        left: 1rem;
+        top: 50%;
+        background-color: #2d2d2d73;
+        border-radius: 50%;
+        transform: rotateZ(90deg);
+        z-index: 99999;
+        cursor: pointer;
+    }
+
+    .left-arrow:hover,.right-arrow:hover{
+        background-color: #2d2d2de0;;
+        transition: .25s;
+    }
+
+    .left-arrow::before {
+        content: '>';
+        position: relative;
+        top: 0.1rem;
+        right: 1.2rem;
+        font-size: 50px;
+        font-weight: 300;
+        color: #ffffff;
+        transform: rotateZ(90deg);
+    }
+
+    .right-arrow {
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        width: 2.7rem;
+        height: 2.7rem;
+        right: 1rem;
+        top: 50%;
+        background-color: #2d2d2da4;
+        border-radius: 50%;
+        transform: rotateZ(-90deg);
+        color: $fancy;
+        z-index: 99999;
+        cursor: pointer;
+    }
+
+    .right-arrow::before {
+        content: '>';
+        position: relative;
+        top: 0.1rem;
+        right: 1.2rem;
+        font-size: 50px;
+        font-weight: 300;
+        color: #ffffff;
+        transform: rotateZ(90deg);
+    }
+
+    .right-arrow:focus {
+        outline: none;
+    }
+
+    @media screen and ( min-width: 500px) {
+        .vel-btns-wrapper .btn__close {
+            top: 3rem;
+        }
+    }
+
+    @media screen and ( min-width: 550px) {
+        .vel-btns-wrapper .btn__close {
+            top: 2rem;
+        }
+    }
+
+    @media screen and ( min-width: 750px) {
+        .vel-btns-wrapper .btn__close {
+            top: 4.5rem;
+        }
+    }
+
+    @media screen and ( min-width: 1024px) {w
+        .vel-btns-wrapper .btn__close {
+            top: 2rem;
+        }
+    }
+</style>
+
 <style lang="scss" scoped>
 
 @media screen and (min-width: 0px) {
-
     main {
         overflow-x: hidden;
         position: relative;
@@ -619,180 +743,4 @@ export default {
         }
     }
 }
-
-// LIGHT BOX
-
-@media screen and (min-width: 0px) {
-
-    .lightbox {
-        position: fixed;
-        display: none;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: 10;
-        background-color: rgba(0, 0, 0, 0.8);
-
-        .image-box{
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .imagebox img {
-            max-width: 90%;
-            max-height: 90vh;
-            margin: 0 auto;
-            border: 3px solid $primary;
-        }
-    }
-
-    .lightbox.active {
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        animation: fadeImage 0.25s ease-in-out forwards;
-    }
-
-    .left-arrow {
-        position: absolute;
-        display: flex;
-        justify-content: flex-end;
-        width: 2rem;
-        height: 2rem;
-        left: 1rem;
-        background-color: #ffffff98;
-        border-radius: 50%;
-        transform: rotateZ(90deg);
-        color: $fancy;
-        z-index: 11;
-        cursor: pointer;
-    }
-
-    .left-arrow::before {
-        content: '>';
-        position: relative;
-        top: 0.1rem;
-        right: 0.45rem;
-        font-size: 50px;
-        font-weight: 300;
-        color: $darkest;
-        transform: rotateZ(90deg);
-    }
-
-    .right-arrow {
-        position: absolute;
-        display: flex;
-        justify-content: flex-end;
-        width: 2rem;
-        height: 2rem;
-        right: 1rem;
-        background-color: #ffffff98;
-        border-radius: 50%;
-        transform: rotateZ(-90deg);
-        color: $fancy;
-        z-index: 11;
-        cursor: pointer;
-    }
-
-    .right-arrow::before {
-        content: '>';
-        position: relative;
-        top: 0.1rem;
-        right: 0.45rem;
-        font-size: 50px;
-        font-weight: 300;
-        color: $darkest;
-        transform: rotateZ(90deg);
-    }
-
-    .right-arrow:focus {outline:none}
-
-    .close-cross{
-        position: absolute;
-        width: 2rem;
-        height: 2rem;
-        background-color: #ffffff98;
-        border-radius: 50%;
-        z-index: 15;
-        cursor: pointer;
-        right: 0rem;
-        top: -1rem;
-    }
-
-    .close-cross::before{
-         content: 'X';
-         position: relative;
-         left: 0.64rem;
-         top: 0.25rem;
-         font-size: 18px;
-    }
-
-    @keyframes fadeImage {
-        from {
-            opacity: 0%;
-        }
-        to {
-            opacity: 100%;
-        }
-    }
-}
-
-@media screen and (min-width: 400px) {
-    .image-box img {
-        width: 90%;
-    }
-
-    .close-cross{
-        right: 1rem;
-    }
-
-    .left-arrow {
-        left: 2rem;
-    }
-
-    .right-arrow {
-        right: 2rem;
-    }
-}
-
-@media screen and (min-width: 530px) {
-    .image-box img {
-        max-height: calc(100vh - 5%);
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .image-box img {
-        max-width: 77%;
-        max-height: calc(100vh - 5%);
-    }
-
-    .close-cross{
-        right: 5rem;
-    }
-
-    .left-arrow {
-        left: 4.5rem;
-    }
-
-    .right-arrow {
-        right: 4.5rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    .image-box img {
-        max-width: 100%;
-        width: 100%;
-        max-height: 90vh
-    }
-
-    .close-cross{
-        right: -1rem;
-    }
-}
-
 </style>

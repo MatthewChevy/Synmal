@@ -1,16 +1,18 @@
 <template>
-    <div class="contact-box" v-if='actualyWidnowSize < breakpoint'>
+    <div class="contact-box" v-if="actualyWidnowSize < breakpoint">
         <header>
             <div class="h2-box" data-aos="fade-down">
                 <h2>Kontaktujte nás</h2>
             </div>
-            <div class="background-box" data-aos="zoom-out">
+
+            <div class="background-box" data-aos="zoom-in">
                 <img
                     src="../assets/img/decoration/email-background.png"
                     alt="email ilustration"
                 />
             </div>
         </header>
+
         <main>
             <div class="contact-form">
                 <form class="form" method="GET" @submit.prevent="sendEmail">
@@ -49,7 +51,12 @@
                             <a href="#">osobných údajov</a></label
                         >
                         <div class="checkbox-center">
-                            <input type="checkbox" name="" required />
+                            <input
+                                class="chbox"
+                                type="checkbox"
+                                name=""
+                                required
+                            />
                         </div>
                     </div>
 
@@ -62,19 +69,6 @@
             </div>
 
             <div class="container">
-                <div class="email-box">
-                    <div class="email-img">
-                        <img
-                            src="../assets/img/icons/email-icon.png"
-                            alt="email-cartoon"
-                        />
-                    </div>
-                    <div class="email-content">
-                        <a href="mailto: matej.sevcik11@gmail.com"
-                            >synmal.inbox@gmail.com</a
-                        >
-                    </div>
-                </div>
                 <div class="telephone-box">
                     <div class="telephone-img">
                         <img
@@ -83,10 +77,24 @@
                         />
                     </div>
                     <div class="telephone-content">
-                        <a href="tel:+421948880678">0948880678</a>
+                        <a href="tel:+421904669843">0904 669 843</a>
                     </div>
                 </div>
-                <div class="navigation-box" >
+
+                <div class="email-box">
+                    <div class="email-img">
+                        <img
+                            src="../assets/img/icons/email-icon.png"
+                            alt="email-cartoon"
+                        />
+                    </div>
+                    <div class="email-content">
+                        <a href="mailto:jozefzigosynmal@gmail.com"
+                            >jozefzigosynmal@gmail.com</a
+                        >
+                    </div>
+                </div>
+                <div class="navigation-box">
                     <div class="navigation-img">
                         <img
                             src="../assets/img/icons/navigation-icon.png"
@@ -112,22 +120,9 @@
             </div>
         </header>
 
-        <main>      
+        <main>
             <div class="container">
-                <div class="email-box" data-aos='fade-right'>
-                    <div class="email-img">
-                        <img
-                            src="../assets/img/icons/email-icon.png"
-                            alt="email-cartoon"
-                        />
-                    </div>
-                    <div class="email-content">
-                        <a href="mailto: matej.sevcik11@gmail.com"
-                            >synmal.inbox@gmail.com</a
-                        >
-                    </div>
-                </div>
-                <div class="telephone-box" data-aos='fade-down'>
+                <div class="telephone-box" data-aos="fade-down">
                     <div class="telephone-img">
                         <img
                             src="../assets/img/icons/telephone-icon.png"
@@ -135,10 +130,25 @@
                         />
                     </div>
                     <div class="telephone-content">
-                        <a href="tel:+421948880678">0948880678</a>
+                        <a href="tel:+421904669843">0904 669 843</a>
                     </div>
                 </div>
-                <div class="navigation-box" data-aos='fade-left'>
+
+                <div class="email-box" data-aos="fade-right">
+                    <div class="email-img">
+                        <img
+                            src="../assets/img/icons/email-icon.png"
+                            alt="email-cartoon"
+                        />
+                    </div>
+                    <div class="email-content">
+                        <a href="mailto:jozefzigosynmal@gmail.com"
+                            >jozefzigosynmal@gmail.com</a
+                        >
+                    </div>
+                </div>
+
+                <div class="navigation-box" data-aos="fade-left">
                     <div class="navigation-img">
                         <img
                             src="../assets/img/icons/navigation-icon.png"
@@ -162,8 +172,8 @@
                         alt="email ilustration"
                     />
                 </div>
-                
-                <div class="contact-form" data-aos='fade-left'>
+
+                <div class="contact-form" data-aos="fade-left">
                     <div class="h3-box">
                         <h3>Kontaktný formulár</h3>
                     </div>
@@ -217,13 +227,12 @@
             </div>
         </main>
     </div>
-    
+
     <div class="notification-box">
         <div class="notification">
             <div>Váš email bol odoslaný</div>
         </div>
     </div>
-    
 </template>
 
 <script>
@@ -240,13 +249,15 @@ export default {
             navigationBox: 'fade-down',
             name: '',
             email: '',
-            textarea: ''
+            textarea: '',
+            checkBox: Object
         }
     },
 
     mixins: [tableMixins],
 
     mounted() {
+        this.checkBox = document.getElementsByClassName('chbox')[0]
         this.setAOSProperty()
 
         window.addEventListener('resize', () => {
@@ -264,7 +275,7 @@ export default {
 
         sendEmail(e) {
             emailjs.sendForm(
-                'service_2z0lgh8',
+                'service_ehaz1yn',
                 'template_4abbbgf',
                 e.target,
                 'user_okHWgjLSsIuRCUvM9r751'
@@ -281,13 +292,14 @@ export default {
             setTimeout(() => {
                 notificationBox.classList.remove('notification-animation')
             }, 5000)
+
+            this.checkBox.checked = false
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
 @media screen and (min-width: 0px) {
     header {
         position: relative;
@@ -443,6 +455,7 @@ export default {
         appearance: none;
         background: $primary;
         outline: none;
+        border: none;
         border-radius: 20px;
         box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.2);
         transition: 0.5s;
@@ -509,11 +522,8 @@ export default {
     .email-box {
         position: relative;
         width: 100%;
-        margin-top: 5rem;
-        padding: 5rem 0 7rem 0;
-        background-color: $primary-soft;
-        border-top: 1px solid $primary;
-        border-bottom: 1px solid $primary;
+        margin: 3rem 0;
+        padding: 3rem 0 5rem 0;
 
         .email-img {
             width: 5rem;
@@ -538,8 +548,11 @@ export default {
     .telephone-box {
         position: relative;
         width: 100%;
-        margin: 3rem 0;
-        padding: 3rem 0 5rem 0;
+        margin-top: 5rem;
+        padding: 5rem 0 7rem 0;
+        background-color: $primary-soft;
+        border-top: 1px solid $primary;
+        border-bottom: 1px solid $primary;
 
         .telephone-img {
             width: 4rem;
@@ -696,17 +709,18 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
-    header{
+
+    header {
         top: 6rem;
     }
 
-    main{
+    main {
         overflow-x: hidden;
 
-          .background-box{
-              max-width: 45%;
-              margin: unset;
-            img{
+        .background-box {
+            max-width: 45%;
+            margin: unset;
+            img {
                 max-width: 100%;
                 padding: 2rem 0;
                 right: 12rem;
@@ -714,17 +728,16 @@ export default {
         }
     }
 
-    .flex-wrapper{
+    .flex-wrapper {
         max-width: 80rem;
         padding-top: 7rem;
         display: flex;
         justify-content: center;
         margin: 0 auto;
         margin-bottom: 15rem;
-    
     }
 
-    .container{
+    .container {
         max-width: 80rem;
         display: flex;
         flex-flow: row;
@@ -734,7 +747,7 @@ export default {
         overflow-y: hidden;
     }
 
-    .contact-form{
+    .contact-form {
         position: relative;
         top: 1rem;
         max-width: 50%;
@@ -770,7 +783,6 @@ export default {
                 left: 1rem;
             }
         }
-
     }
 
     .form {
@@ -778,6 +790,9 @@ export default {
         margin: 0 auto;
     }
 
+    .container{
+        margin-top: 2rem;
+    }
 
     .email-box,
     .telephone-box,
@@ -789,13 +804,14 @@ export default {
         background-color: unset;
     }
 
-    .telephone-box {
-        padding: 6rem 0 5rem 0;
+    .email-box {
+        top: 1rem;
     }
 
     .navigation-box {
-        padding: 5.1rem 0 5rem 0;
+        top: 0.7rem;
     }
+
 
     .notification-box {
         .notification {
@@ -804,5 +820,4 @@ export default {
         }
     }
 }
-
 </style>
