@@ -3,8 +3,9 @@
         <div class="container">
             <div class="h3-handler" data-aos="fade-down">
                 <h3>
-                    Interérové a exterierové nátery stien a fasád realizujeme aj
-                    <strong>strojovím maľovaním</strong>
+                    Interierové a exterierové nátery stien a fasád realizujeme
+                    aj
+                    <strong>strojovým maľovaním</strong>
                 </h3>
             </div>
             <article>

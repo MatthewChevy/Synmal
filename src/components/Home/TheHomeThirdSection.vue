@@ -15,7 +15,10 @@
                         schopnosťou je pre nás veľkým favoritom.
                     </p>
 
-                    <div class="decorative-bucket sm-screen" data-aos="fade-right">
+                    <div
+                        class="decorative-bucket sm-screen"
+                        data-aos="fade-right"
+                    >
                         <img
                             src="../../assets/img/decoration/jupol.png"
                             alt="Jupol bucket"

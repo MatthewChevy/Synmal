@@ -16,13 +16,9 @@
                     </h1>
                 </div>
             </div>
-            <div class="button">
+            <div class="button" @click="$router.push({ path: 'contact' })">
                 <div class="contact-link-button">
-                    <a
-                        class="contact-link"
-                        tabindex="1"
-                        @click="$router.push({ path: 'contact' })"
-                    >
+                    <a class="contact-link" tabindex="1">
                         Kontakt
                     </a>
                 </div>
@@ -39,7 +35,9 @@ export default {
 
     data() {
         return {
-            sectionTitle: Object
+            sectionTitle: Object,
+            width: Number,
+            height: Number
         }
     },
 
@@ -48,19 +46,21 @@ export default {
         window.addEventListener('scroll', () => {
             this.titleParallax()
         })
+
+        this.width = window.innerWidth
+        this.height = window.innerHeight
     },
 
     methods: {
         titleParallax() {
             if (this.actualyWidnowSize >= this.breakpoint) {
                 //1024+
-                this.parallax(this.sectionTitle, window.scrollY,-0.3)
+                this.parallax(this.sectionTitle, window.scrollY, -0.3)
             }
         }
     }
 }
 </script>
-
 
 <style lang="scss" scoped>
 @media screen and (min-width: 0px) {
@@ -71,7 +71,7 @@ export default {
     .text-top {
         position: absolute;
         width: 100%;
-        top: 11rem;
+        top: 8rem;
         animation: textTopFadeIn 1s 0.5s ease-in-out both;
 
         .h2-box {
@@ -82,6 +82,7 @@ export default {
                 position: absolute;
                 color: $primary-soft;
                 text-transform: uppercase;
+                text-shadow: 2px 1px rgba(0, 0, 0, 0.308);
                 font: {
                     size: 28px;
                     weight: 500;
@@ -94,7 +95,7 @@ export default {
     .span-box {
         position: absolute;
         width: 100vw;
-        top: 15.5rem;
+        top: 12rem;
         display: flex;
         justify-content: center;
 
@@ -105,6 +106,7 @@ export default {
             height: 0.15rem;
             background-color: $primary-soft;
             animation: spanFadeIn 0.5s 0.25s ease-in-out both;
+            box-shadow: 2px 1px rgba(0, 0, 0, 0.308);
         }
     }
 
@@ -113,7 +115,7 @@ export default {
         width: 100vw;
         display: flex;
         justify-content: center;
-        top: 18rem;
+        top: 14rem;
         text-align: left;
         opacity: 0;
         animation: textBottomFadeIn 0.5s 1s ease-in-out forwards;
@@ -126,8 +128,9 @@ export default {
             padding-bottom: 3rem;
             letter-spacing: 1px;
             line-height: 45px;
+            text-shadow: 2px 1px rgba(0, 0, 0, 0.308);
             font: {
-                size: 40px;
+                size: 35px;
                 family: $font-lora;
                 weight: 400;
             }
@@ -136,7 +139,7 @@ export default {
 
     .button {
         position: absolute;
-        top: 30rem;
+        top: 27rem;
         width: 100vw;
         text-align: center;
 
@@ -153,12 +156,19 @@ export default {
 
             a {
                 letter-spacing: 2px;
+                text-shadow: 2px 1px rgba(0, 0, 0, 0.308);
                 font: {
                     size: 20px;
                     weight: 300;
                 }
             }
         }
+    }
+
+    .contact-link-button:focus,
+    .contact-link-button:hover {
+        background-color: #373737ad;
+        transition: 0.25s;
     }
 
     @keyframes spanFadeIn {
@@ -203,6 +213,38 @@ export default {
         100% {
             opacity: 1;
         }
+    }
+}
+
+@media screen and (min-width: 335px) {
+    .button {
+        position: absolute;
+        top: 25rem;
+        width: 100vw;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .text-top {
+        top: 11rem;
+    }
+
+    .span-box {
+        top: 15.5rem;
+    }
+
+    .text-bottom {
+        top: 18rem;
+        h1 {
+            font: {
+                size: 40px;
+            }
+        }
+    }
+
+    .button {
+        top: 33rem;
     }
 }
 
