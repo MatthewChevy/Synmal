@@ -16,5 +16,12 @@ The project is built in Vue.js. I realize that Vue is not suitable for the type 
 
 I would like to thank Martin Plávka who helped me and guided me :)
 
+## Technology
+
+Vue.js / Javascript
+CSS / SASS
+HTML
+
+
 ## License
 [MIT]
