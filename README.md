@@ -1,25 +1,20 @@
-# synmal
+# Synmal
 
-## Project setup
-```
-npm install
-```
+Synmal is a small company that deals with interior (apartments, offices, houses) and exterior (facades, gazebos, roofs) coatings
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Installation
 
-### Compiles and minifies for production
-```
-npm run build
+Use the package manager npm or yarn to install all package what do you needed.
+
+```bash
+npm install / yarn
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## About this page
+This website was my first project I sent to the world. It was a challenge for me. I'm happy with how the site looks and how it works since I had no experience with web design.
+The project is built in Vue.js. I realize that Vue is not suitable for the type of such a simple web page, but I wanted to try it in vue to make friends with it.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-"# Synmal" 
+I would like to thank Martin Plávka who helped me and guided me :)
+
+## License
+[MIT]
